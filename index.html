@@ -1,1021 +1,1075 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | AIDN Strategic Consulting</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0c2a85;
-            --secondary: #03b4d6;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f9fafb;
-            --bg-white: #ffffff;
-            --border: #e5e7eb;
-            --accent: #10b981;
-            --warning: #f59e0b;
-            --gold: #d97706;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: var(--bg-white);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        /* HEADER */
-        .header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .logo-container {
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo-aidn {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: white;
-            letter-spacing: 3px;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 1;
-        }
-
-        .header .subtitle {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.95);
-            font-weight: 500;
-            margin-bottom: 0.3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header .tagline {
-            font-size: 0.95rem;
-            color: rgba(255,255,255,0.85);
-            font-style: italic;
-            margin-bottom: 1.2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header .year {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: white;
-            border: 2px solid rgba(255,255,255,0.3);
-            position: relative;
-            z-index: 1;
-        }
-
-        /* CONTENT */
-        .content {
-            padding: 2.5rem;
-        }
-
-        .intro-section {
-            background: linear-gradient(135deg, #dbeafe, #e0f2fe);
-            border-left: 5px solid var(--secondary);
-            padding: 1.8rem;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-        }
-
-        .intro-section h2 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-
-        .intro-section p {
-            color: var(--text-dark);
-            line-height: 1.8;
-            margin-bottom: 0.8rem;
-        }
-
-        .intro-section .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold), #f59e0b);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        .section {
-            margin-bottom: 3rem;
-        }
-
-        .section:last-child {
-            margin-bottom: 0;
-        }
-
-        .section-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .section-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border-radius: 50%;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .subsection {
-            margin-bottom: 2rem;
-        }
-
-        .subsection-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-            border-left: 4px solid var(--secondary);
-        }
-
-        /* TABLES */
-        .service-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1.5rem;
-            background: var(--bg-white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .service-table thead {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-        }
-
-        .service-table th {
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .service-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .service-table tbody tr:hover {
-            background: var(--bg-light);
-        }
-
-        .service-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .price {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .scope-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .scope-list li {
-            padding: 0.3rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--text-dark);
-        }
-
-        .scope-list li.included::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .scope-list li.excluded::before {
-            content: '✗';
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-            font-weight: 700;
-        }
-
-        /* INFO BOXES */
-        .info-box {
-            background: linear-gradient(135deg, #e0f2fe, #dbeafe);
-            border-left: 4px solid var(--secondary);
-            padding: 1.2rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-box.warning {
-            background: linear-gradient(135deg, #fef3c7, #fde68a);
-            border-left-color: var(--warning);
-        }
-
-        .info-box.success {
-            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-            border-left-color: var(--accent);
-        }
-
-        .info-box.premium {
-            background: linear-gradient(135deg, #fef3c7, #fde68a);
-            border-left-color: var(--gold);
-        }
-
-        .info-box-title {
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-        }
-
-        .info-box p {
-            margin: 0;
-            color: var(--text-dark);
-            line-height: 1.7;
-        }
-
-        /* CONSULTING SECTION */
-        .consulting-card {
-            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-            border: 2px solid var(--secondary);
-            border-radius: 12px;
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(3, 180, 214, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .consulting-card:hover {
-            box-shadow: 0 8px 25px rgba(3, 180, 214, 0.25);
-            transform: translateY(-2px);
-        }
-
-        .consulting-card h4 {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .consulting-card p {
-            color: var(--text-dark);
-            line-height: 1.7;
-            margin-bottom: 0.8rem;
-        }
-
-        .consulting-features {
-            list-style: none;
-            padding: 0;
-            margin-top: 1rem;
-        }
-
-        .consulting-features li {
-            padding: 0.5rem 0;
-            padding-left: 1.8rem;
-            position: relative;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .consulting-features li::before {
-            content: '◆';
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-
-        /* POLICY LIST */
-        .policy-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .policy-list li {
-            padding: 1rem;
-            margin-bottom: 0.8rem;
-            background: var(--bg-light);
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary);
-            transition: all 0.3s ease;
-        }
-
-        .policy-list li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .policy-list strong {
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        /* HIERARCHY SECTION */
-        .hierarchy-box {
-            background: linear-gradient(135deg, #fef9c3, #fde68a);
-            border: 2px solid var(--warning);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .hierarchy-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .hierarchy-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .hierarchy-list li {
-            padding: 0.6rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .hierarchy-list li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: var(--warning);
-            font-size: 0.8rem;
-        }
-
-        .hierarchy-note {
-            margin-top: 1rem;
-            padding: 1rem;
-            background: rgba(255,255,255,0.7);
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-style: italic;
-            color: var(--text-dark);
-        }
-
-        /* CTA SECTION */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 2.5rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 3rem;
-            color: white;
-        }
-
-        .cta-section h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .cta-section p {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--primary);
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            background: #f0f9ff;
-        }
-
-        /* FOOTER */
-        .footer {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 2rem;
-            text-align: center;
-            color: white;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .contact-item svg {
-            stroke: white;
-            flex-shrink: 0;
-        }
-
-        .contact-item strong {
-            font-weight: 600;
-        }
-
-        .footer-note {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-top: 1rem;
-            font-style: italic;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.5rem;
-            }
-
-            .content {
-                padding: 1.5rem;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.3rem;
-            }
-
-            .service-table {
-                font-size: 0.9rem;
-            }
-
-            .service-table th,
-            .service-table td {
-                padding: 0.7rem;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-
-            .cta-section {
-                padding: 2rem 1.5rem;
-            }
-
-            .cta-section h3 {
-                font-size: 1.3rem;
-            }
-        }
-
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-            }
-
-            .cta-section {
-                display: none;
-            }
-        }
-    </style>
+<!-- Charset & Viewport -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Primary Meta Tags -->
+<title>Catálogo de Servicios 2026 | AIDN Strategic Consulting</title>
+<meta name="title" content="Catálogo de Servicios 2026 | AIDN Strategic Consulting">
+<meta name="description" content="Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad. Consultoría estratégica, servicios fiscales RESICO y administración empresarial.">
+<meta name="keywords" content="consultoría estratégica, servicios fiscales, RESICO, contabilidad, AIDN, asesoría empresarial, planeación estratégica, México, Guadalupe NL, MAE Saúl Dávila">
+<meta name="author" content="MAE Saúl Dávila Pantoja - AIDN Strategic Consulting">
+<meta name="language" content="Spanish">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bit.ly/catalogo-aidn">
+<meta property="og:title" content="Catálogo de Servicios 2026 | AIDN Strategic Consulting">
+<meta property="og:description" content="Catapultando empresas para liderar el cambio. Consultoría estratégica y servicios fiscales profesionales certificados internacionalmente.">
+<meta property="og:image" content="https://aidn.com.mx/assets/banner-catalogo26.png">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="AIDN Strategic Consulting">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://bit.ly/catalogo-aidn">
+<meta name="twitter:title" content="Catálogo AIDN 2026 - Consultoría Estratégica">
+<meta name="twitter:description" content="Consultoría estratégica certificada OLA/CICA. Servicios fiscales RESICO, planeación empresarial y más.">
+<meta name="twitter:image" content="https://aidn.com.mx/assets/banner-catalogo26.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+<!-- Theme & Manifest -->
+<meta name="theme-color" content="#0c2a85">
+<meta name="msapplication-TileColor" content="#0c2a85">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Canonical & SEO -->
+<link rel="canonical" href="https://bit.ly/catalogo-aidn">
+
+<!-- DNS Prefetch -->
+<link rel="preconnect" href="https://wa.me">
+<link rel="dns-prefetch" href="//wa.me">
+
+<!-- Security -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://wa.me;">
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--primary: #0c2a85;
+--secondary: #03b4d6;
+--text-dark: #1f2937;
+--text-light: #6b7280;
+--bg-light: #f9fafb;
+--bg-white: #ffffff;
+--border: #e5e7eb;
+--accent: #10b981;
+--warning: #f59e0b;
+--gold: #d97706;
+--shadow: rgba(0,0,0,0.1);
+--hover-shadow: rgba(0,0,0,0.2);
+--transition-fast: 150ms ease;
+--transition-base: 250ms ease;
+--transition-slow: 400ms ease;
+--premium-gradient-start: #e0f2fe;
+--premium-gradient-end: #dbeafe;
+--premium-border: #0ea5e9;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-dark);
+background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+padding: 2rem 1rem;
+}
+
+.container {
+max-width: 1100px;
+margin: 0 auto;
+background: var(--bg-white);
+box-shadow: 0 20px 60px var(--shadow);
+border-radius: 16px;
+overflow: hidden;
+}
+
+.header {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+padding: 3rem 2rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.header::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%);
+pointer-events: none;
+}
+
+.logo-container {
+margin-bottom: 1.5rem;
+position: relative;
+z-index: 1;
+}
+
+.logo-aidn {
+width: 100px;
+height: 100px;
+margin: 0 auto;
+filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
+}
+
+.header h1 {
+font-size: 2.5rem;
+font-weight: 700;
+color: white;
+letter-spacing: 3px;
+margin-bottom: 0.5rem;
+text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+position: relative;
+z-index: 1;
+}
+
+.header .subtitle {
+font-size: 1.1rem;
+color: rgba(255,255,255,0.95);
+font-weight: 500;
+margin-bottom: 0.3rem;
+position: relative;
+z-index: 1;
+}
+
+.header .tagline {
+font-size: 0.95rem;
+color: rgba(255,255,255,0.85);
+font-style: italic;
+margin-bottom: 1.2rem;
+position: relative;
+z-index: 1;
+}
+
+.header .year {
+display: inline-block;
+background: rgba(255,255,255,0.2);
+padding: 0.5rem 1.5rem;
+border-radius: 20px;
+font-size: 1rem;
+font-weight: 600;
+color: white;
+border: 2px solid rgba(255,255,255,0.3);
+position: relative;
+z-index: 1;
+}
+
+.content {
+padding: 2.5rem;
+}
+
+.intro-section {
+background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+border-left: 5px solid var(--secondary);
+padding: 1.8rem;
+border-radius: 12px;
+margin-bottom: 3rem;
+}
+
+.intro-section h2 {
+font-size: 1.4rem;
+color: var(--primary);
+margin-bottom: 0.8rem;
+font-weight: 700;
+}
+
+.intro-section p {
+color: var(--text-dark);
+line-height: 1.8;
+margin-bottom: 0.8rem;
+}
+
+.intro-section .badge {
+display: inline-block;
+background: linear-gradient(135deg, var(--gold), #f59e0b);
+color: white;
+padding: 0.4rem 1rem;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 600;
+margin-top: 0.5rem;
+}
+
+.section {
+margin-bottom: 3rem;
+}
+
+.section:last-child {
+margin-bottom: 0;
+}
+
+.section-title {
+font-size: 1.6rem;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 1.5rem;
+padding-bottom: 0.8rem;
+border-bottom: 3px solid var(--secondary);
+display: flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+.section-number {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 38px;
+height: 38px;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+border-radius: 50%;
+font-size: 1.1rem;
+font-weight: 700;
+}
+
+.subsection {
+margin-bottom: 2rem;
+}
+
+.subsection-title {
+font-size: 1.2rem;
+font-weight: 600;
+color: var(--text-dark);
+margin-bottom: 1rem;
+padding-left: 1rem;
+border-left: 4px solid var(--secondary);
+}
+
+.service-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 1.5rem;
+background: var(--bg-white);
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.service-table thead {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+}
+
+.service-table th {
+padding: 1rem;
+text-align: left;
+font-weight: 600;
+font-size: 0.95rem;
+}
+
+.service-table td {
+padding: 1rem;
+border-bottom: 1px solid var(--border);
+}
+
+.service-table tbody tr:hover {
+background: var(--bg-light);
+}
+
+.service-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.price {
+font-weight: 700;
+color: var(--primary);
+font-size: 1.1rem;
+}
+
+.scope-list {
+list-style: none;
+padding: 0;
+margin-top: 0.5rem;
+font-size: 0.9rem;
+}
+
+.scope-list li {
+padding: 0.3rem 0;
+padding-left: 1.5rem;
+position: relative;
+color: var(--text-dark);
+}
+
+.scope-list li.included::before {
+content: '✓';
+position: absolute;
+left: 0;
+color: var(--accent);
+font-weight: 700;
+}
+
+.scope-list li.excluded::before {
+content: '✗';
+position: absolute;
+left: 0;
+color: #ef4444;
+font-weight: 700;
+}
+
+.info-box {
+background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+border-left: 4px solid var(--secondary);
+padding: 1.2rem;
+border-radius: 8px;
+margin-bottom: 1.5rem;
+}
+
+.info-box.warning {
+background: linear-gradient(135deg, #fef3c7, #fde68a);
+border-left-color: var(--warning);
+}
+
+.info-box.success {
+background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+border-left-color: var(--accent);
+}
+
+.info-box.premium {
+background: linear-gradient(135deg, var(--premium-gradient-start), var(--premium-gradient-end));
+border-left: 4px solid var(--premium-border);
+box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+position: relative;
+overflow: hidden;
+}
+
+.info-box.premium::before {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+width: 100px;
+height: 100px;
+background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.info-box.premium .info-box-title {
+color: #0369a1;
+font-weight: 700;
+}
+
+.info-box-title {
+font-weight: 700;
+color: var(--text-dark);
+margin-bottom: 0.5rem;
+font-size: 1.05rem;
+}
+
+.info-box p {
+margin: 0;
+color: var(--text-dark);
+line-height: 1.7;
+}
+
+.consulting-card {
+background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+border: 2px solid var(--secondary);
+border-radius: 12px;
+padding: 1.8rem;
+margin-bottom: 1.5rem;
+box-shadow: 0 4px 15px rgba(3, 180, 214, 0.15);
+transition: all var(--transition-base);
+}
+
+.consulting-card:hover {
+box-shadow: 0 8px 25px rgba(3, 180, 214, 0.25);
+transform: translateY(-2px);
+}
+
+.consulting-card h4 {
+font-size: 1.1rem;
+color: var(--text-dark);
+font-weight: 700;
+margin-bottom: 0.8rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.consulting-card p {
+color: var(--text-dark);
+line-height: 1.7;
+margin-bottom: 0.8rem;
+}
+
+.consulting-features {
+list-style: none;
+padding: 0;
+margin-top: 1rem;
+}
+
+.consulting-features li {
+padding: 0.5rem 0;
+padding-left: 1.8rem;
+position: relative;
+color: var(--text-dark);
+font-size: 0.95rem;
+}
+
+.consulting-features li::before {
+content: '◆';
+position: absolute;
+left: 0;
+color: var(--secondary);
+font-size: 0.9rem;
+}
+
+.policy-list {
+list-style: none;
+padding: 0;
+}
+
+.policy-list li {
+padding: 1rem;
+margin-bottom: 0.8rem;
+background: var(--bg-light);
+border-radius: 8px;
+border-left: 4px solid var(--secondary);
+transition: all var(--transition-base);
+}
+
+.policy-list li:hover {
+transform: translateX(5px);
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.policy-list strong {
+color: var(--primary);
+font-weight: 700;
+}
+
+.hierarchy-box {
+background: linear-gradient(135deg, #fef9c3, #fde68a);
+border: 2px solid var(--warning);
+border-radius: 12px;
+padding: 1.5rem;
+margin-top: 1.5rem;
+}
+
+.hierarchy-title {
+font-size: 1.1rem;
+font-weight: 700;
+color: var(--text-dark);
+margin-bottom: 1rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.hierarchy-list {
+list-style: none;
+padding: 0;
+}
+
+.hierarchy-list li {
+padding: 0.6rem 0;
+padding-left: 1.5rem;
+position: relative;
+color: var(--text-dark);
+font-size: 0.95rem;
+}
+
+.hierarchy-list li::before {
+content: '▶';
+position: absolute;
+left: 0;
+color: var(--warning);
+font-size: 0.8rem;
+}
+
+.hierarchy-note {
+margin-top: 1rem;
+padding: 1rem;
+background: rgba(255,255,255,0.7);
+border-radius: 8px;
+font-size: 0.9rem;
+font-style: italic;
+color: var(--text-dark);
+}
+
+.cta-section {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+padding: 2.5rem;
+border-radius: 12px;
+text-align: center;
+margin-top: 3rem;
+color: white;
+}
+
+.cta-section h3 {
+font-size: 1.6rem;
+margin-bottom: 1rem;
+font-weight: 700;
+}
+
+.cta-section p {
+font-size: 1.05rem;
+margin-bottom: 1.5rem;
+opacity: 0.95;
+}
+
+.cta-button {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+background: white;
+color: var(--primary);
+padding: 1rem 2rem;
+border-radius: 30px;
+text-decoration: none;
+font-weight: 700;
+font-size: 1.05rem;
+transition: all var(--transition-base);
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+background: #f0f9ff;
+}
+
+.cta-icon {
+width: 24px;
+height: 24px;
+}
+
+.footer {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+padding: 2rem;
+text-align: center;
+color: white;
+}
+
+.contact-info {
+display: flex;
+justify-content: center;
+gap: 2rem;
+flex-wrap: wrap;
+margin-bottom: 1rem;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.95rem;
+}
+
+.contact-item svg {
+stroke: white;
+flex-shrink: 0;
+}
+
+.contact-item strong {
+font-weight: 600;
+}
+
+.footer-note {
+font-size: 0.9rem;
+opacity: 0.9;
+margin-top: 1rem;
+font-style: italic;
+}
+
+@media (max-width: 768px) {
+body {
+padding: 1rem 0.5rem;
+}
+
+.content {
+padding: 1.5rem;
+}
+
+.header h1 {
+font-size: 2rem;
+}
+
+.section-title {
+font-size: 1.3rem;
+}
+
+.service-table {
+font-size: 0.9rem;
+}
+
+.service-table th,
+.service-table td {
+padding: 0.7rem;
+}
+
+.contact-info {
+flex-direction: column;
+gap: 0.8rem;
+}
+
+.cta-section {
+padding: 2rem 1.5rem;
+}
+
+.cta-section h3 {
+font-size: 1.3rem;
+}
+}
+
+@media print {
+body {
+background: white;
+padding: 0;
+}
+
+.container {
+box-shadow: none;
+border-radius: 0;
+}
+
+.cta-section {
+display: none;
+}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <!-- HEADER -->
-        <div class="header">
-            <div class="logo-container">
-                <svg class="logo-aidn" viewBox="0 0 100 100" aria-label="Logo AIDN">
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#0c2a85;stop-opacity:1"/>
-                            <stop offset="100%" style="stop-color:#03b4d6;stop-opacity:1"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M50 5L85 25V75L50 95L15 75V25L50 5Z" fill="url(#logoGradient)"/>
-                    <path d="M50 15L75 30V70L50 85L25 70V30L50 15Z" fill="#fff"/>
-                    <path d="M35 65C38 53.75 42 37.75 50 33.25C58 37.75 62 53.75 65 65M42 58Q50 56.5 58 58" fill="none" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="68" cy="42" fill="url(#logoGradient)" r="3"/>
-                </svg>
-            </div>
-            <h1>A I D N</h1>
-            <p class="subtitle">Strategic Consulting</p>
-            <p class="tagline">Catapultando empresas para liderar el cambio</p>
-            <div class="year">CATÁLOGO DE SERVICIOS Y HONORARIOS 2026</div>
-        </div>
+<div class="container">
+<div class="header">
+<div class="logo-container">
+<svg class="logo-aidn" viewBox="0 0 100 100" aria-label="Logo AIDN">
+<defs>
+<linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#0c2a85;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#03b4d6;stop-opacity:1"/>
+</linearGradient>
+</defs>
+<path d="M50 5L85 25V75L50 95L15 75V25L50 5Z" fill="url(#logoGradient)"/>
+<path d="M50 15L75 30V70L50 85L25 70V30L50 15Z" fill="#fff"/>
+<path d="M35 65C38 53.75 42 37.75 50 33.25C58 37.75 62 53.75 65 65M42 58Q50 56.5 58 58" fill="none" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="68" cy="42" fill="url(#logoGradient)" r="3"/>
+</svg>
+</div>
+<h1>A I D N</h1>
+<p class="subtitle">Strategic Consulting</p>
+<p class="tagline">Catapultando empresas para liderar el cambio</p>
+<div class="year">CATÁLOGO DE SERVICIOS Y HONORARIOS 2026</div>
+</div>
 
-        <!-- CONTENT -->
-        <div class="content">
-            
-            <!-- INTRO -->
-            <div class="intro-section">
-                <h2>Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad</h2>
-                <p>
-                    AIDN Strategic Consulting va más allá de "presentar declaraciones". Mientras muchos clientes buscan disminuir su carga fiscal con mañas y omisiones, nosotros te mostramos el verdadero camino: <strong>crecer de manera sostenible y rentable</strong> con estrategias legales que maximizan tu potencial empresarial.
-                </p>
-                <p>
-                    Combinamos precisión fiscal con visión estratégica empresarial. No evadimos impuestos, <strong>diseñamos modelos de negocio más eficientes</strong>. No ocultamos ingresos, <strong>creamos estrategias para incrementarlos</strong>. El ahorro fiscal real viene del crecimiento inteligente, no de la improvisación.
-                </p>
-                <p>
-                    <strong>MAE Saúl Dávila Pantoja</strong> — Maestro en Administración Empresarial con especialidad en Planeación Estratégica | Consultor Estratégico Certificado por OLA/CICA en Administración Estratégica | Licenciado en Contaduría Pública.
-                </p>
-                <span class="badge">🏆 Certificación Internacional OLA/CICA 2025-2031</span>
-            </div>
+<div class="content">
+<div class="intro-section">
+<h2>Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad</h2>
+<p>AIDN Strategic Consulting va más allá de "presentar declaraciones". Mientras muchos clientes buscan disminuir su carga fiscal con mañas y omisiones, nosotros te mostramos el verdadero camino: <strong>crecer de manera sostenible y rentable</strong> con estrategias legales que maximizan tu potencial empresarial.</p>
+<p>Combinamos precisión fiscal con visión estratégica empresarial. No evadimos impuestos, <strong>diseñamos modelos de negocio más eficientes</strong>. No ocultamos ingresos, <strong>creamos estrategias para incrementarlos</strong>. El ahorro fiscal real viene del crecimiento inteligente, no de la improvisación.</p>
+<p><strong>MAE Saúl Dávila Pantoja</strong> — Maestro en Administración Empresarial con especialidad en Planeación Estratégica | Consultor Estratégico Certificado por OLA/CICA en Administración Estratégica | Licenciado en Contaduría Pública.</p>
+<span class="badge">🏆 Certificación Internacional OLA/CICA 2025-2031</span>
+</div>
 
-            <!-- SECCIÓN CONSULTORÍA ESTRATÉGICA -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">🎯</span>
-                    Consultoría Estratégica y Administración Empresarial
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">🎯</span>
+Consultoría Estratégica y Administración Empresarial
+</h2>
 
-                <div class="info-box premium">
-                    <p class="info-box-title">💼 Servicios Premium Personalizados</p>
-                    <p>Cada empresa tiene su propia realidad, desafíos y oportunidades. Por ello, nuestros servicios de consultoría estratégica se diseñan <strong>a la medida</strong> de cada organización, sin tarifas estándar. Agendamos una sesión diagnóstica y construimos una propuesta de valor específica para tu empresa.</p>
-                </div>
+<div class="info-box premium">
+<p class="info-box-title">💼 Servicios Premium Personalizados</p>
+<p>Cada empresa tiene su propia realidad, desafíos y oportunidades. Por ello, nuestros servicios de consultoría estratégica se diseñan <strong>a la medida</strong> de cada organización, sin tarifas estándar. Agendamos una sesión diagnóstica y construimos una propuesta de valor específica para tu empresa.</p>
+</div>
 
-                <div class="consulting-card">
-                    <h4>📊 Planeación y Dirección Estratégica</h4>
-                    <p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
-                    <ul class="consulting-features">
-                        <li>Análisis FODA y diagnóstico organizacional profundo</li>
-                        <li>Definición de objetivos estratégicos y planes de acción</li>
-                        <li>Diseño de KPIs y tableros de control gerencial</li>
-                        <li>Acompañamiento en ejecución y seguimiento de estrategia</li>
-                    </ul>
-                </div>
+<div class="consulting-card">
+<h4>📊 Planeación y Dirección Estratégica</h4>
+<p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
+<ul class="consulting-features">
+<li>Análisis FODA y diagnóstico organizacional profundo</li>
+<li>Definición de objetivos estratégicos y planes de acción</li>
+<li>Diseño de KPIs y tableros de control gerencial</li>
+<li>Acompañamiento en ejecución y seguimiento de estrategia</li>
+</ul>
+</div>
 
-                <div class="consulting-card">
-                    <h4>💰 Análisis Financiero y Proyecciones</h4>
-                    <p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
-                    <ul class="consulting-features">
-                        <li>Proyecciones financieras a 1, 3 y 5 años</li>
-                        <li>Análisis de viabilidad de proyectos e inversiones</li>
-                        <li>Evaluación de rentabilidad por línea de negocio</li>
-                        <li>Optimización de flujo de efectivo y estructura de capital</li>
-                    </ul>
-                </div>
+<div class="consulting-card">
+<h4>💰 Análisis Financiero y Proyecciones</h4>
+<p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
+<ul class="consulting-features">
+<li>Proyecciones financieras a 1, 3 y 5 años</li>
+<li>Análisis de viabilidad de proyectos e inversiones</li>
+<li>Evaluación de rentabilidad por línea de negocio</li>
+<li>Optimización de flujo de efectivo y estructura de capital</li>
+</ul>
+</div>
 
-                <div class="consulting-card">
-                    <h4>🔄 Reestructuración Organizacional</h4>
-                    <p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
-                    <ul class="consulting-features">
-                        <li>Rediseño de estructura organizacional y organigramas</li>
-                        <li>Mapeo y optimización de procesos operativos</li>
-                        <li>Definición de perfiles de puesto y manuales de funciones</li>
-                        <li>Estrategias de cambio organizacional y gestión del talento</li>
-                    </ul>
-                </div>
+<div class="consulting-card">
+<h4>🔄 Reestructuración Organizacional</h4>
+<p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
+<ul class="consulting-features">
+<li>Rediseño de estructura organizacional y organigramas</li>
+<li>Mapeo y optimización de procesos operativos</li>
+<li>Definición de perfiles de puesto y manuales de funciones</li>
+<li>Estrategias de cambio organizacional y gestión del talento</li>
+</ul>
+</div>
 
-                <div class="consulting-card">
-                    <h4>🚀 Desarrollo de Modelos de Negocio</h4>
-                    <p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
-                    <ul class="consulting-features">
-                        <li>Canvas de modelo de negocio y propuesta de valor</li>
-                        <li>Análisis de mercado y posicionamiento competitivo</li>
-                        <li>Estrategias de diversificación y crecimiento</li>
-                        <li>Plan de escalabilidad y expansión</li>
-                    </ul>
-                </div>
+<div class="consulting-card">
+<h4>🚀 Desarrollo de Modelos de Negocio</h4>
+<p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
+<ul class="consulting-features">
+<li>Canvas de modelo de negocio y propuesta de valor</li>
+<li>Análisis de mercado y posicionamiento competitivo</li>
+<li>Estrategias de diversificación y crecimiento</li>
+<li>Plan de escalabilidad y expansión</li>
+</ul>
+</div>
 
-                <div class="info-box success">
-                    <p class="info-box-title">✅ ¿Cómo trabajamos la Consultoría?</p>
-                    <p>
-                        <strong>1. Sesión diagnóstica inicial</strong> (sin costo) para entender tu situación y necesidades.<br>
-                        <strong>2. Diseño de propuesta personalizada</strong> con alcance, metodología, entregables y honorarios.<br>
-                        <strong>3. Ejecución del proyecto</strong> con acompañamiento cercano y entregas progresivas.<br>
-                        <strong>4. Seguimiento post-proyecto</strong> para asegurar la implementación exitosa.
-                    </p>
-                </div>
-            </section>
+<div class="info-box success">
+<p class="info-box-title">✅ ¿Cómo trabajamos la Consultoría?</p>
+<p><strong>1. Sesión diagnóstica inicial</strong> (sin costo) para entender tu situación y necesidades.<br>
+<strong>2. Diseño de propuesta personalizada</strong> con alcance, metodología, entregables y honorarios.<br>
+<strong>3. Ejecución del proyecto</strong> con acompañamiento cercano y entregas progresivas.<br>
+<strong>4. Seguimiento post-proyecto</strong> para asegurar la implementación exitosa.</p>
+</div>
+</section>
 
-            <!-- SECCIÓN I -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">I</span>
-                    Servicios Fiscales: Personas Físicas RESICO
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">I</span>
+Servicios Fiscales: Personas Físicas RESICO
+</h2>
 
-                <div class="info-box success">
-                    <p class="info-box-title">💎 Permanencia Premium en Padrón Activo</p>
-                    <p><strong>$400 MXN mensuales</strong> - Asegura tu continuidad fiscal sin interrupciones. Mantiene tu registro activo ante el SAT y previene restricciones operativas que podrían afectar tu negocio. Inversión mínima para tranquilidad máxima.</p>
-                </div>
+<div class="info-box success">
+<p class="info-box-title">💎 Permanencia Premium en Padrón Activo</p>
+<p><strong>$400 MXN mensuales</strong> - Asegura tu continuidad fiscal sin interrupciones. Mantiene tu registro activo ante el SAT y previene restricciones operativas que podrían afectar tu negocio. Inversión mínima para tranquilidad máxima.</p>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">RESICO Servicios Profesionales</h3>
-                    <table class="service-table">
-                        <thead>
-                            <tr>
-                                <th>Paquete</th>
-                                <th>Volumen Mensual</th>
-                                <th>Honorario Mensual</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Esencial</strong>
-                                    <ul class="scope-list">
-                                        <li class="included">Cumplimiento fiscal mensual completo</li>
-                                        <li class="included">Asesoría fiscal vía WhatsApp</li>
-                                        <li class="included">Revisión y validación de CFDI's</li>
-                                        <li class="excluded">NO incluye acudir físicamente ante autoridades</li>
-                                    </ul>
-                                </td>
-                                <td>1 a 9 facturas</td>
-                                <td class="price">$600</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Profesional</strong>
-                                    <ul class="scope-list">
-                                        <li class="included">Cumplimiento fiscal mensual completo</li>
-                                        <li class="included">Asesoría fiscal estratégica vía WhatsApp</li>
-                                        <li class="included">Revisión y validación de CFDI's</li>
-                                        <li class="included">Análisis y optimización de deducciones aplicables</li>
-                                        <li class="excluded">NO incluye acudir físicamente ante autoridades</li>
-                                    </ul>
-                                </td>
-                                <td>10 a 25 facturas</td>
-                                <td class="price">$900</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+<div class="subsection">
+<h3 class="subsection-title">RESICO Servicios Profesionales</h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Volumen Mensual</th>
+<th>Honorario Mensual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Esencial</strong>
+<ul class="scope-list">
+<li class="included">Cumplimiento fiscal mensual completo</li>
+<li class="included">Asesoría fiscal vía WhatsApp</li>
+<li class="included">Revisión y validación de CFDI's</li>
+<li class="excluded">NO incluye acudir físicamente ante autoridades</li>
+</ul>
+</td>
+<td>1 a 9 facturas</td>
+<td class="price">$600</td>
+</tr>
+<tr>
+<td>
+<strong>Profesional</strong>
+<ul class="scope-list">
+<li class="included">Cumplimiento fiscal mensual completo</li>
+<li class="included">Asesoría fiscal estratégica vía WhatsApp</li>
+<li class="included">Revisión y validación de CFDI's</li>
+<li class="included">Análisis y optimización de deducciones aplicables</li>
+<li class="excluded">NO incluye acudir físicamente ante autoridades</li>
+</ul>
+</td>
+<td>10 a 25 facturas</td>
+<td class="price">$900</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">RESICO Sector Primario (Cobro Anual Único)</h3>
-                    <table class="service-table">
-                        <thead>
-                            <tr>
-                                <th>Tipo de Cliente</th>
-                                <th>Honorario Anual</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Clientes del Despacho (Costo Unitario)</td>
-                                <td class="price">$3,800</td>
-                            </tr>
-                            <tr>
-                                <td>Clientes Externos (Precio Lista)</td>
-                                <td class="price">$6,000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+<div class="subsection">
+<h3 class="subsection-title">RESICO Sector Primario (Cobro Anual Único)</h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Tipo de Cliente</th>
+<th>Honorario Anual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clientes del Despacho (Costo Unitario)</td>
+<td class="price">$3,800</td>
+</tr>
+<tr>
+<td>Clientes Externos (Precio Lista)</td>
+<td class="price">$6,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 
-            <!-- SECCIÓN II -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">II</span>
-                    Servicios Fiscales: Sueldos y Salarios
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">II</span>
+Servicios Fiscales: Sueldos y Salarios
+</h2>
 
-                <table class="service-table">
-                    <thead>
-                        <tr>
-                            <th>Servicio</th>
-                            <th>Honorario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <strong>Declaración Anual (1 empleador)</strong>
-                                <ul class="scope-list">
-                                    <li class="included">Cálculo integral de obligaciones fiscales</li>
-                                    <li class="included">Presentación electrónica de declaración</li>
-                                    <li class="included">Análisis y optimización de deducciones personales</li>
-                                    <li class="excluded">NO incluye acudir físicamente ante autoridades</li>
-                                </ul>
-                            </td>
-                            <td class="price">$550</td>
-                        </tr>
-                        <tr>
-                            <td>Empleador adicional</td>
-                            <td class="price">$100 <small>(por cada uno)</small></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+<table class="service-table">
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Honorario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Declaración Anual (1 empleador)</strong>
+<ul class="scope-list">
+<li class="included">Cálculo integral de obligaciones fiscales</li>
+<li class="included">Presentación electrónica de declaración</li>
+<li class="included">Análisis y optimización de deducciones personales</li>
+<li class="excluded">NO incluye acudir físicamente ante autoridades</li>
+</ul>
+</td>
+<td class="price">$550</td>
+</tr>
+<tr>
+<td>Empleador adicional</td>
+<td class="price">$100 <small>(por cada uno)</small></td>
+</tr>
+</tbody>
+</table>
+</section>
 
-            <!-- SECCIÓN III -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">III</span>
-                    Servicios Fiscales: Actividad Empresarial y Minoristas
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">III</span>
+Servicios Fiscales: Actividad Empresarial y Minoristas
+</h2>
 
-                <div class="info-box warning">
-                    <p class="info-box-title">⚠️ Nota Importante</p>
-                    <p>El cliente emite sus propias facturas. El contador únicamente procesa archivos XML para cumplimiento fiscal mensual.</p>
-                </div>
+<div class="info-box warning">
+<p class="info-box-title">⚠️ Nota Importante</p>
+<p>El cliente emite sus propias facturas. El contador únicamente procesa archivos XML para cumplimiento fiscal mensual.</p>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Actividad Empresarial y Profesional</h3>
-                    <table class="service-table">
-                        <thead>
-                            <tr>
-                                <th>Paquete</th>
-                                <th>Honorario Mensual</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Esencial</strong></td>
-                                <td class="price">$800</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Profesional</strong></td>
-                                <td class="price">$1,300</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+<div class="subsection">
+<h3 class="subsection-title">Actividad Empresarial y Profesional</h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Honorario Mensual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Esencial</strong></td>
+<td class="price">$800</td>
+</tr>
+<tr>
+<td><strong>Profesional</strong></td>
+<td class="price">$1,300</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Minoristas (Abarrotes, Ropa, Panaderías)</h3>
-                    <table class="service-table">
-                        <thead>
-                            <tr>
-                                <th>Paquete</th>
-                                <th>Honorario Mensual</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Esencial</strong></td>
-                                <td class="price">$1,100</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Profesional</strong></td>
-                                <td class="price">$1,800</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+<div class="subsection">
+<h3 class="subsection-title">Minoristas (Abarrotes, Ropa, Panaderías)</h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Honorario Mensual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Esencial</strong></td>
+<td class="price">$1,100</td>
+</tr>
+<tr>
+<td><strong>Profesional</strong></td>
+<td class="price">$1,800</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Mueblerías</h3>
-                    <table class="service-table">
-                        <thead>
-                            <tr>
-                                <th>Paquete</th>
-                                <th>Honorario Mensual</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Esencial</strong></td>
-                                <td class="price">$1,300</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Profesional</strong></td>
-                                <td class="price">$2,200</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+<div class="subsection">
+<h3 class="subsection-title">Mueblerías</h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Honorario Mensual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Esencial</strong></td>
+<td class="price">$1,300</td>
+</tr>
+<tr>
+<td><strong>Profesional</strong></td>
+<td class="price">$2,200</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 
-            <!-- SECCIÓN IV -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">IV</span>
-                    Servicios Administrativos y Patrimoniales
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">IV</span>
+Servicios Administrativos y Patrimoniales
+</h2>
 
-                <table class="service-table">
-                    <thead>
-                        <tr>
-                            <th>Servicio</th>
-                            <th>Honorario</th>
-                            <th>Detalle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Redacción y Elaboración de CV</td>
-                            <td class="price">$100</td>
-                            <td>Costo mínimo</td>
-                        </tr>
-                        <tr>
-                            <td>Modificación Patrimonial</td>
-                            <td class="price">$450</td>
-                            <td>$250 descarga/cálculo + $200 presentación</td>
-                        </tr>
-                        <tr>
-                            <td>Declaración Inicial</td>
-                            <td class="price">$550</td>
-                            <td>$250 descarga/cálculo + $300 presentación</td>
-                        </tr>
-                        <tr>
-                            <td>Declaración Final (Baja)</td>
-                            <td class="price">$250</td>
-                            <td>Costo unitario</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+<table class="service-table">
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Honorario</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redacción y Elaboración de CV</td>
+<td class="price">$100</td>
+<td>Costo mínimo</td>
+</tr>
+<tr>
+<td>Modificación Patrimonial</td>
+<td class="price">$450</td>
+<td>$250 descarga/cálculo + $200 presentación</td>
+</tr>
+<tr>
+<td>Declaración Inicial</td>
+<td class="price">$550</td>
+<td>$250 descarga/cálculo + $300 presentación</td>
+</tr>
+<tr>
+<td>Declaración Final (Baja)</td>
+<td class="price">$250</td>
+<td>Costo unitario</td>
+</tr>
+</tbody>
+</table>
+</section>
 
-            <!-- SECCIÓN V -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">V</span>
-                    Políticas de Operación y Ética Profesional
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">V</span>
+Políticas de Operación y Ética Profesional
+</h2>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Exclusividad y Gestión de Citas</h3>
-                    <ul class="policy-list">
-                        <li><strong>Atención Exclusiva:</strong> Únicamente para clientes activos del despacho. No se brinda apoyo a externos ni a clientes de otros despachos.</li>
-                        <li><strong>Citas Obligatorias:</strong> Agendar vía WhatsApp al <strong>81 1063 2844</strong> para atenciones mayores a 30 minutos.</li>
-                    </ul>
-                </div>
+<div class="subsection">
+<h3 class="subsection-title">Exclusividad y Gestión de Citas</h3>
+<ul class="policy-list">
+<li><strong>Atención Exclusiva:</strong> Únicamente para clientes activos del despacho. No se brinda apoyo a externos ni a clientes de otros despachos.</li>
+<li><strong>Citas Obligatorias:</strong> Agendar vía WhatsApp al <strong>81 1063 2844</strong> para atenciones mayores a 30 minutos.</li>
+</ul>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Facturación y Gestión de CFDI</h3>
-                    <ul class="policy-list">
-                        <li><strong>Factura Adicional:</strong> $50 MXN a partir de la décima factura en adelante.</li>
-                        <li><strong>Re-emisión y Cancelación de CFDI:</strong> $80 MXN por evento. Proceso: re-emisión con relación UUID y posterior cancelación del CFDI original.</li>
-                    </ul>
-                </div>
+<div class="subsection">
+<h3 class="subsection-title">Facturación y Gestión de CFDI</h3>
+<ul class="policy-list">
+<li><strong>Factura Adicional:</strong> $50 MXN a partir de la décima factura en adelante.</li>
+<li><strong>Re-emisión y Cancelación de CFDI:</strong> $80 MXN por evento. Proceso: re-emisión con relación UUID y posterior cancelación del CFDI original.</li>
+</ul>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Transparencia y Ética</h3>
-                    <div class="info-box success">
-                        <p class="info-box-title">✅ Despacho Serio y Transparente</p>
-                        <p><strong>No hay regateos.</strong> Si el cliente busca omitir ingresos o realizar prácticas fiscales irregulares, deberá buscar servicios en otro lugar. <strong>Cero tolerancia a sobornos o corrupción.</strong></p>
-                    </div>
-                    <ul class="policy-list">
-                        <li><strong>Carga Administrativa Adicional:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
-                    </ul>
-                </div>
+<div class="subsection">
+<h3 class="subsection-title">Transparencia y Ética</h3>
+<div class="info-box success">
+<p class="info-box-title">✅ Despacho Serio y Transparente</p>
+<p><strong>No hay regateos.</strong> Si el cliente busca omitir ingresos o realizar prácticas fiscales irregulares, deberá buscar servicios en otro lugar. <strong>Cero tolerancia a sobornos o corrupción.</strong></p>
+</div>
+<ul class="policy-list">
+<li><strong>Carga Administrativa Adicional:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
+</ul>
+</div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Condiciones de Pago y Rescisión</h3>
-                    <ul class="policy-list">
-                        <li><strong>Anticipos:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong> para iniciar trabajos.</li>
-                        <li><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende la presentación de declaraciones sin responsabilidad legal o fiscal por parte del contador.</li>
-                    </ul>
-                </div>
-            </section>
+<div class="subsection">
+<h3 class="subsection-title">Condiciones de Pago y Rescisión</h3>
+<ul class="policy-list">
+<li><strong>Anticipos:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong> para iniciar trabajos.</li>
+<li><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende la presentación de declaraciones sin responsabilidad legal o fiscal por parte del contador.</li>
+</ul>
+</div>
+</section>
 
-            <!-- SECCIÓN EDUCATIVA -->
-            <section class="section">
-                <h2 class="section-title">
-                    <span class="section-number">📚</span>
-                    Información Legal para el Contribuyente
-                </h2>
+<section class="section">
+<h2 class="section-title">
+<span class="section-number">📚</span>
+Información Legal para el Contribuyente
+</h2>
 
-                <div class="hierarchy-box">
-                    <h3 class="hierarchy-title">⚖️ Jerarquía de las Leyes en México (Art. 133 Constitucional)</h3>
-                    <p style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.95rem;">
-                        Es fundamental que todo contribuyente conozca el <strong>orden jerárquico de las leyes</strong> para defenderse de exigencias indebidas de autoridades municipales que contradigan disposiciones federales.
-                    </p>
-                    <ol class="hierarchy-list">
-                        <li><strong>Constitución Política de los Estados Unidos Mexicanos</strong> - Ley Suprema del país.</li>
-                        <li><strong>Tratados Internacionales</strong> - Acuerdos ratificados por el Senado.</li>
-                        <li><strong>Leyes Federales</strong> - ISR, IVA, Código Fiscal de la Federación (aplicables en todo el territorio).</li>
-                        <li><strong>Leyes Estatales</strong> - Aplicables solo en la entidad correspondiente.</li>
-                        <li><strong>Reglamentos y Bandos Municipales</strong> - Normas administrativas locales que deben subordinarse a todas las anteriores.</li>
-                    </ol>
-                    <div class="hierarchy-note">
-                        <strong>Nota Importante:</strong> Ningún reglamento municipal puede contradecir o estar por encima de una ley federal o constitucional. Si un empleado municipal solicita actos contrarios a la legislación federal (ejemplo: invalidar un CFDI emitido conforme al SAT), está actuando en la <strong>ilegalidad</strong>. Todo acto de autoridad debe estar <strong>fundado y motivado</strong> (Art. 16 Constitucional).
-                    </div>
-                </div>
-            </section>
+<div class="hierarchy-box">
+<h3 class="hierarchy-title">⚖️ Jerarquía de las Leyes en México (Art. 133 Constitucional)</h3>
+<p style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.95rem;">
+Es fundamental que todo contribuyente conozca el <strong>orden jerárquico de las leyes</strong> para defenderse de exigencias indebidas de autoridades municipales que contradigan disposiciones federales.
+</p>
+<ol class="hierarchy-list">
+<li><strong>Constitución Política de los Estados Unidos Mexicanos</strong> - Ley Suprema del país.</li>
+<li><strong>Tratados Internacionales</strong> - Acuerdos ratificados por el Senado.</li>
+<li><strong>Leyes Federales</strong> - ISR, IVA, Código Fiscal de la Federación (aplicables en todo el territorio).</li>
+<li><strong>Leyes Estatales</strong> - Aplicables solo en la entidad correspondiente.</li>
+<li><strong>Reglamentos y Bandos Municipales</strong> - Normas administrativas locales que deben subordinarse a todas las anteriores.</li>
+</ol>
+<div class="hierarchy-note">
+<strong>Nota Importante:</strong> Ningún reglamento municipal puede contradecir o estar por encima de una ley federal o constitucional. Si un empleado municipal solicita actos contrarios a la legislación federal (ejemplo: invalidar un CFDI emitido conforme al SAT), está actuando en la <strong>ilegalidad</strong>. Todo acto de autoridad debe estar <strong>fundado y motivado</strong> (Art. 16 Constitucional).
+</div>
+</div>
+</section>
 
-            <!-- CTA SECTION -->
-            <div class="cta-section">
-                <h3>¿Listo para impulsar tu empresa con estrategia?</h3>
-                <p>Agenda una consulta estratégica y diseñemos juntos la solución que tu negocio necesita</p>
-                <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
-                    📱 Agendar Consulta por WhatsApp
-                </a>
-            </div>
+<div class="cta-section">
+<h3>¿Listo para impulsar tu empresa con estrategia?</h3>
+<p>Agenda una consulta estratégica y diseñemos juntos la solución que tu negocio necesita</p>
+<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
+<svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+</svg>
+Agendar Consulta por WhatsApp
+</a>
+</div>
+</div>
 
-        </div>
-
-        <!-- FOOTER -->
-        <div class="footer">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                    </svg>
-                    <strong>WhatsApp:</strong> +52 81 1063 2844
-                </div>
-                <div class="contact-item">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    <strong>Email:</strong> aidnserviciosdeadmon@gmail.com
-                </div>
-            </div>
-            <div class="footer-note">
-                AIDN Strategic Consulting | Catapultando empresas para liderar el cambio
-            </div>
-        </div>
-    </div>
+<div class="footer">
+<div class="contact-info">
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+</svg>
+<strong>WhatsApp:</strong> +52 81 1063 2844
+</div>
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+<polyline points="22,6 12,13 2,6"/>
+</svg>
+<strong>Email:</strong> aidnserviciosdeadmon@gmail.com
+</div>
+</div>
+<div class="footer-note">
+AIDN Strategic Consulting | Catapultando empresas para liderar el cambio
+</div>
+</div>
+</div>
 </body>
 </html>
-                        
