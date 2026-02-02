@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
 <!-- Charset & Viewport -->
 <meta charset="UTF-8">
@@ -69,6 +69,7 @@ box-sizing: border-box;
 --text-light: #6b7280;
 --bg-light: #f9fafb;
 --bg-white: #ffffff;
+--bg-main: #ffffff;
 --border: #e5e7eb;
 --accent: #10b981;
 --warning: #f59e0b;
@@ -84,14 +85,34 @@ box-sizing: border-box;
 --info-blue: #3b82f6;
 --success-green: #059669;
 --water-blue: #06b6d4;
+--tech-purple: #8b5cf6;
+--tech-cyan: #06b6d4;
+}
+
+[data-theme="dark"] {
+--primary: #03b4d6;
+--secondary: #0c2a85;
+--bg-main: #0a0e1a;
+--bg-white: #1a1f35;
+--bg-light: #2a3254;
+--text-dark: #e5e7eb;
+--text-light: #9ca3af;
+--border: #2d3748;
+--shadow: rgba(0,0,0,0.4);
+--hover-shadow: rgba(0,0,0,0.6);
+--premium-gradient-start: #1e3a5f;
+--premium-gradient-end: #2a4a6f;
+--premium-border: #0ea5e9;
 }
 
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 line-height: 1.6;
 color: var(--text-dark);
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+background: var(--bg-main);
+background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-light) 100%);
 padding: 2rem 1rem;
+transition: background var(--transition-base), color var(--transition-base);
 }
 
 .new-badge {
@@ -106,6 +127,7 @@ margin-left: 0.5rem;
 text-transform: uppercase;
 letter-spacing: 0.5px;
 vertical-align: middle;
+box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 }
 
 .container {
@@ -115,6 +137,7 @@ background: var(--bg-white);
 box-shadow: 0 20px 60px var(--shadow);
 border-radius: 16px;
 overflow: hidden;
+transition: all var(--transition-base);
 }
 
 .header {
@@ -147,6 +170,11 @@ width: 100px;
 height: 100px;
 margin: 0 auto;
 filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
+transition: transform var(--transition-slow);
+}
+
+.logo-aidn:hover {
+transform: scale(1.05) rotate(5deg);
 }
 
 .header h1 {
@@ -201,6 +229,11 @@ border-left: 5px solid var(--secondary);
 padding: 1.8rem;
 border-radius: 12px;
 margin-bottom: 3rem;
+transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .intro-section {
+background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 }
 
 .intro-section h2 {
@@ -208,6 +241,10 @@ font-size: 1.4rem;
 color: var(--primary);
 margin-bottom: 0.8rem;
 font-weight: 700;
+}
+
+[data-theme="dark"] .intro-section h2 {
+color: var(--secondary);
 }
 
 .intro-section p {
@@ -225,6 +262,87 @@ border-radius: 20px;
 font-size: 0.85rem;
 font-weight: 600;
 margin-top: 0.5rem;
+}
+
+.tech-highlight {
+background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+border: 2px solid var(--tech-cyan);
+border-radius: 16px;
+padding: 2rem;
+margin-bottom: 3rem;
+position: relative;
+overflow: hidden;
+box-shadow: 0 8px 24px rgba(6, 182, 212, 0.15);
+}
+
+[data-theme="dark"] .tech-highlight {
+background: linear-gradient(135deg, #1e293b, #1e3a5f);
+border-color: var(--tech-cyan);
+}
+
+.tech-highlight::before {
+content: '';
+position: absolute;
+top: -50%;
+right: -10%;
+width: 300px;
+height: 300px;
+background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.tech-highlight h3 {
+font-size: 1.3rem;
+color: var(--primary);
+margin-bottom: 1rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+[data-theme="dark"] .tech-highlight h3 {
+color: var(--tech-cyan);
+}
+
+.tech-highlight .tech-icon {
+width: 28px;
+height: 28px;
+}
+
+.tech-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5rem;
+margin-top: 1.5rem;
+}
+
+.tech-card {
+background: var(--bg-white);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 1.5rem;
+transition: all var(--transition-base);
+}
+
+.tech-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px var(--shadow);
+border-color: var(--tech-cyan);
+}
+
+.tech-card h4 {
+font-size: 1.1rem;
+color: var(--text-dark);
+margin-bottom: 0.8rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.tech-card p {
+color: var(--text-light);
+font-size: 0.95rem;
+line-height: 1.6;
 }
 
 .section {
@@ -245,6 +363,11 @@ border-bottom: 3px solid var(--secondary);
 display: flex;
 align-items: center;
 gap: 0.8rem;
+transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .section-title {
+color: var(--secondary);
 }
 
 .section-number {
@@ -314,6 +437,10 @@ color: var(--primary);
 font-size: 1.1rem;
 }
 
+[data-theme="dark"] .price {
+color: var(--secondary);
+}
+
 .scope-list {
 list-style: none;
 padding: 0;
@@ -350,6 +477,11 @@ border-left: 4px solid var(--secondary);
 padding: 1.2rem;
 border-radius: 8px;
 margin-bottom: 1.5rem;
+transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .info-box {
+background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 }
 
 .info-box.warning {
@@ -357,9 +489,26 @@ background: linear-gradient(135deg, #fef3c7, #fde68a);
 border-left-color: var(--warning);
 }
 
+[data-theme="dark"] .info-box.warning {
+background: linear-gradient(135deg, #422006, #78350f);
+}
+
 .info-box.success {
 background: linear-gradient(135deg, #d1fae5, #a7f3d0);
 border-left-color: var(--accent);
+}
+
+[data-theme="dark"] .info-box.success {
+background: linear-gradient(135deg, #064e3b, #065f46);
+}
+
+.info-box.info {
+background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+border-left-color: var(--info-blue);
+}
+
+[data-theme="dark"] .info-box.info {
+background: linear-gradient(135deg, #1e3a8a, #1e40af);
 }
 
 .info-box.premium {
@@ -386,6 +535,10 @@ color: #0369a1;
 font-weight: 700;
 }
 
+[data-theme="dark"] .info-box.premium .info-box-title {
+color: var(--tech-cyan);
+}
+
 .info-box-title {
 font-weight: 700;
 color: var(--text-dark);
@@ -407,6 +560,10 @@ padding: 1.8rem;
 margin-bottom: 1.5rem;
 box-shadow: 0 4px 15px rgba(3, 180, 214, 0.15);
 transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .consulting-card {
+background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 }
 
 .consulting-card:hover {
@@ -476,12 +633,20 @@ color: var(--primary);
 font-weight: 700;
 }
 
+[data-theme="dark"] .policy-list strong {
+color: var(--secondary);
+}
+
 .hierarchy-box {
 background: linear-gradient(135deg, #fef9c3, #fde68a);
 border: 2px solid var(--warning);
 border-radius: 12px;
 padding: 1.5rem;
 margin-top: 1.5rem;
+}
+
+[data-theme="dark"] .hierarchy-box {
+background: linear-gradient(135deg, #422006, #78350f);
 }
 
 .hierarchy-title {
@@ -518,53 +683,61 @@ font-size: 0.8rem;
 .hierarchy-note {
 margin-top: 1rem;
 padding: 1rem;
-background: rgba(255,255,255,0.7);
+background: rgba(251, 191, 36, 0.1);
 border-radius: 8px;
-font-size: 0.9rem;
-font-style: italic;
-color: var(--text-dark);
+border-left: 3px solid var(--warning);
+}
+
+[data-theme="dark"] .hierarchy-note {
+background: rgba(251, 191, 36, 0.05);
 }
 
 .cta-section {
-background: linear-gradient(135deg, var(--primary), var(--secondary));
-padding: 2.5rem;
-border-radius: 12px;
 text-align: center;
+padding: 3rem 2rem;
+background: linear-gradient(135deg, var(--bg-light), var(--premium-gradient-start));
+border-radius: 12px;
 margin-top: 3rem;
-color: white;
+}
+
+[data-theme="dark"] .cta-section {
+background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 }
 
 .cta-section h3 {
-font-size: 1.6rem;
+font-size: 1.8rem;
+color: var(--primary);
 margin-bottom: 1rem;
-font-weight: 700;
+}
+
+[data-theme="dark"] .cta-section h3 {
+color: var(--secondary);
 }
 
 .cta-section p {
-font-size: 1.05rem;
-margin-bottom: 1.5rem;
-opacity: 0.95;
+font-size: 1.1rem;
+color: var(--text-light);
+margin-bottom: 2rem;
 }
 
 .cta-button {
 display: inline-flex;
 align-items: center;
-gap: 0.5rem;
-background: white;
-color: var(--primary);
+gap: 0.8rem;
+background: linear-gradient(135deg, #25D366, #128C7E);
+color: white;
 padding: 1rem 2rem;
-border-radius: 30px;
+border-radius: 50px;
 text-decoration: none;
-font-weight: 700;
-font-size: 1.05rem;
+font-weight: 600;
+font-size: 1.1rem;
 transition: all var(--transition-base);
-box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
 .cta-button:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-background: #f0f9ff;
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
 .cta-icon {
@@ -573,103 +746,76 @@ height: 24px;
 }
 
 .footer {
-background: linear-gradient(135deg, var(--primary), var(--secondary));
+background: var(--bg-light);
 padding: 2rem;
 text-align: center;
-color: white;
+color: var(--text-light);
 }
 
 .contact-info {
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 gap: 2rem;
-flex-wrap: wrap;
-margin-bottom: 1rem;
+margin-bottom: 1.5rem;
 }
 
 .contact-item {
 display: flex;
 align-items: center;
 gap: 0.5rem;
-font-size: 0.95rem;
 }
 
 .contact-item svg {
-stroke: white;
-flex-shrink: 0;
+color: var(--secondary);
 }
 
-.contact-item strong {
-font-weight: 600;
+.contact-item a {
+color: var(--text-dark);
+text-decoration: none;
+transition: color var(--transition-fast);
 }
 
-.footer-note {
-font-size: 0.9rem;
-opacity: 0.9;
-margin-top: 1rem;
-font-style: italic;
+.contact-item a:hover {
+color: var(--secondary);
 }
 
 @media (max-width: 768px) {
-body {
-padding: 1rem 0.5rem;
+.header h1 {
+font-size: 2rem;
 }
 
 .content {
 padding: 1.5rem;
 }
 
-.header h1 {
-font-size: 2rem;
-}
-
 .section-title {
 font-size: 1.3rem;
 }
 
-.service-table {
-font-size: 0.9rem;
-}
-
-.service-table th,
-.service-table td {
-padding: 0.7rem;
+.tech-grid {
+grid-template-columns: 1fr;
 }
 
 .contact-info {
 flex-direction: column;
-gap: 0.8rem;
-}
-
-.cta-section {
-padding: 2rem 1.5rem;
-}
-
-.cta-section h3 {
-font-size: 1.3rem;
+gap: 1rem;
 }
 }
 
-@media print {
-body {
-background: white;
-padding: 0;
-}
-
-.container {
-box-shadow: none;
-border-radius: 0;
-}
-
-.cta-section {
-display: none;
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+animation-duration: 0.01ms !important;
+transition-duration: 0.01ms !important;
 }
 }
 </style>
 </head>
 <body>
 <div class="container">
-<div class="header">
+<header class="header">
 <div class="logo-container">
 <svg class="logo-aidn" viewBox="0 0 100 100" aria-label="Logo AIDN">
 <defs>
@@ -677,37 +823,79 @@ display: none;
 <stop offset="0%" style="stop-color:#0c2a85;stop-opacity:1"/>
 <stop offset="100%" style="stop-color:#03b4d6;stop-opacity:1"/>
 </linearGradient>
+<filter id="logoGlow">
+<feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+<feMerge>
+<feMergeNode in="coloredBlur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
 </defs>
-<path d="M50 5L85 25V75L50 95L15 75V25L50 5Z" fill="url(#logoGradient)"/>
+<path d="M50 5L85 25V75L50 95L15 75V25L50 5Z" fill="url(#logoGradient)" filter="url(#logoGlow)"/>
 <path d="M50 15L75 30V70L50 85L25 70V30L50 15Z" fill="#fff"/>
 <path d="M35 65C38 53.75 42 37.75 50 33.25C58 37.75 62 53.75 65 65M42 58Q50 56.5 58 58" fill="none" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="68" cy="42" fill="url(#logoGradient)" r="3"/>
 </svg>
 </div>
-<h1>A I D N</h1>
+<h1>AIDN</h1>
 <p class="subtitle">Strategic Consulting</p>
 <p class="tagline">Catapultando empresas para liderar el cambio</p>
 <div class="year">CATÁLOGO DE SERVICIOS Y HONORARIOS 2026</div>
-</div>
+</header>
 
 <div class="content">
-<div class="intro-section">
+<section class="intro-section">
 <h2>Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad</h2>
 <p>AIDN Strategic Consulting va más allá de "presentar declaraciones". Mientras muchos clientes buscan disminuir su carga fiscal con mañas y omisiones, nosotros te mostramos el verdadero camino: <strong>crecer de manera sostenible y rentable</strong> con estrategias legales que maximizan tu potencial empresarial.</p>
 <p>Combinamos precisión fiscal con visión estratégica empresarial. No evadimos impuestos, <strong>diseñamos modelos de negocio más eficientes</strong>. No ocultamos ingresos, <strong>creamos estrategias para incrementarlos</strong>. El ahorro fiscal real viene del crecimiento inteligente, no de la improvisación.</p>
 <p><strong>MAE Saúl Dávila Pantoja</strong> — Maestro en Administración Empresarial con especialidad en Planeación Estratégica | Consultor Estratégico Certificado por OLA/CICA en Administración Estratégica | Licenciado en Contaduría Pública.</p>
 <span class="badge">🏆 Certificación Internacional OLA/CICA 2025-2031</span>
+</section>
+
+<div class="tech-highlight">
+<h3>
+<svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+<line x1="12" y1="22.08" x2="12" y2="12"/>
+</svg>
+Modelo de Trabajo Digital y Remoto
+</h3>
+<p style="margin-bottom: 1.5rem; line-height: 1.7;">Operamos con un modelo de trabajo predominantemente remoto, aprovechando tecnología de vanguardia para brindar servicios de clase mundial sin las limitaciones geográficas tradicionales.</p>
+
+<div style="background: var(--bg-white); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Atención primaria vía videollamada o videoconferencia</strong><br>Reuniones efectivas desde cualquier ubicación</p>
+<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Despacho físico disponible bajo cita previa</strong><br>Atención presencial cuando sea necesario</p>
+<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Plataformas digitales gubernamentales</strong><br>Gestiones directas en portales del SAT, IMSS y otros sistemas oficiales</p>
+<p style="margin-bottom: 0; line-height: 1.6;"><strong>✓ Respuesta ágil sin necesidad de desplazamientos</strong><br>Ahorra tiempo y reduce costos operativos</p>
+</div>
+
+<div class="tech-grid">
+<div class="tech-card">
+<h4>🤖 Inteligencia Artificial</h4>
+<p>Implementación de IA para análisis del contexto empresarial, optimización de procesos estratégicos y apoyo a herramientas de planeación y toma de decisiones.</p>
+</div>
+<div class="tech-card">
+<h4>📱 Apps de Automatización</h4>
+<p>Utilización de aplicaciones especializadas para automatización de cálculos, gestiones y seguimiento estratégico de indicadores clave de negocio.</p>
+</div>
+<div class="tech-card">
+<h4>🐧 Software Libre & Linux</h4>
+<p>Infraestructura basada en software libre, garantizando seguridad, estabilidad y cero dependencia de licencias restrictivas. Mayor control sobre tus datos sensibles.</p>
+</div>
+</div>
 </div>
 
 <section class="section">
 <h2 class="section-title">
-<span class="section-number">🎯</span>
+<span class="section-number">I</span>
 Consultoría Estratégica y Administración Empresarial
 </h2>
 
 <div class="info-box premium">
 <p class="info-box-title">💼 Servicios Premium Personalizados</p>
 <p>Cada empresa tiene su propia realidad, desafíos y oportunidades. Por ello, nuestros servicios de consultoría estratégica se diseñan <strong>a la medida</strong> de cada organización, sin tarifas estándar. Agendamos una sesión diagnóstica y construimos una propuesta de valor específica para tu empresa.</p>
+<p style="margin-top: 1rem;"><strong>Nota importante:</strong> Para los servicios de consultoría es necesario acudir a las instalaciones del cliente para conocer su contexto, realizar análisis, entrevistas, aplicar test y estudios de campo que permitan un diagnóstico preciso.</p>
 </div>
 
 <div class="consulting-card">
@@ -765,9 +953,14 @@ Consultoría Estratégica y Administración Empresarial
 
 <section class="section">
 <h2 class="section-title">
-<span class="section-number">I</span>
+<span class="section-number">II</span>
 Servicios Fiscales: Personas Físicas RESICO
 </h2>
+
+<div class="info-box info">
+<p class="info-box-title">🌐 Modelo de Trabajo Remoto</p>
+<p>Los servicios fiscales se brindan de manera <strong>100% remota</strong> mediante videollamadas o videoconferencias por Zoom y utilizando plataformas digitales gubernamentales (portales del SAT, IMSS y otros sistemas oficiales). No es necesario acudir físicamente al despacho para el cumplimiento fiscal mensual.</p>
+</div>
 
 <div class="info-box success">
 <p class="info-box-title">💎 Permanencia Premium en Padrón Activo</p>
@@ -775,7 +968,7 @@ Servicios Fiscales: Personas Físicas RESICO
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">RESICO Servicios Profesionales</h3>
+<h3 class="subsection-title">RESICO Servicios Profesionales y Emprendedores</h3>
 <table class="service-table">
 <thead>
 <tr>
@@ -817,6 +1010,46 @@ Servicios Fiscales: Personas Físicas RESICO
 </div>
 
 <div class="subsection">
+<h3 class="subsection-title">RESICO Médicos y Dentistas <span class="new-badge">Actualizado 2026</span></h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Honorario Mensual</th>
+<th>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Esencial</strong></td>
+<td class="price">$1,250</td>
+<td>Cumplimiento fiscal mensual bajo régimen RESICO</td>
+</tr>
+<tr>
+<td><strong>Profesional</strong></td>
+<td class="price">$1,900</td>
+<td>Incluye análisis de acreditamientos y optimización fiscal</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box info">
+<p class="info-box-title">ℹ️ Nota Tributaria</p>
+<p>Los médicos y dentistas pueden tributar tanto en RESICO como en Actividades Empresariales y Profesionales. Consulta con el despacho para determinar el régimen más conveniente según tu situación particular.</p>
+</div>
+
+<div class="info-box warning">
+<p class="info-box-title">⚠️ Requisito Obligatorio: Médicos y Dentistas</p>
+<p>Para brindar servicios fiscales a profesionales de la salud, es <strong>OBLIGATORIO</strong> presentar:</p>
+<ul style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.8;">
+<li><strong>Título Profesional</strong> registrado ante la Dirección General de Profesiones (SEP)</li>
+<li><strong>Cédula Profesional</strong> vigente y verificable</li>
+</ul>
+<p style="margin-top: 0.75rem; font-weight: 600;"><strong>AIDN NO acepta trabajos de profesionales de la salud sin estos documentos acreditados.</strong> Esta política protege la legalidad del ejercicio profesional.</p>
+<p style="margin-top: 0.75rem;"><strong>Elaboración de Facturas:</strong> Médicos y Dentistas reciben servicio de elaboración de CFDI por parte del despacho (1 a 9 facturas mensuales sin costo adicional, a partir de la décima factura $50 MXN c/u).</p>
+</div>
+</div>
+
+<div class="subsection">
 <h3 class="subsection-title">RESICO Sector Primario (Cobro Anual Único)</h3>
 <table class="service-table">
 <thead>
@@ -841,7 +1074,7 @@ Servicios Fiscales: Personas Físicas RESICO
 
 <section class="section">
 <h2 class="section-title">
-<span class="section-number">II</span>
+<span class="section-number">III</span>
 Servicios Fiscales: Sueldos y Salarios
 </h2>
 
@@ -875,7 +1108,7 @@ Servicios Fiscales: Sueldos y Salarios
 
 <section class="section">
 <h2 class="section-title">
-<span class="section-number">III</span>
+<span class="section-number">IV</span>
 Servicios Fiscales: Actividad Empresarial y Minoristas
 </h2>
 
@@ -901,6 +1134,28 @@ Servicios Fiscales: Actividad Empresarial y Minoristas
 <tr>
 <td><strong>Profesional</strong></td>
 <td class="price">$1,300</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">Médicos y Dentistas (Actividad Empresarial y Profesional) <span class="new-badge">Actualizado 2026</span></h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Honorario Mensual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Esencial</strong></td>
+<td class="price">$1,650</td>
+</tr>
+<tr>
+<td><strong>Profesional</strong></td>
+<td class="price">$2,300</td>
 </tr>
 </tbody>
 </table>
@@ -953,13 +1208,13 @@ Servicios Fiscales: Actividad Empresarial y Minoristas
 
 <section class="section">
 <h2 class="section-title">
-<span class="section-number">IV</span>
+<span class="section-number">V</span>
 Servicios Administrativos, Legales y Patrimoniales
 <span class="new-badge">Actualizado 2026</span>
 </h2>
 
 <div class="subsection">
-<h3 class="subsection-title">📄 Servicios Legales y Corporativos <span class="new-badge">Nuevo</span></h3>
+<h3 class="subsection-title">📄 Servicios Legales y Corporativos</h3>
 <table class="service-table">
 <thead>
 <tr>
@@ -984,7 +1239,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">💧 DECLAR@GUA - Asesoría Profesional <span class="new-badge">Nuevo</span></h3>
+<h3 class="subsection-title">💧 DECLAR@GUA - Asesoría Profesional</h3>
 <div class="info-box info">
 <p class="info-box-title">🔹 Servicio Especializado en Derechos de Agua</p>
 <p>Asesoría integral para el cumplimiento de obligaciones ante CONAGUA. Incluye cálculos técnicos, presentación electrónica y descarga de CFDI oficiales.</p>
@@ -1031,7 +1286,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">🏥 IMSS - Seguridad Social y Retiro <span class="new-badge">Nuevo</span></h3>
+<h3 class="subsection-title">🏥 IMSS - Seguridad Social y Retiro <span class="new-badge">Actualizado 2026</span></h3>
 <table class="service-table">
 <thead>
 <tr>
@@ -1042,36 +1297,97 @@ Servicios Administrativos, Legales y Patrimoniales
 </thead>
 <tbody>
 <tr>
-<td><strong>Descarga de Semanas Cotizadas + Propuesta Plan de Retiro</strong></td>
+<td><strong>Paquete Integral: Análisis de Retiro + Alta en Modalidad 40</strong></td>
 <td>
 <ul class="scope-list">
 <li class="included">Descarga oficial de historial de semanas IMSS</li>
 <li class="included">Análisis detallado de cotizaciones</li>
 <li class="included">Proyección de pensión bajo Ley 73</li>
-<li class="included">Propuesta personalizada Modalidad 10 y/o 40</li>
+<li class="included">Propuesta personalizada Modalidad 40</li>
 <li class="included">Estudio de viabilidad económica</li>
 <li class="included">Recomendaciones estratégicas de retiro</li>
+<li class="included">Gestión de alta en Modalidad 40 ante el IMSS</li>
+<li class="included">Asesoría en selección de base de cotización</li>
+<li class="included">Validación de vigencia de derechos</li>
 </ul>
 </td>
 <td class="price">$750</td>
 </tr>
 <tr>
-<td><strong>Generación de Líneas de Captura Mensuales IMSS</strong></td>
+<td><strong>Inscripción en Modalidad 10 (Seguro de Salud Familiar)</strong></td>
+<td>
+<ul class="scope-list">
+<li class="included">Trámite de alta ante IMSS</li>
+<li class="included">Asesoría en documentación requerida</li>
+<li class="included">Seguimiento de gestión</li>
+</ul>
+</td>
+<td class="price">$400</td>
+</tr>
+<tr>
+<td><strong>Generación de Hojas de Pago Mensuales (Líneas de Captura)</strong></td>
 <td>
 <ul class="scope-list">
 <li class="included">Emisión mensual de líneas de pago IMSS</li>
 <li class="included">Seguimiento de cumplimiento de pagos</li>
 <li class="included">Alertas de vencimiento</li>
+<li class="included">Modalidad 10 o Modalidad 40</li>
 </ul>
 </td>
-<td class="price">$150 <small>mensual</small></td>
+<td class="price">$150 <small>mensual</small><br><span style="color: var(--success-green); font-weight: 600; font-size: 0.9rem;">$75 clientes con servicios fiscales</span></td>
 </tr>
 </tbody>
 </table>
 <div class="info-box premium">
 <p class="info-box-title">💎 Ventaja Competitiva</p>
-<p>El servicio de <strong>Plan de Retiro IMSS</strong> es uno de los más competitivos del mercado. Análisis profesional que puede significar la diferencia entre una pensión digna y prestaciones mínimas.</p>
+<p>El servicio de <strong>Paquete Integral de Retiro IMSS</strong> es uno de los más competitivos del mercado. Análisis profesional que puede significar la diferencia entre una pensión digna y prestaciones mínimas. Incluye desde el estudio hasta la inscripción oficial en Modalidad 40.</p>
 </div>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">🏛️ Trámites y Actualizaciones SAT <span class="new-badge">Actualizado 2026</span></h3>
+<table class="service-table">
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Honorario</th>
+<th>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Constancia de Situación Fiscal</strong></td>
+<td class="price">
+Clientes: Sin costo<br>
+Público: $50
+</td>
+<td>
+Solo para quienes cuenten con firma o contraseña SAT vigente.
+<br><br>
+<strong>⚠️ Nota:</strong> No tramitamos constancias para público en general mediante la app del SAT debido a demoras e inconvenientes técnicos del sistema.
+</td>
+</tr>
+<tr>
+<td><strong>Gestión de Citas en Módulos del SAT</strong></td>
+<td class="price">Incluido</td>
+<td>
+Servicio exclusivo para clientes activos del despacho.
+<br>
+No se tramitan citas para público en general.
+</td>
+</tr>
+<tr>
+<td><strong>Actualización de Actividades Económicas</strong></td>
+<td class="price">$250</td>
+<td>Modificación de actividades económicas o cambio de régimen fiscal ante el SAT.</td>
+</tr>
+<tr>
+<td><strong>Actualización de Domicilio Fiscal</strong></td>
+<td class="price">$250</td>
+<td>Cambio de domicilio fiscal en el RFC.</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <div class="subsection">
@@ -1088,7 +1404,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <tr>
 <td>Redacción y Elaboración de CV</td>
 <td class="price">$100</td>
-<td>Costo mínimo</td>
+<td>Por cuartilla</td>
 </tr>
 <tr>
 <td>Modificación Patrimonial</td>
@@ -1112,95 +1428,160 @@ Servicios Administrativos, Legales y Patrimoniales
 
 <section class="section">
 <h2 class="section-title">
-<span class="section-number">V</span>
+<span class="section-number">VI</span>
 Políticas de Operación y Ética Profesional
 <span class="new-badge">Actualizado 2026</span>
 </h2>
 
 <div class="subsection">
-<h3 class="subsection-title">1. Exclusividad y Gestión de Citas</h3>
-<ul class="policy-list">
-<li><strong>Atención Exclusiva:</strong> Únicamente para clientes activos del despacho. No se brinda apoyo a externos ni a clientes de otros despachos.</li>
-<li><strong>Citas Obligatorias:</strong> Agendar vía WhatsApp al <strong>81 1063 2844</strong> para atenciones mayores a 30 minutos.</li>
-</ul>
+<h3 class="subsection-title">1. Modelo de Atención y Disponibilidad</h3>
+<div class="info-box premium">
+<p class="info-box-title">📅 Horarios y Modalidades de Servicio</p>
+<p style="margin: 0 0 10px 0; line-height: 1.4;">Para garantizar un servicio de alta calidad y enfoque total en cada cuenta, operamos bajo el siguiente modelo:</p>
+<div style="margin-top: 10px;">
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Atención Operativa:</strong> Lunes a Viernes de 11:00 am a 7:00 pm (Despacho y WhatsApp de soporte).</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Gestión de Citas:</strong> Recepción de solicitudes vía WhatsApp de Lunes a Sábado de 8:00 am a 8:00 pm.</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Atención en Sábado:</strong> De 11:00 am a 6:00 pm, únicamente bajo acuerdo individual previo (no generalizado).</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Modalidad de Trabajo:</strong> Predominantemente remoto (videollamada/videoconferencia). Atención presencial en despacho físico disponible bajo cita previa.</p>
+<p style="margin: 0; line-height: 1.4;">✓ <strong>Exclusividad:</strong> Servicio limitado a clientes activos; no se brinda soporte a externos.</p>
+</div>
+</div>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">2. Condiciones de Pago y Facturación <span class="new-badge">Actualizado</span></h3>
-
+<h3 class="subsection-title">2. Condiciones de Pago y Facturación</h3>
 <div class="info-box premium">
 <p class="info-box-title">💼 Métodos de Pago Aceptados</p>
-<p>El despacho acepta los siguientes métodos de pago:</p>
-<ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-<li><strong>Transferencia electrónica</strong> (método preferente - más rápido y seguro)</li>
-<li><strong>Depósito en sucursal bancaria</strong> (alternativa para clientes sin banca en línea)</li>
-<li><strong>Pago en cadena Oxxo</strong> (máxima accesibilidad)</li>
-</ul>
-<p style="margin-top: 0.8rem;">Se proporcionarán los datos bancarios o referencias de pago correspondientes al confirmar el servicio.</p>
+<p style="margin: 0 0 10px 0; line-height: 1.4;">El despacho acepta los siguientes métodos para su comodidad y seguridad en cada transacción:</p>
+<div style="margin-top: 10px;">
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Transferencia electrónica:</strong> Método preferente para un registro contable inmediato y seguro.</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Depósito en sucursal:</strong> Alternativa disponible para depósitos directos en ventanilla bancaria.</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Pago en cadena Oxxo:</strong> Máxima accesibilidad para depósitos en efectivo.</p>
+<p style="margin: 0; line-height: 1.4;"><span style="color: #ef4444;">⚠</span> <strong style="color: #ef4444;">Efectivo (Presencial):</strong> Solo de manera <strong style="color: #ef4444;">extraordinaria</strong>. Es el método menos eficiente para la trazabilidad fiscal.</p>
+</div>
+<p style="margin: 15px 0 0 0; font-style: italic; font-size: 0.9em; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; line-height: 1.4;">Se proporcionarán los datos bancarios al confirmar el servicio.</p>
 </div>
 
 <ul class="policy-list">
-<li><strong>Momento de Pago:</strong> Los honorarios se liquidan <strong>al momento de la entrega final</strong> de los documentos oficiales solicitados (declaraciones, acuses, constancias, contratos, actas). El pago se realiza contra entrega de documentos generados por el despacho, <strong>independientemente</strong> de los tiempos de actualización en sistemas de SAT, IMSS u otras dependencias gubernamentales, ya que estos procesos están fuera del control del despacho.</li>
-<li><strong>Facturación Obligatoria:</strong> <strong>Todos los servicios son facturados sin excepción.</strong> El CFDI correspondiente se emite al momento del pago. Esta política garantiza transparencia fiscal para ambas partes y cumplimiento con la normatividad del SAT.</li>
-<li><strong>Anticipos y Garantías:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong> antes de iniciar trabajos. Clientes activos pueden pagar contra entrega según su historial crediticio.</li>
+<li><strong>Momento de Pago:</strong> Los honorarios se liquidan <strong>al momento de la entrega final</strong> de los documentos oficiales solicitados.</li>
+<li><strong>Facturación Obligatoria:</strong> Todos los servicios son facturados sin excepción. El CFDI se emite al momento del pago.</li>
+<li><strong>Anticipos:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong>.</li>
 </ul>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">3. Proceso de Cotización Personas Morales <span class="new-badge">Nuevo</span></h3>
+<h3 class="subsection-title">2.1 Política de Asesoría Fiscal y Honorarios por Sesión</h3>
+<div class="info-box info">
+<p class="info-box-title">💼 Servicios de Asesoría Fiscal</p>
+<p>Para clientes de servicios fiscales que requieren sesiones de consulta adicionales fuera del paquete contratado:</p>
+</div>
+<ul class="policy-list">
+<li><strong>Personas Físicas:</strong> Primera sesión sin costo. Sesiones adicionales o posteriores sobre la misma temática: <strong>$750 MXN</strong> por sesión.</li>
+<li><strong>Personas Morales:</strong> La tarifa de $750 MXN <strong>NO aplica</strong>. Requieren cotización específica según necesidades (propuesta entregada en 72 horas).</li>
+<li><strong>Alcance del Servicio Contable:</strong> El contador procesa únicamente archivos XML proporcionados por el cliente para cumplimiento fiscal mensual. La elaboración de facturas depende del régimen fiscal del contribuyente (ver nota específica en cada sección).</li>
+</ul>
+</div>
 
+<div class="subsection">
+<h3 class="subsection-title">3. Alcance del Servicio Profesional</h3>
+<div class="info-box info">
+<p class="info-box-title">📊 Definición de Servicios Fiscales</p>
+<p>El servicio de consultoría fiscal incluye análisis técnico, planeación estratégica fiscal y cumplimiento normativo tributario.</p>
+</div>
+<ul class="policy-list">
+<li><strong>Servicios Fiscales NO Incluyen:</strong> Planeación estratégica empresarial, administración de empresas, ni aspectos legales de derecho mercantil o corporativo. Estos servicios <strong>SÍ se realizan en AIDN</strong>, pero su honorario es independiente al servicio fiscal y se cotiza por separado.</li>
+<li><strong>Funciones Administrativas:</strong> Las tareas secretariales o de carácter administrativo no están contempladas en el alcance de nuestros servicios profesionales.</li>
+</ul>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">4. Ética y Transparencia Profesional</h3>
+<div class="info-box success">
+<p class="info-box-title">✅ Despacho Serio y Transparente</p>
+<p>Nuestros servicios se brindan exclusivamente dentro del marco legal vigente y las mejores prácticas profesionales. Los honorarios están establecidos conforme al valor técnico de cada servicio. <strong>Cero tolerancia a prácticas irregulares o corrupción.</strong></p>
+</div>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">5. Gestión de Líneas de Captura y Reemisiones</h3>
+<ul class="policy-list">
+<li><strong>Vigencia de Líneas de Captura:</strong> Las líneas de captura tienen vigencia limitada establecida por las autoridades. Solicitudes recurrentes de la misma línea de captura previamente entregada generarán un cargo administrativo.</li>
+<li><strong>Reemisión de Documentos:</strong> Cualquier reemisión de documentos, líneas de captura o trámites extraordinarios fuera de lo programado tendrá un cargo administrativo de <strong>$200 MXN</strong>, liquidable al momento de la solicitud.</li>
+</ul>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">6. Control de Gestiones y Eficiencia Operativa</h3>
+<ul class="policy-list">
+<li><strong>Horario Operativo:</strong> Por respeto a la agenda colectiva y la seriedad del despacho, toda solicitud de servicio o consulta debe realizarse estrictamente dentro de los horarios de atención operativa y contar con un justificante o motivo claro de negocio.</li>
+<li><strong>Gestiones Extraordinarias:</strong> Para mantener la excelencia en el servicio a todos nuestros clientes, las gestiones fuera de lo programado tienen un cargo de <strong>$200 MXN</strong>. Esta política garantiza que podamos cumplir con los compromisos adquiridos con cada cliente de manera oportuna y profesional.</li>
+<li><strong>Carga Administrativa Excesiva:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
+</ul>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">7. Políticas de Continuidad y Gestión de Clientes</h3>
+<div class="info-box warning">
+<p class="info-box-title">⚖️ Exclusividad de Servicio</p>
+<p>Para garantizar la calidad y continuidad en la gestión fiscal, operamos bajo las siguientes condiciones:</p>
+</div>
+<ul class="policy-list">
+<li><strong>Clientes que Contratan Otro Despacho:</strong> Clientes que establezcan relación profesional con otro despacho durante la vigencia de nuestros servicios no podrán continuar siendo atendidos en AIDN. Esta política permite mantener el enfoque total y la responsabilidad integral sobre cada cuenta.</li>
+<li><strong>Clientes Provenientes de Otros Despachos:</strong> Clientes que provienen de otros asesores fiscales deberán firmar contrato de servicios con cláusula de deslinde de responsabilidades por actos, omisiones o asesorías de profesionales anteriores. AIDN no asume responsabilidad por situaciones fiscales preexistentes derivadas de gestiones anteriores.</li>
+</ul>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">8. Cláusulas de Rescisión y Suspensión de Servicio</h3>
+<ul class="policy-list">
+<li><strong>Derecho de Retención y Propiedad de Gestiones:</strong> El despacho se reserva el derecho de no entregar papeles de trabajo, cálculos internos o archivos procesados de periodos que presenten adeudos. La continuidad del servicio y el acceso a la información administrativa actualizada dependen estrictamente del cumplimiento de los honorarios pactados.</li>
+<li><strong>Rescisión por Falta de Ética o Imposición:</strong> AIDN podrá dar por terminada la relación profesional de forma inmediata si el cliente intenta imponer prácticas fuera de la ley, busca omitir ingresos, no acepta sus responsabilidades personales o muestra una actitud que comprometa la integridad del despacho. En estos casos, se cortará todo soporte técnico sin responsabilidad para el consultor.</li>
+<li><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende definitivamente la presentación de declaraciones y cualquier gestión activa, deslindando al despacho de cualquier multa o requerimiento derivado del abandono de obligaciones por parte del cliente.</li>
+<li><strong>Política de No Reembolso:</strong> Los honorarios pagados por servicios ya prestados <strong>no serán retornados</strong> bajo ninguna circunstancia, independientemente del motivo de terminación de la relación contractual.</li>
+<li><strong>Terminación por Decisión del Cliente:</strong> Cuando un cliente decide dar por terminada la relación contractual para acudir a otro despacho, <strong>no se entregarán firmas electrónicas</strong>. Los clientes deben contar con un respaldo de sus propias firmas. AIDN eliminará del sistema todas las firmas electrónicas del cliente para evitar controversias futuras y delimitar responsabilidades de manera clara.</li>
+</ul>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">9. Proceso de Cotización Personas Morales</h3>
 <div class="info-box info">
 <p class="info-box-title">📊 Servicios de Consultoría y Asesoría a Empresas</p>
 <p>Para servicios de consultoría, asesoría fiscal o contable a <strong>personas morales</strong>, el proceso es el siguiente:</p>
 </div>
-
 <ul class="policy-list">
 <li><strong>Sesión de Información Inicial:</strong> Se requiere una sesión previa donde se analizan las necesidades específicas de la empresa, alcance del servicio, complejidad operativa y periodicidad requerida.</li>
 <li><strong>Entrega de Cotización:</strong> La cotización formal se entrega en un plazo <strong>máximo de 72 horas</strong> posteriores a la sesión informativa, e incluye desglose detallado de servicios, honorarios específicos, cronograma de trabajo y condiciones de pago.</li>
 <li><strong>Confirmación Explícita Requerida:</strong> <strong>No se inician trabajos sin confirmación explícita</strong> del cliente (vía correo electrónico o WhatsApp oficial del despacho). Esta política protege tanto al cliente como al despacho, asegurando claridad en expectativas y compromisos mutuos.</li>
 <li><strong>Diferenciación de Tarifas PF vs PM:</strong> Las tarifas para personas morales son diferentes a las de personas físicas debido a: (a) mayor complejidad en procesos contables y fiscales, (b) mayor responsabilidad legal y exposición al riesgo, (c) volumen de operaciones y documentación, y (d) capacidad adquisitiva diferenciada. Esta diferenciación permite ofrecer precios accesibles a personas físicas manteniendo la calidad profesional en servicios corporativos.</li>
+<li><strong>No Aplica Política de Sesiones:</strong> La tarifa de $750 MXN por sesión <strong>NO aplica para Personas Morales</strong>. Cada servicio corporativo se cotiza de manera integral según necesidades específicas de la empresa.</li>
 </ul>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">4. Gestión de CFDI</h3>
+<h3 class="subsection-title">10. Gestión de CFDI</h3>
 <ul class="policy-list">
-<li><strong>Factura Adicional:</strong> $50 MXN a partir de la décima factura en adelante.</li>
-<li><strong>Re-emisión y Cancelación de CFDI:</strong> $80 MXN por evento. Proceso: re-emisión con relación UUID y posterior cancelación del CFDI original.</li>
+<li><strong>Factura Adicional (RESICO):</strong> $50 MXN a partir de la décima factura en adelante para contribuyentes en RESICO.</li>
+<li><strong>Reemisión y Cancelación de CFDI:</strong> $80 MXN por evento. Proceso: reemisión con relación UUID y posterior cancelación del CFDI original.</li>
 </ul>
+<div class="info-box info" style="margin-top: 1rem;">
+<p class="info-box-title">💡 Nota sobre Elaboración de Facturas</p>
+<p>La política de elaboración de facturas varía según el régimen fiscal. Consulte las notas específicas en cada sección de servicios (RESICO, Actividades Empresariales, Médicos y Dentistas).</p>
+</div>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">5. Transparencia y Ética Profesional</h3>
-<div class="info-box success">
-<p class="info-box-title">✅ Despacho Serio y Transparente</p>
-<p><strong>No hay regateos.</strong> Si el cliente busca omitir ingresos o realizar prácticas fiscales irregulares, deberá buscar servicios en otro lugar. <strong>Cero tolerancia a sobornos o corrupción.</strong></p>
-</div>
-<ul class="policy-list">
-<li><strong>Carga Administrativa Adicional:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
-</ul>
-</div>
-
-<div class="subsection">
-<h3 class="subsection-title">6. Cláusulas de Rescisión y Suspensión</h3>
-<ul class="policy-list">
-<li><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende la presentación de declaraciones sin responsabilidad legal o fiscal por parte del contador.</li>
-</ul>
-</div>
-
-<div class="subsection">
-<h3 class="subsection-title">7. Cláusula Anti-Ambigüedad <span class="new-badge">Nuevo</span></h3>
+<h3 class="subsection-title">11. Cláusula Anti-Ambigüedad</h3>
 <div class="info-box warning">
 <p class="info-box-title">⚖️ Interpretación de Políticas</p>
-<p>Ante cualquier duda o discrepancia en la interpretación de estas políticas, prevalecerá siempre el criterio que favorezca la <strong>transparencia fiscal</strong>, el <strong>cumplimiento normativo</strong> y la <strong>protección legal</strong> de ambas partes.</p>
+<p>Ante cualquier duda en la interpretación de estas políticas, prevalecerá el criterio que favorezca la <strong>transparencia fiscal</strong> y la <strong>protección legal</strong> de AIDN. El desconocimiento de estas cláusulas, una vez entregado el catálogo, no exime al cliente de su cumplimiento.</p>
 </div>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">8. Protección de Datos <span class="new-badge">Nuevo</span></h3>
+<h3 class="subsection-title">12. Protección de Datos</h3>
 <div class="info-box info">
 <p class="info-box-title">🔒 Confidencialidad Profesional</p>
-<p>Toda información financiera, fiscal o patrimonial del cliente es tratada con <strong>confidencialidad profesional</strong> conforme a la Ley Federal de Protección de Datos Personales en Posesión de Particulares.</p>
+<p>Toda información financiera o patrimonial es tratada con estricta <strong>confidencialidad profesional</strong> conforme a la Ley Federal de Protección de Datos Personales.</p>
 </div>
 </div>
 </section>
@@ -1241,7 +1622,7 @@ Agendar Consulta por WhatsApp
 </div>
 </div>
 
-<div class="footer">
+<footer class="footer">
 <div class="contact-info">
 <div class="contact-item">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1255,12 +1636,80 @@ Agendar Consulta por WhatsApp
 <polyline points="22,6 12,13 2,6"/>
 </svg>
 <strong>Email:</strong> <a href="mailto:aidnserviciosdeadmon@gmail.com">aidnserviciosdeadmon@gmail.com</a>
-      </div>
-    </div>
-    <div class="footer-note">
-      © 2026 AIDN Strategic Consulting. Catapultando empresas para liderar el cambio.
-    </div>
-  </div>
 </div>
+</div>
+<p style="margin-top: 1rem; font-size: 0.9rem;">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
+</footer>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Theme Management System
+const state = {
+theme: 'light',
+themeManuallySet: false
+};
+
+const detectTheme = () => {
+try {
+const stored = localStorage.getItem('aidn_catalog_theme');
+if (stored) {
+const parsed = JSON.parse(stored);
+if (parsed?.themeManuallySet) return parsed.theme || 'light';
+}
+} catch(e) {
+console.error('Error loading theme:', e);
+}
+return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
+const applyTheme = (theme) => {
+document.documentElement.setAttribute('data-theme', theme);
+state.theme = theme;
+};
+
+const saveTheme = () => {
+try {
+localStorage.setItem('aidn_catalog_theme', JSON.stringify({
+theme: state.theme,
+themeManuallySet: state.themeManuallySet
+}));
+} catch(e) {
+console.error('Error saving theme:', e);
+}
+};
+
+const toggleTheme = () => {
+const newTheme = state.theme === 'light' ? 'dark' : 'light';
+state.themeManuallySet = true;
+applyTheme(newTheme);
+saveTheme();
+console.log(`Tema ${newTheme === 'dark' ? 'oscuro' : 'claro'} activado`);
+};
+
+// Initialize theme
+const initialTheme = detectTheme();
+applyTheme(initialTheme);
+
+// Keyboard shortcut: Ctrl+Alt+T
+document.addEventListener('keydown', (e) => {
+if (e.ctrlKey && e.altKey && e.key === 't') {
+e.preventDefault();
+toggleTheme();
+}
+});
+
+// Listen to system theme changes (only if not manually set)
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+if (darkModeQuery?.addEventListener) {
+darkModeQuery.addEventListener('change', (e) => {
+if (!state.themeManuallySet) {
+applyTheme(e.matches ? 'dark' : 'light');
+}
+});
+}
+
+console.log('🎨 Sistema de temas inicializado');
+console.log('💡 Usa Ctrl+Alt+T para cambiar entre tema claro y oscuro');
+</script>
 </body>
 </html>
