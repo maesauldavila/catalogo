@@ -1774,7 +1774,7 @@ border-radius: 50%;
 background: rgba(3, 180, 214, 0.1);
 backdrop-filter: blur(12px);
 -webkit-backdrop-filter: blur(12px);
-border: 1px solid rgba(3, 180, 214, 0.2);
+border: none;
 cursor: pointer;
 display: flex;
 align-items: center;
@@ -1961,6 +1961,480 @@ animation-duration: 0.01ms !important;
 transition-duration: 0.01ms !important;
 }
 }
+
+
+/* Dark theme support */
+[data-theme="dark"] .footer-mission {
+    background: linear-gradient(135deg, rgba(3, 180, 214, 0.05), rgba(3, 180, 214, 0.12));
+    border-color: rgba(3, 180, 214, 0.25);
+}
+
+[data-theme="dark"] .footer-mission h4 {
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .footer-mission .mission-tagline {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .footer-mission .expertise-line {
+    color: var(--secondary);
+}
+
+/* Responsive Design */
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .footer-mission {
+        padding: 1.2rem 1rem;
+        margin: 1.5rem auto 1rem;
+    }
+    
+    .footer-mission h4 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-mission .mission-tagline {
+        font-size: 0.9rem;
+    }
+    
+    .footer-mission .expertise-line {
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Medium Mobile & Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer-mission {
+        padding: 1.3rem 1.5rem;
+        margin: 1.8rem auto 1.2rem;
+    }
+    
+    .footer-mission h4 {
+        font-size: 1.15rem;
+    }
+    
+    .footer-mission .mission-tagline {
+        font-size: 0.95rem;
+    }
+    
+    .footer-mission .expertise-line {
+        font-size: 0.88rem;
+    }
+}
+
+/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-mission {
+        padding: 1.5rem 2rem;
+        margin: 2rem auto 1.5rem;
+        max-width: 850px;
+    }
+    
+    .footer-mission h4 {
+        font-size: 1.25rem;
+    }
+    
+    .footer-mission .mission-tagline {
+        font-size: 1rem;
+    }
+    
+    .footer-mission .expertise-line {
+        font-size: 0.92rem;
+    }
+}
+
+/* Desktop (1025px - 1600px) */
+@media (min-width: 1025px) and (max-width: 1600px) {
+    .footer-mission {
+        padding: 1.5rem 2rem;
+        margin: 2rem auto 1.5rem;
+    }
+}
+
+/* Desktop Large (1601px+) */
+@media (min-width: 1601px) {
+    .footer-mission {
+        padding: 1.8rem 2.5rem;
+        margin: 2.5rem auto 2rem;
+        max-width: 950px;
+    }
+    
+    .footer-mission h4 {
+        font-size: 1.4rem;
+    }
+    
+    .footer-mission .mission-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .footer-mission .expertise-line {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* CTA Enhanced - Unified Mission + Call to Action */
+.cta-enhanced {
+    padding: 3.5rem 2.5rem;
+}
+
+.cta-mission {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.cta-mission h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin: 0 0 0.9rem 0;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.cta-mission .mission-tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin: 0 0 0.9rem 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.cta-mission .expertise-line {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+}
+
+.cta-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+    margin: 2rem auto 2.5rem;
+    max-width: 400px;
+    position: relative;
+    opacity: 0.6;
+}
+
+.cta-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(3, 180, 214, 0.5);
+}
+
+/* Dark theme support */
+[data-theme="dark"] .cta-mission h3 {
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .cta-mission .mission-tagline {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .cta-mission .expertise-line {
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .cta-divider {
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .cta-enhanced {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-mission {
+        margin-bottom: 1.8rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 0.95rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 0.88rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .cta-divider {
+        margin: 1.5rem auto 2rem;
+        max-width: 250px;
+    }
+}
+
+/* Medium Mobile & Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .cta-enhanced {
+        padding: 2.5rem 2rem;
+    }
+    
+    .cta-mission {
+        margin-bottom: 2rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 1rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 0.92rem;
+    }
+    
+    .cta-divider {
+        margin: 1.8rem auto 2.2rem;
+        max-width: 320px;
+    }
+}
+
+/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cta-enhanced {
+        padding: 3rem 2.2rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.55rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 1.05rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 0.95rem;
+    }
+}
+
+/* Desktop Large (1601px+) */
+@media (min-width: 1601px) {
+    .cta-enhanced {
+        padding: 4rem 3rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 1.15rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 1.05rem;
+    }
+    
+    .cta-divider {
+        max-width: 500px;
+    }
+}
+
+
+
+/* CTA Enhanced - Unified Mission + Call to Action */
+.cta-enhanced {
+    padding: 3.5rem 2.5rem;
+}
+
+.cta-mission {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.cta-mission h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin: 0 0 0.9rem 0;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.cta-mission .mission-tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin: 0 0 0.9rem 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.cta-mission .expertise-line {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+}
+
+.cta-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+    margin: 2rem auto 2.5rem;
+    max-width: 400px;
+    position: relative;
+    opacity: 0.6;
+}
+
+.cta-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(3, 180, 214, 0.5);
+}
+
+/* Dark theme support */
+[data-theme="dark"] .cta-mission h3 {
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .cta-mission .mission-tagline {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .cta-mission .expertise-line {
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .cta-divider {
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .cta-enhanced {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-mission {
+        margin-bottom: 1.8rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 0.95rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 0.88rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .cta-divider {
+        margin: 1.5rem auto 2rem;
+        max-width: 250px;
+    }
+}
+
+/* Medium Mobile & Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .cta-enhanced {
+        padding: 2.5rem 2rem;
+    }
+    
+    .cta-mission {
+        margin-bottom: 2rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 1rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 0.92rem;
+    }
+    
+    .cta-divider {
+        margin: 1.8rem auto 2.2rem;
+        max-width: 320px;
+    }
+}
+
+/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cta-enhanced {
+        padding: 3rem 2.2rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.55rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 1.05rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 0.95rem;
+    }
+}
+
+/* Desktop Large (1601px+) */
+@media (min-width: 1601px) {
+    .cta-enhanced {
+        padding: 4rem 3rem;
+    }
+    
+    .cta-mission h3 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-mission .mission-tagline {
+        font-size: 1.15rem;
+    }
+    
+    .cta-mission .expertise-line {
+        font-size: 1.05rem;
+    }
+    
+    .cta-divider {
+        max-width: 500px;
+    }
+}
+
+
 </style>
 </head>
 <body>
@@ -2893,7 +3367,15 @@ Es fundamental que todo contribuyente conozca el <strong>orden jerárquico de la
 </svg>
 </div>
 
-<div class="cta-section">
+<div class="cta-section cta-enhanced">
+<div class="cta-mission">
+<h3>Consultoría Estratégica y Servicios Fiscales</h3>
+<p class="mission-tagline">Socio estratégico de PYMES en crecimiento acelerado</p>
+<p class="expertise-line">Expertise de Big 4 • Accesibilidad de boutique • Agilidad de startup</p>
+</div>
+
+<div class="cta-divider"></div>
+
 <h3>¿Listo para impulsar tu empresa con estrategia?</h3>
 <p>Agenda una consulta estratégica y diseñemos juntos la solución que tu negocio necesita</p>
 <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
@@ -2925,7 +3407,7 @@ Agendar Consulta por WhatsApp
 <div class="footer-badges">
 <div class="footer-badge badge-opensource">
 <span class="badge-icon">💻</span>
-<span>Operado bajo Linux</span>
+<span>Operado bajo GNU/Linux</span>
 </div>
 <div class="footer-badge badge-security">
 <span class="badge-icon">🔐</span>
