@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Primary Meta Tags -->
-<title>Catálogo de Servicios 2026 | AIDN Strategic Consulting</title>
+<title>Catálogo 2026 | AIDN Strategic Consulting</title>
 <meta name="title" content="Catálogo de Servicios 2026 | AIDN Strategic Consulting">
 <meta name="description" content="Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad. Consultoría estratégica, servicios fiscales RESICO y administración empresarial.">
 <meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner-catalogo-aidn.png">
@@ -69,11 +69,13 @@ box-sizing: border-box;
 
 html {
 scroll-behavior: smooth;
+scroll-padding-top: 100px;
 }
 
 :focus-visible {
-outline: 2px solid var(--secondary);
-outline-offset: 2px;
+outline: 3px solid var(--secondary);
+outline-offset: 3px;
+border-radius: 4px;
 }
 
 :root {
@@ -92,7 +94,7 @@ outline-offset: 2px;
 --hover-shadow: rgba(0,0,0,0.2);
 --transition-fast: 150ms ease;
 --transition-base: 250ms ease;
---transition-slow: 400ms ease;
+--transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 --premium-gradient-start: #e0f2fe;
 --premium-gradient-end: #dbeafe;
 --premium-border: #0ea5e9;
@@ -110,7 +112,7 @@ outline-offset: 2px;
 --bg-white: #1a1f35;
 --bg-light: #2a3254;
 --text-dark: #e5e7eb;
---text-light: #9ca3af;
+--text-light: #d1d5db;
 --border: #2d3748;
 --shadow: rgba(0,0,0,0.4);
 --hover-shadow: rgba(0,0,0,0.6);
@@ -144,6 +146,18 @@ vertical-align: middle;
 box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 white-space: nowrap;
 flex-shrink: 0;
+animation: pulse-new 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-new {
+0%, 100% {
+box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+transform: scale(1);
+}
+50% {
+box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+transform: scale(1.02);
+}
 }
 
 .container {
@@ -158,7 +172,7 @@ transition: all var(--transition-base);
 
 .header {
 background: linear-gradient(135deg, var(--primary), var(--secondary));
-padding: 3rem 2rem;
+padding: 3.5rem 2rem;
 text-align: center;
 position: relative;
 overflow: hidden;
@@ -182,8 +196,8 @@ z-index: 1;
 }
 
 .logo-aidn {
-width: 100px;
-height: 100px;
+width: 110px;
+height: 110px;
 margin: 0 auto;
 filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
 transition: transform var(--transition-slow);
@@ -195,7 +209,7 @@ transform: scale(1.05) rotate(5deg);
 
 .header h1 {
 font-family: 'Rajdhani', sans-serif;
-font-size: 2.5rem;
+font-size: 2.75rem;
 font-weight: 700;
 color: white;
 letter-spacing: 3px;
@@ -239,7 +253,7 @@ letter-spacing: 0.5px;
 }
 
 .content {
-padding: 2.5rem;
+padding: 3rem 2.5rem;
 }
 
 .intro-section {
@@ -247,7 +261,7 @@ background: linear-gradient(135deg, #dbeafe, #e0f2fe);
 border-left: 5px solid var(--secondary);
 padding: 1.8rem;
 border-radius: 12px;
-margin-bottom: 3rem;
+margin-bottom: 3.5rem;
 transition: all var(--transition-base);
 }
 
@@ -257,7 +271,7 @@ background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 
 .intro-section h2 {
 font-family: 'Rajdhani', sans-serif;
-font-size: 1.4rem;
+font-size: 1.75rem;
 color: var(--primary);
 margin-bottom: 0.8rem;
 font-weight: 700;
@@ -289,7 +303,7 @@ background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
 border: 2px solid var(--tech-cyan);
 border-radius: 16px;
 padding: 2rem;
-margin-bottom: 3rem;
+margin-bottom: 3.5rem;
 position: relative;
 overflow: hidden;
 box-shadow: 0 8px 24px rgba(6, 182, 212, 0.15);
@@ -313,7 +327,7 @@ pointer-events: none;
 
 .tech-highlight h3 {
 font-family: 'Rajdhani', sans-serif;
-font-size: 1.3rem;
+font-size: 1.5rem;
 color: var(--primary);
 margin-bottom: 1rem;
 display: flex;
@@ -355,7 +369,7 @@ background: linear-gradient(135deg, var(--bg-white), var(--bg-light));
 }
 
 .tech-card h4 {
-font-size: 1.1rem;
+font-size: 1.15rem;
 color: var(--text-dark);
 margin-bottom: 0.8rem;
 display: flex;
@@ -370,7 +384,7 @@ line-height: 1.6;
 }
 
 .section {
-margin-bottom: 3rem;
+margin-bottom: 3.5rem;
 }
 
 .section:last-child {
@@ -379,7 +393,7 @@ margin-bottom: 0;
 
 .section-title {
 font-family: 'Rajdhani', sans-serif;
-font-size: 1.6rem;
+font-size: 2rem;
 font-weight: 700;
 color: var(--primary);
 margin-bottom: 1.5rem;
@@ -415,8 +429,8 @@ margin-bottom: 2rem;
 
 .subsection-title {
 font-family: 'Rajdhani', sans-serif;
-font-size: 1.2rem;
-font-weight: 600;
+font-size: 1.4rem;
+font-weight: 700;
 color: var(--text-dark);
 margin-bottom: 1rem;
 padding-left: 1rem;
@@ -582,8 +596,8 @@ color: var(--tech-cyan);
 .info-box-title {
 font-weight: 700;
 color: var(--text-dark);
-margin-bottom: 0.5rem;
-font-size: 1.05rem;
+margin-bottom: 0.7rem;
+font-size: 1.1rem;
 }
 
 .info-box p {
@@ -608,11 +622,11 @@ background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 
 .consulting-card:hover {
 box-shadow: 0 8px 25px rgba(3, 180, 214, 0.25);
-transform: translateY(-2px);
+transform: translateY(-3px);
 }
 
 .consulting-card h4 {
-font-size: 1.1rem;
+font-size: 1.2rem;
 color: var(--text-dark);
 font-weight: 700;
 margin-bottom: 0.8rem;
@@ -690,7 +704,7 @@ background: linear-gradient(135deg, #422006, #78350f);
 }
 
 .hierarchy-title {
-font-size: 1.1rem;
+font-size: 1.3rem;
 font-weight: 700;
 color: var(--text-dark);
 margin-bottom: 1rem;
@@ -746,7 +760,7 @@ background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 
 .cta-section h3 {
 font-family: 'Rajdhani', sans-serif;
-font-size: 1.8rem;
+font-size: 1.6rem;
 color: var(--primary);
 margin-bottom: 1rem;
 font-weight: 700;
@@ -765,19 +779,39 @@ margin-bottom: 2rem;
 .cta-button {
 display: inline-flex;
 align-items: center;
-gap: 0.8rem;
+gap: 0.9rem;
 background: linear-gradient(135deg, #25D366, #128C7E);
 color: white;
-padding: 1rem 2rem;
+padding: 1.1rem 2.2rem;
 border-radius: 50px;
 text-decoration: none;
-font-weight: 600;
+font-weight: 700;
 font-size: 1.1rem;
 transition: all var(--transition-base);
 box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 cursor: pointer;
 border: none;
 outline: none;
+position: relative;
+overflow: hidden;
+}
+
+.cta-button::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.2);
+transform: translate(-50%, -50%);
+transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before {
+width: 300px;
+height: 300px;
 }
 
 .cta-button:hover {
@@ -797,8 +831,10 @@ outline-offset: 3px;
 }
 
 .cta-icon {
-width: 24px;
-height: 24px;
+width: 26px;
+height: 26px;
+position: relative;
+z-index: 1;
 }
 
 .footer {
@@ -840,6 +876,12 @@ border-bottom: 1px solid var(--secondary);
 transform: translateY(-1px);
 }
 
+.contact-item a:focus-visible {
+outline: 2px solid var(--secondary);
+outline-offset: 3px;
+border-radius: 3px;
+}
+
 /* Mobile First - Smartphones (320px - 480px) */
 @media (max-width: 480px) {
 body {
@@ -855,20 +897,23 @@ padding: 2rem 1rem;
 }
 
 .header h1 {
-font-size: 1.8rem;
+font-size: 2rem;
+font-weight: 700;
 }
 
 .subtitle {
-font-size: 1rem;
+font-size: 1.05rem;
+font-weight: 600;
 }
 
 .tagline {
-font-size: 0.85rem;
+font-size: 0.9rem;
 }
 
 .year {
-font-size: 0.75rem;
-padding: 0.4rem 0.8rem;
+font-size: 0.85rem;
+padding: 0.5rem 1rem;
+font-weight: 700;
 }
 
 .content {
@@ -876,13 +921,15 @@ padding: 1rem;
 }
 
 .section-title {
-font-size: 1.2rem;
+font-size: 1.5rem;
+font-weight: 700;
 padding: 0.8rem 1rem;
 gap: 0.5rem;
 }
 
 .subsection-title {
-font-size: 1rem;
+font-size: 1.15rem;
+font-weight: 700;
 gap: 0.4rem;
 }
 
@@ -896,11 +943,13 @@ padding: 1rem;
 }
 
 .service-title {
-font-size: 1.1rem;
+font-size: 1.15rem;
+font-weight: 700;
 }
 
 .price {
-font-size: 1.3rem;
+font-size: 1.35rem;
+font-weight: 700;
 }
 
 .service-table {
@@ -992,12 +1041,14 @@ padding: 1.5rem;
 }
 
 .cta-section h3 {
-font-size: 1.3rem;
+font-size: 1.4rem;
+font-weight: 700;
 }
 
 .cta-button {
-padding: 0.9rem 1.5rem;
-font-size: 1rem;
+padding: 1rem 1.8rem;
+font-size: 1.05rem;
+font-weight: 700;
 }
 }
 
@@ -1012,7 +1063,8 @@ padding: 2.5rem 1.5rem;
 }
 
 .header h1 {
-font-size: 2rem;
+font-size: 2.3rem;
+font-weight: 700;
 }
 
 .content {
@@ -1020,11 +1072,13 @@ padding: 1.5rem;
 }
 
 .section-title {
-font-size: 1.3rem;
+font-size: 1.75rem;
+font-weight: 700;
 }
 
 .price {
 font-size: 1.4rem;
+font-weight: 700;
 }
 
 .service-table {
@@ -1129,7 +1183,12 @@ max-width: 95%;
 }
 
 .header {
-padding: 2.5rem 2rem;
+padding: 3rem 2rem;
+}
+
+.header h1 {
+font-size: 2.6rem;
+font-weight: 700;
 }
 
 .content {
@@ -1157,6 +1216,26 @@ font-size: 1.5rem;
 .service-grid {
 grid-template-columns: repeat(2, 1fr);
 }
+
+.intro-section h2 {
+font-size: 1.7rem;
+font-weight: 700;
+}
+
+.tech-highlight h3 {
+font-size: 1.5rem;
+font-weight: 700;
+}
+
+.cta-section h3 {
+font-size: 1.6rem;
+font-weight: 700;
+}
+
+.hierarchy-title {
+font-size: 1.3rem;
+font-weight: 700;
+}
 }
 
 /* Desktop (1025px+) - Ya existe el diseño base */
@@ -1166,6 +1245,163 @@ max-width: 1100px;
 }
 }
 
+
+/* Huawei MatePad 11.5"S High Resolution Optimization (1025px - 1600px) */
+@media (min-width: 1025px) and (max-width: 1600px) {
+body {
+padding: 2.5rem 1.5rem;
+}
+
+.container {
+max-width: 1400px;
+}
+
+.header {
+padding: 4rem 3rem;
+}
+
+.header h1 {
+font-size: 3rem;
+font-weight: 700;
+}
+
+.logo-aidn {
+width: 120px;
+height: 120px;
+}
+
+.content {
+padding: 3.5rem 3rem;
+}
+
+.section-title {
+font-size: 2.1rem;
+font-weight: 700;
+margin-bottom: 2.5rem;
+}
+
+.subsection-title {
+font-size: 1.5rem;
+font-weight: 700;
+}
+
+.tech-grid {
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+
+.service-table th,
+.service-table td {
+padding: 1.3rem;
+font-size: 1.05rem;
+}
+
+.price {
+font-size: 1.6rem;
+font-weight: 700;
+}
+
+.intro-section {
+padding: 2.5rem;
+margin-bottom: 4rem;
+}
+
+.intro-section h2 {
+font-size: 1.9rem;
+font-weight: 700;
+}
+
+.intro-section p {
+font-size: 1.05rem;
+line-height: 1.85;
+}
+
+.tech-highlight {
+padding: 2.5rem;
+margin-bottom: 4rem;
+}
+
+.tech-highlight h3 {
+font-size: 1.65rem;
+font-weight: 700;
+}
+
+.cta-section {
+padding: 4rem 3rem;
+}
+
+.cta-section h3 {
+font-size: 1.75rem;
+font-weight: 700;
+}
+
+.cta-section p {
+font-size: 1.15rem;
+}
+
+.hierarchy-title {
+font-size: 1.4rem;
+font-weight: 700;
+}
+
+.consulting-card h4 {
+font-size: 1.3rem;
+font-weight: 700;
+}
+
+.info-box-title {
+font-size: 1.2rem;
+font-weight: 700;
+}
+
+.floating-btn {
+width: 60px;
+height: 60px;
+min-width: 60px;
+}
+
+.floating-btn svg {
+width: 26px;
+height: 26px;
+}
+}
+
+/* Desktop Large (1601px+) */
+@media (min-width: 1601px) {
+.container {
+max-width: 1200px;
+}
+
+.header h1 {
+font-size: 3.2rem;
+font-weight: 700;
+}
+
+.section-title {
+font-size: 2.2rem;
+font-weight: 700;
+}
+
+.subsection-title {
+font-size: 1.6rem;
+font-weight: 700;
+}
+
+.intro-section h2 {
+font-size: 2rem;
+font-weight: 700;
+}
+
+.tech-highlight h3 {
+font-size: 1.75rem;
+font-weight: 700;
+}
+
+.cta-section h3 {
+font-size: 1.85rem;
+font-weight: 700;
+}
+}
 /* Footer Badges - Discrete & Professional */
 .footer-badges {
 display: flex;
@@ -1408,7 +1644,7 @@ transform: translateY(-2px);
 
 .toc-title {
 font-family: 'Rajdhani', sans-serif;
-font-size: 1.8rem;
+font-size: 2rem;
 font-weight: 700;
 color: var(--primary);
 margin-bottom: 1.5rem;
@@ -1499,7 +1735,12 @@ flex-shrink: 0;
 
 .toc-link:hover .toc-icon {
 color: var(--secondary);
-transform: translateX(4px);
+transform: translateX(5px);
+}
+
+.toc-link:focus-visible {
+outline: 3px solid var(--secondary);
+outline-offset: 3px;
 }
 
 /* Scroll to Top Button */
@@ -1526,49 +1767,65 @@ transform: translateY(0);
 
 /* Botones flotantes unificados - Estilo Strategic Radar */
 .floating-btn {
-width: 56px;
-height: 56px;
-min-width: 56px;
+width: 58px;
+height: 58px;
+min-width: 58px;
 border-radius: 50%;
-background: rgba(3, 180, 214, 0.08);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: none;
+background: rgba(3, 180, 214, 0.1);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(3, 180, 214, 0.2);
 cursor: pointer;
 display: flex;
 align-items: center;
 justify-content: center;
-transition: all var(--transition-fast);
+transition: all var(--transition-base);
 color: var(--primary);
-font-size: 1.4em;
 flex-shrink: 0;
 position: relative;
-box-shadow: 0 4px 12px rgba(3, 180, 214, 0.15);
+box-shadow: 0 4px 16px rgba(3, 180, 214, 0.2);
+outline: none;
 }
 
-.floating-btn::before {
+/* CRITICAL FIX: Removed pointer-events capture bug */
+.floating-btn::after {
 content: '';
 position: absolute;
-top: -4px;
-left: -4px;
-right: -4px;
-bottom: -4px;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
 border-radius: 50%;
+background: radial-gradient(circle, rgba(3, 180, 214, 0.15) 0%, transparent 70%);
+opacity: 0;
+transition: opacity var(--transition-base);
+pointer-events: none;
+}
+
+.floating-btn:hover::after {
+opacity: 1;
 }
 
 .floating-btn:hover {
-background: rgba(3, 180, 214, 0.15);
-transform: scale(1.05);
-box-shadow: 0 8px 20px rgba(3, 180, 214, 0.3);
+background: rgba(3, 180, 214, 0.18);
+transform: scale(1.08);
+box-shadow: 0 8px 24px rgba(3, 180, 214, 0.35);
+border-color: rgba(3, 180, 214, 0.4);
 }
 
 .floating-btn:active {
-transform: scale(0.95);
+transform: scale(0.96);
+box-shadow: 0 2px 8px rgba(3, 180, 214, 0.25);
+}
+
+.floating-btn:focus-visible {
+outline: 3px solid rgba(3, 180, 214, 0.5);
+outline-offset: 4px;
 }
 
 .floating-btn svg {
-width: 24px;
-height: 24px;
+width: 25px;
+height: 25px;
 stroke: var(--primary);
 fill: none;
 stroke-width: 2;
@@ -1576,12 +1833,17 @@ transition: transform var(--transition-base);
 }
 
 .floating-btn:hover svg {
-transform: scale(1.1);
+transform: scale(1.12);
 }
 
 /* Botón de WhatsApp específico */
 .floating-btn.whatsapp-btn {
-background: rgba(37, 211, 102, 0.08);
+background: rgba(37, 211, 102, 0.1);
+border-color: rgba(37, 211, 102, 0.2);
+}
+
+.floating-btn.whatsapp-btn::after {
+background: radial-gradient(circle, rgba(37, 211, 102, 0.15) 0%, transparent 70%);
 }
 
 .floating-btn.whatsapp-btn svg {
@@ -1589,8 +1851,9 @@ stroke: #25D366;
 }
 
 .floating-btn.whatsapp-btn:hover {
-background: rgba(37, 211, 102, 0.15);
-box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+background: rgba(37, 211, 102, 0.18);
+box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+border-color: rgba(37, 211, 102, 0.4);
 }
 
 /* Botón scroll to top - flecha arriba */
@@ -1599,24 +1862,36 @@ transform: rotate(0deg);
 }
 
 .floating-btn.scroll-top:hover svg {
-transform: translateY(-3px);
+transform: translateY(-4px) scale(1.12);
 }
 
 /* Tema oscuro */
 [data-theme="dark"] .floating-btn {
-background: rgba(3, 180, 214, 0.12);
+background: rgba(3, 180, 214, 0.15);
+border-color: rgba(3, 180, 214, 0.3);
 }
 
 [data-theme="dark"] .floating-btn svg {
 stroke: var(--secondary);
 }
 
+[data-theme="dark"] .floating-btn.whatsapp-btn {
+background: rgba(52, 211, 153, 0.15);
+border-color: rgba(52, 211, 153, 0.3);
+}
+
 [data-theme="dark"] .floating-btn.whatsapp-btn svg {
 stroke: #34d399;
 }
 
+[data-theme="dark"] .floating-btn.whatsapp-btn:hover {
+background: rgba(52, 211, 153, 0.25);
+border-color: rgba(52, 211, 153, 0.5);
+}
+
 [data-theme="dark"] .floating-btn:hover {
-background: rgba(3, 180, 214, 0.2);
+background: rgba(3, 180, 214, 0.25);
+border-color: rgba(3, 180, 214, 0.5);
 }
 
 @keyframes subtle-vibrate {
@@ -2643,7 +2918,7 @@ Agendar Consulta por WhatsApp
 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
 <polyline points="22,6 12,13 2,6"/>
 </svg>
-<strong>Email:</strong> <a href="mailto:aidnserviciosdeadmon@gmail.com">aidnserviciosdeadmon@gmail.com</a>
+<strong>Email:</strong> <a href="mailto:aidnstrategicconsulting@gmail.com">aidnstrategicconsulting@gmail.com</a>
 </div>
 </div>
 
@@ -2818,16 +3093,21 @@ toggleTheme();
 });
 
 // Auto-detección de cambios en el tema del sistema
+// Auto-detección de cambios en el tema del sistema
 const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-if (darkModeQuery?.addEventListener) {
+
+// Escuchar cambios en el tema del sistema solo si el usuario NO ha establecido preferencia manual
 darkModeQuery.addEventListener('change', (e) => {
 if (!state.themeManuallySet) {
-applyTheme(e.matches ? 'dark' : 'light');
+const newTheme = e.matches ? 'dark' : 'light';
+applyTheme(newTheme);
+console.log(`Tema del sistema cambió a: ${newTheme}`);
 }
 });
-}
 
-console.log('Sistema de temas inicializado correctamente');
+console.log(`✅ Sistema de temas inicializado. Tema actual: ${state.theme}`);
+console.log('💡 Usa Ctrl+Alt+T para cambiar el tema manualmente');
 </script>
+
 </body>
 </html>
