@@ -65,6 +65,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -254,6 +255,8 @@ letter-spacing: 0.5px;
 
 .content {
 padding: 3rem 2.5rem;
+max-width: 100%;
+overflow-x: hidden;
 }
 
 .intro-section {
@@ -385,6 +388,8 @@ line-height: 1.6;
 
 .section {
 margin-bottom: 3.5rem;
+max-width: 100%;
+overflow-x: hidden;
 }
 
 .section:last-child {
@@ -414,13 +419,14 @@ color: var(--secondary);
 display: inline-flex;
 align-items: center;
 justify-content: center;
-width: 38px;
+min-width: 50px;
 height: 38px;
 background: linear-gradient(135deg, var(--primary), var(--secondary));
 color: white;
-border-radius: 50%;
+border-radius: 8px;
 font-size: 1.1rem;
 font-weight: 700;
+padding: 0 0.8rem;
 }
 
 .subsection {
@@ -439,6 +445,21 @@ display: flex;
 align-items: center;
 flex-wrap: wrap;
 gap: 0.5rem;
+}
+
+.subsection-number {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-width: 40px;
+height: 30px;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+border-radius: 6px;
+font-size: 0.95rem;
+font-weight: 700;
+padding: 0 0.6rem;
+margin-right: 0.5rem;
 }
 
 .service-table {
@@ -494,19 +515,15 @@ color: var(--secondary);
 
 .scope-list {
 list-style: none;
-padding: 0;
-margin-top: 0.5rem;
-font-size: 0.9rem;
-max-width: 100%;
+padding-left: 0;
+margin: 0.5rem 0 0 0;
 }
 
 .scope-list li {
-padding: 0.3rem 0;
-padding-left: 1.5rem;
+padding: 0.3rem 0 0.3rem 1.8rem;
 position: relative;
-color: var(--text-dark);
-word-wrap: break-word;
-overflow-wrap: break-word;
+font-size: 0.9rem;
+line-height: 1.5;
 }
 
 .scope-list li.included::before {
@@ -515,1248 +532,622 @@ position: absolute;
 left: 0;
 color: var(--accent);
 font-weight: 700;
+font-size: 1.1rem;
 }
 
 .scope-list li.excluded::before {
 content: '✗';
 position: absolute;
 left: 0;
-color: #ef4444;
+color: var(--warning);
 font-weight: 700;
+font-size: 1.1rem;
 }
 
 .info-box {
-background: linear-gradient(135deg, #e0f2fe, #dbeafe);
-border-left: 4px solid var(--secondary);
-padding: 1.2rem;
-border-radius: 8px;
-margin-bottom: 1.5rem;
+padding: 1.5rem;
+border-radius: 12px;
+margin-bottom: 2rem;
+border-left: 5px solid;
+background: var(--bg-light);
 transition: all var(--transition-base);
 }
 
-[data-theme="dark"] .info-box {
+.info-box.info {
+border-color: var(--info-blue);
+background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+[data-theme="dark"] .info-box.info {
 background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
 }
 
-.info-box.warning {
-background: linear-gradient(135deg, #fef3c7, #fde68a);
-border-left-color: var(--warning);
-}
-
-[data-theme="dark"] .info-box.warning {
-background: linear-gradient(135deg, #422006, #78350f);
-}
-
 .info-box.success {
-background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-border-left-color: var(--accent);
+border-color: var(--success-green);
+background: linear-gradient(135deg, #d1fae5, #ecfdf5);
 }
 
 [data-theme="dark"] .info-box.success {
 background: linear-gradient(135deg, #064e3b, #065f46);
 }
 
-.info-box.info {
-background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-border-left-color: var(--info-blue);
-}
-
-[data-theme="dark"] .info-box.info {
-background: linear-gradient(135deg, #1e3a8a, #1e40af);
-}
-
 .info-box.premium {
+border-color: var(--premium-border);
 background: linear-gradient(135deg, var(--premium-gradient-start), var(--premium-gradient-end));
-border-left: 4px solid var(--premium-border);
-box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
-position: relative;
-overflow: hidden;
 }
 
-.info-box.premium::before {
-content: '';
-position: absolute;
-top: 0;
-right: 0;
-width: 100px;
-height: 100px;
-background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
-pointer-events: none;
+[data-theme="dark"] .info-box.premium {
+background: linear-gradient(135deg, var(--premium-gradient-start), var(--premium-gradient-end));
 }
 
-.info-box.premium .info-box-title {
-color: #0369a1;
-font-weight: 700;
+.info-box.warning {
+border-color: var(--warning);
+background: linear-gradient(135deg, #fed7aa, #ffedd5);
 }
 
-[data-theme="dark"] .info-box.premium .info-box-title {
-color: var(--tech-cyan);
+[data-theme="dark"] .info-box.warning {
+background: linear-gradient(135deg, #78350f, #92400e);
 }
 
 .info-box-title {
 font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.7rem;
 font-size: 1.1rem;
+margin-bottom: 0.8rem;
+color: var(--text-dark);
 }
 
 .info-box p {
-margin: 0;
 color: var(--text-dark);
 line-height: 1.7;
+margin-bottom: 0.5rem;
 }
 
-.consulting-card {
-background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-border: 2px solid var(--secondary);
-border-radius: 12px;
-padding: 1.8rem;
-margin-bottom: 1.5rem;
-box-shadow: 0 4px 15px rgba(3, 180, 214, 0.15);
-transition: all var(--transition-base);
-}
-
-[data-theme="dark"] .consulting-card {
-background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
-}
-
-.consulting-card:hover {
-box-shadow: 0 8px 25px rgba(3, 180, 214, 0.25);
-transform: translateY(-3px);
-}
-
-.consulting-card h4 {
-font-size: 1.2rem;
-color: var(--text-dark);
-font-weight: 700;
-margin-bottom: 0.8rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-.consulting-card p {
-color: var(--text-dark);
-line-height: 1.7;
-margin-bottom: 0.8rem;
-}
-
-.consulting-features {
-list-style: none;
-padding: 0;
-margin-top: 1rem;
-}
-
-.consulting-features li {
-padding: 0.5rem 0;
-padding-left: 1.8rem;
-position: relative;
-color: var(--text-dark);
-font-size: 0.95rem;
-}
-
-.consulting-features li::before {
-content: '◆';
-position: absolute;
-left: 0;
-color: var(--secondary);
-font-size: 0.9rem;
-}
-
-.policy-list {
-list-style: none;
-padding: 0;
-}
-
-.policy-list li {
-padding: 1rem;
-margin-bottom: 0.8rem;
-background: var(--bg-light);
-border-radius: 8px;
-border-left: 4px solid var(--secondary);
-transition: all var(--transition-base);
-}
-
-.policy-list li:hover {
-transform: translateX(5px);
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.policy-list strong {
-color: var(--primary);
-font-weight: 700;
-}
-
-[data-theme="dark"] .policy-list strong {
-color: var(--secondary);
-}
-
-.hierarchy-box {
-background: linear-gradient(135deg, #fef9c3, #fde68a);
-border: 2px solid var(--warning);
-border-radius: 12px;
-padding: 1.5rem;
-margin-top: 1.5rem;
-}
-
-[data-theme="dark"] .hierarchy-box {
-background: linear-gradient(135deg, #422006, #78350f);
-}
-
-.hierarchy-title {
-font-size: 1.3rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 1rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-.hierarchy-list {
-list-style: none;
-padding: 0;
-}
-
-.hierarchy-list li {
-padding: 0.6rem 0;
-padding-left: 1.5rem;
-position: relative;
-color: var(--text-dark);
-font-size: 0.95rem;
-}
-
-.hierarchy-list li::before {
-content: '▶';
-position: absolute;
-left: 0;
-color: var(--warning);
-font-size: 0.8rem;
-}
-
-.hierarchy-note {
-margin-top: 1rem;
-padding: 1rem;
-background: rgba(251, 191, 36, 0.1);
-border-radius: 8px;
-border-left: 3px solid var(--warning);
-}
-
-[data-theme="dark"] .hierarchy-note {
-background: rgba(251, 191, 36, 0.05);
-}
-
-.cta-section {
-text-align: center;
-padding: 3rem 2rem;
-background: linear-gradient(135deg, var(--bg-light), var(--premium-gradient-start));
-border-radius: 12px;
-margin-top: 3rem;
-}
-
-[data-theme="dark"] .cta-section {
-background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
-}
-
-.cta-section h3 {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.6rem;
-color: var(--primary);
-margin-bottom: 1rem;
-font-weight: 700;
-}
-
-[data-theme="dark"] .cta-section h3 {
-color: var(--secondary);
-}
-
-.cta-section p {
-font-size: 1.1rem;
-color: var(--text-light);
-margin-bottom: 2rem;
-}
-
-.cta-button {
-display: inline-flex;
-align-items: center;
-gap: 0.9rem;
-background: linear-gradient(135deg, #25D366, #128C7E);
-color: white;
-padding: 1.1rem 2.2rem;
-border-radius: 50px;
-text-decoration: none;
-font-weight: 700;
-font-size: 1.1rem;
-transition: all var(--transition-base);
-box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-cursor: pointer;
-border: none;
-outline: none;
-position: relative;
-overflow: hidden;
-}
-
-.cta-button::before {
-content: '';
-position: absolute;
-top: 50%;
-left: 50%;
-width: 0;
-height: 0;
-border-radius: 50%;
-background: rgba(255, 255, 255, 0.2);
-transform: translate(-50%, -50%);
-transition: width 0.6s, height 0.6s;
-}
-
-.cta-button:hover::before {
-width: 300px;
-height: 300px;
-}
-
-.cta-button:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-background: linear-gradient(135deg, #128C7E, #25D366);
-}
-
-.cta-button:active {
-transform: translateY(-1px);
-box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-}
-
-.cta-button:focus-visible {
-outline: 3px solid rgba(37, 211, 102, 0.5);
-outline-offset: 3px;
-}
-
-.cta-icon {
-width: 26px;
-height: 26px;
-position: relative;
-z-index: 1;
-}
-
-.footer {
-background: var(--bg-light);
-padding: 2rem;
-text-align: center;
-color: var(--text-light);
-}
-
-.contact-info {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 2rem;
-margin-bottom: 1.5rem;
-}
-
-.contact-item {
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-.contact-item svg {
-color: var(--secondary);
-}
-
-.contact-item a {
-color: var(--text-dark);
-text-decoration: none;
-transition: all var(--transition-base);
-border-bottom: 1px solid transparent;
-cursor: pointer;
-}
-
-.contact-item a:hover {
-color: var(--secondary);
-border-bottom: 1px solid var(--secondary);
-transform: translateY(-1px);
-}
-
-.contact-item a:focus-visible {
-outline: 2px solid var(--secondary);
-outline-offset: 3px;
-border-radius: 3px;
-}
-
-/* Mobile First - Smartphones (320px - 480px) */
-@media (max-width: 480px) {
-body {
-padding: 0.5rem;
-}
-
-.container {
-border-radius: 8px;
-}
-
-.header {
-padding: 2rem 1rem;
-}
-
-.header h1 {
-font-size: 2rem;
-font-weight: 700;
-}
-
-.subtitle {
-font-size: 1.05rem;
-font-weight: 600;
-}
-
-.tagline {
-font-size: 0.9rem;
-}
-
-.year {
-font-size: 0.85rem;
-padding: 0.5rem 1rem;
-font-weight: 700;
-}
-
-.content {
-padding: 1rem;
-}
-
-.section-title {
-font-size: 1.5rem;
-font-weight: 700;
-padding: 0.8rem 1rem;
-gap: 0.5rem;
-}
-
-.subsection-title {
-font-size: 1.15rem;
-font-weight: 700;
-gap: 0.4rem;
-}
-
-.new-badge {
-font-size: 0.65rem;
-padding: 0.15rem 0.5rem;
-}
-
-.service-card {
-padding: 1rem;
-}
-
-.service-title {
-font-size: 1.15rem;
-font-weight: 700;
-}
-
-.price {
-font-size: 1.35rem;
-font-weight: 700;
-}
-
-.service-table {
-display: block;
-overflow-x: auto;
--webkit-overflow-scrolling: touch;
-}
-
-.service-table thead,
-.service-table tbody,
-.service-table tr,
-.service-table th,
-.service-table td {
-display: block;
-width: 100%;
-}
-
-.service-table thead {
-display: none;
-}
-
-.service-table tr {
-margin-bottom: 1.5rem;
-border: 1px solid var(--border);
-border-radius: 8px;
-padding: 1rem;
-background: var(--bg-white);
-}
-
-.service-table td {
-padding: 0.5rem 0;
-border: none;
-text-align: left;
-position: relative;
-padding-left: 0;
-}
-
-.service-table td:first-child {
-font-weight: 700;
-font-size: 1.05rem;
-color: var(--primary);
-margin-bottom: 0.8rem;
-padding-bottom: 0.8rem;
-border-bottom: 2px solid var(--secondary);
-}
-
-.service-table td:last-child {
-margin-top: 0.8rem;
-padding-top: 0.8rem;
-border-top: 1px solid var(--border);
-}
-
-.scope-list {
-font-size: 0.8rem;
-}
-
-.scope-list li {
-padding: 0.25rem 0;
-padding-left: 1.3rem;
-}
-
-.tech-grid {
-grid-template-columns: 1fr;
-gap: 1rem;
-}
-
-.pricing-table {
-overflow-x: auto;
--webkit-overflow-scrolling: touch;
-}
-
-.pricing-table table {
-min-width: 600px;
-font-size: 0.8rem;
-}
-
-.pricing-table td,
-.pricing-table th {
-padding: 0.6rem 0.5rem;
-}
-
-.contact-info {
-flex-direction: column;
-gap: 1rem;
-}
-
-.cta-section {
-padding: 1.5rem;
-}
-
-.cta-section h3 {
-font-size: 1.4rem;
-font-weight: 700;
-}
-
-.cta-button {
-padding: 1rem 1.8rem;
-font-size: 1.05rem;
-font-weight: 700;
-}
-}
-
-/* Small Tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-body {
-padding: 1rem;
-}
-
-.header {
-padding: 2.5rem 1.5rem;
-}
-
-.header h1 {
-font-size: 2.3rem;
-font-weight: 700;
-}
-
-.content {
-padding: 1.5rem;
-}
-
-.section-title {
-font-size: 1.75rem;
-font-weight: 700;
-}
-
-.price {
-font-size: 1.4rem;
-font-weight: 700;
-}
-
-.service-table {
-display: table;
-table-layout: auto;
-}
-
-.service-table thead,
-.service-table tbody,
-.service-table tr,
-.service-table th,
-.service-table td {
-display: table-cell;
-width: auto;
-}
-
-.service-table thead {
-display: table-header-group;
-}
-
-.service-table tr {
-display: table-row;
+.info-box p:last-child {
 margin-bottom: 0;
-border: none;
-border-radius: 0;
-padding: 0;
 }
 
-.service-table td {
-padding: 0.8rem;
-border-bottom: 1px solid var(--border);
-}
-
-.service-table td:first-child {
-font-weight: normal;
-font-size: inherit;
-margin-bottom: 0;
-padding-bottom: 0.8rem;
-border-bottom: 1px solid var(--border);
-}
-
-.service-table td:last-child {
-margin-top: 0;
-padding-top: 0.8rem;
-border-top: none;
-}
-
-.scope-list {
-font-size: 0.85rem;
-}
-
-.tech-grid {
-grid-template-columns: 1fr;
-gap: 1.2rem;
-}
-
-.pricing-table {
-overflow-x: auto;
--webkit-overflow-scrolling: touch;
-}
-
-.pricing-table table {
-min-width: 650px;
-font-size: 0.9rem;
-}
-
-.service-table td,
-.service-table th {
-font-size: 0.9rem;
-}
-
-.contact-info {
-flex-direction: column;
-gap: 1rem;
-}
-
-
-.floating-btn {
-width: 48px;
-height: 48px;
-min-width: 48px;
-}
-
-.floating-btn svg {
-width: 22px;
-height: 22px;
-}
-
-.toc-link {
-padding: 0.9rem 1.1rem;
-}
-}
-
-/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-body {
-padding: 1.5rem;
-}
-
-.container {
-max-width: 95%;
-}
-
-.header {
-padding: 3rem 2rem;
-}
-
-.header h1 {
-font-size: 2.6rem;
-font-weight: 700;
-}
-
-.content {
-padding: 2rem;
-}
-
-.tech-grid {
-grid-template-columns: repeat(2, 1fr);
-gap: 1.5rem;
-}
-
-.pricing-table table {
-font-size: 0.95rem;
-}
-
-.service-table td,
-.service-table th {
-font-size: 0.95rem;
-}
-
-.price {
-font-size: 1.5rem;
-}
-
-.service-grid {
-grid-template-columns: repeat(2, 1fr);
-}
-
-.intro-section h2 {
-font-size: 1.7rem;
-font-weight: 700;
-}
-
-.tech-highlight h3 {
-font-size: 1.5rem;
-font-weight: 700;
-}
-
-.cta-section h3 {
-font-size: 1.6rem;
-font-weight: 700;
-}
-
-.hierarchy-title {
-font-size: 1.3rem;
-font-weight: 700;
-}
-}
-
-/* Desktop (1025px+) - Ya existe el diseño base */
-@media (min-width: 1025px) {
-.container {
-max-width: 1100px;
-}
-}
-
-
-/* Huawei MatePad 11.5"S High Resolution Optimization (1025px - 1600px) */
-@media (min-width: 1025px) and (max-width: 1600px) {
-body {
-padding: 2.5rem 1.5rem;
-}
-
-.container {
-max-width: 1400px;
-}
-
-.header {
-padding: 4rem 3rem;
-}
-
-.header h1 {
-font-size: 3rem;
-font-weight: 700;
-}
-
-.logo-aidn {
-width: 120px;
-height: 120px;
-}
-
-.content {
-padding: 3.5rem 3rem;
-}
-
-.section-title {
-font-size: 2.1rem;
-font-weight: 700;
-margin-bottom: 2.5rem;
-}
-
-.subsection-title {
-font-size: 1.5rem;
-font-weight: 700;
-}
-
-.tech-grid {
-grid-template-columns: repeat(3, 1fr);
-gap: 2rem;
-}
-
-.service-table th,
-.service-table td {
-padding: 1.3rem;
-font-size: 1.05rem;
-}
-
-.price {
-font-size: 1.6rem;
-font-weight: 700;
-}
-
-.intro-section {
-padding: 2.5rem;
-margin-bottom: 4rem;
-}
-
-.intro-section h2 {
-font-size: 1.9rem;
-font-weight: 700;
-}
-
-.intro-section p {
-font-size: 1.05rem;
-line-height: 1.85;
-}
-
-.tech-highlight {
-padding: 2.5rem;
-margin-bottom: 4rem;
-}
-
-.tech-highlight h3 {
-font-size: 1.65rem;
-font-weight: 700;
-}
-
-.cta-section {
-padding: 4rem 3rem;
-}
-
-.cta-section h3 {
-font-size: 1.75rem;
-font-weight: 700;
-}
-
-.cta-section p {
-font-size: 1.15rem;
-}
-
-.hierarchy-title {
-font-size: 1.4rem;
-font-weight: 700;
-}
-
-.consulting-card h4 {
-font-size: 1.3rem;
-font-weight: 700;
-}
-
-.info-box-title {
-font-size: 1.2rem;
-font-weight: 700;
-}
-
-.floating-btn {
-width: 60px;
-height: 60px;
-min-width: 60px;
-}
-
-.floating-btn svg {
-width: 26px;
-height: 26px;
-}
-}
-
-/* Desktop Large (1601px+) */
-@media (min-width: 1601px) {
-.container {
-max-width: 1200px;
-}
-
-.header h1 {
-font-size: 3.2rem;
-font-weight: 700;
-}
-
-.section-title {
-font-size: 2.2rem;
-font-weight: 700;
-}
-
-.subsection-title {
-font-size: 1.6rem;
-font-weight: 700;
-}
-
-.intro-section h2 {
-font-size: 2rem;
-font-weight: 700;
-}
-
-.tech-highlight h3 {
-font-size: 1.75rem;
-font-weight: 700;
-}
-
-.cta-section h3 {
-font-size: 1.85rem;
-font-weight: 700;
-}
-}
-/* Footer Badges - Discrete & Professional */
-.footer-badges {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-margin-bottom: 1.5rem;
-flex-wrap: wrap;
-}
-
-/* Target Icon - Separator Element */
 .separator {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 3rem 0;
+position: relative;
+}
+
+.separator::before,
+.separator::after {
+content: '';
+flex: 1;
 height: 2px;
 background: linear-gradient(to right, transparent, var(--border), transparent);
-position: relative;
-margin: 3rem 0;
-display: flex;
-align-items: center;
-justify-content: center;
-user-select: none;
-}
-
-.separator::before {
-content: '';
-position: absolute;
-width: 100%;
-height: 1px;
-background: linear-gradient(to right, transparent 20%, rgba(3, 180, 214, 0.2) 50%, transparent 80%);
-top: 50%;
 }
 
 .target-icon {
-width: 24px;
-height: 24px;
+width: 48px;
+height: 48px;
+margin: 0 1.5rem;
 color: var(--primary);
-filter: drop-shadow(0 0 8px rgba(3, 180, 214, 0.25));
-z-index: 2;
-position: relative;
-background: var(--bg-white);
-padding: 4px;
-border-radius: 50%;
-animation: pulse-target 4s ease-in-out infinite;
-cursor: pointer;
-transition: all var(--transition-base);
-user-select: none;
-}
-
-.target-icon:hover {
-transform: scale(1.15) rotate(90deg);
-filter: drop-shadow(0 0 16px rgba(3, 180, 214, 0.4));
-animation: pulse-target 4s ease-in-out infinite, ripple-target 1.5s ease-out infinite;
-}
-
-.target-icon:active {
-transform: scale(0.95) rotate(90deg);
-animation: bounce-target 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+filter: drop-shadow(0 2px 8px rgba(3, 180, 214, 0.3));
+animation: pulse-target 3s ease-in-out infinite;
 }
 
 @keyframes pulse-target {
 0%, 100% {
 transform: scale(1);
-filter: drop-shadow(0 0 8px rgba(3, 180, 214, 0.25));
+opacity: 0.8;
 }
 50% {
-transform: scale(1.08);
-filter: drop-shadow(0 0 16px rgba(3, 180, 214, 0.4));
-}
-}
-
-@keyframes ripple-target {
-0% {
-box-shadow: 0 0 0 0 rgba(3, 180, 214, 0.6), 0 0 0 0 rgba(3, 180, 214, 0.4);
-}
-50% {
-box-shadow: 0 0 0 8px rgba(3, 180, 214, 0.3), 0 0 0 12px rgba(3, 180, 214, 0.1);
-}
-100% {
-box-shadow: 0 0 0 16px rgba(3, 180, 214, 0), 0 0 0 24px rgba(3, 180, 214, 0);
-}
-}
-
-@keyframes bounce-target {
-0%, 100% {
-transform: scale(1) rotate(0deg);
-}
-25% {
-transform: scale(1.2) rotate(90deg);
-}
-50% {
-transform: scale(0.9) rotate(180deg);
-}
-75% {
-transform: scale(1.1) rotate(270deg);
-}
-}
-
-.footer-badges {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-margin-bottom: 1.5rem;
-flex-wrap: wrap;
-}
-
-.footer-badge {
-display: inline-flex;
-align-items: center;
-gap: 0.5rem;
-padding: 0.5rem 1rem;
-border-radius: 20px;
-font-size: 0.75rem;
-font-weight: 500;
-transition: all var(--transition-base);
-opacity: 0.9;
-line-height: 1.4;
-cursor: default;
-user-select: none;
-}
-
-.footer-badge:hover {
+transform: scale(1.1);
 opacity: 1;
-transform: translateY(-2px);
-box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.badge-opensource {
-background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-color: #065f46;
-border: 1px solid #059669;
-}
-
-[data-theme="dark"] .badge-opensource {
-background: linear-gradient(135deg, #064e3b, #065f46);
-color: #6ee7b7;
-border: 1px solid #059669;
-}
-
-.badge-security {
-background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-color: #1e3a8a;
-border: 1px solid #0c2a85;
-}
-
-[data-theme="dark"] .badge-security {
-background: linear-gradient(135deg, #1e3a8a, #1e40af);
-color: #dbeafe;
-border: 1px solid #3b82f6;
-}
-
-.badge-icon {
-font-size: 1rem;
-}
-
-@media (max-width: 480px) {
-.footer-badges {
-flex-direction: column;
-gap: 0.8rem;
-}
-
-.footer-badge {
-width: 100%;
-max-width: 280px;
-justify-content: center;
-font-size: 0.7rem;
-padding: 0.6rem 0.8rem;
-}
-
-.separator {
-margin: 2rem 0;
-}
-
-.target-icon {
-width: 20px;
-height: 20px;
-}
-
-
-.floating-buttons-container {
-bottom: 12px;
-right: 12px;
-}
-
-.floating-btn {
-width: 44px;
-height: 44px;
-min-width: 44px;
-}
-
-.floating-btn svg {
-width: 20px;
-height: 20px;
-}
-
-.toc-container {
-padding: 1.5rem;
-margin: 2rem 0;
-}
-
-.toc-title {
-font-size: 1.4rem;
-}
-
-.toc-link {
-padding: 0.8rem 1rem;
-gap: 0.8rem;
-}
-
-.toc-number {
-font-size: 1.2rem;
-min-width: 28px;
-}
-
-.toc-text {
-font-size: 0.9rem;
-}
-
-.toc-icon {
-width: 16px;
-height: 16px;
 }
 }
 
-
-/* Table of Contents / Índice */
 .toc-container {
 background: var(--bg-white);
-border: 2px solid var(--secondary);
+border: 2px solid var(--border);
 border-radius: 16px;
 padding: 2rem;
-margin: 3rem 0;
-box-shadow: 0 8px 24px var(--shadow);
-transition: all var(--transition-base);
-}
-
-.toc-container:hover {
-box-shadow: 0 12px 32px var(--hover-shadow);
-transform: translateY(-2px);
+margin-bottom: 3rem;
+box-shadow: 0 4px 16px var(--shadow);
 }
 
 .toc-title {
 font-family: 'Rajdhani', sans-serif;
-font-size: 2rem;
+font-size: 1.75rem;
 font-weight: 700;
-color: var(--primary);
+color: var(--text-dark);
 margin-bottom: 1.5rem;
-text-align: center;
 display: flex;
 align-items: center;
-justify-content: center;
 gap: 0.8rem;
+border-bottom: 2px solid var(--border);
+padding-bottom: 1rem;
 }
 
-[data-theme="dark"] .toc-title {
-color: var(--secondary);
+.toc-title svg {
+width: 24px;
+height: 24px;
+color: var(--primary);
 }
 
 .toc-list {
 list-style: none;
 padding: 0;
-display: grid;
-grid-template-columns: 1fr;
-gap: 0.8rem;
+margin: 0;
+}
+
+.toc-item {
+margin-bottom: 0.8rem;
 }
 
 .toc-link {
 display: flex;
 align-items: center;
-gap: 1rem;
-padding: 1rem 1.2rem;
+justify-content: space-between;
+padding: 1rem;
 background: var(--bg-light);
-border: 2px solid var(--border);
-border-radius: 12px;
+border-radius: 10px;
 text-decoration: none;
 color: var(--text-dark);
-font-weight: 500;
 transition: all var(--transition-base);
-position: relative;
-overflow: hidden;
-}
-
-.toc-link::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(3, 180, 214, 0.1), transparent);
-transition: left 0.5s ease;
-}
-
-.toc-link:hover::before {
-left: 100%;
+border: 1px solid transparent;
+gap: 0.8rem;
 }
 
 .toc-link:hover {
-background: var(--hover-bg);
-border-color: var(--secondary);
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
 transform: translateX(8px);
-box-shadow: 0 4px 12px rgba(3, 180, 214, 0.2);
+border-color: var(--primary);
+box-shadow: 0 4px 12px var(--shadow);
+}
+
+.toc-link:hover .toc-icon {
+color: white;
+transform: translateX(4px);
+}
+
+.toc-link:hover .toc-number {
+background: rgba(255,255,255,0.2);
+color: white;
 }
 
 .toc-number {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.4rem;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-width: 35px;
+height: 35px;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+border-radius: 8px;
 font-weight: 700;
-color: var(--primary);
-min-width: 32px;
-text-align: center;
+font-size: 0.9rem;
 flex-shrink: 0;
-}
-
-[data-theme="dark"] .toc-number {
-color: var(--secondary);
+padding: 0 0.6rem;
+transition: all var(--transition-base);
 }
 
 .toc-text {
 flex: 1;
-font-size: 1rem;
-line-height: 1.4;
+font-weight: 600;
+font-size: 0.95rem;
 }
 
 .toc-icon {
 width: 20px;
 height: 20px;
 color: var(--text-light);
+flex-shrink: 0;
 transition: all var(--transition-base);
+}
+
+.submarca-title {
+padding: 2rem;
+border-radius: 16px;
+margin-bottom: 2.5rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+box-shadow: 0 8px 24px var(--shadow);
+}
+
+.submarca-title::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.submarca-strategy {
+background: linear-gradient(135deg, #06b6d4, #0c2a85);
+}
+
+.submarca-taxes {
+background: linear-gradient(135deg, #059669, #047857);
+}
+
+.submarca-name {
+display: block;
+font-family: 'Rajdhani', sans-serif;
+font-size: 2.5rem;
+font-weight: 700;
+color: white;
+letter-spacing: 2px;
+margin-bottom: 0.5rem;
+position: relative;
+z-index: 1;
+text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.submarca-descriptor {
+display: block;
+font-size: 1.2rem;
+color: rgba(255,255,255,0.9);
+font-weight: 500;
+position: relative;
+z-index: 1;
+}
+
+/* AIDN Strategy - Gradiente Cian-Azul */
+.strategy-subsection {
+margin-bottom: 2.5rem;
+}
+
+.strategy-subsection h3 {
+font-family: 'Rajdhani', sans-serif;
+font-size: 1.6rem;
+font-weight: 700;
+color: var(--text-dark);
+margin-bottom: 1.5rem;
+padding-left: 1rem;
+border-left: 5px solid #06b6d4;
+display: flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+/* AIDN Taxes - Verde Corporativo */
+.taxes-subsection {
+margin-bottom: 2.5rem;
+}
+
+.taxes-subsection h3 {
+font-family: 'Rajdhani', sans-serif;
+font-size: 1.6rem;
+font-weight: 700;
+color: var(--text-dark);
+margin-bottom: 1.5rem;
+padding-left: 1rem;
+border-left: 5px solid #059669;
+display: flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+.consulting-card {
+background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+border: 2px solid #06b6d4;
+border-radius: 16px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 4px 16px rgba(6, 182, 212, 0.15);
+transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .consulting-card {
+background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
+border-color: #06b6d4;
+}
+
+.consulting-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
+}
+
+.consulting-card h4 {
+font-family: 'Rajdhani', sans-serif;
+font-size: 1.4rem;
+color: var(--text-dark);
+margin-bottom: 1rem;
+font-weight: 700;
+}
+
+.consulting-card p {
+color: var(--text-dark);
+line-height: 1.7;
+margin-bottom: 1rem;
+}
+
+.consulting-features {
+list-style: none;
+padding: 0;
+margin: 1rem 0 0 0;
+}
+
+.consulting-features li {
+padding: 0.5rem 0 0.5rem 2rem;
+position: relative;
+color: var(--text-dark);
+line-height: 1.6;
+}
+
+.consulting-features li::before {
+content: '✓';
+position: absolute;
+left: 0;
+color: #06b6d4;
+font-weight: 700;
+font-size: 1.2rem;
+}
+
+.tools-highlight {
+background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+border: 2px solid #06b6d4;
+border-radius: 16px;
+padding: 2rem;
+margin-top: 2rem;
+box-shadow: 0 4px 16px rgba(6, 182, 212, 0.15);
+}
+
+[data-theme="dark"] .tools-highlight {
+background: linear-gradient(135deg, #1e3a5f, #2a4a6f);
+border-color: #06b6d4;
+}
+
+.tools-highlight h4 {
+font-family: 'Rajdhani', sans-serif;
+font-size: 1.3rem;
+color: var(--text-dark);
+margin-bottom: 1.5rem;
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.tools-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 1.5rem;
+margin-top: 1.5rem;
+}
+
+.tool-card {
+background: var(--bg-white);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 1.5rem;
+transition: all var(--transition-base);
+}
+
+.tool-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px var(--shadow);
+border-color: #06b6d4;
+}
+
+.tool-card h5 {
+font-size: 1.1rem;
+color: var(--text-dark);
+margin-bottom: 0.8rem;
+font-weight: 700;
+}
+
+.tool-card p {
+color: var(--text-light);
+font-size: 0.9rem;
+line-height: 1.6;
+margin-bottom: 0.8rem;
+}
+
+.tool-card .tool-usage {
+font-size: 0.85rem;
+color: var(--text-dark);
+font-style: italic;
+padding: 0.5rem;
+background: var(--bg-light);
+border-radius: 6px;
+margin-top: 0.5rem;
+}
+
+.cta-section {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+padding: 3rem 2.5rem;
+border-radius: 16px;
+text-align: center;
+margin-top: 4rem;
+box-shadow: 0 12px 40px var(--shadow);
+position: relative;
+overflow: hidden;
+}
+
+.cta-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+pointer-events: none;
+}
+
+.cta-enhanced {
+position: relative;
+}
+
+.cta-mission {
+margin-bottom: 2rem;
+position: relative;
+z-index: 1;
+}
+
+.cta-mission h3 {
+font-family: 'Rajdhani', sans-serif;
+font-size: 2.2rem;
+font-weight: 700;
+color: white;
+margin-bottom: 0.5rem;
+text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.mission-tagline {
+font-size: 1.1rem;
+color: rgba(255,255,255,0.95);
+font-weight: 500;
+margin-bottom: 0.3rem;
+}
+
+.expertise-line {
+font-size: 0.95rem;
+color: rgba(255,255,255,0.85);
+font-style: italic;
+}
+
+.cta-divider {
+height: 2px;
+background: rgba(255,255,255,0.3);
+margin: 2rem auto;
+max-width: 400px;
+}
+
+.cta-section h3 {
+font-family: 'Rajdhani', sans-serif;
+font-size: 1.8rem;
+font-weight: 700;
+color: white;
+margin-bottom: 1rem;
+position: relative;
+z-index: 1;
+}
+
+.cta-section p {
+font-size: 1.1rem;
+color: rgba(255,255,255,0.95);
+margin-bottom: 2rem;
+position: relative;
+z-index: 1;
+}
+
+.cta-button {
+display: inline-flex;
+align-items: center;
+gap: 0.8rem;
+background: white;
+color: var(--secondary);
+padding: 1rem 2.5rem;
+border-radius: 50px;
+text-decoration: none;
+font-weight: 700;
+font-size: 1.1rem;
+transition: all var(--transition-base);
+box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+position: relative;
+z-index: 1;
+}
+
+.cta-button:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+background: #f0f9ff;
+}
+
+.cta-icon {
+width: 24px;
+height: 24px;
+}
+
+.footer {
+background: var(--bg-light);
+padding: 2.5rem 2rem;
+text-align: center;
+border-top: 3px solid var(--border);
+}
+
+.contact-info {
+display: flex;
+justify-content: center;
+gap: 2.5rem;
+margin-bottom: 2rem;
+flex-wrap: wrap;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+color: var(--text-dark);
+font-size: 0.95rem;
+}
+
+.contact-item svg {
+color: var(--primary);
 flex-shrink: 0;
 }
 
-.toc-link:hover .toc-icon {
+.contact-item strong {
+font-weight: 600;
+margin-right: 0.3rem;
+}
+
+.contact-item a {
+color: var(--primary);
+text-decoration: none;
+transition: color var(--transition-fast);
+}
+
+.contact-item a:hover {
 color: var(--secondary);
-transform: translateX(5px);
+text-decoration: underline;
 }
 
-.toc-link:focus-visible {
-outline: 3px solid var(--secondary);
-outline-offset: 3px;
+.footer-badges {
+display: flex;
+justify-content: center;
+gap: 1.5rem;
+margin-bottom: 1.5rem;
+flex-wrap: wrap;
 }
 
-/* Scroll to Top Button */
-/* Contenedor de botones flotantes */
+.footer-badge {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+background: var(--bg-white);
+padding: 0.6rem 1.2rem;
+border-radius: 20px;
+border: 2px solid var(--border);
+font-size: 0.85rem;
+color: var(--text-dark);
+transition: all var(--transition-base);
+}
+
+.footer-badge:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 12px var(--shadow);
+}
+
+.badge-icon {
+font-size: 1.2rem;
+}
+
 .floating-buttons-container {
 position: fixed;
-bottom: 20px;
-right: 20px;
+bottom: 2rem;
+right: 2rem;
 display: flex;
 flex-direction: column;
-gap: 12px;
-z-index: 9999;
+gap: 1rem;
+z-index: 1000;
 opacity: 0;
 visibility: hidden;
 transform: translateY(20px);
-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+transition: all var(--transition-base);
 }
 
 .floating-buttons-container.visible {
@@ -1765,680 +1156,119 @@ visibility: visible;
 transform: translateY(0);
 }
 
-/* Botones flotantes unificados - Estilo Strategic Radar */
 .floating-btn {
-width: 58px;
-height: 58px;
-min-width: 58px;
+width: 56px;
+height: 56px;
 border-radius: 50%;
-background: rgba(3, 180, 214, 0.1);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
 border: none;
-cursor: pointer;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
 display: flex;
 align-items: center;
 justify-content: center;
+cursor: pointer;
+box-shadow: 0 4px 16px var(--shadow);
 transition: all var(--transition-base);
-color: var(--primary);
-flex-shrink: 0;
-position: relative;
-box-shadow: 0 4px 16px rgba(3, 180, 214, 0.2);
-outline: none;
-}
-
-/* CRITICAL FIX: Removed pointer-events capture bug */
-.floating-btn::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-border-radius: 50%;
-background: radial-gradient(circle, rgba(3, 180, 214, 0.15) 0%, transparent 70%);
-opacity: 0;
-transition: opacity var(--transition-base);
-pointer-events: none;
-}
-
-.floating-btn:hover::after {
-opacity: 1;
 }
 
 .floating-btn:hover {
-background: rgba(3, 180, 214, 0.18);
-transform: scale(1.08);
-box-shadow: 0 8px 24px rgba(3, 180, 214, 0.35);
-border-color: rgba(3, 180, 214, 0.4);
+transform: scale(1.1);
+box-shadow: 0 8px 24px var(--hover-shadow);
 }
 
 .floating-btn:active {
-transform: scale(0.96);
-box-shadow: 0 2px 8px rgba(3, 180, 214, 0.25);
-}
-
-.floating-btn:focus-visible {
-outline: 3px solid rgba(3, 180, 214, 0.5);
-outline-offset: 4px;
+transform: scale(0.95);
 }
 
 .floating-btn svg {
-width: 25px;
-height: 25px;
-stroke: var(--primary);
-fill: none;
-stroke-width: 2;
-transition: transform var(--transition-base);
+width: 24px;
+height: 24px;
 }
 
-.floating-btn:hover svg {
-transform: scale(1.12);
+.whatsapp-btn {
+background: linear-gradient(135deg, #25D366, #128C7E);
 }
 
-/* Botón de WhatsApp específico */
-.floating-btn.whatsapp-btn {
-background: rgba(37, 211, 102, 0.1);
-border-color: rgba(37, 211, 102, 0.2);
+.whatsapp-btn:hover {
+background: linear-gradient(135deg, #128C7E, #075E54);
 }
 
-.floating-btn.whatsapp-btn::after {
-background: radial-gradient(circle, rgba(37, 211, 102, 0.15) 0%, transparent 70%);
+.scroll-top {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
-.floating-btn.whatsapp-btn svg {
-stroke: #25D366;
+@media (max-width: 768px) {
+body {
+padding: 1rem 0.5rem;
 }
 
-.floating-btn.whatsapp-btn:hover {
-background: rgba(37, 211, 102, 0.18);
-box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-border-color: rgba(37, 211, 102, 0.4);
+.container {
+border-radius: 0;
 }
 
-/* Botón scroll to top - flecha arriba */
-.floating-btn.scroll-top svg {
-transform: rotate(0deg);
+.header h1 {
+font-size: 2rem;
 }
 
-.floating-btn.scroll-top:hover svg {
-transform: translateY(-4px) scale(1.12);
+.content {
+padding: 2rem 1.5rem;
 }
 
-/* Tema oscuro */
-[data-theme="dark"] .floating-btn {
-background: rgba(3, 180, 214, 0.15);
-border-color: rgba(3, 180, 214, 0.3);
+.section-title {
+font-size: 1.6rem;
 }
 
-[data-theme="dark"] .floating-btn svg {
-stroke: var(--secondary);
+.contact-info {
+flex-direction: column;
+gap: 1rem;
 }
 
-[data-theme="dark"] .floating-btn.whatsapp-btn {
-background: rgba(52, 211, 153, 0.15);
-border-color: rgba(52, 211, 153, 0.3);
+.tech-grid,
+.tools-grid {
+grid-template-columns: 1fr;
 }
 
-[data-theme="dark"] .floating-btn.whatsapp-btn svg {
-stroke: #34d399;
+.floating-buttons-container {
+bottom: 1rem;
+right: 1rem;
 }
 
-[data-theme="dark"] .floating-btn.whatsapp-btn:hover {
-background: rgba(52, 211, 153, 0.25);
-border-color: rgba(52, 211, 153, 0.5);
+.floating-btn {
+width: 48px;
+height: 48px;
 }
 
-[data-theme="dark"] .floating-btn:hover {
-background: rgba(3, 180, 214, 0.25);
-border-color: rgba(3, 180, 214, 0.5);
+.service-table {
+font-size: 0.85rem;
 }
 
-@keyframes subtle-vibrate {
-0%, 100% { transform: scale(1.1) rotate(0deg); }
-25% { transform: scale(1.1) rotate(-2deg); }
-75% { transform: scale(1.1) rotate(2deg); }
-}
-
-/* Public Notice - Warning boxes */
-.public-notice {
-background: linear-gradient(135deg, #fef3c7, #fde68a);
-border-left: 5px solid var(--warning);
-border-radius: 12px;
-padding: 1.5rem;
-margin: 2rem 0;
-box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-animation: subtle-pulse 3s ease-in-out infinite;
-}
-
-[data-theme="dark"] .public-notice {
-background: linear-gradient(135deg, #422006, #78350f);
-}
-
-.public-notice .info-box-title {
-color: #92400e;
-font-weight: 700;
-font-size: 1.1rem;
-margin-bottom: 0.8rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-[data-theme="dark"] .public-notice .info-box-title {
-color: #fbbf24;
-}
-
-.public-notice p {
-color: var(--text-dark);
-line-height: 1.7;
-}
-
-.public-notice strong {
-color: #92400e;
-font-weight: 700;
-}
-
-[data-theme="dark"] .public-notice strong {
-color: #fbbf24;
-}
-
-@keyframes subtle-pulse {
-0%, 100% {
-box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-}
-50% {
-box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25);
-}
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-*,
-*::before,
-*::after {
-animation-duration: 0.01ms !important;
-transition-duration: 0.01ms !important;
-}
-}
-
-
-/* Dark theme support */
-[data-theme="dark"] .footer-mission {
-    background: linear-gradient(135deg, rgba(3, 180, 214, 0.05), rgba(3, 180, 214, 0.12));
-    border-color: rgba(3, 180, 214, 0.25);
-}
-
-[data-theme="dark"] .footer-mission h4 {
-    color: var(--secondary);
-}
-
-[data-theme="dark"] .footer-mission .mission-tagline {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-[data-theme="dark"] .footer-mission .expertise-line {
-    color: var(--secondary);
-}
-
-/* Responsive Design */
-
-/* Mobile (320px - 480px) */
-@media (max-width: 480px) {
-    .footer-mission {
-        padding: 1.2rem 1rem;
-        margin: 1.5rem auto 1rem;
-    }
-    
-    .footer-mission h4 {
-        font-size: 1.1rem;
-    }
-    
-    .footer-mission .mission-tagline {
-        font-size: 0.9rem;
-    }
-    
-    .footer-mission .expertise-line {
-        font-size: 0.85rem;
-        letter-spacing: 0.3px;
-    }
-}
-
-/* Medium Mobile & Small Tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .footer-mission {
-        padding: 1.3rem 1.5rem;
-        margin: 1.8rem auto 1.2rem;
-    }
-    
-    .footer-mission h4 {
-        font-size: 1.15rem;
-    }
-    
-    .footer-mission .mission-tagline {
-        font-size: 0.95rem;
-    }
-    
-    .footer-mission .expertise-line {
-        font-size: 0.88rem;
-    }
-}
-
-/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .footer-mission {
-        padding: 1.5rem 2rem;
-        margin: 2rem auto 1.5rem;
-        max-width: 850px;
-    }
-    
-    .footer-mission h4 {
-        font-size: 1.25rem;
-    }
-    
-    .footer-mission .mission-tagline {
-        font-size: 1rem;
-    }
-    
-    .footer-mission .expertise-line {
-        font-size: 0.92rem;
-    }
-}
-
-/* Desktop (1025px - 1600px) */
-@media (min-width: 1025px) and (max-width: 1600px) {
-    .footer-mission {
-        padding: 1.5rem 2rem;
-        margin: 2rem auto 1.5rem;
-    }
-}
-
-/* Desktop Large (1601px+) */
-@media (min-width: 1601px) {
-    .footer-mission {
-        padding: 1.8rem 2.5rem;
-        margin: 2.5rem auto 2rem;
-        max-width: 950px;
-    }
-    
-    .footer-mission h4 {
-        font-size: 1.4rem;
-    }
-    
-    .footer-mission .mission-tagline {
-        font-size: 1.1rem;
-    }
-    
-    .footer-mission .expertise-line {
-        font-size: 1rem;
-    }
-}
-
-
-
-/* CTA Enhanced - Unified Mission + Call to Action */
-.cta-enhanced {
-    padding: 3.5rem 2.5rem;
-}
-
-.cta-mission {
-    margin-bottom: 2.5rem;
-    text-align: center;
+.service-table th,
+.service-table td {
+padding: 0.8rem 0.5rem;
 }
 
 .cta-mission h3 {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin: 0 0 0.9rem 0;
-    font-weight: 700;
-    letter-spacing: 0.3px;
+font-size: 1.6rem;
 }
 
-.cta-mission .mission-tagline {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--text-light);
-    margin: 0 0 0.9rem 0;
-    line-height: 1.6;
-    font-weight: 500;
+.cta-section h3 {
+font-size: 1.4rem;
+}
 }
 
-.cta-mission .expertise-line {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--secondary);
-    margin: 0;
-    letter-spacing: 0.5px;
-    line-height: 1.7;
+@media print {
+.floating-buttons-container,
+.cta-section {
+display: none;
 }
-
-.cta-divider {
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--secondary), transparent);
-    margin: 2rem auto 2.5rem;
-    max-width: 400px;
-    position: relative;
-    opacity: 0.6;
 }
-
-.cta-divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background: var(--secondary);
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(3, 180, 214, 0.5);
-}
-
-/* Dark theme support */
-[data-theme="dark"] .cta-mission h3 {
-    color: var(--secondary);
-}
-
-[data-theme="dark"] .cta-mission .mission-tagline {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-[data-theme="dark"] .cta-mission .expertise-line {
-    color: var(--secondary);
-}
-
-[data-theme="dark"] .cta-divider {
-    background: linear-gradient(to right, transparent, var(--secondary), transparent);
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-
-/* Mobile (320px - 480px) */
-@media (max-width: 480px) {
-    .cta-enhanced {
-        padding: 2rem 1.5rem;
-    }
-    
-    .cta-mission {
-        margin-bottom: 1.8rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.3rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 0.95rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 0.88rem;
-        letter-spacing: 0.3px;
-    }
-    
-    .cta-divider {
-        margin: 1.5rem auto 2rem;
-        max-width: 250px;
-    }
-}
-
-/* Medium Mobile & Small Tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .cta-enhanced {
-        padding: 2.5rem 2rem;
-    }
-    
-    .cta-mission {
-        margin-bottom: 2rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.4rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 1rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 0.92rem;
-    }
-    
-    .cta-divider {
-        margin: 1.8rem auto 2.2rem;
-        max-width: 320px;
-    }
-}
-
-/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .cta-enhanced {
-        padding: 3rem 2.2rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.55rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 1.05rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 0.95rem;
-    }
-}
-
-/* Desktop Large (1601px+) */
-@media (min-width: 1601px) {
-    .cta-enhanced {
-        padding: 4rem 3rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.75rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 1.15rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 1.05rem;
-    }
-    
-    .cta-divider {
-        max-width: 500px;
-    }
-}
-
-
-
-/* CTA Enhanced - Unified Mission + Call to Action */
-.cta-enhanced {
-    padding: 3.5rem 2.5rem;
-}
-
-.cta-mission {
-    margin-bottom: 2.5rem;
-    text-align: center;
-}
-
-.cta-mission h3 {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin: 0 0 0.9rem 0;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-}
-
-.cta-mission .mission-tagline {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--text-light);
-    margin: 0 0 0.9rem 0;
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-.cta-mission .expertise-line {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--secondary);
-    margin: 0;
-    letter-spacing: 0.5px;
-    line-height: 1.7;
-}
-
-.cta-divider {
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--secondary), transparent);
-    margin: 2rem auto 2.5rem;
-    max-width: 400px;
-    position: relative;
-    opacity: 0.6;
-}
-
-.cta-divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background: var(--secondary);
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(3, 180, 214, 0.5);
-}
-
-/* Dark theme support */
-[data-theme="dark"] .cta-mission h3 {
-    color: var(--secondary);
-}
-
-[data-theme="dark"] .cta-mission .mission-tagline {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-[data-theme="dark"] .cta-mission .expertise-line {
-    color: var(--secondary);
-}
-
-[data-theme="dark"] .cta-divider {
-    background: linear-gradient(to right, transparent, var(--secondary), transparent);
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-
-/* Mobile (320px - 480px) */
-@media (max-width: 480px) {
-    .cta-enhanced {
-        padding: 2rem 1.5rem;
-    }
-    
-    .cta-mission {
-        margin-bottom: 1.8rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.3rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 0.95rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 0.88rem;
-        letter-spacing: 0.3px;
-    }
-    
-    .cta-divider {
-        margin: 1.5rem auto 2rem;
-        max-width: 250px;
-    }
-}
-
-/* Medium Mobile & Small Tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .cta-enhanced {
-        padding: 2.5rem 2rem;
-    }
-    
-    .cta-mission {
-        margin-bottom: 2rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.4rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 1rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 0.92rem;
-    }
-    
-    .cta-divider {
-        margin: 1.8rem auto 2.2rem;
-        max-width: 320px;
-    }
-}
-
-/* Huawei MatePad 11.5" & Medium Tablets (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .cta-enhanced {
-        padding: 3rem 2.2rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.55rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 1.05rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 0.95rem;
-    }
-}
-
-/* Desktop Large (1601px+) */
-@media (min-width: 1601px) {
-    .cta-enhanced {
-        padding: 4rem 3rem;
-    }
-    
-    .cta-mission h3 {
-        font-size: 1.75rem;
-    }
-    
-    .cta-mission .mission-tagline {
-        font-size: 1.15rem;
-    }
-    
-    .cta-mission .expertise-line {
-        font-size: 1.05rem;
-    }
-    
-    .cta-divider {
-        max-width: 500px;
-    }
-}
-
-
 </style>
 </head>
+
 <body>
+
 <div class="container">
+
 <header class="header">
 <div class="logo-container">
 <svg class="logo-aidn" viewBox="0 0 100 100" aria-label="Logo AIDN">
@@ -2461,19 +1291,20 @@ transition-duration: 0.01ms !important;
 <circle cx="68" cy="42" fill="url(#logoGradient)" r="3"/>
 </svg>
 </div>
-<h1>AIDN</h1>
-<p class="subtitle">Strategic Consulting</p>
+<h1>AIDN STRATEGIC CONSULTING</h1>
+<p class="subtitle">Consultoría Estratégica y Servicios Fiscales</p>
 <p class="tagline">Catapultando empresas para liderar el cambio</p>
-<div class="year">CATÁLOGO DE SERVICIOS Y HONORARIOS 2026</div>
+<div class="year">CATÁLOGO 2026</div>
 </header>
 
 <div class="content">
+
 <section class="intro-section">
-<h2>Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad</h2>
-<p>AIDN Strategic Consulting va más allá de "presentar declaraciones". Mientras muchos clientes buscan disminuir su carga fiscal con mañas y omisiones, nosotros te mostramos el verdadero camino: <strong>crecer de manera sostenible y rentable</strong> con estrategias legales que maximizan tu potencial empresarial.</p>
-<p>Combinamos precisión fiscal con visión estratégica empresarial. No evadimos impuestos, <strong>diseñamos modelos de negocio más eficientes</strong>. No ocultamos ingresos, <strong>creamos estrategias para incrementarlos</strong>. El ahorro fiscal real viene del crecimiento inteligente, no de la improvisación.</p>
-<p><strong>MAE Saúl Dávila Pantoja</strong> — Maestro en Administración Empresarial con especialidad en Planeación Estratégica | Consultor Estratégico Certificado por OLA/CICA en Administración Estratégica | Licenciado en Contaduría Pública.</p>
-<span class="badge">🏆 Certificación Internacional OLA/CICA 2025-2031</span>
+<h2>Más que cumplimiento fiscal: Estrategias que impactan</h2>
+<p>En <strong>AIDN Strategic Consulting</strong>, nuestra prioridad es <strong>crear valor en las organizaciones de nuestros clientes</strong> más allá de buscar simples estrategias fiscales de ahorro. Entendemos que una empresa exitosa no se construye solo desde una perspectiva de finanzas o impuestos, cuyo rango de operación es limitado y con frecuencia deja de lado aspectos de impacto trascendente como <strong>la cultura organizacional, la mejora continua, la toma de decisiones estratégicas y la creación de planes de acción objetivos y monitoreables</strong>.</p>
+<p>Para nosotros, es más importante una <strong>planeación estratégica que busque el desempeño superior con una visión holística</strong>, integrando todas las áreas funcionales de la empresa, que centrarse únicamente en estrategias fiscales de ahorro ínfimo. Nuestra visión como consultores es <strong>360 grados</strong>: consideramos tanto el contexto interno de la organización como el entorno externo, porque solo con una comprensión completa se pueden diseñar soluciones verdaderamente transformadoras.</p>
+<p>Combinamos rigor técnico en servicios fiscales con una visión estratégica de negocio. Nuestro enfoque integra herramientas de planeación probadas internacionalmente y tecnología de vanguardia para ofrecer soluciones personalizadas que impulsan el crecimiento sostenible de tu empresa.</p>
+<span class="badge">🏆 Certificación OLA/CICA en Planeación Estratégica</span>
 </section>
 
 <div class="separator" role="presentation">
@@ -2494,9 +1325,61 @@ transition-duration: 0.01ms !important;
 </h2>
 <ul class="toc-list">
 <li class="toc-item">
-<a href="#seccion-consultoria" class="toc-link">
-<span class="toc-number">I</span>
-<span class="toc-text">Consultoría Estratégica y Administración Empresarial</span>
+<a href="#seccion-strategy" class="toc-link">
+<span class="toc-text">I. AIDN Strategy | Consultoría Estratégica</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#strategy-planeacion" class="toc-link">
+<span class="toc-number">1</span>
+<span class="toc-text">Planeación y Dirección Estratégica</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#strategy-financiero" class="toc-link">
+<span class="toc-number">2</span>
+<span class="toc-text">Análisis Financiero y Proyecciones</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#strategy-reestructuracion" class="toc-link">
+<span class="toc-number">3</span>
+<span class="toc-text">Reestructuración Organizacional</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#strategy-desarrollo" class="toc-link">
+<span class="toc-number">4</span>
+<span class="toc-text">Desarrollo de Modelos de Negocio</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#strategy-herramientas" class="toc-link">
+<span class="toc-number">5</span>
+<span class="toc-text">Herramientas Estratégicas</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#seccion-taxes" class="toc-link">
+<span class="toc-text">II. AIDN Taxes | Servicios Fiscales</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2504,8 +1387,8 @@ transition-duration: 0.01ms !important;
 </li>
 <li class="toc-item">
 <a href="#seccion-resico" class="toc-link">
-<span class="toc-number">II</span>
-<span class="toc-text">Servicios Fiscales RESICO</span>
+<span class="toc-number">1</span>
+<span class="toc-text">Personas Físicas RESICO</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2513,8 +1396,8 @@ transition-duration: 0.01ms !important;
 </li>
 <li class="toc-item">
 <a href="#seccion-sueldos" class="toc-link">
-<span class="toc-number">III</span>
-<span class="toc-text">Servicios Fiscales: Sueldos y Salarios</span>
+<span class="toc-number">2</span>
+<span class="toc-text">Sueldos y Salarios</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2522,8 +1405,8 @@ transition-duration: 0.01ms !important;
 </li>
 <li class="toc-item">
 <a href="#seccion-empresarial" class="toc-link">
-<span class="toc-number">IV</span>
-<span class="toc-text">Servicios Fiscales: Actividad Empresarial y Minoristas</span>
+<span class="toc-number">3</span>
+<span class="toc-text">Actividad Empresarial y Minoristas</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2531,7 +1414,7 @@ transition-duration: 0.01ms !important;
 </li>
 <li class="toc-item">
 <a href="#seccion-administrativos" class="toc-link">
-<span class="toc-number">V</span>
+<span class="toc-number">4</span>
 <span class="toc-text">Servicios Administrativos, Legales y Patrimoniales</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
@@ -2540,7 +1423,15 @@ transition-duration: 0.01ms !important;
 </li>
 <li class="toc-item">
 <a href="#seccion-politicas" class="toc-link">
-<span class="toc-number">VI</span>
+<span class="toc-text">III. Políticas y Ética Profesional</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#seccion-politicas-operacion" class="toc-link">
+<span class="toc-number">1</span>
 <span class="toc-text">Políticas de Operación y Ética Profesional</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
@@ -2549,8 +1440,16 @@ transition-duration: 0.01ms !important;
 </li>
 <li class="toc-item">
 <a href="#seccion-legal" class="toc-link">
-<span class="toc-number">VII</span>
+<span class="toc-number">2</span>
 <span class="toc-text">Información Legal para el Contribuyente</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#seccion-modelo-trabajo" class="toc-link">
+<span class="toc-text">IV. Modelo de Trabajo Digital y Remoto</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2566,50 +1465,15 @@ transition-duration: 0.01ms !important;
 <circle cx="12" cy="12" r="2"/>
 </svg>
 </div>
-<!-- FIN PARTE 1 - CONTINÚA EN catalogo-parte-2.html -->
-<!-- INICIO PARTE 2 - CONTINUACIÓN DE catalogo-parte-1.html -->
 
-
-
-<div class="tech-highlight">
-<h3>
-<svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-<polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-<line x1="12" y1="22.08" x2="12" y2="12"/>
-</svg>
-Modelo de Trabajo Digital y Remoto
-</h3>
-<p style="margin-bottom: 1.5rem; line-height: 1.7;">Operamos con un modelo de trabajo predominantemente remoto, aprovechando tecnología de vanguardia para brindar servicios de clase mundial sin las limitaciones geográficas tradicionales.</p>
-
-<div style="background: var(--bg-white); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
-<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Atención primaria vía videollamada o videoconferencia</strong><br>Reuniones efectivas desde cualquier ubicación</p>
-<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Despacho físico disponible bajo cita previa</strong><br>Atención presencial cuando sea necesario</p>
-<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Plataformas digitales gubernamentales</strong><br>Gestiones directas en portales del SAT, IMSS y otros sistemas oficiales</p>
-<p style="margin-bottom: 0; line-height: 1.6;"><strong>✓ Respuesta ágil sin necesidad de desplazamientos</strong><br>Ahorra tiempo y reduce costos operativos</p>
-</div>
-
-<div class="tech-grid">
-<div class="tech-card">
-<h4>🤖 Inteligencia Artificial</h4>
-<p>Implementación de IA para análisis del contexto empresarial, optimización de procesos estratégicos y apoyo a herramientas de planeación y toma de decisiones.</p>
-</div>
-<div class="tech-card">
-<h4>📱 Apps de Automatización</h4>
-<p>Utilización de aplicaciones especializadas para automatización de cálculos, gestiones y seguimiento estratégico de indicadores clave de negocio.</p>
-</div>
-<div class="tech-card">
-<h4>🐧 Software Libre & Linux</h4>
-<p>Infraestructura basada en software libre, garantizando seguridad, estabilidad y cero dependencia de licencias restrictivas. Mayor control sobre tus datos sensibles.</p>
-</div>
-</div>
+<!-- SECCIÓN I: AIDN STRATEGY -->
+<div id="seccion-strategy"></div>
+<div class="submarca-title submarca-strategy">
+<span class="submarca-name">I. AIDN Strategy</span>
+<span class="submarca-descriptor">Consultoría Estratégica</span>
 </div>
 
 <section class="section" id="seccion-consultoria">
-<h2 class="section-title">
-<span class="section-number">I</span>
-Consultoría Estratégica y Administración Empresarial
-</h2>
 
 <div class="info-box premium">
 <p class="info-box-title">💼 Servicios Premium Personalizados</p>
@@ -2617,6 +1481,8 @@ Consultoría Estratégica y Administración Empresarial
 <p style="margin-top: 1rem;"><strong>Nota importante:</strong> Para los servicios de consultoría es necesario acudir a las instalaciones del cliente para conocer su contexto, realizar análisis, entrevistas, aplicar test y estudios de campo que permitan un diagnóstico preciso.</p>
 </div>
 
+<div class="strategy-subsection" id="strategy-planeacion">
+<h3><span class="subsection-number">1</span> Planeación y Dirección Estratégica</h3>
 <div class="consulting-card">
 <h4>📊 Planeación y Dirección Estratégica</h4>
 <p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
@@ -2627,7 +1493,10 @@ Consultoría Estratégica y Administración Empresarial
 <li>Acompañamiento en ejecución y seguimiento de estrategia</li>
 </ul>
 </div>
+</div>
 
+<div class="strategy-subsection" id="strategy-financiero">
+<h3><span class="subsection-number">2</span> Análisis Financiero y Proyecciones</h3>
 <div class="consulting-card">
 <h4>💰 Análisis Financiero y Proyecciones</h4>
 <p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
@@ -2638,7 +1507,10 @@ Consultoría Estratégica y Administración Empresarial
 <li>Optimización de flujo de efectivo y estructura de capital</li>
 </ul>
 </div>
+</div>
 
+<div class="strategy-subsection" id="strategy-reestructuracion">
+<h3><span class="subsection-number">3</span> Reestructuración Organizacional</h3>
 <div class="consulting-card">
 <h4>🔄 Reestructuración Organizacional</h4>
 <p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
@@ -2649,7 +1521,10 @@ Consultoría Estratégica y Administración Empresarial
 <li>Estrategias de cambio organizacional y gestión del talento</li>
 </ul>
 </div>
+</div>
 
+<div class="strategy-subsection" id="strategy-desarrollo">
+<h3><span class="subsection-number">4</span> Desarrollo de Modelos de Negocio</h3>
 <div class="consulting-card">
 <h4>🚀 Desarrollo de Modelos de Negocio</h4>
 <p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
@@ -2660,6 +1535,107 @@ Consultoría Estratégica y Administración Empresarial
 <li>Plan de escalabilidad y expansión</li>
 </ul>
 </div>
+</div>
+
+<div class="strategy-subsection" id="strategy-herramientas">
+<h3><span class="subsection-number">5</span> Herramientas Estratégicas</h3>
+<div class="tools-highlight">
+<h4>🛠️ Arsenal de Herramientas Estratégicas Internacionales</h4>
+<p>Utilizamos las metodologías y frameworks más reconocidos a nivel mundial para garantizar análisis rigurosos y decisiones fundamentadas:</p>
+
+<div class="tools-grid">
+<div class="tool-card">
+<h5>🌊 Estrategia del Océano Azul</h5>
+<p>Crea nuevos espacios de mercado inexplorados y deja de competir en mercados saturados.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Busques diferenciación radical o nuevos modelos de negocio.</p>
+</div>
+
+<div class="tool-card">
+<h5>⚔️ 5 Fuerzas de Porter</h5>
+<p>Analiza la competitividad de tu industria evaluando competidores, proveedores, clientes, sustitutos y nuevos entrantes.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Necesites entender la dinámica competitiva de tu sector.</p>
+</div>
+
+<div class="tool-card">
+<h5>📊 Cuadro de Mando Integral (BSC)</h5>
+<p>Traduce la estrategia en objetivos medibles desde 4 perspectivas: financiera, cliente, procesos y aprendizaje.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Requieras alinear toda la organización con la estrategia.</p>
+</div>
+
+<div class="tool-card">
+<h5>⚠️ Matriz de Análisis de Riesgos</h5>
+<p>Identifica, evalúa y prioriza riesgos según probabilidad e impacto para tomar decisiones informadas.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Enfrentes incertidumbre o proyectos de alto riesgo.</p>
+</div>
+
+<div class="tool-card">
+<h5>📍 Matriz PEYEA</h5>
+<p>Determina la postura estratégica óptima (agresiva, defensiva, competitiva o conservadora) según tu contexto.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Necesites decidir entre crecimiento, estabilidad o reestructuración.</p>
+</div>
+
+<div class="tool-card">
+<h5>📈 Matriz de Ansoff</h5>
+<p>Define estrategias de crecimiento: penetración de mercado, desarrollo de productos, desarrollo de mercados o diversificación.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Planifiques expansión o diversificación.</p>
+</div>
+
+<div class="tool-card">
+<h5>⛓️ Cadena de Valor</h5>
+<p>Identifica actividades que generan valor y ventajas competitivas en tu operación.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Busques optimizar procesos y reducir costos.</p>
+</div>
+
+<div class="tool-card">
+<h5>🎯 Matriz de McKinsey (GE)</h5>
+<p>Prioriza unidades de negocio o productos según atractivo del mercado y fortaleza competitiva.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Gestiones portafolios complejos de productos o servicios.</p>
+</div>
+
+<div class="tool-card">
+<h5>💎 Análisis VRIO</h5>
+<p>Evalúa si tus recursos son Valiosos, Raros, Inimitables y Organizados para generar ventaja competitiva sostenible.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Identifiques tus fortalezas competitivas únicas.</p>
+</div>
+
+<div class="tool-card">
+<h5>🐄 Matriz BCG (Boston Consulting Group)</h5>
+<p>Clasifica productos en estrellas, vacas lecheras, interrogantes o perros según crecimiento y participación de mercado.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Gestiones portafolios de productos y decidas inversiones.</p>
+</div>
+
+<div class="tool-card">
+<h5>📉 Curva de Experiencia</h5>
+<p>Reduce costos unitarios conforme aumenta la producción acumulada, generando ventaja en precio.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Planifiques escalamiento o busques liderazgo en costos.</p>
+</div>
+
+<div class="tool-card">
+<h5>🌍 Análisis PESTEL</h5>
+<p>Examina factores externos: Políticos, Económicos, Sociales, Tecnológicos, Ecológicos y Legales.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Analices el macroentorno y tendencias externas.</p>
+</div>
+
+<div class="tool-card">
+<h5>🔍 Matriz FODA (SWOT)</h5>
+<p>Identifica Fortalezas, Oportunidades, Debilidades y Amenazas para diseñar estrategias coherentes.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Realices diagnósticos integrales y planeación estratégica.</p>
+</div>
+
+<div class="tool-card">
+<h5>⏱️ Matriz de Eisenhower</h5>
+<p>Prioriza tareas según urgencia e importancia para maximizar productividad y enfoque estratégico.</p>
+<p class="tool-usage"><strong>Úsala cuando:</strong> Necesites gestionar tiempo y prioridades eficazmente.</p>
+</div>
+
+<div class="tool-card">
+<h5>🎯 KPIs y OKRs</h5>
+<p>KPIs miden desempeño continuo. OKRs establecen objetivos ambiciosos y resultados clave medibles.</p>
+<p class="tool-usage"><strong>Úsalos cuando:</strong> Monitorees progreso y alinees equipos con metas estratégicas.</p>
+</div>
+</div>
+</div>
+</div>
 
 <div class="info-box success">
 <p class="info-box-title">✅ ¿Cómo trabajamos la Consultoría?</p>
@@ -2668,9 +1644,11 @@ Consultoría Estratégica y Administración Empresarial
 <strong>3. Ejecución del proyecto</strong> con acompañamiento cercano y entregas progresivas.<br>
 <strong>4. Seguimiento post-proyecto</strong> para asegurar la implementación exitosa.</p>
 </div>
+
 </section>
-<!-- FIN PARTE 1 -->
-<!-- INICIO PARTE 2 -->
+
+<!-- FIN PARTE 1 - CONTINÚA EN catalogo-parte-2.html -->
+<!-- INICIO PARTE 2 - CONTINUACIÓN DE catalogo-parte-1.html -->
 
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2680,10 +1658,17 @@ Consultoría Estratégica y Administración Empresarial
 </svg>
 </div>
 
+<!-- SECCIÓN II: AIDN TAXES -->
+<div id="seccion-taxes"></div>
+<div class="submarca-title submarca-taxes">
+<span class="submarca-name">II. AIDN Taxes</span>
+<span class="submarca-descriptor">Servicios Fiscales</span>
+</div>
+
 <section class="section" id="seccion-resico">
 <h2 class="section-title">
-<span class="section-number">II</span>
-Servicios Fiscales: Personas Físicas RESICO
+<span class="section-number">1</span>
+Personas Físicas RESICO
 </h2>
 
 <div class="info-box info">
@@ -2803,8 +1788,8 @@ Servicios Fiscales: Personas Físicas RESICO
 
 <section class="section" id="seccion-sueldos">
 <h2 class="section-title">
-<span class="section-number">III</span>
-Servicios Fiscales: Sueldos y Salarios
+<span class="section-number">2</span>
+Sueldos y Salarios
 </h2>
 
 <table class="service-table">
@@ -2837,8 +1822,8 @@ Servicios Fiscales: Sueldos y Salarios
 
 <section class="section" id="seccion-empresarial">
 <h2 class="section-title">
-<span class="section-number">IV</span>
-Servicios Fiscales: Actividad Empresarial y Minoristas
+<span class="section-number">3</span>
+Actividad Empresarial y Minoristas
 </h2>
 
 <div class="info-box warning">
@@ -2937,7 +1922,7 @@ Servicios Fiscales: Actividad Empresarial y Minoristas
 
 <section class="section" id="seccion-administrativos">
 <h2 class="section-title">
-<span class="section-number">V</span>
+<span class="section-number">4</span>
 Servicios Administrativos, Legales y Patrimoniales
 <span class="new-badge">Actualizado 2026</span>
 </h2>
@@ -3153,9 +2138,9 @@ No se tramitan citas para público en general.
 </tbody>
 </table>
 
-<div class="public-notice">
-<p class="info-box-title">⚠️ IMPORTANTE - Servicio No Disponible para Público en General</p>
-<p>Las <strong>constancias de situación fiscal NO se tramitan para público en general</strong> mediante la app del SAT debido a demoras e inconvenientes técnicos recurrentes del sistema. Este servicio está disponible únicamente para <strong>clientes activos con servicios fiscales contratados</strong>.</p>
+<div class="public-notice" style="background: linear-gradient(135deg, #fed7aa, #ffedd5); border: 2px solid var(--warning); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
+<p class="info-box-title" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-dark);">⚠️ IMPORTANTE - Servicio No Disponible para Público en General</p>
+<p style="color: var(--text-dark); line-height: 1.7; margin: 0;">Las <strong>constancias de situación fiscal NO se tramitan para público en general</strong> mediante la app del SAT debido a demoras e inconvenientes técnicos recurrentes del sistema. Este servicio está disponible únicamente para <strong>clientes activos con servicios fiscales contratados</strong>.</p>
 </div>
 </div>
 </section>
@@ -3168,9 +2153,16 @@ No se tramitan citas para público en general.
 </svg>
 </div>
 
-<section class="section" id="seccion-politicas">
+<!-- SECCIÓN III: POLÍTICAS Y ÉTICA PROFESIONAL -->
+<div id="seccion-politicas"></div>
+<div class="submarca-title" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+<span class="submarca-name">III. Políticas y Ética Profesional</span>
+<span class="submarca-descriptor">Marco de Operación y Transparencia</span>
+</div>
+
+<section class="section" id="seccion-politicas-operacion">
 <h2 class="section-title">
-<span class="section-number">VI</span>
+<span class="section-number">1</span>
 Políticas de Operación y Ética Profesional
 <span class="new-badge">Actualizado 2026</span>
 </h2>
@@ -3189,9 +2181,9 @@ Políticas de Operación y Ética Profesional
 </div>
 </div>
 
-<div class="public-notice">
-<p class="info-box-title">⚠️ IMPORTANTE - Servicios Exclusivos para Clientes Activos</p>
-<p><strong>NO se tramitan citas ni se brinda asesoría al público en general.</strong> Todos nuestros servicios profesionales están disponibles únicamente para clientes con contratos activos. Esto nos permite garantizar calidad, dedicación y resultados óptimos para quienes confían en nosotros de manera continua.</p>
+<div class="public-notice" style="background: linear-gradient(135deg, #fed7aa, #ffedd5); border: 2px solid var(--warning); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
+<p class="info-box-title" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-dark);">⚠️ IMPORTANTE - Servicios Exclusivos para Clientes Activos</p>
+<p style="color: var(--text-dark); line-height: 1.7; margin: 0;"><strong>NO se tramitan citas ni se brinda asesoría al público en general.</strong> Todos nuestros servicios profesionales están disponibles únicamente para clientes con contratos activos. Esto nos permite garantizar calidad, dedicación y resultados óptimos para quienes confían en nosotros de manera continua.</p>
 </div>
 </div>
 
@@ -3209,10 +2201,10 @@ Políticas de Operación y Ética Profesional
 <p style="margin: 15px 0 0 0; font-style: italic; font-size: 0.9em; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; line-height: 1.4;">Se proporcionarán los datos bancarios al confirmar el servicio.</p>
 </div>
 
-<ul class="policy-list">
-<li><strong>Momento de Pago:</strong> Los honorarios se liquidan <strong>al momento de la entrega final</strong> de los documentos oficiales solicitados.</li>
-<li><strong>Facturación Obligatoria:</strong> Todos los servicios son facturados sin excepción. El CFDI se emite al momento del pago.</li>
-<li><strong>Anticipos:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong>.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1.5rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Momento de Pago:</strong> Los honorarios se liquidan <strong>al momento de la entrega final</strong> de los documentos oficiales solicitados.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Facturación Obligatoria:</strong> Todos los servicios son facturados sin excepción. El CFDI se emite al momento del pago.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Anticipos:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong>.</li>
 </ul>
 </div>
 
@@ -3222,10 +2214,10 @@ Políticas de Operación y Ética Profesional
 <p class="info-box-title">💼 Servicios de Asesoría Fiscal</p>
 <p>Para clientes de servicios fiscales que requieren sesiones de consulta adicionales fuera del paquete contratado:</p>
 </div>
-<ul class="policy-list">
-<li><strong>Personas Físicas:</strong> Primera sesión sin costo. Sesiones adicionales o posteriores sobre la misma temática: <strong>$750 MXN</strong> por sesión.</li>
-<li><strong>Personas Morales:</strong> La tarifa de $750 MXN <strong>NO aplica</strong>. Requieren cotización específica según necesidades (propuesta entregada en 72 horas).</li>
-<li><strong>Alcance del Servicio Contable:</strong> El contador procesa únicamente archivos XML proporcionados por el cliente para cumplimiento fiscal mensual. La elaboración de facturas depende del régimen fiscal del contribuyente (ver nota específica en cada sección).</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Personas Físicas:</strong> Primera sesión sin costo. Sesiones adicionales o posteriores sobre la misma temática: <strong>$750 MXN</strong> por sesión.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Personas Morales:</strong> La tarifa de $750 MXN <strong>NO aplica</strong>. Requieren cotización específica según necesidades (propuesta entregada en 72 horas).</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Alcance del Servicio Contable:</strong> El contador procesa únicamente archivos XML proporcionados por el cliente para cumplimiento fiscal mensual. La elaboración de facturas depende del régimen fiscal del contribuyente (ver nota específica en cada sección).</li>
 </ul>
 </div>
 
@@ -3235,9 +2227,9 @@ Políticas de Operación y Ética Profesional
 <p class="info-box-title">📊 Definición de Servicios Fiscales</p>
 <p>El servicio de consultoría fiscal incluye análisis técnico, planeación estratégica fiscal y cumplimiento normativo tributario.</p>
 </div>
-<ul class="policy-list">
-<li><strong>Servicios Fiscales NO Incluyen:</strong> Planeación estratégica empresarial, administración de empresas, ni aspectos legales de derecho mercantil o corporativo. Estos servicios <strong>SÍ se realizan en AIDN</strong>, pero su honorario es independiente al servicio fiscal y se cotiza por separado.</li>
-<li><strong>Funciones Administrativas:</strong> Las tareas secretariales o de carácter administrativo no están contempladas en el alcance de nuestros servicios profesionales.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Servicios Fiscales NO Incluyen:</strong> Planeación estratégica empresarial, administración de empresas, ni aspectos legales de derecho mercantil o corporativo. Estos servicios <strong>SÍ se realizan en AIDN</strong>, pero su honorario es independiente al servicio fiscal y se cotiza por separado.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Funciones Administrativas:</strong> Las tareas secretariales o de carácter administrativo no están contempladas en el alcance de nuestros servicios profesionales.</li>
 </ul>
 </div>
 
@@ -3251,18 +2243,18 @@ Políticas de Operación y Ética Profesional
 
 <div class="subsection">
 <h3 class="subsection-title">5. Gestión de Líneas de Captura y Reemisiones</h3>
-<ul class="policy-list">
-<li><strong>Vigencia de Líneas de Captura:</strong> Las líneas de captura tienen vigencia limitada establecida por las autoridades. Solicitudes recurrentes de la misma línea de captura previamente entregada generarán un cargo administrativo.</li>
-<li><strong>Reemisión de Documentos:</strong> Cualquier reemisión de documentos, líneas de captura o trámites extraordinarios fuera de lo programado tendrá un cargo administrativo de <strong>$200 MXN</strong>, liquidable al momento de la solicitud.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Vigencia de Líneas de Captura:</strong> Las líneas de captura tienen vigencia limitada establecida por las autoridades. Solicitudes recurrentes de la misma línea de captura previamente entregada generarán un cargo administrativo.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Reemisión de Documentos:</strong> Cualquier reemisión de documentos, líneas de captura o trámites extraordinarios fuera de lo programado tendrá un cargo administrativo de <strong>$200 MXN</strong>, liquidable al momento de la solicitud.</li>
 </ul>
 </div>
 
 <div class="subsection">
 <h3 class="subsection-title">6. Control de Gestiones y Eficiencia Operativa</h3>
-<ul class="policy-list">
-<li><strong>Horario Operativo:</strong> Por respeto a la agenda colectiva y la seriedad del despacho, toda solicitud de servicio o consulta debe realizarse estrictamente dentro de los horarios de atención operativa y contar con un justificante o motivo claro de negocio.</li>
-<li><strong>Gestiones Extraordinarias:</strong> Para mantener la excelencia en el servicio a todos nuestros clientes, las gestiones fuera de lo programado tienen un cargo de <strong>$200 MXN</strong>. Esta política garantiza que podamos cumplir con los compromisos adquiridos con cada cliente de manera oportuna y profesional.</li>
-<li><strong>Carga Administrativa Excesiva:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Horario Operativo:</strong> Por respeto a la agenda colectiva y la seriedad del despacho, toda solicitud de servicio o consulta debe realizarse estrictamente dentro de los horarios de atención operativa y contar con un justificante o motivo claro de negocio.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Gestiones Extraordinarias:</strong> Para mantener la excelencia en el servicio a todos nuestros clientes, las gestiones fuera de lo programado tienen un cargo de <strong>$200 MXN</strong>. Esta política garantiza que podamos cumplir con los compromisos adquiridos con cada cliente de manera oportuna y profesional.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Carga Administrativa Excesiva:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
 </ul>
 </div>
 
@@ -3272,20 +2264,20 @@ Políticas de Operación y Ética Profesional
 <p class="info-box-title">⚖️ Exclusividad de Servicio</p>
 <p>Para garantizar la calidad y continuidad en la gestión fiscal, operamos bajo las siguientes condiciones:</p>
 </div>
-<ul class="policy-list">
-<li><strong>Clientes que Contratan Otro Despacho:</strong> Clientes que establezcan relación profesional con otro despacho durante la vigencia de nuestros servicios no podrán continuar siendo atendidos en AIDN. Esta política permite mantener el enfoque total y la responsabilidad integral sobre cada cuenta.</li>
-<li><strong>Clientes Provenientes de Otros Despachos:</strong> Clientes que provienen de otros asesores fiscales deberán firmar contrato de servicios con cláusula de deslinde de responsabilidades por actos, omisiones o asesorías de profesionales anteriores. AIDN no asume responsabilidad por situaciones fiscales preexistentes derivadas de gestiones anteriores.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Clientes que Contratan Otro Despacho:</strong> Clientes que establezcan relación profesional con otro despacho durante la vigencia de nuestros servicios no podrán continuar siendo atendidos en AIDN. Esta política permite mantener el enfoque total y la responsabilidad integral sobre cada cuenta.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Clientes Provenientes de Otros Despachos:</strong> Clientes que provienen de otros asesores fiscales deberán firmar contrato de servicios con cláusula de deslinde de responsabilidades por actos, omisiones o asesorías de profesionales anteriores. AIDN no asume responsabilidad por situaciones fiscales preexistentes derivadas de gestiones anteriores.</li>
 </ul>
 </div>
 
 <div class="subsection">
 <h3 class="subsection-title">8. Cláusulas de Rescisión y Suspensión de Servicio</h3>
-<ul class="policy-list">
-<li><strong>Derecho de Retención y Propiedad de Gestiones:</strong> El despacho se reserva el derecho de no entregar papeles de trabajo, cálculos internos o archivos procesados de periodos que presenten adeudos. La continuidad del servicio y el acceso a la información administrativa actualizada dependen estrictamente del cumplimiento de los honorarios pactados.</li>
-<li><strong>Rescisión por Falta de Ética o Imposición:</strong> AIDN podrá dar por terminada la relación profesional de forma inmediata si el cliente intenta imponer prácticas fuera de la ley, busca omitir ingresos, no acepta sus responsabilidades personales o muestra una actitud que comprometa la integridad del despacho. En estos casos, se cortará todo soporte técnico sin responsabilidad para el consultor.</li>
-<li><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende definitivamente la presentación de declaraciones y cualquier gestión activa, deslindando al despacho de cualquier multa o requerimiento derivado del abandono de obligaciones por parte del cliente.</li>
-<li><strong>Política de No Reembolso:</strong> Los honorarios pagados por servicios ya prestados <strong>no serán retornados</strong> bajo ninguna circunstancia, independientemente del motivo de terminación de la relación contractual.</li>
-<li><strong>Terminación por Decisión del Cliente:</strong> Cuando un cliente decide dar por terminada la relación contractual para acudir a otro despacho, <strong>no se entregarán firmas electrónicas</strong>. Los clientes deben contar con un respaldo de sus propias firmas. AIDN eliminará del sistema todas las firmas electrónicas del cliente para evitar controversias futuras y delimitar responsabilidades de manera clara.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Derecho de Retención y Propiedad de Gestiones:</strong> El despacho se reserva el derecho de no entregar papeles de trabajo, cálculos internos o archivos procesados de periodos que presenten adeudos. La continuidad del servicio y el acceso a la información administrativa actualizada dependen estrictamente del cumplimiento de los honorarios pactados.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Rescisión por Falta de Ética o Imposición:</strong> AIDN podrá dar por terminada la relación profesional de forma inmediata si el cliente intenta imponer prácticas fuera de la ley, busca omitir ingresos, no acepta sus responsabilidades personales o muestra una actitud que comprometa la integridad del despacho. En estos casos, se cortará todo soporte técnico sin responsabilidad para el consultor.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende definitivamente la presentación de declaraciones y cualquier gestión activa, deslindando al despacho de cualquier multa o requerimiento derivado del abandono de obligaciones por parte del cliente.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Política de No Reembolso:</strong> Los honorarios pagados por servicios ya prestados <strong>no serán retornados</strong> bajo ninguna circunstancia, independientemente del motivo de terminación de la relación contractual.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Terminación por Decisión del Cliente:</strong> Cuando un cliente decide dar por terminada la relación contractual para acudir a otro despacho, <strong>no se entregarán firmas electrónicas</strong>. Los clientes deben contar con un respaldo de sus propias firmas. AIDN eliminará del sistema todas las firmas electrónicas del cliente para evitar controversias futuras y delimitar responsabilidades de manera clara.</li>
 </ul>
 </div>
 
@@ -3295,20 +2287,20 @@ Políticas de Operación y Ética Profesional
 <p class="info-box-title">📊 Servicios de Consultoría y Asesoría a Empresas</p>
 <p>Para servicios de consultoría, asesoría fiscal o contable a <strong>personas morales</strong>, el proceso es el siguiente:</p>
 </div>
-<ul class="policy-list">
-<li><strong>Sesión de Información Inicial:</strong> Se requiere una sesión previa donde se analizan las necesidades específicas de la empresa, alcance del servicio, complejidad operativa y periodicidad requerida.</li>
-<li><strong>Entrega de Cotización:</strong> La cotización formal se entrega en un plazo <strong>máximo de 72 horas</strong> posteriores a la sesión informativa, e incluye desglose detallado de servicios, honorarios específicos, cronograma de trabajo y condiciones de pago.</li>
-<li><strong>Confirmación Explícita Requerida:</strong> <strong>No se inician trabajos sin confirmación explícita</strong> del cliente (vía correo electrónico o WhatsApp oficial del despacho). Esta política protege tanto al cliente como al despacho, asegurando claridad en expectativas y compromisos mutuos.</li>
-<li><strong>Diferenciación de Tarifas PF vs PM:</strong> Las tarifas para personas morales son diferentes a las de personas físicas debido a: (a) mayor complejidad en procesos contables y fiscales, (b) mayor responsabilidad legal y exposición al riesgo, (c) volumen de operaciones y documentación, y (d) capacidad adquisitiva diferenciada. Esta diferenciación permite ofrecer precios accesibles a personas físicas manteniendo la calidad profesional en servicios corporativos.</li>
-<li><strong>No Aplica Política de Sesiones:</strong> La tarifa de $750 MXN por sesión <strong>NO aplica para Personas Morales</strong>. Cada servicio corporativo se cotiza de manera integral según necesidades específicas de la empresa.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Sesión de Información Inicial:</strong> Se requiere una sesión previa donde se analizan las necesidades específicas de la empresa, alcance del servicio, complejidad operativa y periodicidad requerida.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Entrega de Cotización:</strong> La cotización formal se entrega en un plazo <strong>máximo de 72 horas</strong> posteriores a la sesión informativa, e incluye desglose detallado de servicios, honorarios específicos, cronograma de trabajo y condiciones de pago.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Confirmación Explícita Requerida:</strong> <strong>No se inician trabajos sin confirmación explícita</strong> del cliente (vía correo electrónico o WhatsApp oficial del despacho). Esta política protege tanto al cliente como al despacho, asegurando claridad en expectativas y compromisos mutuos.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Diferenciación de Tarifas PF vs PM:</strong> Las tarifas para personas morales son diferentes a las de personas físicas debido a: (a) mayor complejidad en procesos contables y fiscales, (b) mayor responsabilidad legal y exposición al riesgo, (c) volumen de operaciones y documentación, y (d) capacidad adquisitiva diferenciada. Esta diferenciación permite ofrecer precios accesibles a personas físicas manteniendo la calidad profesional en servicios corporativos.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>No Aplica Política de Sesiones:</strong> La tarifa de $750 MXN por sesión <strong>NO aplica para Personas Morales</strong>. Cada servicio corporativo se cotiza de manera integral según necesidades específicas de la empresa.</li>
 </ul>
 </div>
 
 <div class="subsection">
 <h3 class="subsection-title">10. Gestión de CFDI</h3>
-<ul class="policy-list">
-<li><strong>Factura Adicional (RESICO):</strong> $50 MXN a partir de la décima factura en adelante para contribuyentes en RESICO.</li>
-<li><strong>Reemisión y Cancelación de CFDI:</strong> $80 MXN por evento. Proceso: reemisión con relación UUID y posterior cancelación del CFDI original.</li>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Factura Adicional (RESICO):</strong> $50 MXN a partir de la décima factura en adelante para contribuyentes en RESICO.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Reemisión y Cancelación de CFDI:</strong> $80 MXN por evento. Proceso: reemisión con relación UUID y posterior cancelación del CFDI original.</li>
 </ul>
 <div class="info-box info" style="margin-top: 1rem;">
 <p class="info-box-title">💡 Nota sobre Elaboración de Facturas</p>
@@ -3332,29 +2324,27 @@ Políticas de Operación y Ética Profesional
 </div>
 </div>
 </section>
-<!-- FIN PARTE 2 -->
-<!-- INICIO PARTE 3 -->
 
 <section class="section" id="seccion-legal">
 <h2 class="section-title">
-<span class="section-number">VII</span>
+<span class="section-number">2</span>
 Información Legal para el Contribuyente
 </h2>
 
-<div class="hierarchy-box">
-<h3 class="hierarchy-title">⚖️ Jerarquía de las Leyes en México (Art. 133 Constitucional)</h3>
-<p style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.95rem;">
+<div style="background: linear-gradient(135deg, #dbeafe, #e0f2fe); border-left: 5px solid var(--secondary); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-family: 'Rajdhani', sans-serif; font-size: 1.4rem; color: var(--text-dark); margin-bottom: 1rem; font-weight: 700;">⚖️ Jerarquía de las Leyes en México (Art. 133 Constitucional)</h3>
+<p style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.95rem; line-height: 1.7;">
 Es fundamental que todo contribuyente conozca el <strong>orden jerárquico de las leyes</strong> para defenderse de exigencias indebidas de autoridades municipales que contradigan disposiciones federales.
 </p>
-<ol class="hierarchy-list">
-<li><strong>Constitución Política de los Estados Unidos Mexicanos</strong> - Ley Suprema del país.</li>
-<li><strong>Tratados Internacionales</strong> - Acuerdos ratificados por el Senado.</li>
-<li><strong>Leyes Federales</strong> - ISR, IVA, Código Fiscal de la Federación (aplicables en todo el territorio).</li>
-<li><strong>Leyes Estatales</strong> - Aplicables solo en la entidad correspondiente.</li>
-<li><strong>Reglamentos y Bandos Municipales</strong> - Normas administrativas locales que deben subordinarse a todas las anteriores.</li>
+<ol style="list-style-position: inside; padding-left: 1rem; margin: 1rem 0; color: var(--text-dark);">
+<li style="margin-bottom: 0.8rem; line-height: 1.6;"><strong>Constitución Política de los Estados Unidos Mexicanos</strong> - Ley Suprema del país.</li>
+<li style="margin-bottom: 0.8rem; line-height: 1.6;"><strong>Tratados Internacionales</strong> - Acuerdos ratificados por el Senado.</li>
+<li style="margin-bottom: 0.8rem; line-height: 1.6;"><strong>Leyes Federales</strong> - ISR, IVA, Código Fiscal de la Federación (aplicables en todo el territorio).</li>
+<li style="margin-bottom: 0.8rem; line-height: 1.6;"><strong>Leyes Estatales</strong> - Aplicables solo en la entidad correspondiente.</li>
+<li style="margin-bottom: 0; line-height: 1.6;"><strong>Reglamentos y Bandos Municipales</strong> - Normas administrativas locales que deben subordinarse a todas las anteriores.</li>
 </ol>
-<div class="hierarchy-note">
-<strong>Nota Importante:</strong> Ningún reglamento municipal puede contradecir o estar por encima de una ley federal o constitucional. Si un empleado municipal solicita actos contrarios a la legislación federal (ejemplo: invalidar un CFDI emitido conforme al SAT), está actuando en la <strong>ilegalidad</strong>. Todo acto de autoridad debe estar <strong>fundado y motivado</strong> (Art. 16 Constitucional).
+<div style="background: rgba(255,255,255,0.5); border-radius: 8px; padding: 1rem; margin-top: 1.5rem;">
+<strong style="color: var(--text-dark);">Nota Importante:</strong> <span style="color: var(--text-dark); line-height: 1.7;">Ningún reglamento municipal puede contradecir o estar por encima de una ley federal o constitucional. Si un empleado municipal solicita actos contrarios a la legislación federal (ejemplo: invalidar un CFDI emitido conforme al SAT), está actuando en la <strong>ilegalidad</strong>. Todo acto de autoridad debe estar <strong>fundado y motivado</strong> (Art. 16 Constitucional).</span>
 </div>
 </div>
 </section>
@@ -3367,24 +2357,73 @@ Es fundamental que todo contribuyente conozca el <strong>orden jerárquico de la
 </svg>
 </div>
 
+<!-- SECCIÓN IV: MODELO DE TRABAJO DIGITAL Y REMOTO -->
+<div id="seccion-modelo-trabajo"></div>
+<div class="submarca-title" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+<span class="submarca-name">IV. Modelo de Trabajo Digital y Remoto</span>
+<span class="submarca-descriptor">Tecnología al Servicio de tu Negocio</span>
+</div>
+
+<div class="tech-highlight">
+<h3>
+<svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+<polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+<line x1="12" y1="22.08" x2="12" y2="12"/>
+</svg>
+Modelo de Trabajo Digital y Remoto
+</h3>
+<p style="margin-bottom: 1.5rem; line-height: 1.7;">Operamos con un modelo de trabajo predominantemente remoto, aprovechando tecnología de vanguardia para brindar servicios de clase mundial sin las limitaciones geográficas tradicionales.</p>
+
+<div style="background: var(--bg-white); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Atención primaria vía videollamada o videoconferencia</strong><br>Reuniones efectivas desde cualquier ubicación</p>
+<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Despacho físico disponible bajo cita previa</strong><br>Atención presencial cuando sea necesario</p>
+<p style="margin-bottom: 1rem; line-height: 1.6;"><strong>✓ Plataformas digitales gubernamentales</strong><br>Gestiones directas en portales del SAT, IMSS y otros sistemas oficiales</p>
+<p style="margin-bottom: 0; line-height: 1.6;"><strong>✓ Respuesta ágil sin necesidad de desplazamientos</strong><br>Ahorra tiempo y reduce costos operativos</p>
+</div>
+
+<div class="tech-grid">
+<div class="tech-card">
+<h4>🤖 Inteligencia Artificial</h4>
+<p>Implementación de IA para análisis del contexto empresarial, optimización de procesos estratégicos y apoyo a herramientas de planeación y toma de decisiones.</p>
+</div>
+<div class="tech-card">
+<h4>📱 Apps de Automatización</h4>
+<p>Utilización de aplicaciones especializadas para automatización de cálculos, gestiones y seguimiento estratégico de indicadores clave de negocio.</p>
+</div>
+<div class="tech-card">
+<h4>🐧 Software Libre & Linux</h4>
+<p>Infraestructura basada en software libre, garantizando seguridad, estabilidad y cero dependencia de licencias restrictivas. Mayor control sobre tus datos sensibles.</p>
+</div>
+</div>
+</div>
+
+<div class="separator" role="presentation">
+<svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<circle cx="12" cy="12" r="10"/>
+<circle cx="12" cy="12" r="6"/>
+<circle cx="12" cy="12" r="2"/>
+</svg>
+</div>
+
 <div class="cta-section cta-enhanced">
 <div class="cta-mission">
-<h3>Consultoría Estratégica y Servicios Fiscales</h3>
-<p class="mission-tagline">Socio estratégico de PYMES en crecimiento acelerado</p>
-<p class="expertise-line">Expertise de Big 4 • Accesibilidad de boutique • Agilidad de startup</p>
+<h3 style="font-size: 2.8rem;">AIDN Strategic Consulting</h3>
+<p class="mission-tagline" style="font-size: 1.3rem;">Consultoría Estratégica y Servicios Fiscales</p>
+<p class="expertise-line">Socio estratégico de PYMES en crecimiento acelerado</p>
+<p class="expertise-line" style="margin-top: 0.3rem;">Expertise de Big 4 • Accesibilidad de boutique • Agilidad de startup</p>
 </div>
 
 <div class="cta-divider"></div>
 
-<h3>¿Listo para impulsar tu empresa con estrategia?</h3>
-<p>Agenda una consulta estratégica y diseñemos juntos la solución que tu negocio necesita</p>
+<h3 style="font-size: 1.5rem;">¿Listo para impulsar tu empresa con estrategia?</h3>
+<p style="font-size: 1rem;">Agenda una consulta estratégica y diseñemos juntos la solución que tu negocio necesita</p>
 <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
 </svg>
 Agendar Consulta por WhatsApp
 </a>
-</div>
 </div>
 
 <footer class="footer">
@@ -3566,30 +2605,19 @@ console.log(`Tema ${newTheme === 'dark' ? 'oscuro' : 'claro'} activado`);
 const initialTheme = detectTheme();
 applyTheme(initialTheme);
 
-// Atajo de teclado: Ctrl+Alt+T
+// Atajos de teclado para cambio de tema
 document.addEventListener('keydown', (e) => {
+// Ctrl+Alt+T para cambiar tema
 if (e.ctrlKey && e.altKey && e.key === 't') {
 e.preventDefault();
 toggleTheme();
 }
 });
 
-// Auto-detección de cambios en el tema del sistema
-// Auto-detección de cambios en el tema del sistema
-const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-// Escuchar cambios en el tema del sistema solo si el usuario NO ha establecido preferencia manual
-darkModeQuery.addEventListener('change', (e) => {
-if (!state.themeManuallySet) {
-const newTheme = e.matches ? 'dark' : 'light';
-applyTheme(newTheme);
-console.log(`Tema del sistema cambió a: ${newTheme}`);
-}
-});
-
-console.log(`✅ Sistema de temas inicializado. Tema actual: ${state.theme}`);
-console.log('💡 Usa Ctrl+Alt+T para cambiar el tema manualmente');
+// Log inicial
+console.log('🎨 Sistema de temas inicializado:', state.theme);
 </script>
 
 </body>
 </html>
+<!-- FIN PARTE 2 -->
