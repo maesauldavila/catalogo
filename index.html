@@ -1187,24 +1187,34 @@ height: 24px;
 }
 
 .whatsapp-btn {
-background: linear-gradient(135deg, #25D366, #128C7E);
-transition: all 0.2s ease;
+background: linear-gradient(135deg, #25D366, #128C7E) !important;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .whatsapp-btn:hover {
-background: linear-gradient(135deg, #128C7E, #075E54);
+transform: scale(1.1);
+box-shadow: 0 8px 24px rgba(18, 140, 126, 0.4);
 }
 
 .whatsapp-btn:active {
-background: linear-gradient(135deg, #128C7E, #075E54);
 transform: scale(0.95);
-transition: all 0.1s ease;
+}
+
+/* Forzar que vuelva al color normal después del tap en móvil */
+.whatsapp-btn:focus {
+background: linear-gradient(135deg, #25D366, #128C7E) !important;
+outline: none;
 }
 
 /* Fix para móviles: asegurar que vuelva al estado normal */
 @media (hover: none) and (pointer: coarse) {
+.whatsapp-btn:hover {
+background: linear-gradient(135deg, #25D366, #128C7E) !important;
+transform: none;
+}
 .whatsapp-btn:active {
-transition: all 0.1s ease;
+transform: scale(0.95);
+transition: transform 0.1s ease;
 }
 }
 
@@ -2609,16 +2619,23 @@ if (floatingButtons && scrollToTopBtn && whatsappBtn) {
         });
     });
 
-    // WhatsApp button click
-    whatsappBtn.addEventListener('click', (e) => {
+    // WhatsApp button - Manejo mejorado para móvil
+    const handleWhatsAppClick = () => {
         console.log('📱 WhatsApp button clicked');
         const whatsappUrl = 'https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN';
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
         
-        // Fix para móvil: forzar blur después de abrir el enlace
-        setTimeout(() => {
-            whatsappBtn.blur();
-        }, 100);
+        // Forzar que el botón vuelva al estado normal inmediatamente
+        whatsappBtn.blur();
+        whatsappBtn.classList.remove('active');
+    };
+    
+    whatsappBtn.addEventListener('click', handleWhatsAppClick);
+    
+    // Para móviles: usar touchend para evitar que se quede pegado
+    whatsappBtn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        handleWhatsAppClick();
     });
     
     console.log('✅ Event listeners registrados correctamente');
