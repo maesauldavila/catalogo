@@ -1188,10 +1188,24 @@ height: 24px;
 
 .whatsapp-btn {
 background: linear-gradient(135deg, #25D366, #128C7E);
+transition: all 0.2s ease;
 }
 
 .whatsapp-btn:hover {
 background: linear-gradient(135deg, #128C7E, #075E54);
+}
+
+.whatsapp-btn:active {
+background: linear-gradient(135deg, #128C7E, #075E54);
+transform: scale(0.95);
+transition: all 0.1s ease;
+}
+
+/* Fix para móviles: asegurar que vuelva al estado normal */
+@media (hover: none) and (pointer: coarse) {
+.whatsapp-btn:active {
+transition: all 0.1s ease;
+}
 }
 
 .scroll-top {
@@ -2552,7 +2566,7 @@ Agendar Consulta por WhatsApp
 </button>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Floating Buttons Functionality
 console.log('🔵 Inicializando botones flotantes...');
 
@@ -2596,10 +2610,15 @@ if (floatingButtons && scrollToTopBtn && whatsappBtn) {
     });
 
     // WhatsApp button click
-    whatsappBtn.addEventListener('click', () => {
+    whatsappBtn.addEventListener('click', (e) => {
         console.log('📱 WhatsApp button clicked');
         const whatsappUrl = 'https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN';
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        
+        // Fix para móvil: forzar blur después de abrir el enlace
+        setTimeout(() => {
+            whatsappBtn.blur();
+        }, 100);
     });
     
     console.log('✅ Event listeners registrados correctamente');
