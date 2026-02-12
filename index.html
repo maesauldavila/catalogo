@@ -1327,6 +1327,30 @@ background: rgba(0,0,0,0.3) !important;
 color: #e5e7eb !important;
 }
 
+
+/* Botón de Tema */
+.theme-toggle-btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+}
+
+.theme-toggle-btn:hover {
+    background: linear-gradient(135deg, var(--secondary), var(--primary)) !important;
+    transform: translateY(-4px) rotate(20deg);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+}
+
+/* Animación del icono de tema */
+#themeIcon {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover #themeIcon {
+    transform: rotate(180deg);
+}
+
 </style>
 </head>
 
@@ -1560,10 +1584,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <h4>📊 Planeación y Dirección Estratégica</h4>
 <p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
 <ul class="consulting-features">
-<li>Análisis FODA y diagnóstico organizacional profundo</li>
-<li>Definición de objetivos estratégicos y planes de acción</li>
-<li>Diseño de KPIs y tableros de control gerencial</li>
-<li>Acompañamiento en ejecución y seguimiento de estrategia</li>
+<li>Análisis FODA y diagnóstico organizacional profundo.</li>
+<li>Definición de objetivos estratégicos y planes de acción.</li>
+<li>Diseño de KPIs y tableros de control gerencial.</li>
+<li>Acompañamiento en ejecución y seguimiento de estrategia.</li>
 </ul>
 </div>
 </div>
@@ -1574,10 +1598,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <h4>💰 Análisis Financiero y Proyecciones</h4>
 <p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
 <ul class="consulting-features">
-<li>Proyecciones financieras a 1, 3 y 5 años</li>
-<li>Análisis de viabilidad de proyectos e inversiones</li>
-<li>Evaluación de rentabilidad por línea de negocio</li>
-<li>Optimización de flujo de efectivo y estructura de capital</li>
+<li>Proyecciones financieras a 1, 3 y 5 años.</li>
+<li>Análisis de viabilidad de proyectos e inversiones.</li>
+<li>Evaluación de rentabilidad por línea de negocio.</li>
+<li>Optimización de flujo de efectivo y estructura de capital.</li>
 </ul>
 </div>
 </div>
@@ -1588,10 +1612,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <h4>🔄 Reestructuración Organizacional</h4>
 <p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
 <ul class="consulting-features">
-<li>Rediseño de estructura organizacional y organigramas</li>
-<li>Mapeo y optimización de procesos operativos</li>
-<li>Definición de perfiles de puesto y manuales de funciones</li>
-<li>Estrategias de cambio organizacional y gestión del talento</li>
+<li>Rediseño de estructura organizacional y organigramas.</li>
+<li>Mapeo y optimización de procesos operativos.</li>
+<li>Definición de perfiles de puesto y manuales de funciones.</li>
+<li>Estrategias de cambio organizacional y gestión del talento.</li>
 </ul>
 </div>
 </div>
@@ -1602,10 +1626,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <h4>🚀 Desarrollo de Modelos de Negocio</h4>
 <p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
 <ul class="consulting-features">
-<li>Canvas de modelo de negocio y propuesta de valor</li>
-<li>Análisis de mercado y posicionamiento competitivo</li>
-<li>Estrategias de diversificación y crecimiento</li>
-<li>Plan de escalabilidad y expansión</li>
+<li>Canvas de modelo de negocio y propuesta de valor.</li>
+<li>Análisis de mercado y posicionamiento competitivo.</li>
+<li>Estrategias de diversificación y crecimiento.</li>
+<li>Plan de escalabilidad y expansión.</li>
 </ul>
 </div>
 </div>
@@ -1775,7 +1799,7 @@ Personas Físicas RESICO
 <li class="excluded">NO incluye acudir físicamente ante autoridades</li>
 </ul>
 </td>
-<td>1 a 9 facturas</td>
+<td>1 a 9 facturas.</td>
 <td class="price">$600</td>
 </tr>
 <tr>
@@ -1789,7 +1813,7 @@ Personas Físicas RESICO
 <li class="excluded">NO incluye acudir físicamente ante autoridades</li>
 </ul>
 </td>
-<td>10 a 25 facturas</td>
+<td>10 a 25 facturas.</td>
 <td class="price">$900</td>
 </tr>
 </tbody>
@@ -1809,13 +1833,13 @@ Personas Físicas RESICO
 <tbody>
 <tr>
 <td><strong>Esencial</strong></td>
-<td class="price">$1,250</td>
-<td>Cumplimiento fiscal mensual bajo régimen RESICO</td>
+<td class="price">$1250</td>
+<td>Cumplimiento fiscal básico..</td>
 </tr>
 <tr>
 <td><strong>Profesional</strong></td>
-<td class="price">$1,900</td>
-<td>Incluye análisis de acreditamientos y optimización fiscal</td>
+<td class="price">$1900</td>
+<td>Incluye optimización fiscal..</td>
 </tr>
 </tbody>
 </table>
@@ -1828,11 +1852,11 @@ Personas Físicas RESICO
 <p class="info-box-title">⚠️ Requisito Obligatorio: Médicos y Dentistas</p>
 <p>Para brindar servicios fiscales a profesionales de la salud, es <strong>OBLIGATORIO</strong> presentar:</p>
 <ul style="margin-top: 0.5rem; padding-left: 1.5rem; line-height: 1.8;">
-<li><strong>Título Profesional</strong> registrado ante la Dirección General de Profesiones (SEP)</li>
-<li><strong>Cédula Profesional</strong> vigente y verificable</li>
+<li><strong>Título Profesional</strong> registrado ante la Dirección General de Profesiones (SEP).</li>
+<li><strong>Cédula Profesional</strong> vigente y verificable.</li>
 </ul>
 <p style="margin-top: 0.75rem; font-weight: 600;"><strong>AIDN NO acepta trabajos de profesionales de la salud sin estos documentos acreditados.</strong> Esta política protege la legalidad del ejercicio profesional.</p>
-<p style="margin-top: 0.75rem;"><strong>Elaboración de Facturas:</strong> Médicos y Dentistas reciben servicio de elaboración de CFDI por parte del despacho (1 a 9 facturas mensuales sin costo adicional, a partir de la décima factura $50 MXN c/u).</p>
+<p style="margin-top: 0.75rem;"><strong>Elaboración de Facturas:</strong> Médicos y Dentistas reciben servicio de elaboración de CFDI por parte del despacho (1 a 9 facturas mensuales sin costo adicional, a partir de la décima factura $50 MXN c. u.).</p>
 </div>
 </div>
 
@@ -1847,12 +1871,12 @@ Personas Físicas RESICO
 </thead>
 <tbody>
 <tr>
-<td>Clientes del Despacho (Costo Unitario)</td>
-<td class="price">$3,800</td>
+<td>Clientes del Despacho (Costo Unitario).</td>
+<td class="price">$3800</td>
 </tr>
 <tr>
-<td>Clientes Externos (Precio Lista)</td>
-<td class="price">$6,000</td>
+<td>Clientes Externos (Precio Lista).</td>
+<td class="price">$5500</td>
 </tr>
 </tbody>
 </table>
@@ -1886,7 +1910,7 @@ Sueldos y Salarios
 <td class="price">$550</td>
 </tr>
 <tr>
-<td>Empleador adicional</td>
+<td>Empleador adicional.</td>
 <td class="price">$100 <small>(por cada uno)</small></td>
 </tr>
 </tbody>
@@ -1920,7 +1944,7 @@ Actividad Empresarial y Minoristas
 </tr>
 <tr>
 <td><strong>Profesional</strong></td>
-<td class="price">$1,300</td>
+<td class="price">$1300</td>
 </tr>
 </tbody>
 </table>
@@ -1938,11 +1962,11 @@ Actividad Empresarial y Minoristas
 <tbody>
 <tr>
 <td><strong>Esencial</strong></td>
-<td class="price">$1,650</td>
+<td class="price">$1650</td>
 </tr>
 <tr>
 <td><strong>Profesional</strong></td>
-<td class="price">$2,300</td>
+<td class="price">$2300</td>
 </tr>
 </tbody>
 </table>
@@ -1960,11 +1984,11 @@ Actividad Empresarial y Minoristas
 <tbody>
 <tr>
 <td><strong>Esencial</strong></td>
-<td class="price">$1,100</td>
+<td class="price">$1100</td>
 </tr>
 <tr>
 <td><strong>Profesional</strong></td>
-<td class="price">$1,800</td>
+<td class="price">$1800</td>
 </tr>
 </tbody>
 </table>
@@ -1982,11 +2006,11 @@ Actividad Empresarial y Minoristas
 <tbody>
 <tr>
 <td><strong>Esencial</strong></td>
-<td class="price">$1,300</td>
+<td class="price">$1300</td>
 </tr>
 <tr>
 <td><strong>Profesional</strong></td>
-<td class="price">$2,200</td>
+<td class="price">$2200</td>
 </tr>
 </tbody>
 </table>
@@ -2013,7 +2037,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <tbody>
 <tr>
 <td><strong>Paquete Integral: Constitución de Nueva Sociedad</strong></td>
-<td class="price">$8,700</td>
+<td class="price">$8700</td>
 <td>
 <p><strong>Solución completa para constituir tu empresa desde cero</strong></p>
 <p style="margin-top: 0.5rem;"><strong>Incluye:</strong></p>
@@ -2022,12 +2046,12 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included"><strong>Diseño y elaboración de estatutos sociales:</strong> Creación de proyectos de estatutos completos y personalizados para sociedades mercantiles</li>
 <li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> Redacción de cláusulas especiales adaptadas a los requerimientos particulares y necesidades de gobierno corporativo de cada organización</li>
 </ul>
-<p style="margin-top: 0.5rem; font-size: 0.9rem;"><em>Precio: $7,500 + IVA (16%) = $8,700 MXN</em></p>
+<p style="margin-top: 0.5rem; font-size: 0.9rem;"><em>Precio: $7500 y IVA (16%) = $8700 MXN</em></p>
 </td>
 </tr>
 <tr>
 <td><strong>Paquete Integral: Actualización de Estatutos de Sociedad Existente</strong></td>
-<td class="price">$7,600</td>
+<td class="price">$8000</td>
 <td>
 <p><strong>Para sociedades que requieren modernizar o reformar sus estatutos sociales</strong></p>
 <p style="margin-top: 0.5rem;"><strong>Incluye:</strong></p>
@@ -2036,18 +2060,18 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included"><strong>Diseño de modificaciones estatutarias:</strong> Elaboración de proyecto de reforma a estatutos sociales</li>
 <li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> Redacción de cláusulas especiales adaptadas a nuevos requerimientos y necesidades de la organización</li>
 </ul>
-<p style="margin-top: 0.5rem; font-size: 0.9rem;"><em>Precio: $6,551.72 + IVA (16%) = $7,600 MXN</em></p>
+<p style="margin-top: 0.5rem; font-size: 0.9rem;"><em>Precio: $6551.72 y IVA (16%) = $7600 MXN</em></p>
 </td>
 </tr>
 <tr>
 <td><strong>Redacción de Actas de Sociedades Mercantiles</strong></td>
-<td class="price">$900</td>
+<td class="price">$1150</td>
 <td>Actas complementarias y modificaciones menores: cambios de domicilio, nombramientos/revocaciones, aumentos o disminuciones de capital simples, poderes, y otras actas que no impliquen reformas integrales a estatutos. <em>Para reformas mayores, ver Paquetes arriba.</em></td>
 </tr>
 <tr>
 <td><strong>Redacción de Contratos Legales</strong></td>
-<td class="price">$480</td>
-<td>Elaboración de contratos civiles, mercantiles, laborales y de prestación de servicios profesionales.</td>
+<td class="price">$680</td>
+<td>Civiles, laborales y mercantiles.</td>
 </tr>
 </tbody>
 </table>
@@ -2077,7 +2101,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included">Configuración de expediente digital</li>
 </ul>
 </td>
-<td class="price">$348</td>
+<td class="price">$450</td>
 </tr>
 <tr>
 <td><strong>Declaración Trimestral</strong></td>
@@ -2095,7 +2119,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </table>
 <div class="info-box success">
 <p class="info-box-title">✅ Inversión Anual Total</p>
-<p><strong>Alta inicial + 4 declaraciones trimestrales = $3,828</strong> (primer año). Años subsecuentes: $3,480 anuales.</p>
+<p><strong>Alta inicial y 4 declaraciones trimestrales = $3930</strong> (primer año). Años subsecuentes: $3480 anuales.</p>
 </div>
 </div>
 
@@ -2111,7 +2135,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </thead>
 <tbody>
 <tr>
-<td><strong>Paquete Integral: Análisis de Retiro + Alta en Modalidad 40</strong></td>
+<td><strong>Paquete Integral: Análisis de Retiro y Alta en Modalidad 40</strong></td>
 <td>
 <ul class="scope-list">
 <li class="included">Descarga oficial de historial de semanas IMSS</li>
@@ -2216,24 +2240,29 @@ No se tramitan citas para público en general.
 </thead>
 <tbody>
 <tr>
-<td>Redacción y Elaboración de CV</td>
-<td class="price">$120</td>
-<td>Por cuartilla</td>
+<td>Redacción de Documentos</td>
+<td class="price">$150</td>
+<td>Por cuartilla.</td>
 </tr>
 <tr>
-<td>Modificación Patrimonial</td>
+<td>Redacción de CV</td>
+<td class="price">$120</td>
+<td>Curriculum vitae por cuartilla.</td>
+</tr>
+<tr>
+<td>Modificación Patrimonial.</td>
 <td class="price">$450</td>
 <td>$250 descarga/cálculo + $200 presentación</td>
 </tr>
 <tr>
-<td>Declaración Inicial</td>
+<td>Declaración Inicial.</td>
 <td class="price">$550</td>
 <td>$250 descarga/cálculo + $300 presentación</td>
 </tr>
 <tr>
-<td>Declaración Final (Baja)</td>
+<td>Declaración Final (Baja).</td>
 <td class="price">$250</td>
-<td>Costo unitario</td>
+<td>Costo unitario.</td>
 </tr>
 </tbody>
 </table>
@@ -2574,9 +2603,25 @@ Agendar Consulta por WhatsApp
 <polyline points="18 15 12 9 6 15"/>
 </svg>
 </button>
+
+<!-- Botón Cambiar Tema -->
+<button class="floating-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema" title="Cambiar tema (Ctrl+Shift+T)">
+<svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<!-- Sol (tema claro) -->
+<circle cx="12" cy="12" r="5"/>
+<line x1="12" y1="1" x2="12" y2="3"/>
+<line x1="12" y1="21" x2="12" y2="23"/>
+<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+<line x1="1" y1="12" x2="3" y2="12"/>
+<line x1="21" y1="12" x2="23" y2="12"/>
+<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+</svg>
+</button>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Floating Buttons Functionality
 console.log('🔵 Inicializando botones flotantes...');
 
@@ -2717,16 +2762,80 @@ console.log(`Tema ${newTheme === 'dark' ? 'oscuro' : 'claro'} activado`);
 const initialTheme = detectTheme();
 applyTheme(initialTheme);
 
+
+
+
 // Atajos de teclado para cambio de tema
 document.addEventListener('keydown', (e) => {
-if (e.ctrlKey && e.altKey && e.key === 't') {
-e.preventDefault();
-toggleTheme();
-}
+    // Ctrl/Cmd + Shift + T
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'T' || e.key === 't')) {
+        e.preventDefault();
+        toggleTheme();
+    }
+    // Alt + Ctrl + T (alternativo)
+    if (e.altKey && e.ctrlKey && (e.key === 'T' || e.key === 't')) {
+        e.preventDefault();
+        toggleTheme();
+    }
 });
 
-console.log('✅ Sistema de temas inicializado');
-console.log('💡 Presiona Ctrl+Alt+T para cambiar entre tema claro y oscuro');
+// Actualizar icono del botón según el tema
+const updateThemeIcon = () => {
+    const themeIcon = document.getElementById('themeIcon');
+    if (!themeIcon) return;
+    
+    const isDark = state.theme === 'dark';
+    
+    // Cambiar icono: Sol para tema claro, Luna para tema oscuro
+    if (isDark) {
+        themeIcon.innerHTML = `
+            <!-- Luna (tema oscuro) -->
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        `;
+    } else {
+        themeIcon.innerHTML = `
+            <!-- Sol (tema claro) -->
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        `;
+    }
+};
+
+// Modificar toggleTheme para actualizar el icono
+const toggleThemeOriginal = toggleTheme;
+window.toggleTheme = () => {
+    toggleThemeOriginal();
+    updateThemeIcon();
+};
+
+// Event listener para el botón
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        window.toggleTheme();
+    });
+}
+
+// Actualizar icono al cargar
+updateThemeIcon();
+
+// Exponer funciones globalmente
+window.getCurrentTheme = () => state.theme;
+window.applyTheme = applyTheme;
+
+console.log('✅ Sistema de temas completamente inicializado');
+console.log('📌 Tema actual:', state.theme);
+console.log('⌨️  Atajos disponibles:');
+console.log('   • Ctrl/Cmd + Shift + T');
+console.log('   • Alt + Ctrl + T');
+console.log('   • Click en botón flotante (abajo derecha)');
 </script>
 
 </body>
