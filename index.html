@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Primary Meta Tags -->
-<title>AIDN Strategic Consulting</title>
+<title>AIDN</title>
 <meta name="title" content="AIDN Strategic Consulting">
 <meta name="description" content="Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad. Consultoría estratégica, servicios fiscales RESICO y administración empresarial.">
 <meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner-catalogo-aidn.png">
@@ -18,19 +18,19 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://bit.ly/catalogo-aidn">
-<meta property="og:title" content="Catálogo de Servicios 2026 | AIDN Strategic Consulting">
-<meta property="og:description" content="Catapultamos empresas para liderar el cambio. Consultoría estratégica y servicios fiscales profesionales.">
+<meta property="og:url" content="https://aidnstrategic.com">
+<meta property="og:title" content="AIDN Strategic Consulting | Consultoría Estratégica y Servicios Fiscales">
+<meta property="og:description" content="Catapultamos empresas para liderar el cambio. Consultoría estratégica certificada OLA/CICA y servicios fiscales profesionales.">
 <meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner-catalogo-aidn.png">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="AIDN Strategic Consulting">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://bit.ly/catalogo-aidn">
-<meta name="twitter:title" content="Catálogo AIDN 2026 - Consultoría Estratégica">
+<meta name="twitter:url" content="https://aidnstrategic.com">
+<meta name="twitter:title" content="AIDN Strategic Consulting | Consultoría Estratégica y Servicios Fiscales">
 <meta name="twitter:description" content="Consultoría estratégica certificada OLA/CICA. Servicios fiscales RESICO, planeación empresarial y más.">
-<meta name="twitter:image" content="https://aidn.com.mx/assets/banner-catalogo26.png">
+<meta name="twitter:image" content="https://maesauldavila.github.io/catalogo/banner-catalogo-aidn.png">
 
 <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -46,7 +46,7 @@
 <link rel="manifest" href="site.webmanifest">
 
 <!-- Canonical & SEO -->
-<link rel="canonical" href="https://bit.ly/catalogo-aidn">
+<link rel="canonical" href="https://aidnstrategic.com">
 
 <!-- DNS Prefetch -->
 <link rel="preconnect" href="https://wa.me">
@@ -90,7 +90,9 @@ border-radius: 4px;
 --border: #e5e7eb;
 --accent: #10b981;
 --warning: #f59e0b;
---gold: #d97706;
+/* Plata Corporativo — único metalizado autorizado (Biblia v3.1) */
+--silver-light: #C8D0DC;
+--silver-dark: #8E9BAE;
 --shadow: rgba(0,0,0,0.1);
 --hover-shadow: rgba(0,0,0,0.2);
 --transition-fast: 150ms ease;
@@ -107,16 +109,17 @@ border-radius: 4px;
 }
 
 [data-theme="dark"] {
+/* Tokens dark mode — Biblia AIDN v3.1 */
 --primary: #03b4d6;
 --secondary: #0c2a85;
---bg-main: #0a0e1a;
---bg-white: #1a1f35;
---bg-light: #2a3254;
---text-dark: #e5e7eb;
---text-light: #d1d5db;
---border: #2d3748;
---shadow: rgba(0,0,0,0.4);
---hover-shadow: rgba(0,0,0,0.6);
+--bg-main: #060d1f;
+--bg-white: #0f1d42;
+--bg-light: #0d1d52;
+--text-dark: #EDF2FF;
+--text-light: #8899CC;
+--border: #1a2d6b;
+--shadow: rgba(0,0,0,0.5);
+--hover-shadow: rgba(0,0,0,0.7);
 --premium-gradient-start: #1e3a5f;
 --premium-gradient-end: #2a4a6f;
 --premium-border: #0ea5e9;
@@ -126,10 +129,13 @@ body {
 font-family: 'IBM Plex Sans', sans-serif;
 line-height: 1.6;
 color: var(--text-dark);
-background: var(--bg-main);
-background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-light) 100%);
+background: linear-gradient(135deg, var(--silver-dark) 0%, var(--silver-light) 50%, #dde3ec 100%);
 padding: 2rem 1rem;
 transition: background var(--transition-base), color var(--transition-base);
+}
+
+html[data-theme="dark"] body {
+background: linear-gradient(135deg, #060d1f 0%, #0c1a3a 100%);
 }
 
 .new-badge {
@@ -236,21 +242,6 @@ font-style: italic;
 margin-bottom: 1.2rem;
 position: relative;
 z-index: 1;
-}
-
-.header .year {
-font-family: 'Rajdhani', sans-serif;
-display: inline-block;
-background: rgba(255,255,255,0.2);
-padding: 0.5rem 1.5rem;
-border-radius: 20px;
-font-size: 1rem;
-font-weight: 600;
-color: white;
-border: 2px solid rgba(255,255,255,0.3);
-position: relative;
-z-index: 1;
-letter-spacing: 0.5px;
 }
 
 .content {
@@ -511,7 +502,7 @@ font-size: 1.1rem;
 }
 
 [data-theme="dark"] .price {
-color: var(--secondary);
+color: var(--silver-light);
 }
 
 .scope-list {
@@ -1383,7 +1374,6 @@ color: #e5e7eb !important;
 <h1>AIDN STRATEGIC CONSULTING</h1>
 <p class="subtitle">Consultoría Estratégica y Servicios Fiscales</p>
 <p class="tagline">Catapultamos empresas para liderar el cambio</p>
-<div class="year">CATÁLOGO 2026</div>
 </header>
 
 <div class="content">
@@ -1393,7 +1383,7 @@ color: #e5e7eb !important;
 <p>En <strong>AIDN Strategic Consulting</strong>, nuestra prioridad es <strong>crear valor en las organizaciones de nuestros clientes</strong> más allá de buscar simples estrategias fiscales de ahorro. Entendemos que una empresa exitosa no se construye solo desde una perspectiva de finanzas o impuestos, cuyo rango de operación es limitado y con frecuencia deja de lado aspectos de impacto trascendente como <strong>la cultura organizacional, la mejora continua, la toma de decisiones estratégicas y la creación de planes de acción objetivos y monitoreables</strong>.</p>
 <p>Para nosotros, es más importante una <strong>planeación estratégica que busque el desempeño superior con una visión holística</strong>, integrando todas las áreas funcionales de la empresa, que centrarse únicamente en estrategias fiscales de ahorro ínfimo. Nuestra visión como consultores es <strong>360 grados</strong>: consideramos tanto el contexto interno de la organización como el entorno externo, porque solo con una comprensión completa se pueden diseñar soluciones verdaderamente transformadoras.</p>
 <p>Combinamos rigor técnico en servicios fiscales con una visión estratégica de negocio. Nuestro enfoque integra herramientas de planeación probadas internacionalmente y tecnología de vanguardia para ofrecer soluciones personalizadas que impulsan el crecimiento sostenible de tu empresa.</p>
-<p style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(3, 180, 214, 0.08), rgba(16, 185, 129, 0.08)); border-left: 4px solid var(--accent); border-radius: 8px;"><strong>MAE Saúl Dávila Pantoja</strong> — Maestro en Administración de Empresas con especialidad en Planeación Estratégica | Consultor Estratégico Certificado por OLA/CICA en Administración Estratégica | Licenciado en Contaduría Pública.</p>
+<p style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(200, 208, 220, 0.15), rgba(142, 155, 174, 0.10)); border-left: 4px solid var(--silver-dark); border-radius: 8px;"><strong>MAE Saúl Dávila Pantoja</strong> — Maestro en Administración de Empresas con especialidad en Planeación Estratégica | Consultor Estratégico Certificado por OLA/CICA en Administración Estratégica | Licenciado en Contaduría Pública.</p>
 
 <span class="badge">
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 0.4rem;">
@@ -1744,8 +1734,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 </section>
 
-<!-- FIN PARTE 1 - CONTINÚA EN catalogo-parte-2.html -->
-<!-- INICIO PARTE 2 - CONTINUACIÓN DE catalogo-parte-1.html -->
+
 
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1770,7 +1759,7 @@ Personas Físicas RESICO
 
 <div class="info-box info">
 <p class="info-box-title">🌐 Modelo de Trabajo Remoto</p>
-<p>Los servicios fiscales se brindan de manera <strong>100% remota</strong> mediante videollamadas o videoconferencias por Zoom y utilizando plataformas digitales gubernamentales (portales del SAT, IMSS y otros sistemas oficiales). No es necesario acudir físicamente al despacho para el cumplimiento fiscal mensual.</p>
+<p>Los servicios fiscales se brindan de manera <strong>100% remota</strong> mediante videollamadas o videoconferencias por Zoom y utilizando plataformas digitales gubernamentales (portales del SAT, IMSS y otros sistemas oficiales). No es necesario acudir físicamente a la firma para el cumplimiento fiscal mensual.</p>
 </div>
 
 <div class="info-box success">
@@ -1845,7 +1834,7 @@ Personas Físicas RESICO
 </table>
 <div class="info-box info">
 <p class="info-box-title">ℹ️ Nota Tributaria</p>
-<p>Los médicos y dentistas pueden tributar tanto en RESICO como en Actividades Empresariales y Profesionales. Consulta con el despacho para determinar el régimen más conveniente según tu situación particular.</p>
+<p>Los médicos y dentistas pueden tributar tanto en RESICO como en Actividades Empresariales y Profesionales. Consulta con la firma para determinar el régimen más conveniente según tu situación particular.</p>
 </div>
 
 <div class="info-box warning">
@@ -1856,7 +1845,7 @@ Personas Físicas RESICO
 <li><strong>Cédula Profesional</strong> vigente y verificable.</li>
 </ul>
 <p style="margin-top: 0.75rem; font-weight: 600;"><strong>AIDN NO acepta trabajos de profesionales de la salud sin estos documentos acreditados.</strong> Esta política protege la legalidad del ejercicio profesional.</p>
-<p style="margin-top: 0.75rem;"><strong>Elaboración de Facturas:</strong> Médicos y Dentistas reciben servicio de elaboración de CFDI por parte del despacho (1 a 9 facturas mensuales sin costo adicional, a partir de la décima factura $50 MXN c. u.).</p>
+<p style="margin-top: 0.75rem;"><strong>Elaboración de Facturas:</strong> Médicos y Dentistas reciben servicio de elaboración de CFDI por parte de la firma (1 a 9 facturas mensuales sin costo adicional, a partir de la décima factura $50 MXN c. u.).</p>
 </div>
 </div>
 
@@ -1871,7 +1860,7 @@ Personas Físicas RESICO
 </thead>
 <tbody>
 <tr>
-<td>Clientes del Despacho (Costo Unitario).</td>
+<td>Clientes de la Firma (Costo Unitario).</td>
 <td class="price">$3800</td>
 </tr>
 <tr>
@@ -1893,7 +1882,8 @@ Sueldos y Salarios
 <thead>
 <tr>
 <th>Servicio</th>
-<th>Honorario</th>
+<th>Clientes</th>
+<th>Externos</th>
 </tr>
 </thead>
 <tbody>
@@ -1908,13 +1898,19 @@ Sueldos y Salarios
 </ul>
 </td>
 <td class="price">$550</td>
+<td class="price">$650</td>
 </tr>
 <tr>
 <td>Empleador adicional.</td>
-<td class="price">$100 <small>(por cada uno)</small></td>
+<td class="price">$100 <small>(c/u)</small></td>
+<td class="price">$150 <small>(c/u)</small></td>
 </tr>
 </tbody>
 </table>
+<div class="info-box info" style="margin-top: 1rem;">
+<p class="info-box-title">ℹ️ Tarifa según tipo de solicitante</p>
+<p>La tarifa <strong>Clientes</strong> aplica a personas con <strong>al menos 2 años de antigüedad continua</strong> como clientes activos de la firma. Cualquier otra persona recibe la tarifa <strong>Externos</strong>. Ver definición completa en la Sección III — Políticas y Ética Profesional.</p>
+</div>
 </section>
 
 <section class="section" id="seccion-empresarial">
@@ -2202,16 +2198,14 @@ Público: $50
 <td>
 Solo para quienes cuenten con firma o contraseña SAT vigente.
 <br><br>
-<strong>⚠️ Nota:</strong> No tramitamos constancias para público en general mediante la app del SAT debido a demoras e inconvenientes técnicos del sistema.
+<strong>Nota:</strong> Por limitaciones técnicas recurrentes del sistema SAT, este servicio se atiende de forma prioritaria para clientes activos. El público en general puede solicitarlo sujeto a disponibilidad.
 </td>
 </tr>
 <tr>
 <td><strong>Gestión de Citas en Módulos del SAT</strong></td>
 <td class="price">Incluido</td>
 <td>
-Servicio exclusivo para clientes activos del despacho.
-<br>
-No se tramitan citas para público en general.
+Servicio disponible para clientes activos de la firma.
 </td>
 </tr>
 <tr>
@@ -2229,7 +2223,7 @@ No se tramitan citas para público en general.
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">📋 Declaraciones Patrimoniales y CV</h3>
+<h3 class="subsection-title">📋 Declaraciones Patrimoniales y Documentos</h3>
 <table class="service-table">
 <thead>
 <tr>
@@ -2245,31 +2239,26 @@ No se tramitan citas para público en general.
 <td>Por cuartilla.</td>
 </tr>
 <tr>
-<td>Redacción de CV</td>
-<td class="price">$120</td>
-<td>Curriculum vitae por cuartilla.</td>
-</tr>
-<tr>
 <td>Modificación Patrimonial.</td>
 <td class="price">$450</td>
 <td>$250 descarga/cálculo + $200 presentación</td>
 </tr>
 <tr>
 <td>Declaración Inicial.</td>
-<td class="price">$550</td>
-<td>$250 descarga/cálculo + $300 presentación</td>
+<td class="price">$600</td>
+<td>$250 descarga/cálculo + $350 presentación</td>
 </tr>
 <tr>
 <td>Declaración Final (Baja).</td>
-<td class="price">$250</td>
+<td class="price">$300</td>
 <td>Costo unitario.</td>
 </tr>
 </tbody>
 </table>
 
-<div class="public-notice" style="background: linear-gradient(135deg, #fed7aa, #ffedd5); border: 2px solid var(--warning); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
-<p class="info-box-title" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-dark);">⚠️ IMPORTANTE - Servicio No Disponible para Público en General</p>
-<p style="color: var(--text-dark); line-height: 1.7; margin: 0;">Las <strong>constancias de situación fiscal NO se tramitan para público en general</strong> mediante la app del SAT debido a demoras e inconvenientes técnicos recurrentes del sistema. Este servicio está disponible únicamente para <strong>clientes activos con servicios fiscales contratados</strong>.</p>
+<div class="info-box info" style="margin-top: 1.5rem;">
+<p class="info-box-title">ℹ️ Nota sobre Constancias de Situación Fiscal</p>
+<p style="margin: 0;">Por limitaciones técnicas recurrentes del sistema SAT, este servicio se atiende de forma prioritaria para <strong>clientes activos con servicios fiscales contratados</strong>. El público en general puede solicitarlo sujeto a disponibilidad de agenda.</p>
 </div>
 </div>
 </section>
@@ -2302,17 +2291,17 @@ Políticas de Operación y Ética Profesional
 <p class="info-box-title">📅 Horarios y Modalidades de Servicio</p>
 <p style="margin: 0 0 10px 0; line-height: 1.4;">Para garantizar un servicio de alta calidad y enfoque total en cada cuenta, operamos bajo el siguiente modelo:</p>
 <div style="margin-top: 10px;">
-<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Atención Operativa:</strong> Lunes a Viernes de 11:00 am a 7:00 pm (Despacho y WhatsApp de soporte).</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Atención Operativa:</strong> Lunes a Viernes de 11:00 am a 7:00 pm (oficina y WhatsApp de soporte).</p>
 <p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Gestión de Citas:</strong> Recepción de solicitudes vía WhatsApp de Lunes a Sábado de 8:00 am a 8:00 pm.</p>
-<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Atención en Sábado:</strong> De 11:00 am a 6:00 pm, únicamente bajo acuerdo individual previo (no generalizado).</p>
+<p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Atención en Sábado:</strong> Citas presenciales en despacho disponibles bajo acuerdo previo. Horario: 11:00 am a 6:00 pm.</p>
 <p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Modalidad de Trabajo:</strong> Predominantemente remoto (videollamada/videoconferencia). Atención presencial en despacho físico disponible bajo cita previa.</p>
-<p style="margin: 0; line-height: 1.4;">✓ <strong>Exclusividad:</strong> Servicio limitado a clientes activos; no se brinda soporte a externos.</p>
+<p style="margin: 0; line-height: 1.4;">✓ <strong>Prioridad de atención:</strong> Los clientes activos de la firma reciben atención preferencial y dedicada.</p>
 </div>
 </div>
 
-<div class="public-notice" style="background: linear-gradient(135deg, #fed7aa, #ffedd5); border: 2px solid var(--warning); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
-<p class="info-box-title" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-dark);">⚠️ IMPORTANTE - Servicios Exclusivos para Clientes Activos</p>
-<p style="color: var(--text-dark); line-height: 1.7; margin: 0;"><strong>NO se tramitan citas ni se brinda asesoría al público en general.</strong> Todos nuestros servicios profesionales están disponibles únicamente para clientes con contratos activos. Esto nos permite garantizar calidad, dedicación y resultados óptimos para quienes confían en nosotros de manera continua.</p>
+<div class="info-box info" style="margin-top: 1.5rem;">
+<p class="info-box-title">ℹ️ Atención Preferencial para Clientes Activos</p>
+<p style="margin: 0;">Los clientes activos de la firma cuentan con atención prioritaria y tarifas preferenciales. El público en general puede solicitar servicios a tarifas de lista; la disponibilidad está sujeta a agenda.</p>
 </div>
 </div>
 
@@ -2320,20 +2309,20 @@ Políticas de Operación y Ética Profesional
 <h3 class="subsection-title">2. Condiciones de Pago y Facturación</h3>
 <div class="info-box premium">
 <p class="info-box-title">💼 Métodos de Pago Aceptados</p>
-<p style="margin: 0 0 10px 0; line-height: 1.4;">El despacho acepta los siguientes métodos para su comodidad y seguridad en cada transacción:</p>
+<p style="margin: 0 0 10px 0; line-height: 1.4;">La firma acepta los siguientes métodos para su comodidad y seguridad en cada transacción:</p>
 <div style="margin-top: 10px;">
 <p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Transferencia electrónica:</strong> Método preferente para un registro contable inmediato y seguro.</p>
 <p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Depósito en sucursal:</strong> Alternativa disponible para depósitos directos en ventanilla bancaria.</p>
 <p style="margin: 0 0 8px 0; line-height: 1.4;">✓ <strong>Pago en cadena Oxxo:</strong> Máxima accesibilidad para depósitos en efectivo.</p>
-<p style="margin: 0; line-height: 1.4;"><span style="color: #ef4444;">⚠</span> <strong style="color: #ef4444;">Efectivo (Presencial):</strong> Solo de manera <strong style="color: #ef4444;">extraordinaria</strong>. Es el método menos eficiente para la trazabilidad fiscal.</p>
+<p style="margin: 0; line-height: 1.4;">✓ <strong>Efectivo (Presencial):</strong> Se sugiere evitar; representa menor trazabilidad fiscal para el contribuyente.</p>
 </div>
 <p style="margin: 15px 0 0 0; font-style: italic; font-size: 0.9em; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; line-height: 1.4;">Se proporcionarán los datos bancarios al confirmar el servicio.</p>
 </div>
 
 <ul class="policy-list" style="list-style: none; padding: 0; margin: 1.5rem 0;">
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Momento de Pago:</strong> Los honorarios se liquidan <strong>al momento de la entrega final</strong> de los documentos oficiales solicitados.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Facturación Obligatoria:</strong> Todos los servicios son facturados sin excepción. El CFDI se emite al momento del pago.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Anticipos:</strong> Clientes nuevos y asesorías independientes requieren el <strong>50% de anticipo</strong>.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Momento de Pago:</strong> Los honorarios se liquidan en su totalidad <strong>al momento de la entrega final</strong>, salvo cuando aplique anticipo conforme a la política correspondiente. En ese caso, el 50% se cubre al inicio del trabajo y el saldo restante a la entrega.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Facturación Obligatoria:</strong> Todos los servicios son facturados sin excepción. El CFDI se emite al momento de cada pago, ya sea anticipo o liquidación final.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Anticipos:</strong> Los externos requieren el <strong>50% de anticipo en todos los trabajos</strong>. Los clientes vigentes requieren el <strong>50% de anticipo en trabajos cuyo costo sea mayor a $2,000 MXN</strong>.</li>
 </ul>
 </div>
 
@@ -2365,7 +2354,7 @@ Políticas de Operación y Ética Profesional
 <div class="subsection">
 <h3 class="subsection-title">4. Ética y Transparencia Profesional</h3>
 <div class="info-box success">
-<p class="info-box-title">✅ Despacho Serio y Transparente</p>
+<p class="info-box-title">✅ Firma Seria y Transparente</p>
 <p>Nuestros servicios se brindan exclusivamente dentro del marco legal vigente y las mejores prácticas profesionales. Los honorarios están establecidos conforme al valor técnico de cada servicio. <strong>Cero tolerancia a prácticas irregulares o corrupción.</strong></p>
 </div>
 </div>
@@ -2381,7 +2370,7 @@ Políticas de Operación y Ética Profesional
 <div class="subsection">
 <h3 class="subsection-title">6. Control de Gestiones y Eficiencia Operativa</h3>
 <ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Horario Operativo:</strong> Por respeto a la agenda colectiva y la seriedad del despacho, toda solicitud de servicio o consulta debe realizarse estrictamente dentro de los horarios de atención operativa y contar con un justificante o motivo claro de negocio.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Horario Operativo:</strong> Por respeto a la agenda colectiva y la seriedad de la firma, toda solicitud de servicio o consulta debe realizarse estrictamente dentro de los horarios de atención operativa y contar con un justificante o motivo claro de negocio.</li>
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Gestiones Extraordinarias:</strong> Para mantener la excelencia en el servicio a todos nuestros clientes, las gestiones fuera de lo programado tienen un cargo de <strong>$200 MXN</strong>. Esta política garantiza que podamos cumplir con los compromisos adquiridos con cada cliente de manera oportuna y profesional.</li>
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Carga Administrativa Excesiva:</strong> Clientes que requieran explicaciones reiteradas o muestren falta de colaboración tendrán un incremento del <strong>50% en su iguala mensual</strong>.</li>
 </ul>
@@ -2394,19 +2383,19 @@ Políticas de Operación y Ética Profesional
 <p>Para garantizar la calidad y continuidad en la gestión fiscal, operamos bajo las siguientes condiciones:</p>
 </div>
 <ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Clientes que Contratan Otro Despacho:</strong> Clientes que establezcan relación profesional con otro despacho durante la vigencia de nuestros servicios no podrán continuar siendo atendidos en AIDN. Esta política permite mantener el enfoque total y la responsabilidad integral sobre cada cuenta.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Clientes Provenientes de Otros Despachos:</strong> Clientes que provienen de otros asesores fiscales deberán firmar contrato de servicios con cláusula de deslinde de responsabilidades por actos, omisiones o asesorías de profesionales anteriores. AIDN no asume responsabilidad por situaciones fiscales preexistentes derivadas de gestiones anteriores.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Clientes que Contratan Otra Firma:</strong> Clientes que establezcan relación profesional con otra firma o despacho durante la vigencia de nuestros servicios no podrán continuar siendo atendidos en AIDN. Esta política permite mantener el enfoque total y la responsabilidad integral sobre cada cuenta.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Clientes Provenientes de Otras Firmas:</strong> Clientes que provienen de otros asesores fiscales deberán firmar contrato de servicios con cláusula de deslinde de responsabilidades por actos, omisiones o asesorías de profesionales anteriores. AIDN no asume responsabilidad por situaciones fiscales preexistentes derivadas de gestiones anteriores.</li>
 </ul>
 </div>
 
 <div class="subsection">
 <h3 class="subsection-title">8. Cláusulas de Rescisión y Suspensión de Servicio</h3>
 <ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Derecho de Retención y Propiedad de Gestiones:</strong> El despacho se reserva el derecho de no entregar papeles de trabajo, cálculos internos o archivos procesados de periodos que presenten adeudos. La continuidad del servicio y el acceso a la información administrativa actualizada dependen estrictamente del cumplimiento de los honorarios pactados.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Rescisión por Falta de Ética o Imposición:</strong> AIDN podrá dar por terminada la relación profesional de forma inmediata si el cliente intenta imponer prácticas fuera de la ley, busca omitir ingresos, no acepta sus responsabilidades personales o muestra una actitud que comprometa la integridad del despacho. En estos casos, se cortará todo soporte técnico sin responsabilidad para el consultor.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende definitivamente la presentación de declaraciones y cualquier gestión activa, deslindando al despacho de cualquier multa o requerimiento derivado del abandono de obligaciones por parte del cliente.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Derecho de Retención y Propiedad de Gestiones:</strong> AIDN se reserva el derecho de no entregar papeles de trabajo, cálculos internos o archivos procesados de periodos que presenten adeudos. La continuidad del servicio y el acceso a la información administrativa actualizada dependen estrictamente del cumplimiento de los honorarios pactados.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Rescisión por Falta de Ética o Imposición:</strong> AIDN podrá dar por terminada la relación profesional de forma inmediata si el cliente intenta imponer prácticas fuera de la ley, busca omitir ingresos, no acepta sus responsabilidades personales o muestra una actitud que comprometa la integridad de la firma. En estos casos, se cortará todo soporte técnico sin responsabilidad para el consultor.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Cláusula de Impago:</strong> Con <strong>3 meses consecutivos de adeudo</strong>, se suspende definitivamente la presentación de declaraciones y cualquier gestión activa, deslindando a AIDN de cualquier multa o requerimiento derivado del abandono de obligaciones por parte del cliente.</li>
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Política de No Reembolso:</strong> Los honorarios pagados por servicios ya prestados <strong>no serán retornados</strong> bajo ninguna circunstancia, independientemente del motivo de terminación de la relación contractual.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Terminación por Decisión del Cliente:</strong> Cuando un cliente decide dar por terminada la relación contractual para acudir a otro despacho, <strong>no se entregarán firmas electrónicas</strong>. Los clientes deben contar con un respaldo de sus propias firmas. AIDN eliminará del sistema todas las firmas electrónicas del cliente para evitar controversias futuras y delimitar responsabilidades de manera clara.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Terminación por Decisión del Cliente:</strong> Cuando un cliente decide dar por terminada la relación contractual para acudir a otra firma, <strong>no se entregarán firmas electrónicas</strong>. Los clientes deben contar con un respaldo de sus propias firmas. AIDN eliminará del sistema todas las firmas electrónicas del cliente para evitar controversias futuras y delimitar responsabilidades de manera clara.</li>
 </ul>
 </div>
 
@@ -2419,7 +2408,7 @@ Políticas de Operación y Ética Profesional
 <ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Sesión de Información Inicial:</strong> Se requiere una sesión previa donde se analizan las necesidades específicas de la empresa, alcance del servicio, complejidad operativa y periodicidad requerida.</li>
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Entrega de Cotización:</strong> La cotización formal se entrega en un plazo <strong>máximo de 72 horas</strong> posteriores a la sesión informativa, e incluye desglose detallado de servicios, honorarios específicos, cronograma de trabajo y condiciones de pago.</li>
-<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Confirmación Explícita Requerida:</strong> <strong>No se inician trabajos sin confirmación explícita</strong> del cliente (vía correo electrónico o WhatsApp oficial del despacho). Esta política protege tanto al cliente como al despacho, asegurando claridad en expectativas y compromisos mutuos.</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Confirmación Explícita Requerida:</strong> <strong>No se inician trabajos sin confirmación explícita</strong> del cliente (vía correo electrónico o WhatsApp oficial de la firma). Esta política protege tanto al cliente como a la firma, asegurando claridad en expectativas y compromisos mutuos.</li>
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Diferenciación de Tarifas PF vs PM:</strong> Las tarifas para personas morales son diferentes a las de personas físicas debido a: (a) mayor complejidad en procesos contables y fiscales, (b) mayor responsabilidad legal y exposición al riesgo, (c) volumen de operaciones y documentación, y (d) capacidad adquisitiva diferenciada. Esta diferenciación permite ofrecer precios accesibles a personas físicas manteniendo la calidad profesional en servicios corporativos.</li>
 <li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>No Aplica Política de Sesiones:</strong> La tarifa de $750 MXN por sesión <strong>NO aplica para Personas Morales</strong>. Cada servicio corporativo se cotiza de manera integral según necesidades específicas de la empresa.</li>
 </ul>
@@ -2450,6 +2439,23 @@ Políticas de Operación y Ética Profesional
 <div class="info-box info">
 <p class="info-box-title">🔒 Confidencialidad Profesional</p>
 <p>Toda información financiera o patrimonial es tratada con estricta <strong>confidencialidad profesional</strong> conforme a la Ley Federal de Protección de Datos Personales.</p>
+</div>
+</div>
+
+<div class="subsection">
+<h3 class="subsection-title">13. Definición de Cliente y Externo para Efectos de Tarifas</h3>
+<div class="info-box success">
+<p class="info-box-title">✅ Categorías de Solicitante — Aplicación de Honorarios</p>
+<p>Para la correcta aplicación de las tarifas diferenciadas que aparecen en el catálogo, se establecen las siguientes definiciones:</p>
+</div>
+<ul class="policy-list" style="list-style: none; padding: 0; margin: 1rem 0;">
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Cliente:</strong> Persona física o moral con <strong>al menos dos años de antigüedad continua</strong> como cliente activo de la firma a la fecha de solicitud del servicio. Aplica la tarifa preferencial indicada en la columna «Clientes».</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Externo:</strong> Cualquier persona física o moral que no cumpla el criterio de antigüedad anterior, incluyendo clientes nuevos, clientes con relación menor a dos años, o público en general. Aplica la tarifa de lista indicada en la columna «Externos».</li>
+<li style="padding: 0.5rem 0 0.5rem 1.8rem; position: relative; line-height: 1.6;"><strong>Verificación de Antigüedad:</strong> La antigüedad se contabiliza de forma continua. Una interrupción en la relación de servicios reinicia el cómputo.</li>
+</ul>
+<div class="info-box warning" style="margin-top: 1rem;">
+<p class="info-box-title">⚠️ Aplicación</p>
+<p>Esta distinción aplica actualmente a: <strong>Declaración Anual (Sueldos y Salarios)</strong> y cualquier otro servicio del catálogo donde se indiquen columnas diferenciadas. En caso de duda, prevalece la tarifa «Externos» hasta que se acredite la antigüedad correspondiente.</p>
 </div>
 </div>
 </section>
@@ -2605,7 +2611,7 @@ Agendar Consulta por WhatsApp
 </button>
 
 <!-- Botón Cambiar Tema -->
-<button class="floating-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema" title="Cambiar tema (Ctrl+Shift+T)">
+<button class="floating-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema" title="Cambiar tema (Ctrl+Alt+T)">
 <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <!-- Sol (tema claro) -->
 <circle cx="12" cy="12" r="5"/>
@@ -2692,150 +2698,87 @@ if (floatingButtons && scrollToTopBtn && whatsappBtn) {
 
 <script>
 const state = {
-theme: 'light',
-themeManuallySet: false
+    theme: 'light',
+    themeManuallySet: false
 };
 
 const isLocalStorageAvailable = () => {
-try {
-const test = '__storage_test__';
-localStorage.setItem(test, test);
-localStorage.removeItem(test);
-return true;
-} catch(e) {
-return false;
-}
+    try {
+        const test = '__storage_test__';
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
 };
 
 const detectTheme = () => {
-if (isLocalStorageAvailable()) {
-try {
-const stored = localStorage.getItem('aidn_catalog_theme');
-if (stored) {
-const parsed = JSON.parse(stored);
-if (parsed?.themeManuallySet && parsed?.theme) {
-return parsed.theme;
-}
-}
-} catch(e) {
-console.warn('No se pudo cargar el tema guardado:', e);
-}
-}
-return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    if (isLocalStorageAvailable()) {
+        try {
+            const stored = localStorage.getItem('aidn_catalog_theme');
+            if (stored) {
+                const parsed = JSON.parse(stored);
+                if (parsed?.themeManuallySet && parsed?.theme) {
+                    return parsed.theme;
+                }
+            }
+        } catch(e) {}
+    }
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
 const applyTheme = (theme) => {
-if (theme !== 'light' && theme !== 'dark') {
-console.error('Tema inválido:', theme);
-return;
-}
-document.documentElement.setAttribute('data-theme', theme);
-state.theme = theme;
+    if (theme !== 'light' && theme !== 'dark') return;
+    document.documentElement.setAttribute('data-theme', theme);
+    state.theme = theme;
+    const themeIcon = document.getElementById('themeIcon');
+    if (themeIcon) {
+        if (theme === 'dark') {
+            themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+        } else {
+            themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+        }
+    }
 };
 
 const saveTheme = () => {
-if (!isLocalStorageAvailable()) {
-console.warn('localStorage no disponible');
-return;
-}
-
-try {
-localStorage.setItem('aidn_catalog_theme', JSON.stringify({
-theme: state.theme,
-themeManuallySet: state.themeManuallySet,
-timestamp: new Date().toISOString()
-}));
-} catch(e) {
-console.error('Error al guardar tema:', e);
-}
+    if (!isLocalStorageAvailable()) return;
+    try {
+        localStorage.setItem('aidn_catalog_theme', JSON.stringify({
+            theme: state.theme,
+            themeManuallySet: state.themeManuallySet,
+            timestamp: new Date().toISOString()
+        }));
+    } catch(e) {}
 };
 
 const toggleTheme = () => {
-const newTheme = state.theme === 'light' ? 'dark' : 'light';
-state.themeManuallySet = true;
-applyTheme(newTheme);
-saveTheme();
-console.log(`Tema ${newTheme === 'dark' ? 'oscuro' : 'claro'} activado`);
+    const newTheme = state.theme === 'light' ? 'dark' : 'light';
+    state.themeManuallySet = true;
+    applyTheme(newTheme);
+    saveTheme();
 };
 
-// Inicializar tema
-const initialTheme = detectTheme();
-applyTheme(initialTheme);
+// Inicializar
+applyTheme(detectTheme());
 
+// Botón flotante
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+}
 
-
-
-// Atajos de teclado para cambio de tema
+// Ctrl+Alt+T — Biblia AIDN v3.1
 document.addEventListener('keydown', (e) => {
-    // Ctrl/Cmd + Shift + T
-    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'T' || e.key === 't')) {
-        e.preventDefault();
-        toggleTheme();
-    }
-    // Alt + Ctrl + T (alternativo)
-    if (e.altKey && e.ctrlKey && (e.key === 'T' || e.key === 't')) {
+    if (e.ctrlKey && e.altKey && (e.key === 'T' || e.key === 't')) {
         e.preventDefault();
         toggleTheme();
     }
 });
 
-// Actualizar icono del botón según el tema
-const updateThemeIcon = () => {
-    const themeIcon = document.getElementById('themeIcon');
-    if (!themeIcon) return;
-    
-    const isDark = state.theme === 'dark';
-    
-    // Cambiar icono: Sol para tema claro, Luna para tema oscuro
-    if (isDark) {
-        themeIcon.innerHTML = `
-            <!-- Luna (tema oscuro) -->
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        `;
-    } else {
-        themeIcon.innerHTML = `
-            <!-- Sol (tema claro) -->
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        `;
-    }
-};
-
-// Modificar toggleTheme para actualizar el icono
-const toggleThemeOriginal = toggleTheme;
-window.toggleTheme = () => {
-    toggleThemeOriginal();
-    updateThemeIcon();
-};
-
-// Event listener para el botón
-const themeToggleBtn = document.getElementById('themeToggleBtn');
-if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-        window.toggleTheme();
-    });
-}
-
-// Actualizar icono al cargar
-updateThemeIcon();
-
-// Exponer funciones globalmente
 window.getCurrentTheme = () => state.theme;
 window.applyTheme = applyTheme;
-
-console.log('✅ Sistema de temas completamente inicializado');
-console.log('📌 Tema actual:', state.theme);
-console.log('⌨️  Atajos disponibles:');
-console.log('   • Ctrl/Cmd + Shift + T');
-console.log('   • Alt + Ctrl + T');
-console.log('   • Click en botón flotante (abajo derecha)');
 </script>
 
 </body>
