@@ -1342,6 +1342,52 @@ color: #e5e7eb !important;
     transform: rotate(180deg);
 }
 
+
+/* ── Separador interno de menor jerarquía ── */
+.separator-minor {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 2.2rem 0;
+  opacity: 0.55;
+}
+
+.separator-minor::before,
+.separator-minor::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--border) 30%,
+    var(--border) 70%,
+    transparent);
+}
+
+.separator-minor-diamond {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  transform: rotate(45deg);
+  margin: 0 0.8rem;
+  flex-shrink: 0;
+  transition: border-color var(--transition-base);
+}
+
+[data-theme="dark"] .separator-minor::before,
+[data-theme="dark"] .separator-minor::after {
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255,255,255,0.12) 30%,
+    rgba(255,255,255,0.12) 70%,
+    transparent);
+}
+
+[data-theme="dark"] .separator-minor-diamond {
+  border-color: rgba(255,255,255,0.15);
+}
+
 /* ============================================================
    BUYER PERSONAS — ¿Para quién es AIDN?
    Opción B · Filtro por identificación emocional
@@ -2005,6 +2051,26 @@ margin-bottom: 0.8rem;
 }
 
 .admin-est-def p:last-child { margin-bottom: 0; }
+
+/* ── Diagrama Diamante — Administración Estratégica ── */
+.aestrat-diagram-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.8rem 0;
+  filter: drop-shadow(0 8px 28px rgba(12,42,133,0.18));
+}
+
+.aestrat-svg-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.aestrat-svg-container svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Reuse fases animations — already declared */
 
 .admin-est-pilares {
 display: flex;
@@ -3198,6 +3264,12 @@ text-align: center;
 </svg>
 Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </span>
+
+<div class="info-box" style="margin-top:1.8rem;border-left-color:#14338F;">
+  <p class="info-box-title" style="color:#14338F;">🗺️ Cómo navegar este catálogo</p>
+  <p>Este documento está organizado para que cada lector encuentre directamente lo que le interesa. <strong>No es necesario leerlo en orden.</strong> El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice de Contenidos</a> te permite ir directamente a la sección relevante: si buscas consultoría estratégica ve a <a href="#seccion-strategy" style="color:#14338F;font-weight:600;">AIDN Strategy</a>; si necesitas servicios fiscales ve a <a href="#seccion-taxes" style="color:#14338F;font-weight:600;">AIDN Taxes</a>; y si te interesa el fundamento conceptual de nuestro enfoque, la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> es tu punto de partida.</p>
+</div>
+
 </section>
 
 
@@ -3209,7 +3281,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </svg>
 </div>
 
-<nav class="toc-container" aria-label="Índice de contenidos">
+<nav class="toc-container" id="toc-nav" aria-label="Índice de contenidos">
 <h2 class="toc-title">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -3236,24 +3308,8 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </svg>
 </a>
 </li>
-<li class="toc-item">
-<a href="#seccion-admin-proceso" class="toc-link">
-<span class="toc-number">1</span>
-<span class="toc-text">Administración y su Proceso</span>
-<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<polyline points="9 18 15 12 9 6"/>
-</svg>
-</a>
-</li>
-<li class="toc-item">
-<a href="#seccion-planeacion-tipos" class="toc-link">
-<span class="toc-number">2</span>
-<span class="toc-text">Planeación Estratégica y sus Tipos</span>
-<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<polyline points="9 18 15 12 9 6"/>
-</svg>
-</a>
-</li>
+
+
 <li class="toc-item">
 <a href="#seccion-admin-estrategica" class="toc-link">
 <span class="toc-number">3</span>
@@ -3416,6 +3472,14 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </svg>
 </a>
 </li>
+<li class="toc-item">
+<a href="#seccion-contacto-final" class="toc-link">
+<span class="toc-text">✦ Agendar Sesión Diagnóstica</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
 </ul>
 </nav>
 
@@ -3531,12 +3595,8 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <!-- / Fin Bloque A -->
 
 
-<div class="separator" role="presentation">
-<svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<circle cx="12" cy="12" r="10"/>
-<circle cx="12" cy="12" r="6"/>
-<circle cx="12" cy="12" r="2"/>
-</svg>
+<div class="separator-minor" role="presentation" aria-hidden="true">
+  <div class="separator-minor-diamond"></div>
 </div>
 
 
@@ -3547,236 +3607,176 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   Administración y su Proceso
 </h2>
 
-<div class="admin-block">
 
-  <h3 class="admin-block-title">
-    <span>⚙️</span> ¿Qué es la Administración?
-  </h3>
-  <p class="admin-def">
-    La <em>Administración</em> es el proceso mediante el cual se coordinan y optimizan los recursos de una organización para lograr sus objetivos con la mayor eficiencia, eficacia y calidad posibles. Comprende cuatro funciones fundamentales —<em>Planeación, Organización, Dirección y Control</em>— que, lejos de seguir una secuencia lineal, se retroalimentan de forma continua y simultánea a lo largo de toda la gestión empresarial.
-  </p>
-
-  <!-- Diagrama circular-cruzado SVG -->
-  <div class="fases-diagram-wrap">
-    <div class="fases-svg-container" role="img" aria-label="Diagrama de las cuatro fases de la administración: Planeación, Organización, Dirección y Control en ciclo iterativo">
-      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="gPlan" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#03b4d6;stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1"/>
-          </linearGradient>
-          <linearGradient id="gOrg" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#14338F;stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1"/>
-          </linearGradient>
-          <linearGradient id="gDir" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#0c2a85;stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1"/>
-          </linearGradient>
-          <linearGradient id="gCtrl" x1="100%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
-          </linearGradient>
-          <filter id="fglow">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <marker id="arrowC" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L6,3 Z" fill="rgba(255,255,255,0.7)"/>
-          </marker>
-          <marker id="arrowB" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L6,3 Z" fill="rgba(3,180,214,0.8)"/>
-          </marker>
-        </defs>
-
-        <!-- Anillo de fondo pulsante -->
-        <circle class="fases-ring-pulse" cx="150" cy="150" r="108" fill="none" stroke="rgba(3,180,214,0.15)" stroke-width="18"/>
-
-        <!-- Segmento Q1: Planeación (arriba-izquierda) -->
-        <path class="fases-seg" d="M150,150 L42,42 A152,152 0 0,1 150,0 L150,44 A106,106 0 0,0 81,69 Z" fill="url(#gPlan)" opacity="0.92"/>
-
-        <!-- Segmento Q2: Organización (arriba-derecha) -->
-        <path class="fases-seg" d="M150,150 L258,42 A152,152 0 0,1 300,150 L256,150 A106,106 0 0,0 219,69 Z" fill="url(#gOrg)" opacity="0.92"/>
-
-        <!-- Segmento Q3: Control (abajo-derecha) -->
-        <path class="fases-seg" d="M150,150 L258,258 A152,152 0 0,1 150,300 L150,256 A106,106 0 0,0 219,231 Z" fill="url(#gCtrl)" opacity="0.92"/>
-
-        <!-- Segmento Q4: Dirección (abajo-izquierda) -->
-        <path class="fases-seg" d="M150,150 L42,258 A152,152 0 0,1 0,150 L44,150 A106,106 0 0,0 81,231 Z" fill="url(#gDir)" opacity="0.92"/>
-
-        <!-- Arco exterior decorativo -->
-        <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
-
-        <!-- Flechas cruzadas indicando interdependencia -->
-        <!-- Diagonal Plan → Ctrl -->
-        <line class="fases-arrow-dash" x1="88" y1="88" x2="212" y2="212"
-              stroke="rgba(255,255,255,0.5)" stroke-width="1.5"
-              marker-end="url(#arrowC)"/>
-        <!-- Diagonal Org → Dir -->
-        <line class="fases-arrow-dash" x1="212" y1="88" x2="88" y2="212"
-              stroke="rgba(255,255,255,0.5)" stroke-width="1.5"
-              marker-end="url(#arrowC)"/>
-
-        <!-- Flecha circular exterior (sentido iterativo) -->
-        <path class="fases-arrow-dash" d="M150,20 A130,130 0 0,1 280,150"
-              fill="none" stroke="rgba(3,180,214,0.6)" stroke-width="2"
-              marker-end="url(#arrowB)"/>
-        <path class="fases-arrow-dash" d="M280,150 A130,130 0 0,1 150,280"
-              fill="none" stroke="rgba(3,180,214,0.5)" stroke-width="2"
-              marker-end="url(#arrowB)"/>
-        <path class="fases-arrow-dash" d="M150,280 A130,130 0 0,1 20,150"
-              fill="none" stroke="rgba(3,180,214,0.4)" stroke-width="2"
-              marker-end="url(#arrowB)"/>
-        <path class="fases-arrow-dash" d="M20,150 A130,130 0 0,1 150,20"
-              fill="none" stroke="rgba(3,180,214,0.5)" stroke-width="2"
-              marker-end="url(#arrowB)"/>
-
-        <!-- Círculo central -->
-        <circle cx="150" cy="150" r="38" fill="#0c2a85" filter="url(#fglow)"/>
-        <circle cx="150" cy="150" r="34" fill="url(#gDir)" opacity="0.4"/>
-        <text x="150" y="146" text-anchor="middle" fill="white" font-family="Rajdhani, sans-serif" font-size="9" font-weight="700" letter-spacing="1">ADMÓN.</text>
-        <text x="150" y="158" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Rajdhani, sans-serif" font-size="7.5" letter-spacing="0.5">ITERATIVA</text>
-
-        <!-- Labels de fases -->
-        <text x="78" y="54" text-anchor="middle" fill="white" font-family="Rajdhani, sans-serif" font-size="11" font-weight="700">PLANEACIÓN</text>
-        <text x="222" y="54" text-anchor="middle" fill="white" font-family="Rajdhani, sans-serif" font-size="11" font-weight="700">ORGANIZACIÓN</text>
-        <text x="222" y="256" text-anchor="middle" fill="white" font-family="Rajdhani, sans-serif" font-size="11" font-weight="700">CONTROL</text>
-        <text x="78" y="256" text-anchor="middle" fill="white" font-family="Rajdhani, sans-serif" font-size="11" font-weight="700">DIRECCIÓN</text>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Descripción breve de las 4 fases -->
-  <div class="fases-grid">
-    <div class="fase-card fase-plan">
-      <div class="fase-card-head">
-        <div class="fase-card-icon">📋</div>
-        <span class="fase-card-name">Planeación</span>
-      </div>
-      <p>Define el rumbo: establece objetivos, estrategias y planes de acción. Responde a las preguntas <em>¿qué queremos lograr?</em> y <em>¿cómo llegaremos ahí?</em> Es el punto de partida de toda gestión deliberada.</p>
-    </div>
-    <div class="fase-card fase-org">
-      <div class="fase-card-head">
-        <div class="fase-card-icon">🏗️</div>
-        <span class="fase-card-name">Organización</span>
-      </div>
-      <p>Estructura los recursos humanos, materiales y financieros para ejecutar los planes. Define roles, jerarquías y procesos que habilitan la ejecución coordinada y eficiente.</p>
-    </div>
-    <div class="fase-card fase-dir">
-      <div class="fase-card-head">
-        <div class="fase-card-icon">🧭</div>
-        <span class="fase-card-name">Dirección</span>
-      </div>
-      <p>Motiva, lidera y comunica para que las personas ejecuten sus funciones con propósito. Es la fase donde la estrategia toca la realidad: el liderazgo convierte planes en acción.</p>
-    </div>
-    <div class="fase-card fase-ctrl">
-      <div class="fase-card-head">
-        <div class="fase-card-icon">📊</div>
-        <span class="fase-card-name">Control</span>
-      </div>
-      <p>Mide, evalúa y corrige la ejecución frente a los planes establecidos. Sin control no hay aprendizaje ni mejora; es el mecanismo que cierra el ciclo y retroalimenta la planeación.</p>
-    </div>
-  </div>
-
-  <!-- Clasificación de la Planeación -->
-
-
-<div class="separator" role="presentation">
-<svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<circle cx="12" cy="12" r="10"/>
-<circle cx="12" cy="12" r="6"/>
-<circle cx="12" cy="12" r="2"/>
-</svg>
+<div class="separator-minor" role="presentation" aria-hidden="true">
+  <div class="separator-minor-diamond"></div>
 </div>
 
-
-<!-- ── Párrafo de transición: Administración → Planeación ──── -->
-<div style="margin:1.5rem 0 2rem; padding:1.2rem 1.5rem; border-left:4px solid #14338F; background:var(--bg-light); border-radius:0 10px 10px 0;">
-  <p style="color:var(--text-dark); line-height:1.8; margin:0; font-size:0.95rem;">De las cuatro funciones de la administración, la <strong>planeación</strong> es la que determina el rumbo de todas las demás. Sin una planeación sólida, la organización carece de propósito claro, la dirección pierde criterio y el control no tiene referencia frente a la cual comparar. Es el punto de partida de toda gestión deliberada — y existe en distintos niveles de alcance, profundidad y horizonte temporal.</p>
-</div>
-
-<!-- ── Planeación y sus Tipos ───────────────────────────────── -->
-<div id="seccion-planeacion-tipos"></div>
-<h2 class="section-title">
-  <span class="section-icon">📋</span>
-  Planeación Estratégica y sus Tipos
-</h2>
-
-<h4 class="plan-class-title">La Planeación y sus Tipos</h4>
-  <p class="plan-class-intro">La planeación no es un acto único ni un solo nivel de decisión. Distintos autores han clasificado sus tipos según el horizonte temporal, el nivel organizacional y el grado de formalización. En la práctica, los tres niveles coexisten y se condicionan mutuamente.</p>
-
-  <div class="plan-tipos-grid">
-
-    <div class="plan-tipo tipo-op">
-      <span class="plan-tipo-badge">Operativa</span>
-      <div class="plan-tipo-name">Planeación Operativa</div>
-      <div class="plan-tipo-horizon">Horizonte: días — meses</div>
-      <p>Traduce los planes tácticos en tareas concretas, procedimientos y programas de trabajo. Opera en el nivel funcional: producción, ventas, logística. Alta especificidad, baja ambigüedad.</p>
-      <div class="plan-autores">
-        <span class="plan-autor-tag">Koontz</span>
-        <span class="plan-autor-tag">Hitt</span>
-      </div>
-    </div>
-
-    <div class="plan-tipo tipo-tac">
-      <span class="plan-tipo-badge">Táctica</span>
-      <div class="plan-tipo-name">Planeación Táctica</div>
-      <div class="plan-tipo-horizon">Horizonte: 1 — 2 años</div>
-      <p>Convierte la estrategia corporativa en planes por departamento o unidad de negocio. Conecta la visión de largo plazo con la acción cotidiana; es el puente entre estrategia y operación.</p>
-      <div class="plan-autores">
-        <span class="plan-autor-tag">Koontz</span>
-        <span class="plan-autor-tag">Mintzberg</span>
-      </div>
-    </div>
-
-    <div class="plan-tipo tipo-est">
-      <span class="plan-tipo-badge">Estratégica</span>
-      <div class="plan-tipo-name">Planeación Estratégica</div>
-      <div class="plan-tipo-horizon">Horizonte: 3 — 10 años</div>
-      <p>Define la dirección global de la organización frente al entorno competitivo. Involucra análisis del macroentorno, posicionamiento, asignación de recursos y construcción de ventajas sostenibles. Su naturaleza es deliberada y emergente a la vez.</p>
-      <div class="plan-autores">
-        <span class="plan-autor-tag">Koontz</span>
-        <span class="plan-autor-tag">Mintzberg</span>
-        <span class="plan-autor-tag">Hitt</span>
-      </div>
-    </div>
-
-    <div class="plan-tipo tipo-norm">
-      <span class="plan-tipo-badge">Normativa</span>
-      <div class="plan-tipo-name">Planeación Normativa</div>
-      <div class="plan-tipo-horizon">Horizonte: visión a largo plazo</div>
-      <p>Establece los valores, principios, misión y visión que orientan toda la organización. No es un plan de acción sino el marco filosófico que da coherencia y propósito a los demás niveles. Algunos autores la llaman planeación filosófica o institucional.</p>
-      <div class="plan-autores">
-        <span class="plan-autor-tag">Ackoff</span>
-        <span class="plan-autor-tag">Hitt</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Definición de Administración Estratégica -->
-
-
-<div class="separator" role="presentation">
-<svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<circle cx="12" cy="12" r="10"/>
-<circle cx="12" cy="12" r="6"/>
-<circle cx="12" cy="12" r="2"/>
-</svg>
-</div>
-
-
-<!-- ── Administración Estratégica con Enfoque Holístico ─────── -->
 <div id="seccion-admin-estrategica"></div>
-<h2 class="section-title" style="margin-top:0;">
-  <span class="section-icon">🎯</span>
-  Administración Estratégica con Enfoque Holístico
-</h2>
 
 <div class="admin-est-def">
     <span class="admin-est-def-label">Definición Central · AIDN Strategic Consulting</span>
     <h4>Administración Estratégica con Enfoque Holístico</h4>
     <p>La <strong>Administración Estratégica</strong> es el proceso continuo e integrado mediante el cual una organización analiza su entorno externo e interno, formula estrategias alineadas con su misión y visión, las implementa a través de su estructura, cultura y personas, y evalúa sistemáticamente su desempeño para aprender y adaptarse. No es un ejercicio de planeación anual — es una capacidad organizacional permanente.</p>
+
+    <!-- Diagrama Diamante — Administración Estratégica -->
+    <div class="aestrat-diagram-wrap">
+      <div class="aestrat-svg-container" role="img" aria-label="Diamante de la Administración Estratégica: Análisis, Formulación, Implementación y Evaluación con Ventaja Competitiva Sostenible al centro">
+        <svg viewBox="0 0 440 310" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Gradientes por vértice -->
+            <linearGradient id="gAnl" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" style="stop-color:#03b4d6;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.85"/>
+            </linearGradient>
+            <linearGradient id="gFor" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0%" style="stop-color:#14338F;stop-opacity:0.85"/>
+              <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="gImp" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" style="stop-color:#0c2a85;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.85"/>
+            </linearGradient>
+            <linearGradient id="gEva" x1="100%" y1="50%" x2="0%" y2="50%">
+              <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.85"/>
+              <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
+            </linearGradient>
+            <radialGradient id="gCtr" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#0c2a85;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#14338F;stop-opacity:1"/>
+            </radialGradient>
+            <filter id="dglow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <!-- Marcadores de flecha -->
+            <marker id="dArrowW" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L6,3 Z" fill="rgba(255,255,255,0.7)"/>
+            </marker>
+            <marker id="dArrowC" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L6,3 Z" fill="rgba(3,180,214,0.8)"/>
+            </marker>
+          </defs>
+
+          <!-- ── Segmento SUPERIOR: Análisis Estratégico ── -->
+          <!-- Triángulo superior: vértice top (220,18), left (80,155), right (360,155) -->
+          <polygon class="fases-seg"
+            points="220,18 80,155 220,155"
+            fill="url(#gAnl)" opacity="0.92"/>
+          <polygon class="fases-seg"
+            points="220,18 220,155 360,155"
+            fill="url(#gAnl)" opacity="0.78"/>
+
+          <!-- ── Segmento DERECHO: Formulación ── -->
+          <!-- Triángulo derecho: right (360,155), top (220,155), bottom (220,292) -->
+          <polygon class="fases-seg"
+            points="360,155 220,155 220,292"
+            fill="url(#gFor)" opacity="0.92"/>
+          <polygon class="fases-seg"
+            points="360,155 220,292 220,155"
+            fill="url(#gFor)" opacity="0.78"/>
+
+          <!-- ── Segmento INFERIOR: Implementación ── -->
+          <polygon class="fases-seg"
+            points="220,292 80,155 220,155"
+            fill="url(#gImp)" opacity="0.92"/>
+          <polygon class="fases-seg"
+            points="220,292 220,155 360,155"
+            fill="url(#gImp)" opacity="0.78"/>
+
+          <!-- ── Segmento IZQUIERDO: Evaluación ── -->
+          <polygon class="fases-seg"
+            points="80,155 220,18 220,155"
+            fill="url(#gEva)" opacity="0.92"/>
+          <polygon class="fases-seg"
+            points="80,155 220,155 220,292"
+            fill="url(#gEva)" opacity="0.78"/>
+
+          <!-- Borde exterior del diamante -->
+          <polygon points="220,14 364,155 220,296 76,155"
+            fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+          <!-- ── Líneas cruzadas de interdependencia ── -->
+          <line class="fases-arrow-dash"
+            x1="130" y1="90" x2="310" y2="220"
+            stroke="rgba(255,255,255,0.45)" stroke-width="1.5"
+            marker-end="url(#dArrowW)"/>
+          <line class="fases-arrow-dash"
+            x1="310" y1="90" x2="130" y2="220"
+            stroke="rgba(255,255,255,0.45)" stroke-width="1.5"
+            marker-end="url(#dArrowW)"/>
+
+          <!-- ── Flechas de ciclo por los bordes del diamante ── -->
+          <!-- Análisis → Formulación (top-right edge) -->
+          <path class="fases-arrow-dash"
+            d="M270,52 Q340,100 342,148"
+            fill="none" stroke="rgba(3,180,214,0.7)" stroke-width="1.8"
+            marker-end="url(#dArrowC)"/>
+          <!-- Formulación → Implementación (right-bottom edge) -->
+          <path class="fases-arrow-dash"
+            d="M342,162 Q340,215 270,260"
+            fill="none" stroke="rgba(3,180,214,0.6)" stroke-width="1.8"
+            marker-end="url(#dArrowC)"/>
+          <!-- Implementación → Evaluación (bottom-left edge) -->
+          <path class="fases-arrow-dash"
+            d="M170,260 Q100,215 98,162"
+            fill="none" stroke="rgba(3,180,214,0.6)" stroke-width="1.8"
+            marker-end="url(#dArrowC)"/>
+          <!-- Evaluación → Análisis (left-top edge) — cierra el ciclo -->
+          <path class="fases-arrow-dash"
+            d="M98,148 Q100,100 170,52"
+            fill="none" stroke="rgba(3,180,214,0.7)" stroke-width="1.8"
+            marker-end="url(#dArrowC)"/>
+
+          <!-- ── Centro: Ventaja Competitiva Sostenible ── -->
+          <ellipse cx="220" cy="155" rx="48" ry="36"
+            fill="url(#gCtr)" filter="url(#dglow)" class="fases-ring-pulse"
+            style="animation-name:none;"/>
+          <ellipse cx="220" cy="155" rx="44" ry="32"
+            fill="rgba(3,180,214,0.12)"/>
+          <text x="220" y="149" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.5">VENTAJA</text>
+          <text x="220" y="159" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.5">COMPETITIVA</text>
+          <text x="220" y="169" text-anchor="middle" fill="rgba(255,255,255,0.75)"
+            font-family="Rajdhani, sans-serif" font-size="7" letter-spacing="0.3">SOSTENIBLE</text>
+
+          <!-- ── Labels de vértices ── -->
+
+          <!-- SUPERIOR: Análisis Estratégico -->
+          <text x="220" y="40" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">ANÁLISIS</text>
+          <text x="220" y="52" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">ESTRATÉGICO</text>
+          <text x="220" y="65" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+            font-family="Rajdhani, sans-serif" font-size="8.5">FODA · PESTEL · Porter</text>
+
+          <!-- DERECHO: Formulación -->
+          <text x="403" y="145" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="10.5" font-weight="700">FORMULACIÓN</text>
+          <text x="403" y="157" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+            font-family="Rajdhani, sans-serif" font-size="8">Misión · Visión</text>
+          <text x="403" y="167" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+            font-family="Rajdhani, sans-serif" font-size="8">Estrategia</text>
+
+          <!-- INFERIOR: Implementación -->
+          <text x="220" y="274" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">IMPLEMENTACIÓN</text>
+          <text x="220" y="287" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+            font-family="Rajdhani, sans-serif" font-size="8.5">Estructura · Cultura · Personas</text>
+
+          <!-- IZQUIERDO: Evaluación -->
+          <text x="37" y="145" text-anchor="middle" fill="white"
+            font-family="Rajdhani, sans-serif" font-size="10.5" font-weight="700">EVALUACIÓN</text>
+          <text x="37" y="157" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+            font-family="Rajdhani, sans-serif" font-size="8">KPIs · BSC</text>
+          <text x="37" y="167" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+            font-family="Rajdhani, sans-serif" font-size="8">Aprendizaje</text>
+
+        </svg>
+      </div>
+    </div>
+    <!-- / Diagrama Diamante -->
     <p>El enfoque holístico reconoce que ninguna estrategia opera en aislamiento: involucra simultáneamente la cultura que la soporta, el liderazgo que la modela, las personas que la ejecutan y los procesos que la hacen medible. Siguiendo a <strong>Hitt, Ireland y Hoskisson</strong>, la ventaja competitiva sostenible emerge de la intersección entre recursos valiosos, capacidades dinámicas y decisiones estratégicas superiores — tomadas con información rigurosa y ejecutadas con disciplina organizacional. Como planteó <strong>Mintzberg</strong>, la estrategia no solo se planea: también emerge; y como sistematizó <strong>Koontz</strong>, solo se realiza cuando la dirección y el control acompañan a la planeación en un ciclo ininterrumpido.</p>
     <div class="admin-est-pilares">
       <span class="admin-est-pilar">Análisis del Entorno</span>
@@ -3794,63 +3794,13 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <span class="submarca-descriptor">Consultoría Estratégica</span>
 </div>
 
-<!-- ① BUYER PERSONA STRATEGY -->
-<div class="para-quien-wrapper">
-<div class="para-quien-header">
-  <span class="para-quien-eyebrow">¿Este servicio es para ti?</span>
-</div>
-<p class="para-quien-title" style="margin-bottom:1.2rem;">Trabajamos con quienes están construyendo o escalando — no con quien solo busca cumplir trámites.</p>
-
-<div class="pq-grid">
-
-  <div class="pq-card pq-accent">
-    <span class="pq-tag">Emprendedor en Estructuración</span>
-    <span class="pq-emoji">🏗️</span>
-    <div class="pq-titulo">El Arquitecto de su Negocio</div>
-    <p class="pq-trigger">"Mi negocio funciona, pero todo depende de mí y no sé hacia dónde vamos exactamente."</p>
-    <p class="pq-desc">Llevas 2 a 5 años operando, tienes clientes y flujo, pero operas por intuición. No tienes objetivos formales, no mides lo correcto y sientes que el negocio te está rebasando en lugar de tú dirigirlo.</p>
-    <div class="pq-tags-list">
-      <span class="pq-pill">Planeación Estratégica</span>
-      <span class="pq-pill">KPIs</span>
-      <span class="pq-pill">Modelo de Negocio</span>
-      <span class="pq-pill">Constitución de Sociedad</span>
-    </div>
-  </div>
-
-  <div class="pq-card">
-    <span class="pq-tag">PYME en Consolidación</span>
-    <span class="pq-emoji">⚙️</span>
-    <div class="pq-titulo">El Director que Necesita Orden</div>
-    <p class="pq-trigger">"Ya pagué consultoría antes. Me entregaron un documento muy bonito que nunca se ejecutó."</p>
-    <p class="pq-desc">Tu empresa opera, tiene equipo y facturación real, pero los roles son difusos, las decisiones no tienen datos detrás y la estrategia — si existe — no se refleja en el día a día. Necesitas estructura, no más paperwork.</p>
-    <div class="pq-tags-list">
-      <span class="pq-pill">Reestructuración Organizacional</span>
-      <span class="pq-pill">BSC</span>
-      <span class="pq-pill">Análisis Financiero</span>
-      <span class="pq-pill">Capital Humano</span>
-    </div>
-  </div>
-
-  <div class="pq-card pq-consejo">
-    <span class="pq-tag">Consejería Estratégica Individual</span>
-    <span class="pq-emoji">🧭</span>
-    <div class="pq-titulo">El Ejecutivo que Busca Perspectiva</div>
-    <p class="pq-trigger">"Necesito una visión externa con criterio, no un equipo de consultores junior que lean el mismo manual."</p>
-    <p class="pq-desc">Diriges una empresa mediana o grande y requieres un Consejero Independiente con expertise real — sin conflicto de interés, sin intermediarios. Acceso directo al consultor senior como miembro de tu consejo de administración.</p>
-    <div class="pq-tags-list">
-      <span class="pq-pill">Consejería Estratégica</span>
-      <span class="pq-pill">Análisis de Portafolio</span>
-      <span class="pq-pill">Gobierno Corporativo</span>
-    </div>
-  </div>
-
+<div class="info-box info" style="margin-top:2rem; border-left-color:#14338F;">
+  <p class="info-box-title" style="color:#14338F;">💼 Inversión en Consultoría Estratégica</p>
+  <p>Los proyectos de AIDN Strategy se estructuran a la medida de cada organización — alcance, complejidad y horizonte de acompañamiento determinan la inversión. Como referencia orientativa, los compromisos de consultoría estratégica parten desde <strong>$8,000 MXN por sesión diagnóstica</strong> hasta esquemas de acompañamiento continuo. La primera sesión diagnóstica es sin costo y sin compromiso.</p>
 </div>
 
-<div class="pq-nota-especializacion">
-  <strong>Nota de especialización:</strong> AIDN Strategy no opera con equipos corporativos desplazados al cliente. Cada proceso es conducido directamente por el consultor senior. Si tu empresa requiere un despacho con múltiples colaboradores en sitio de forma permanente, te orientaremos hacia la firma adecuada.
-</div>
-</div>
-<!-- / Buyer Persona Strategy -->
+
+
 
 <section class="section" id="seccion-consultoria">
 
@@ -4301,35 +4251,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <span class="submarca-descriptor">Servicios Fiscales</span>
 </div>
 
-<!-- ② BUYER PERSONA TAXES -->
-<div class="pq-taxes-wrapper">
-<p class="para-quien-title" style="margin-bottom:1.2rem; font-family:'Rajdhani',sans-serif; font-size:1.35rem; font-weight:700; color:var(--text-dark);">Servicios fiscales para personas físicas — con ojo puesto en tu siguiente etapa.</p>
 
-<div class="pq-taxes-grid">
-
-  <div class="pq-taxes-card">
-    <span class="pq-taxes-tag">Tu perfil fiscal</span>
-    <span class="pq-emoji">🧾</span>
-    <div class="pq-titulo" style="font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text-dark);margin-bottom:0.5rem;">Personas Físicas en Régimen Activo</div>
-    <p class="pq-trigger" style="font-style:italic;font-size:0.88rem;color:#10b981;font-weight:600;margin-bottom:0.8rem;line-height:1.5;border-left:3px solid #10b981;padding-left:0.7rem;">"Necesito que alguien lleve mis impuestos correctamente y pueda orientarme cuando tengo dudas."</p>
-    <p class="pq-desc" style="font-size:0.88rem;color:var(--text-light);line-height:1.6;">Profesionistas, médicos, dentistas, emprendedores en RESICO o Actividad Empresarial, trabajadores con declaración anual y contribuyentes del sector primario. Cumplimiento fiscal profesional, sin complicaciones.</p>
-  </div>
-
-  <div class="pq-taxes-card" style="border-top-color:#14338F;">
-    <span class="pq-taxes-tag" style="color:#14338F;background:linear-gradient(135deg,#eef2ff,#e0e7ff);">Tu siguiente paso</span>
-    <span class="pq-emoji">🚀</span>
-    <div class="pq-titulo" style="font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text-dark);margin-bottom:0.5rem;">El Independiente en Transición</div>
-    <p class="pq-trigger" style="font-style:italic;font-size:0.88rem;color:#14338F;font-weight:600;margin-bottom:0.8rem;line-height:1.5;border-left:3px solid #14338F;padding-left:0.7rem;">"Ya tengo socios, ya tengo operación real. Creo que es momento de formalizarlo correctamente."</p>
-    <p class="pq-desc" style="font-size:0.88rem;color:var(--text-light);line-height:1.6;">Si operas como persona física pero tu negocio ya tiene socios, empleados, activos o necesitas separar tu patrimonio personal — la constitución de una sociedad mercantil es el paso natural. Lo hacemos bien desde el inicio. <a href="#seccion-administrativos" style="color:#14338F;font-weight:600;text-decoration:none;">Ver servicio de constitución →</a></p>
-  </div>
-
-</div>
-
-<div class="pq-taxes-nota-moral">
-  <strong>¿Tienes una empresa (persona moral)?</strong> Los servicios de AIDN Taxes están orientados a personas físicas. Para personas morales, contáctanos: evaluamos tu caso y te orientamos hacia la solución correcta o la firma especializada que mejor se adapte a tu estructura.
-</div>
-</div>
-<!-- / Buyer Persona Taxes -->
 
 <section class="section" id="seccion-resico">
 <h2 class="section-title">
@@ -5252,7 +5174,7 @@ Agendar Consulta por WhatsApp
 </button>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ============================================================
    AIDN Strategic Consulting — Interacciones del Catálogo
    Sistema de Tema, Botones Flotantes y Accesibilidad
@@ -5427,25 +5349,14 @@ Agendar Consulta por WhatsApp
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
-      initFloatingButtons();
-      initKeyboardShortcut();
-      initSmoothAnchors();
-      initSystemThemeWatcher();
+      initFloatingButtons(); initKeyboardShortcut();
+      initSmoothAnchors(); initSystemThemeWatcher();
     });
   } else {
-    initFloatingButtons();
-    initKeyboardShortcut();
-    initSmoothAnchors();
-    initSystemThemeWatcher();
+    initFloatingButtons(); initKeyboardShortcut();
+    initSmoothAnchors(); initSystemThemeWatcher();
   }
-
-  /* API PUBLICA */
-  window.AIDNTheme = {
-    toggle: toggleTheme,
-    apply:  applyTheme,
-    get:    function () { return state.theme; }
-  };
-
+  window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: function () { return state.theme; } };
 }());
 </script>
 </body>
