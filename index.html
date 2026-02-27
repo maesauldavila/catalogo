@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
@@ -1223,17 +1224,142 @@ border-radius: 0;
 }
 
 .header h1 {
-font-size: 2rem;
+font-size: 1.8rem;
+letter-spacing: 1px;
 }
 
 .content {
-padding: 2rem 1.5rem;
+padding: 2rem 1.2rem;
 }
 
 .section-title {
-font-size: 1.6rem;
+font-size: 1.4rem;
 }
 
+/* ── Submarca headers ── */
+.submarca-name {
+font-size: 1.5rem;
+letter-spacing: 0.5px;
+word-break: break-word;
+overflow-wrap: break-word;
+hyphens: auto;
+}
+
+.submarca-descriptor {
+font-size: 0.95rem;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+
+/* ── Marco Filosófico header ── */
+.filosofico-header-name {
+font-size: 1.35rem;
+letter-spacing: 0;
+}
+
+.filosofico-header-sub {
+font-size: 0.9rem;
+}
+
+/* ── Ruta Emprendedor hero ── */
+.ruta-hero-title {
+font-size: 1.7rem;
+letter-spacing: 0;
+}
+
+.ruta-hero-header {
+padding: 2rem 1.2rem 1.8rem;
+}
+
+.ruta-hero-steps {
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+padding: 1.8rem 1rem;
+}
+
+.ruta-hero-steps::before { display: none; }
+
+.ruta-hero-step:last-child {
+grid-column: 1 / -1;
+}
+
+.ruta-hero-cta {
+flex-direction: column;
+text-align: center;
+padding: 1.8rem 1.2rem;
+}
+
+.ruta-hero-cta-text h4 {
+font-size: 1.2rem;
+}
+
+/* ── Más allá hero fusionado ── */
+.mas-alla-hero-top {
+flex-direction: column;
+gap: 1.2rem;
+padding: 1.8rem 1.2rem 1.5rem;
+}
+
+.hero-badge-block {
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 0.6rem;
+}
+
+.hero-title {
+font-size: 1.4rem;
+}
+
+/* ── Admin estratégica def ── */
+.admin-est-def {
+padding: 1.3rem;
+}
+
+.admin-est-def h4 {
+font-size: 1.2rem;
+}
+
+/* ── Admin block titles ── */
+.admin-block-title {
+font-size: 1.3rem;
+}
+
+.plan-class-title {
+font-size: 1.15rem;
+}
+
+/* ── Cierre estratega / firma ── */
+.cierre-estratega {
+padding: 2rem 1.2rem;
+}
+
+.cierre-firma-name {
+font-size: 1.5rem;
+letter-spacing: 1px;
+}
+
+/* ── Diagramas SVG ── */
+.fases-svg-container,
+.aestrat-svg-container {
+max-width: 100%;
+}
+
+/* ── Fases grid ── */
+.fases-grid {
+grid-template-columns: 1fr;
+}
+
+.plan-tipos-grid {
+grid-template-columns: 1fr;
+}
+
+/* ── Filosofico valores grid ── */
+.valores-grid {
+grid-template-columns: 1fr;
+}
+
+/* ── Tablas de servicios ── */
 .contact-info {
 flex-direction: column;
 gap: 1rem;
@@ -1255,20 +1381,32 @@ height: 48px;
 }
 
 .service-table {
-font-size: 0.85rem;
+font-size: 0.82rem;
 }
 
 .service-table th,
 .service-table td {
-padding: 0.8rem 0.5rem;
+padding: 0.7rem 0.4rem;
 }
 
 .cta-mission h3 {
-font-size: 1.6rem;
+font-size: 1.5rem;
 }
 
 .cta-section h3 {
-font-size: 1.4rem;
+font-size: 1.3rem;
+}
+
+/* ── TOC ── */
+.toc-text {
+font-size: 0.88rem;
+overflow-wrap: break-word;
+word-break: break-word;
+}
+
+/* ── Nota de lectura ── */
+.reading-note-container {
+padding: 1rem 1.2rem;
 }
 }
 
@@ -1276,6 +1414,68 @@ font-size: 1.4rem;
 .floating-buttons-container,
 .cta-section {
 display: none;
+}
+}
+
+/* ── Safety net: never overflow horizontally ── */
+.submarca-name,
+.submarca-descriptor,
+.section-title,
+.filosofico-header-name,
+.filosofico-header-sub,
+.ruta-hero-title,
+.hero-title,
+.admin-block-title,
+.plan-class-title,
+.toc-text {
+overflow-wrap: break-word;
+word-break: break-word;
+min-width: 0;
+}
+
+/* ── Extra small phones (≤480px) ── */
+@media (max-width: 480px) {
+.submarca-name {
+  font-size: 1.3rem;
+  letter-spacing: 0;
+}
+
+.submarca-title {
+  padding: 1.4rem 1rem;
+}
+
+.ruta-hero-title {
+  font-size: 1.45rem;
+}
+
+.filosofico-header-name {
+  font-size: 1.2rem;
+}
+
+.admin-est-def h4 {
+  font-size: 1.1rem;
+}
+
+.ruta-hero-steps {
+  grid-template-columns: 1fr;
+}
+
+.ruta-hero-step:last-child {
+  grid-column: auto;
+}
+
+.hero-badge-block {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content {
+  padding: 1.5rem 1rem;
+}
+
+.fases-grid,
+.plan-tipos-grid {
+  grid-template-columns: 1fr;
 }
 }
 
@@ -2440,13 +2640,13 @@ color: #34d399;
 
 .filosofico-header {
 background: linear-gradient(135deg, #14338F, #0c2a85);
-padding: 2rem;
-border-radius: 16px;
-margin-bottom: 2.5rem;
+padding: 1.4rem 2rem;
+border-radius: 12px;
+margin-bottom: 2rem;
 text-align: center;
 position: relative;
 overflow: hidden;
-box-shadow: 0 8px 24px rgba(20, 51, 143, 0.25);
+box-shadow: 0 4px 16px rgba(20, 51, 143, 0.18);
 }
 
 .filosofico-header::before {
@@ -2460,10 +2660,10 @@ pointer-events: none;
 .filosofico-header-name {
 display: block;
 font-family: 'Rajdhani', sans-serif;
-font-size: 2.4rem;
+font-size: 1.75rem;
 font-weight: 700;
 color: white;
-letter-spacing: 2px;
+letter-spacing: 0.5px;
 margin-bottom: 0.4rem;
 position: relative;
 z-index: 1;
@@ -3214,6 +3414,20 @@ text-align: center;
 }
 }
 
+
+/* ── Diamante Admón Estratégica — labels por tema ── */
+html[data-theme="light"] .aestrat-label-title {
+  fill: #1e293b;
+}
+html[data-theme="light"] .aestrat-label-sub {
+  fill: #475569;
+}
+html[data-theme="dark"] .aestrat-label-title {
+  fill: #ffffff;
+}
+html[data-theme="dark"] .aestrat-label-sub {
+  fill: rgba(255,255,255,0.82);
+}
 </style>
 </head>
 
@@ -3265,13 +3479,41 @@ text-align: center;
 Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </span>
 
-<div class="info-box" style="margin-top:1.8rem;border-left-color:#14338F;">
-  <p class="info-box-title" style="color:#14338F;">🗺️ Cómo navegar este catálogo</p>
-  <p>Este documento está organizado para que cada lector encuentre directamente lo que le interesa. <strong>No es necesario leerlo en orden.</strong> El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice de Contenidos</a> te permite ir directamente a la sección relevante: si buscas consultoría estratégica ve a <a href="#seccion-strategy" style="color:#14338F;font-weight:600;">AIDN Strategy</a>; si necesitas servicios fiscales ve a <a href="#seccion-taxes" style="color:#14338F;font-weight:600;">AIDN Taxes</a>; y si te interesa el fundamento conceptual de nuestro enfoque, la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> es tu punto de partida.</p>
-</div>
 
 </section>
 
+
+
+<!-- ═══════════════════════════════════════════════════════
+     NOTA DE LECTURA — Antesala del Índice
+     ═══════════════════════════════════════════════════════ -->
+<div style="
+  margin: 0;
+  padding: 1.2rem 2rem;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+">
+  <p style="
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  ">
+    <span style="font-size:1rem; flex-shrink:0;">🗺️</span>
+    <span>
+      <strong style="color:var(--text-dark);">Cómo navegar este catálogo</strong> —
+      No es necesario leerlo en orden. El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice</a> te lleva directamente a lo que te interesa:
+      <a href="#seccion-strategy" style="color:#14338F;font-weight:600;">AIDN Strategy</a> para consultoría estratégica,
+      <a href="#seccion-taxes" style="color:#14338F;font-weight:600;">AIDN Taxes</a> para servicios fiscales,
+      o la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> si te interesa el fundamento conceptual.
+    </span>
+  </p>
+</div>
 
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -3312,7 +3554,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <li class="toc-item">
 <a href="#seccion-admin-estrategica" class="toc-link">
-<span class="toc-number">3</span>
+<span class="toc-number">1</span>
 <span class="toc-text">Administración Estratégica Holística</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
@@ -3744,33 +3986,33 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
           <!-- ── Labels de vértices ── -->
 
           <!-- SUPERIOR: Análisis Estratégico -->
-          <text x="220" y="40" text-anchor="middle" fill="white"
+          <text x="220" y="40" text-anchor="middle" fill="white" class="aestrat-label-title"
             font-family="Rajdhani, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">ANÁLISIS</text>
-          <text x="220" y="52" text-anchor="middle" fill="white"
+          <text x="220" y="52" text-anchor="middle" fill="white" class="aestrat-label-title"
             font-family="Rajdhani, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">ESTRATÉGICO</text>
-          <text x="220" y="65" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+          <text x="220" y="65" text-anchor="middle" fill="rgba(255,255,255,0.82)" class="aestrat-label-sub"
             font-family="Rajdhani, sans-serif" font-size="8.5">FODA · PESTEL · Porter</text>
 
           <!-- DERECHO: Formulación -->
-          <text x="403" y="145" text-anchor="middle" fill="white"
+          <text x="403" y="145" text-anchor="middle" fill="white" class="aestrat-label-title"
             font-family="Rajdhani, sans-serif" font-size="10.5" font-weight="700">FORMULACIÓN</text>
-          <text x="403" y="157" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+          <text x="403" y="157" text-anchor="middle" fill="rgba(255,255,255,0.82)" class="aestrat-label-sub"
             font-family="Rajdhani, sans-serif" font-size="8">Misión · Visión</text>
-          <text x="403" y="167" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+          <text x="403" y="167" text-anchor="middle" fill="rgba(255,255,255,0.82)" class="aestrat-label-sub"
             font-family="Rajdhani, sans-serif" font-size="8">Estrategia</text>
 
           <!-- INFERIOR: Implementación -->
-          <text x="220" y="274" text-anchor="middle" fill="white"
+          <text x="220" y="274" text-anchor="middle" fill="white" class="aestrat-label-title"
             font-family="Rajdhani, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.5">IMPLEMENTACIÓN</text>
-          <text x="220" y="287" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+          <text x="220" y="287" text-anchor="middle" fill="rgba(255,255,255,0.82)" class="aestrat-label-sub"
             font-family="Rajdhani, sans-serif" font-size="8.5">Estructura · Cultura · Personas</text>
 
           <!-- IZQUIERDO: Evaluación -->
-          <text x="37" y="145" text-anchor="middle" fill="white"
+          <text x="37" y="145" text-anchor="middle" fill="white" class="aestrat-label-title"
             font-family="Rajdhani, sans-serif" font-size="10.5" font-weight="700">EVALUACIÓN</text>
-          <text x="37" y="157" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+          <text x="37" y="157" text-anchor="middle" fill="rgba(255,255,255,0.82)" class="aestrat-label-sub"
             font-family="Rajdhani, sans-serif" font-size="8">KPIs · BSC</text>
-          <text x="37" y="167" text-anchor="middle" fill="rgba(255,255,255,0.82)"
+          <text x="37" y="167" text-anchor="middle" fill="rgba(255,255,255,0.82)" class="aestrat-label-sub"
             font-family="Rajdhani, sans-serif" font-size="8">Aprendizaje</text>
 
         </svg>
@@ -4204,7 +4446,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
       <div class="rh-step-num">Paso 03</div>
       <div class="rh-icon-wrap">⚖️</div>
       <div class="rh-step-label">Constitución Legal</div>
-      <div class="rh-step-desc">Estructura societaria óptima + estatutos personalizados ad hoc</div>
+      <div class="rh-step-desc">Estructura societaria óptima + estatutos personalizados <em>ad hoc</em></div>
       <a href="#seccion-administrativos" class="rh-step-link">Ver servicio →</a>
     </div>
 
