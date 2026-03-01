@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
@@ -55,7 +56,7 @@
 <!-- Google Fonts - IBM Plex Sans & Rajdhani -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <!-- Security -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://fonts.googleapis.com https://fonts.gstatic.com;">
@@ -4102,6 +4103,288 @@ html[data-theme="light"] .aestrat-vertex-label,
 html[data-theme="dark"] .aestrat-vertex-label {
  fill: white;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   CALCULADORA DE HONORARIOS — AIDN TAXES
+   Diseño premium · Paleta corporativa · IBM Plex Mono
+   ══════════════════════════════════════════════════════════════ */
+.calc-section { margin: 3rem 0; }
+
+.calc-wrapper {
+  background: linear-gradient(160deg,#060d1f 0%,#0c1a3a 60%,#0a1628 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(3,180,214,0.12),0 4px 20px rgba(0,0,0,0.4);
+  border: 1px solid rgba(3,180,214,0.2);
+  position: relative;
+}
+.calc-wrapper::before {
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background: linear-gradient(90deg,#14338F,#03b4d6,#14338F);
+  background-size:200% 100%;
+  animation: calcLine 4s linear infinite;
+}
+@keyframes calcLine {
+  0%   { background-position:0% 0%; }
+  100% { background-position:200% 0%; }
+}
+
+/* Header */
+.calc-header {
+  padding:2.2rem 2.5rem 1.8rem;
+  border-bottom:1px solid rgba(3,180,214,0.15);
+  display:flex;align-items:flex-start;
+  justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+}
+.calc-eyebrow {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.62rem;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  color:#03b4d6;display:block;margin-bottom:0.5rem;
+}
+.calc-title {
+  font-family:'Rajdhani',sans-serif;
+  font-size:1.6rem;font-weight:700;color:#fff;
+  letter-spacing:0.5px;line-height:1.2;margin-bottom:0.3rem;
+}
+.calc-subtitle {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.73rem;color:rgba(255,255,255,0.42);line-height:1.5;
+}
+.calc-badge {
+  display:inline-flex;align-items:center;gap:0.4rem;
+  background:rgba(3,180,214,0.1);
+  border:1px solid rgba(3,180,214,0.3);
+  border-radius:20px;padding:0.4rem 0.9rem;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.63rem;color:#03b4d6;
+  letter-spacing:1.5px;text-transform:uppercase;
+  white-space:nowrap;flex-shrink:0;
+}
+
+/* Body: dos columnas */
+.calc-body {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:420px;
+}
+
+/* Panel controles */
+.calc-controls {
+  padding:2rem 2rem 2rem 2.5rem;
+  border-right:1px solid rgba(3,180,214,0.1);
+  display:flex;flex-direction:column;gap:1.4rem;
+}
+.calc-field { display:flex;flex-direction:column;gap:0.5rem; }
+.calc-label {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.67rem;font-weight:500;
+  letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,0.48);
+}
+.calc-select,.calc-input-num {
+  width:100%;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(3,180,214,0.2);
+  border-radius:8px;padding:0.75rem 1rem;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.85rem;color:#fff;
+  outline:none;
+  transition:border-color 0.2s,background 0.2s;
+  appearance:none;-webkit-appearance:none;cursor:pointer;
+}
+.calc-select:focus,.calc-input-num:focus {
+  border-color:#03b4d6;background:rgba(3,180,214,0.08);
+}
+.calc-select-wrap { position:relative; }
+.calc-select-wrap::after {
+  content:'▾';position:absolute;right:1rem;top:50%;
+  transform:translateY(-50%);color:#03b4d6;
+  font-size:0.75rem;pointer-events:none;
+}
+/* Slider */
+.calc-slider-wrap { display:flex;flex-direction:column;gap:0.6rem; }
+.calc-slider {
+  width:100%;height:4px;
+  background:rgba(255,255,255,0.1);
+  border-radius:2px;outline:none;cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+}
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance:none;
+  width:18px;height:18px;border-radius:50%;
+  background:#03b4d6;box-shadow:0 0 10px rgba(3,180,214,0.5);
+  cursor:pointer;border:2px solid rgba(255,255,255,0.3);
+  transition:box-shadow 0.2s;
+}
+.calc-slider::-webkit-slider-thumb:hover { box-shadow:0 0 18px rgba(3,180,214,0.85); }
+.calc-slider::-moz-range-thumb {
+  width:18px;height:18px;border-radius:50%;
+  background:#03b4d6;cursor:pointer;
+  border:2px solid rgba(255,255,255,0.3);
+}
+.calc-slider-labels {
+  display:flex;justify-content:space-between;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.6rem;color:rgba(255,255,255,0.28);
+}
+.calc-slider-val {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.8rem;color:#03b4d6;font-weight:600;text-align:right;
+}
+/* Toggle tipo solicitante */
+.calc-toggle-wrap {
+  display:flex;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(3,180,214,0.2);
+  border-radius:8px;overflow:hidden;
+}
+.calc-toggle-btn {
+  flex:1;padding:0.65rem 0.5rem;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.7rem;color:rgba(255,255,255,0.38);
+  background:none;border:none;cursor:pointer;
+  transition:background 0.2s,color 0.2s;letter-spacing:0.3px;
+  line-height:1.4;
+}
+.calc-toggle-btn.active {
+  background:rgba(3,180,214,0.18);color:#03b4d6;font-weight:600;
+}
+
+/* Panel resultado */
+.calc-result {
+  padding:2rem 2.5rem 2rem 2rem;
+  display:flex;flex-direction:column;
+  justify-content:space-between;gap:1.2rem;
+}
+/* Paquete */
+.calc-pkg {
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:1.2rem 1.4rem;
+}
+.calc-pkg-label {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.6rem;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(255,255,255,0.32);display:block;margin-bottom:0.5rem;
+}
+.calc-pkg-name {
+  font-family:'Rajdhani',sans-serif;
+  font-size:1.15rem;font-weight:700;color:#03b4d6;
+  letter-spacing:0.3px;margin-bottom:0.2rem;
+}
+.calc-pkg-desc {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.68rem;color:rgba(255,255,255,0.38);line-height:1.6;
+}
+/* Precio */
+.calc-price-block { text-align:center;padding:1.5rem 0; }
+.calc-price-prefix {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.68rem;color:rgba(255,255,255,0.32);
+  display:block;margin-bottom:0.4rem;
+  letter-spacing:2px;text-transform:uppercase;
+}
+.calc-price-amount {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:3.2rem;font-weight:600;color:#fff;
+  line-height:1;letter-spacing:-1px;
+  transition:opacity 0.25s;display:block;
+}
+.calc-price-amount .currency {
+  font-size:1.4rem;font-weight:400;color:#03b4d6;
+  vertical-align:top;margin-top:0.5rem;
+  display:inline-block;letter-spacing:0;
+}
+.calc-price-period {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.63rem;color:rgba(255,255,255,0.32);
+  display:block;margin-top:0.4rem;letter-spacing:2px;
+}
+.calc-price-anual {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.7rem;color:rgba(3,180,214,0.7);
+  display:block;margin-top:0.3rem;
+}
+@keyframes calcPriceIn {
+  from { opacity:0;transform:translateY(5px); }
+  to   { opacity:1;transform:translateY(0); }
+}
+.calc-price-amount.animating { animation:calcPriceIn 0.22s ease forwards; }
+
+/* Alcance */
+.calc-scope { display:flex;flex-direction:column;gap:0.45rem; }
+.calc-scope-item {
+  display:flex;align-items:flex-start;gap:0.55rem;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.68rem;color:rgba(255,255,255,0.52);line-height:1.4;
+}
+.calc-scope-item::before { content:'✓';color:#03b4d6;font-size:0.68rem;flex-shrink:0;margin-top:0.05rem; }
+.calc-scope-item.excl { color:rgba(255,255,255,0.22); }
+.calc-scope-item.excl::before { content:'—';color:rgba(255,255,255,0.18); }
+/* Nota */
+.calc-note {
+  background:rgba(3,180,214,0.07);
+  border:1px solid rgba(3,180,214,0.18);
+  border-radius:8px;padding:0.75rem 1rem;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.67rem;color:rgba(255,255,255,0.46);line-height:1.6;
+}
+.calc-note strong { color:#03b4d6;font-weight:600; }
+/* Footer */
+.calc-footer {
+  padding:1.1rem 2.5rem;
+  border-top:1px solid rgba(3,180,214,0.1);
+  display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:0.8rem;
+}
+.calc-footer-note {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.61rem;color:rgba(255,255,255,0.22);line-height:1.5;
+}
+.calc-cta-btn {
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:linear-gradient(135deg,#14338F,#0c2a85);
+  border:1px solid rgba(3,180,214,0.3);
+  border-radius:8px;padding:0.6rem 1.2rem;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.7rem;font-weight:600;color:#fff;
+  text-decoration:none;letter-spacing:0.4px;
+  transition:background 0.2s,border-color 0.2s,box-shadow 0.2s;cursor:pointer;
+}
+.calc-cta-btn:hover {
+  background:linear-gradient(135deg,#1a3fa8,#14338F);
+  border-color:#03b4d6;
+  box-shadow:0 0 18px rgba(3,180,214,0.28);
+  color:#fff;text-decoration:none;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+  .calc-body { grid-template-columns:1fr; }
+  .calc-controls {
+    border-right:none;
+    border-bottom:1px solid rgba(3,180,214,0.1);
+    padding:1.5rem;
+  }
+  .calc-result { padding:1.5rem; }
+  .calc-header { padding:1.5rem 1.5rem 1.2rem; }
+  .calc-footer { padding:1rem 1.5rem;flex-direction:column;align-items:flex-start; }
+  .calc-price-amount { font-size:2.4rem; }
+  .calc-title { font-size:1.3rem; }
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .calc-controls { padding:1.8rem 1.5rem 1.8rem 2rem; }
+  .calc-result { padding:1.8rem 2rem 1.8rem 1.5rem; }
+  .calc-price-amount { font-size:2.8rem; }
+}
+@media (min-width:1025px) and (max-width:1440px) {
+  .calc-price-amount { font-size:3rem; }
+}
+/* Dark mode: forzar fondo oscuro siempre */
+[data-theme="light"] .calc-wrapper {
+  background: linear-gradient(160deg,#060d1f 0%,#0c1a3a 60%,#0a1628 100%);
+}
 </style>
 </head>
 
@@ -4343,6 +4626,13 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#seccion-calculadora" class="toc-link">
+<span class="toc-number">&#8599;</span>
+<span class="toc-text">Calculadora de Honorarios</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
 </a>
 </li>
 <li class="toc-item">
@@ -5387,7 +5677,7 @@ Personas Físicas — RESICO
 
 <div class="info-box" style="border-left-color:#059669;">
  <p class="info-box-title" style="color:#059669;">¿Quién puede tributar en RESICO?</p>
- <p style="line-height:1.8;margin-bottom:0.8rem;">RESICO (Régimen Simplificado de Confianza, Art. 113-E LISR) aplica a personas físicas con ingresos de hasta <strong>$3.5 millones anuales</strong> que realicen actividades empresariales, profesionales o de arrendamiento. El ISR se calcula sobre <strong>ingreso bruto</strong> con tasas del 1 % al 2.5%, significativamente menores a las tarifas progresivas del régimen de Actividad Empresarial y Profesional, que pueden alcanzar el 35 % sobre la utilidad.</p>
+ <p style="line-height:1.8;margin-bottom:0.8rem;">RESICO (Régimen Simplificado de Confianza, Art. 113-E LISR) aplica a personas físicas con ingresos de hasta <strong>$3.5 millones anuales</strong> que realicen actividades empresariales, profesionales o de arrendamiento. El ISR se calcula sobre <strong>ingreso bruto</strong> con tasas del 1 % al 2.5 %, significativamente menores a las tarifas progresivas del régimen de Actividad Empresarial y Profesional, que pueden alcanzar el 35 % sobre la utilidad.</p>
  <p style="line-height:1.8;margin-bottom:0.6rem;"><strong>Restricciones principales del régimen:</strong></p>
  <ul style="padding-left:1.4rem;line-height:1.9;margin:0;">
   <li>No pueden tributar en RESICO quienes sean <strong>socios, accionistas o integrantes de personas morales</strong> (con excepciones para el sector primario y las SOFIPO).</li>
@@ -5639,7 +5929,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included"><strong>Diseño y elaboración de estatutos sociales:</strong> proyectos completos y personalizados para sociedades mercantiles.</li>
 <li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> redacción de cláusulas especiales adaptadas a los requerimientos particulares y al gobierno corporativo de cada organización.</li>
 </ul>
-<p style="margin-top:0.5rem;font-size:0.9rem;font-style:italic;">$7,500 + IVA (16%) = $8,700 MXN</p>
+<p style="margin-top:0.5rem;font-size:0.9rem;font-style:italic;">$7,500 + IVA (16 %) = $8,700 MXN</p>
 </td>
 </tr>
 <tr>
@@ -5653,7 +5943,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included"><strong>Diseño de modificaciones estatutarias:</strong> elaboración del proyecto de reforma.</li>
 <li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> redacción adaptada a los nuevos requerimientos y al gobierno corporativo de la organización.</li>
 </ul>
-<p style="margin-top:0.5rem;font-size:0.9rem;font-style:italic;">$6,551.72 + IVA (16%) = $7,600 MXN</p>
+<p style="margin-top:0.5rem;font-size:0.9rem;font-style:italic;">$6,551.72 + IVA (16 %) = $7,600 MXN</p>
 </td>
 </tr>
 <tr>
@@ -5814,6 +6104,153 @@ Servicios Administrativos, Legales y Patrimoniales
 
 </div>
 </section>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     CALCULADORA DE HONORARIOS AIDN TAXES
+     ══════════════════════════════════════════════════════════════ -->
+<div class="calc-section" id="seccion-calculadora">
+<div class="calc-wrapper" role="region" aria-label="Calculadora de honorarios fiscales AIDN">
+
+  <!-- Header -->
+  <div class="calc-header">
+    <div>
+      <span class="calc-eyebrow">Herramienta · AIDN Taxes</span>
+      <div class="calc-title">Calculadora de Honorarios</div>
+      <div class="calc-subtitle">Selecciona régimen y perfil &rarr; honorario mensual estimado en tiempo real</div>
+    </div>
+    <span class="calc-badge">&#9889; Tiempo real</span>
+  </div>
+
+  <!-- Body -->
+  <div class="calc-body">
+
+    <!-- Controles -->
+    <div class="calc-controls">
+
+      <div class="calc-field">
+        <label class="calc-label" for="calc-regimen">Régimen fiscal</label>
+        <div class="calc-select-wrap">
+          <select id="calc-regimen" class="calc-select" onchange="calcUpdate()">
+            <optgroup label="── RESICO ──">
+              <option value="resico_prof">RESICO &middot; Profesionales / Emprendedores</option>
+              <option value="resico_medico">RESICO &middot; Médicos y Dentistas</option>
+              <option value="resico_primario">RESICO &middot; Sector Primario (cobro anual)</option>
+            </optgroup>
+            <optgroup label="── Actividad Empresarial y Profesional ──">
+              <option value="aeyp_gen">AEyP &middot; General</option>
+              <option value="aeyp_medico">AEyP &middot; Médicos y Dentistas</option>
+              <option value="aeyp_minorista">AEyP &middot; Minoristas (Abarrotes, Ropa, Panaderías)</option>
+              <option value="aeyp_hotel">AEyP &middot; Hoteles y Mueblerías</option>
+            </optgroup>
+            <optgroup label="── Sueldos y Salarios ──">
+              <option value="sueldos">Sueldos y Salarios &middot; Declaración Anual</option>
+            </optgroup>
+            <optgroup label="── IMSS ──">
+              <option value="imss_mod40">IMSS &middot; Análisis de Retiro + Alta Modalidad 40</option>
+              <option value="imss_mod10">IMSS &middot; Modalidad 10 (Seguro de Salud Familiar)</option>
+              <option value="imss_pagos">IMSS &middot; Hojas de Pago Mensuales</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div class="calc-field" id="calc-field-cfdi">
+        <label class="calc-label" for="calc-cfdi">
+          Volumen de CFDI
+          <span id="calc-cfdi-periodo" style="font-size:0.57rem;color:rgba(255,255,255,0.22);margin-left:0.3rem;">(mensuales)</span>
+        </label>
+        <div class="calc-slider-wrap">
+          <input type="range" id="calc-cfdi" class="calc-slider"
+                 min="1" max="30" value="5" oninput="calcUpdate()">
+          <div class="calc-slider-labels">
+            <span>1</span><span>10</span><span>20</span><span>30+</span>
+          </div>
+          <div class="calc-slider-val" id="calc-cfdi-val">5 CFDI / mes</div>
+        </div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label">Tipo de solicitante</label>
+        <div class="calc-toggle-wrap">
+          <button class="calc-toggle-btn active" id="btn-cliente"
+                  onclick="calcSetTipo('cliente')" type="button">
+            Cliente activo<br><span style="font-size:0.57rem;opacity:0.55;">(2+ años)</span>
+          </button>
+          <button class="calc-toggle-btn" id="btn-externo"
+                  onclick="calcSetTipo('externo')" type="button">
+            Externo /<br><span style="font-size:0.57rem;opacity:0.55;">Público general</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="calc-field" id="calc-field-empleadores" style="display:none;">
+        <label class="calc-label" for="calc-empleadores">Empleadores adicionales</label>
+        <div class="calc-select-wrap">
+          <select id="calc-empleadores" class="calc-select" onchange="calcUpdate()">
+            <option value="0">Ninguno (1 empleador)</option>
+            <option value="1">1 empleador adicional</option>
+            <option value="2">2 empleadores adicionales</option>
+            <option value="3">3 empleadores adicionales</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calc-field" id="calc-field-imss-combo" style="display:none;">
+        <label class="calc-label">¿Tienes servicios fiscales con AIDN?</label>
+        <div class="calc-toggle-wrap">
+          <button class="calc-toggle-btn" id="btn-imss-si"
+                  onclick="calcSetImssCombo(true)" type="button">
+            Sí — tarifa cliente
+          </button>
+          <button class="calc-toggle-btn active" id="btn-imss-no"
+                  onclick="calcSetImssCombo(false)" type="button">
+            No — tarifa general
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /calc-controls -->
+
+    <!-- Resultado -->
+    <div class="calc-result">
+
+      <div class="calc-pkg">
+        <span class="calc-pkg-label">Paquete recomendado</span>
+        <div class="calc-pkg-name" id="calc-pkg-name">Esencial</div>
+        <div class="calc-pkg-desc" id="calc-pkg-desc">Cumplimiento fiscal mensual &middot; asesoría vía WhatsApp</div>
+      </div>
+
+      <div class="calc-price-block">
+        <span class="calc-price-prefix">Honorario estimado</span>
+        <span class="calc-price-amount" id="calc-price-el">
+          <span class="currency">$</span><span id="calc-num">600</span>
+        </span>
+        <span class="calc-price-period" id="calc-period">MXN / MES</span>
+        <span class="calc-price-anual" id="calc-anual">Equivale a $7,200 MXN anuales</span>
+      </div>
+
+      <div class="calc-scope" id="calc-scope"></div>
+
+      <div class="calc-note" id="calc-note">
+        <strong>Nota:</strong> Estimado orientativo. La cotización definitiva se confirma en la sesión diagnóstica.
+      </div>
+
+    </div><!-- /calc-result -->
+  </div><!-- /calc-body -->
+
+  <div class="calc-footer">
+    <div class="calc-footer-note">
+      Precios en MXN sin IVA &middot; Estimado orientativo &middot; Sujeto a confirmación en sesión diagnóstica
+    </div>
+    <a href="https://wa.me/5216643320089?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20fiscal"
+       class="calc-cta-btn" target="_blank" rel="noopener noreferrer">
+      Agendar diagnóstico &rarr;
+    </a>
+  </div>
+
+</div><!-- /calc-wrapper -->
+</div><!-- /calc-section -->
 
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -6343,5 +6780,304 @@ Agendar Consulta por WhatsApp
  window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: function () { return state.theme; } };
 }());
 </script>
+
+<script>
+/* ══ Calculadora de Honorarios AIDN Taxes ══ */
+(function () {
+  'use strict';
+
+  /* Datos de tarifas — espejo exacto del catálogo vigente */
+  var T = {
+    resico_prof: {
+      nombre:'RESICO &middot; Servicios Profesionales',
+      periodo:'MXN / MES', anual:true, usaCFDI:true,
+      pkgs:[
+        { nombre:'Esencial',
+          desc:'Cumplimiento fiscal mensual &middot; hasta 9 CFDI &middot; asesoría vía WhatsApp',
+          precio:{cliente:600,externo:600}, desde:0, hasta:9,
+          scope:['Cumplimiento fiscal mensual completo',
+                 'Asesoría fiscal vía WhatsApp',
+                 'Revisión y validación de CFDI (1 a 9 sin costo adicional)'],
+          excl:['No incluye acudir físicamente ante autoridades'] },
+        { nombre:'Profesional',
+          desc:'Cumplimiento + análisis de acreditamientos de IVA &middot; hasta 25 CFDI',
+          precio:{cliente:900,externo:900}, desde:10, hasta:99,
+          scope:['Cumplimiento fiscal mensual completo',
+                 'Asesoría fiscal estratégica vía WhatsApp',
+                 'Revisión y validación de CFDI',
+                 'Análisis y optimización de acreditamientos de IVA'],
+          excl:['No incluye acudir físicamente ante autoridades'] }
+      ],
+      nota:'Régimen ISR sobre ingreso bruto (1 % al 2.5 %). El IVA se determina mediante acreditamiento mensual.'
+    },
+    resico_medico: {
+      nombre:'RESICO &middot; Médicos y Dentistas',
+      periodo:'MXN / MES', anual:true, usaCFDI:true,
+      pkgs:[
+        { nombre:'Esencial',
+          desc:'Cumplimiento mensual &middot; 1 a 9 CFDI incluidos sin costo adicional',
+          precio:{cliente:1250,externo:1250}, desde:0, hasta:9,
+          scope:['Cumplimiento fiscal mensual completo',
+                 'Presentación de declaraciones mensuales',
+                 'Validación de CFDI (1 a 9 sin costo adicional)'],
+          excl:['No incluye acudir físicamente ante autoridades'] },
+        { nombre:'Profesional',
+          desc:'Cumplimiento + análisis de IVA + revisión de carga fiscal efectiva',
+          precio:{cliente:1900,externo:1900}, desde:10, hasta:99,
+          scope:['Cumplimiento fiscal mensual completo',
+                 'Análisis de acreditamientos de IVA',
+                 'Revisión de carga fiscal efectiva',
+                 'CFDI adicionales (a partir de la décima): $50 MXN c/u'],
+          excl:['No incluye acudir físicamente ante autoridades'] }
+      ],
+      nota:'Requiere título profesional SEP y cédula profesional vigente. Ambos documentos son obligatorios para iniciar el servicio.'
+    },
+    resico_primario: {
+      nombre:'RESICO &middot; Sector Primario',
+      periodo:'MXN / AÑO', anual:false, usaCFDI:false,
+      pkgs:[
+        { nombre:'Cumplimiento Anual — Cliente',
+          desc:'Ejercicio fiscal completo &middot; hasta 9 comprobantes anuales incluidos',
+          precio:{cliente:3800,externo:3800}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal del ejercicio',
+                 'Gestión de CFDI emitidos',
+                 'Hasta 9 comprobantes anuales incluidos',
+                 'Exención ISR hasta $900,000 (Art. 113-E, noveno párrafo, LISR)'],
+          excl:[] },
+        { nombre:'Cumplimiento Anual — Externo',
+          desc:'Ejercicio fiscal completo &middot; hasta 9 comprobantes anuales incluidos',
+          precio:{cliente:3800,externo:5500}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal del ejercicio',
+                 'Gestión de CFDI emitidos',
+                 'Hasta 9 comprobantes anuales incluidos',
+                 'Exención ISR hasta $900,000 (Art. 113-E, noveno párrafo, LISR)'],
+          excl:[] }
+      ],
+      nota:'Actividades agrícolas, ganaderas, silvícolas o pesqueras. La exención del Art. 113-E, noveno párrafo, LISR aplica hasta $900,000 de ingresos anuales. Cobro único por ejercicio.'
+    },
+    aeyp_gen: {
+      nombre:'Actividad Empresarial y Profesional &middot; General',
+      periodo:'MXN / MES', anual:true, usaCFDI:false,
+      pkgs:[
+        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual + procesamiento XML',
+          precio:{cliente:875,externo:875}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML para ISR e IVA'],
+          excl:['El cliente emite sus propios CFDI'] },
+        { nombre:'Profesional', desc:'Cumplimiento + análisis de carga fiscal efectiva',
+          precio:{cliente:1300,externo:1300}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
+                 'Análisis de carga fiscal efectiva'],
+          excl:['El cliente emite sus propios CFDI'] }
+      ],
+      nota:'ISR sobre utilidad (ingresos menos gastos deducibles). Tarifa progresiva Art. 152 LISR: del 1.92 % al 35 %. El servicio fiscal comprende el procesamiento de archivos XML para el cumplimiento mensual.'
+    },
+    aeyp_medico: {
+      nombre:'AEyP &middot; Médicos y Dentistas',
+      periodo:'MXN / MES', anual:true, usaCFDI:false,
+      pkgs:[
+        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual para profesionales de la salud',
+          precio:{cliente:1650,externo:1650}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de CFDI','Asesoría fiscal'],
+          excl:[] },
+        { nombre:'Profesional', desc:'Cumplimiento + análisis integral de carga fiscal',
+          precio:{cliente:2300,externo:2300}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual completo',
+                 'Análisis de deducciones AEyP (Art. 103 LISR)',
+                 'Revisión de carga fiscal efectiva y comparativa RESICO / AEyP'],
+          excl:[] }
+      ],
+      nota:'Requiere título y cédula profesional. En AEyP la base gravable es la utilidad — conviene cuando los gastos deducibles (equipo, renta, personal) son significativos y están bien documentados.'
+    },
+    aeyp_minorista: {
+      nombre:'AEyP &middot; Minoristas (Abarrotes, Ropa, Panaderías)',
+      periodo:'MXN / MES', anual:true, usaCFDI:false,
+      pkgs:[
+        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual',
+          precio:{cliente:1100,externo:1100}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML'],
+          excl:['El cliente emite sus propios CFDI'] },
+        { nombre:'Profesional', desc:'Cumplimiento + análisis de carga fiscal',
+          precio:{cliente:1800,externo:1800}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
+                 'Análisis de carga fiscal efectiva'],
+          excl:['El cliente emite sus propios CFDI'] }
+      ],
+      nota:'Régimen de Actividad Empresarial. ISR sobre utilidad. El cliente emite sus propios comprobantes; AIDN procesa los archivos XML para el cumplimiento mensual.'
+    },
+    aeyp_hotel: {
+      nombre:'AEyP &middot; Hoteles y Mueblerías',
+      periodo:'MXN / MES', anual:true, usaCFDI:false,
+      pkgs:[
+        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual',
+          precio:{cliente:1300,externo:1300}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML'],
+          excl:['El cliente emite sus propios CFDI'] },
+        { nombre:'Profesional', desc:'Cumplimiento + análisis de carga fiscal',
+          precio:{cliente:2200,externo:2200}, desde:0, hasta:99,
+          scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
+                 'Análisis de carga fiscal efectiva'],
+          excl:['El cliente emite sus propios CFDI'] }
+      ],
+      nota:'Actividad Empresarial. El cliente emite sus propios CFDI; AIDN gestiona el cumplimiento fiscal mensual mediante procesamiento de archivos XML.'
+    },
+    sueldos: {
+      nombre:'Sueldos y Salarios &middot; Declaración Anual',
+      periodo:'MXN / AÑO', anual:false, usaCFDI:false,
+      pkgs:[
+        { nombre:'Declaración Anual',
+          desc:'Cálculo + presentación + optimización de deducciones personales',
+          precio:{cliente:550,externo:650}, desde:0, hasta:99,
+          scope:['Cálculo integral de obligaciones fiscales anuales',
+                 'Presentación electrónica de declaración ante el SAT',
+                 'Análisis y optimización de deducciones personales autorizadas'],
+          excl:['No incluye acudir físicamente ante autoridades'] }
+      ],
+      nota:'Tarifa «cliente» aplica con al menos 2 años de antigüedad continua. Empleador adicional: $100 MXN (clientes) / $150 MXN (externos).'
+    },
+    imss_mod40: {
+      nombre:'IMSS &middot; Análisis de Retiro + Alta Modalidad 40',
+      periodo:'MXN / SERVICIO', anual:false, usaCFDI:false,
+      pkgs:[
+        { nombre:'Paquete Integral de Retiro',
+          desc:'Análisis técnico completo + alta oficial en Modalidad 40 ante el IMSS',
+          precio:{cliente:875,externo:875}, desde:0, hasta:99,
+          scope:['Descarga del historial de semanas cotizadas',
+                 'Análisis de cotizaciones y proyección de pensión (Ley 73)',
+                 'Propuesta personalizada de base de cotización en Modalidad 40',
+                 'Gestión de alta ante el IMSS',
+                 'Asesoría en selección de base de cotización óptima'],
+          excl:[] }
+      ],
+      nota:'Servicio de pago único. Incluye desde el análisis técnico hasta la inscripción oficial. Uno de los servicios más competitivos en este segmento en la región.'
+    },
+    imss_mod10: {
+      nombre:'IMSS &middot; Modalidad 10 (Seguro de Salud Familiar)',
+      periodo:'MXN / SERVICIO', anual:false, usaCFDI:false,
+      pkgs:[
+        { nombre:'Inscripción Modalidad 10',
+          desc:'Trámite de alta + asesoría documental + seguimiento',
+          precio:{cliente:475,externo:475}, desde:0, hasta:99,
+          scope:['Trámite de alta ante el IMSS','Asesoría en documentación requerida',
+                 'Seguimiento de gestión'],
+          excl:[] }
+      ],
+      nota:'Servicio de pago único por inscripción. Permite acceso a servicios médicos del IMSS sin relación laboral activa.'
+    },
+    imss_pagos: {
+      nombre:'IMSS &middot; Hojas de Pago Mensuales',
+      periodo:'MXN / MES', anual:true, usaCFDI:false,
+      pkgs:[
+        { nombre:'Hojas de Pago Mensuales',
+          desc:'Líneas de captura IMSS mensuales + seguimiento + alertas de vencimiento',
+          precio:{cliente:150,externo:150}, desde:0, hasta:99,
+          scope:['Emisión mensual de líneas de captura IMSS',
+                 'Seguimiento de cumplimiento de pagos',
+                 'Alertas de vencimiento',
+                 'Aplica para Modalidad 10 y Modalidad 40'],
+          excl:[] }
+      ],
+      nota:'Para clientes con servicios fiscales activos en AIDN: $75 MXN / mes. Para público general sin contrato activo: $150 MXN / mes.'
+    }
+  };
+
+  var tipo = 'cliente';
+  var imssCombo = false;
+
+  function fmt(n) { return n.toLocaleString('es-MX'); }
+
+  function animPrice(newVal) {
+    var el = document.getElementById('calc-price-el');
+    var numEl = document.getElementById('calc-num');
+    el.classList.remove('animating');
+    void el.offsetWidth;
+    el.classList.add('animating');
+    numEl.textContent = fmt(newVal);
+  }
+
+  window.calcSetTipo = function(t) {
+    tipo = t;
+    document.getElementById('btn-cliente').classList.toggle('active', t === 'cliente');
+    document.getElementById('btn-externo').classList.toggle('active', t === 'externo');
+    calcUpdate();
+  };
+
+  window.calcSetImssCombo = function(v) {
+    imssCombo = v;
+    document.getElementById('btn-imss-si').classList.toggle('active',  v);
+    document.getElementById('btn-imss-no').classList.toggle('active', !v);
+    calcUpdate();
+  };
+
+  window.calcUpdate = function() {
+    var reg  = document.getElementById('calc-regimen').value;
+    var data = T[reg];
+    var cfdi = parseInt(document.getElementById('calc-cfdi').value, 10);
+
+    /* Visibilidad de controles */
+    document.getElementById('calc-field-cfdi').style.display       = data.usaCFDI ? '' : 'none';
+    document.getElementById('calc-field-empleadores').style.display = reg === 'sueldos' ? '' : 'none';
+    document.getElementById('calc-field-imss-combo').style.display  = reg === 'imss_pagos' ? '' : 'none';
+
+    /* Label del slider */
+    var esAnual = (reg === 'resico_primario');
+    var cfdiPer = document.getElementById('calc-cfdi-periodo');
+    if (cfdiPer) cfdiPer.textContent = esAnual ? '(anuales)' : '(mensuales)';
+    document.getElementById('calc-cfdi-val').textContent =
+      cfdi + ' CFDI / ' + (esAnual ? 'año' : 'mes');
+
+    /* Elegir paquete */
+    var pkgs = data.pkgs;
+    var pkg  = pkgs[pkgs.length - 1];
+    if (data.usaCFDI) {
+      for (var i = 0; i < pkgs.length; i++) {
+        if (cfdi >= pkgs[i].desde && cfdi <= pkgs[i].hasta) { pkg = pkgs[i]; break; }
+      }
+    } else if (reg === 'resico_primario') {
+      pkg = (tipo === 'externo') ? pkgs[1] : pkgs[0];
+    } else {
+      pkg = pkgs[0];
+    }
+
+    /* Precio */
+    var precio = pkg.precio[tipo] || pkg.precio.externo;
+    if (reg === 'imss_pagos' && imssCombo) precio = 75;
+    if (reg === 'sueldos') {
+      var extras = parseInt(document.getElementById('calc-empleadores').value, 10);
+      precio += extras * (tipo === 'cliente' ? 100 : 150);
+    }
+
+    /* Actualizar UI */
+    animPrice(precio);
+    document.getElementById('calc-pkg-name').innerHTML = pkg.nombre;
+    document.getElementById('calc-pkg-desc').innerHTML = pkg.desc;
+    document.getElementById('calc-period').textContent = data.periodo;
+    document.getElementById('calc-note').innerHTML =
+      '<strong>Nota:</strong> ' + data.nota;
+
+    /* Equivalencia anual */
+    var anualEl = document.getElementById('calc-anual');
+    if (data.anual && data.periodo.indexOf('MES') > -1) {
+      anualEl.textContent = 'Equivale a $' + fmt(precio * 12) + ' MXN anuales';
+      anualEl.style.display = '';
+    } else {
+      anualEl.style.display = 'none';
+    }
+
+    /* Alcance */
+    var html = '';
+    (pkg.scope || []).forEach(function(s) {
+      html += '<div class="calc-scope-item">' + s + '</div>';
+    });
+    (pkg.excl || []).forEach(function(s) {
+      html += '<div class="calc-scope-item excl">' + s + '</div>';
+    });
+    document.getElementById('calc-scope').innerHTML = html;
+  };
+
+  document.addEventListener('DOMContentLoaded', function() { calcUpdate(); });
+
+}());
+</script>
+
 </body>
 </html>
