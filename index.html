@@ -626,11 +626,11 @@ animation: pulse-target 3s ease-in-out infinite;
 }
 
 @keyframes pulse-target {
-0%, 100 % {
+0%, 100% {
 transform: scale(1);
 opacity: 0.8;
 }
-50 % {
+50% {
 transform: scale(1.1);
 opacity: 1;
 }
@@ -3835,7 +3835,7 @@ html[data-theme="dark"] .aestrat-arc-label {
   TECH STACK HERO — Modelo de Trabajo Digital
   ══════════════════════════════════════════════════════════════ */
 .aidn-tech-hero {
- background: #080f1e;
+ background: #060d1f;
  border-radius: 20px;
  overflow: hidden;
  margin-bottom: 1.5rem;
@@ -3859,7 +3859,7 @@ html[data-theme="dark"] .aestrat-arc-label {
 }
 
 [data-theme="light"] .aidn-tech-hero {
- background: linear-gradient(135deg, #0a1628, #0c2040);
+ background: linear-gradient(135deg, #060d1f, #0a1a3a);
 }
 
 .aidn-tech-header {
@@ -4111,11 +4111,11 @@ html[data-theme="dark"] .aestrat-vertex-label {
 .calc-section { margin: 3rem 0; }
 
 .calc-wrapper {
-  background: linear-gradient(160deg,#060d1f 0%,#0c1a3a 60%,#0a1628 100%);
+  background: #0a1628;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(3,180,214,0.12),0 4px 20px rgba(0,0,0,0.4);
-  border: 1px solid rgba(3,180,214,0.2);
+  border: 1px solid rgba(3,180,214,0.15);
   position: relative;
 }
 .calc-wrapper::before {
@@ -4383,7 +4383,16 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 /* Dark mode: forzar fondo oscuro siempre */
 [data-theme="light"] .calc-wrapper {
-  background: linear-gradient(160deg,#060d1f 0%,#0c1a3a 60%,#0a1628 100%);
+  background: #0a1628;
+}
+
+/* ── Lightsaber CTA — guiño Star Wars ── */
+@keyframes bladeHum {
+  0%, 100% { opacity: 0.72; }
+  50%       { opacity: 0.88; }
+}
+.cta-section [aria-hidden="true"] {
+  animation: bladeHum 3.5s ease-in-out infinite;
 }
 </style>
 </head>
@@ -4396,9 +4405,9 @@ html[data-theme="dark"] .aestrat-vertex-label {
 <div class="logo-container">
 <svg class="logo-aidn" viewBox="0 0 100 100" aria-label="Logo AIDN">
 <defs>
-<linearGradient id="logoGradient" x1="0 %" y1="0 %" x2="100 %" y2="100 %">
-<stop offset="0 %" style="stop-color:#0c2a85;stop-opacity:1"/>
-<stop offset="100 %" style="stop-color:#03b4d6;stop-opacity:1"/>
+<linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#03b4d6;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#0c2a85;stop-opacity:1"/>
 </linearGradient>
 <filter id="logoGlow">
 <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
@@ -4628,13 +4637,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </svg>
 </a>
 </li>
-<li class="toc-item">
-<a href="#seccion-calculadora" class="toc-link">
-<span class="toc-number">&#8599;</span>
-<span class="toc-text">Calculadora de Honorarios</span>
-<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
-</a>
-</li>
+
 <li class="toc-item">
 <a href="#seccion-sueldos" class="toc-link">
 <span class="toc-number">2</span>
@@ -4660,6 +4663,13 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#seccion-calculadora" class="toc-link">
+<span class="toc-number">&#8599;</span>
+<span class="toc-text">Calculadora de Honorarios</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
 </a>
 </li>
 <li class="toc-item">
@@ -5692,9 +5702,16 @@ Personas Físicas — RESICO
  <p style="line-height:1.8;margin:0;font-style:italic;color:var(--text-light);">La elección de régimen no es trivial ni permanente. AIDN analiza cada caso antes de recomendar o gestionar cualquier cambio ante el SAT.</p>
 </div>
 
-<div class="info-box success" style="margin-top:1rem;">
- <p class="info-box-title">💎 Permanencia en padrón activo — $500 MXN mensuales</p>
- <p style="line-height:1.8;margin:0;">Mantiene el registro activo ante el SAT y garantiza continuidad fiscal sin interrupciones. Este es el <strong>punto de entrada mínimo</strong> a los servicios RESICO de AIDN. No se atienden contribuyentes cuya única necesidad sea presentar declaraciones en cero: ese perfil no requiere criterio profesional, y para esa necesidad el mercado ofrece otras alternativas.</p>
+<div style="margin-top:1.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:14px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · Acceso restringido</p>
+  <p style="font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
+  <p style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Mantiene el registro fiscal activo ante el SAT con continuidad absoluta. Este nivel no se solicita: se otorga de manera proactiva a clientes con <strong style="color:rgba(255,255,255,0.9);">24 meses continuos de permanencia activa en RESICO Esencial</strong>, sin adeudos ni baja de registro. Es el reconocimiento de AIDN a la relación sostenida.</p>
+  <div style="display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;">
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Antigüedad mínima: 24 meses</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Sin adeudos ni baja de registro</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Otorgada proactivamente · No aplica a solicitud</span>
+  </div>
 </div>
 
 <div class="subsection">
@@ -6518,6 +6535,36 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <div class="cta-divider"></div>
+<!-- Star Wars lightsaber — guiño discreto para quien lo conoce -->
+<div style="display:flex;justify-content:center;align-items:center;margin:1.2rem 0 0.8rem;opacity:0.72;" aria-hidden="true">
+  <svg width="140" height="28" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hilt -->
+    <rect x="0" y="10" width="28" height="8" rx="2.5" fill="#0c2a85"/>
+    <rect x="4" y="12" width="3" height="4" rx="1" fill="#03b4d6" opacity="0.8"/>
+    <rect x="9" y="12" width="3" height="4" rx="1" fill="#03b4d6" opacity="0.5"/>
+    <rect x="20" y="10" width="8" height="8" rx="2" fill="#14338F"/>
+    <rect x="22" y="12" width="4" height="4" rx="1" fill="#03b4d6" opacity="0.6"/>
+    <!-- Blade activation button -->
+    <circle cx="16" cy="14" r="2" fill="#03b4d6"/>
+    <!-- Blade — cian con fade a transparente -->
+    <defs>
+      <linearGradient id="bladeGrad" x1="28" y1="14" x2="140" y2="14" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#03b4d6" stop-opacity="1"/>
+        <stop offset="55%" stop-color="#06d6f5" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#7ffbff" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="bladeGlow" x="-10%" y="-80%" width="120%" height="260%">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <!-- Blade core -->
+    <rect x="28" y="12" width="112" height="4" rx="2" fill="url(#bladeGrad)" filter="url(#bladeGlow)"/>
+    <!-- Blade glow layer -->
+    <rect x="28" y="11" width="112" height="6" rx="3" fill="url(#bladeGrad)" opacity="0.25"/>
+  </svg>
+</div>
+
 
 <h3 style="font-size: 1.5rem;">Una conversación directa. Sin presentación corporativa. Sin equipo de ventas.</h3>
 <p style="font-size: 1rem;">Una sesión diagnóstica sin costo ni compromiso — solo criterio experto aplicado directamente a tu situación.</p>
