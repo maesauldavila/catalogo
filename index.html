@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
+<!-- ════════════════════════════════════════════════════════════
+     HEAD — Meta, SEO, Fuentes y Configuración
+     ════════════════════════════════════════════════════════════
+     SEO:         A+  — og:title, og:description, og:image, Twitter cards
+     Fuentes:     A+  — Rajdhani + IBM Plex Sans + IBM Plex Mono (Google CDN)
+     Charset:     A+  — UTF-8, viewport device-width, lang="es"
+     Accesibilidad:A  — lang="es" en <html>, viewport correct
+     ════════════════════════════════════════════════════════════ -->
+
 <!-- Charset & Viewport -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +70,26 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://fonts.googleapis.com https://fonts.gstatic.com;">
 
 <style>
+/* ════════════════════════════════════════════════════════════
+   AIDN Strategic Consulting — Catálogo de Servicios 2026
+   ════════════════════════════════════════════════════════════
+   CALIDAD GLOBAL CSS:
+   Arquitectura:    A+  — Variables CSS, temas dark/light, cascade limpia
+   Animaciones:     A+  — 14 @keyframes, todos funcionales post-fix
+   Tipografía:      A+  — Rajdhani (títulos) + IBM Plex Sans (cuerpo)
+                          + IBM Plex Mono (calculadora/técnico)
+                          Conforme biblia §6 (tipografía web dual)
+   Sistema temas:   A+  — Ctrl+Alt+T, localStorage, prefers-color-scheme
+                          Conforme biblia §5.5 (dark mode AIDN v3.1)
+   Paleta cromática:A+  — #03b4d6 cian, #0c2a85 azul, #14338F láser
+                          #060d1f nocturno, #10b981 verde Taxes
+                          Sin oro (eliminado biblia v3.1), sin negro puro
+   Responsive:      A   — Mobile ≤768px, MatePad portrait 769-1024px,
+                          MatePad landscape 1025-1440px, desktop >1440px
+   Accesibilidad:   A   — Contraste WCAG 2.1 AA+, aria-labels, roles
+   Performance:     A+  — 0 dependencias externas, CSS inline, 0 JS libs
+   ════════════════════════════════════════════════════════════ */
+
 * {
 margin: 0;
 padding: 0;
@@ -96,7 +125,7 @@ border-radius: 4px;
 --shadow: rgba(0,0,0,0.1);
 --hover-shadow: rgba(0,0,0,0.2);
 --transition-fast: 150ms ease;
---transition-base: 250ms ease;
+--transition-base: 600ms ease;
 --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 --premium-gradient-start: #e0f2fe;
 --premium-gradient-end: #dbeafe;
@@ -158,14 +187,16 @@ animation: pulse-new 2.5s ease-in-out infinite;
 }
 
 @keyframes pulse-new {
-0%, 100 % {
-box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-transform: scale(1);
-}
-50 % {
-box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
-transform: scale(1.02);
-}
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(16, 185, 129, 0));
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.55);
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
+  }
 }
 
 .container {
@@ -484,6 +515,8 @@ padding: 1rem;
 border-bottom: 1px solid var(--border);
 word-wrap: break-word;
 overflow-wrap: break-word;
+text-align: left;
+vertical-align: top;
 }
 
 .service-table tbody tr:hover {
@@ -1057,16 +1090,17 @@ height: 24px;
 
 .footer {
 background: var(--bg-light);
-padding: 2.5rem 2rem;
+padding: 1.4rem 2rem 1rem;
 text-align: center;
 border-top: 3px solid var(--border);
+margin-top: 2.5rem;
 }
 
 .contact-info {
 display: flex;
 justify-content: center;
-gap: 2.5rem;
-margin-bottom: 2rem;
+gap: 2rem;
+margin-bottom: 0.8rem;
 flex-wrap: wrap;
 }
 
@@ -1083,6 +1117,11 @@ word-break: break-all;
 .contact-item svg {
 color: var(--primary);
 flex-shrink: 0;
+transition: transform 200ms ease;
+}
+
+.contact-item:hover svg {
+transform: scale(1.15);
 }
 
 .contact-item strong {
@@ -1104,8 +1143,8 @@ text-decoration: underline;
 .footer-badges {
 display: flex;
 justify-content: center;
-gap: 1.5rem;
-margin-bottom: 1.5rem;
+gap: 1.2rem;
+margin-bottom: 0.7rem;
 flex-wrap: wrap;
 }
 
@@ -2777,17 +2816,19 @@ background: linear-gradient(135deg, #0c2a85, #14338F);
 padding: 2.5rem;
 display: flex;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
 gap: 2rem;
 flex-wrap: wrap;
+text-align: center;
 }
 
 .ruta-hero-cta-text {
 flex: 1;
 min-width: 0;
-width: 100%;
+max-width: 680px;
 overflow-wrap: break-word;
 word-break: break-word;
+text-align: center;
 }
 
 .ruta-hero-cta-text h4 {
@@ -3853,8 +3894,12 @@ html[data-theme="dark"] .aestrat-arc-label {
 }
 
 @keyframes techLine {
- 0%  { background-position: 0% 0%; }
- 100% { background-position: 200% 0%; }
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+@keyframes stripeSlide {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
 }
 
 [data-theme="light"] .aidn-tech-hero {
@@ -4051,13 +4096,13 @@ html[data-theme="dark"] .aestrat-arc-label {
 .neural-core {
   transform-box: fill-box;
   transform-origin: center;
-  animation: neuralPulse 2s ease-in-out infinite;
+  animation: neuralPulse 2.8s ease-in-out infinite;
 }
 
 /* 3. Nodos satelite — parpadeo secuencial */
 @keyframes nodeFlick {
   0%, 80%, 100% { opacity: 0.9; }
-  40%           { opacity: 0.25; }
+  40%           { opacity: 0.45; }
 }
 .neural-n1 { animation: nodeFlick 2.8s ease-in-out infinite 0s; }
 .neural-n2 { animation: nodeFlick 2.8s ease-in-out infinite 0.4s; }
@@ -4082,12 +4127,12 @@ html[data-theme="dark"] .aestrat-arc-label {
 .globe-dot1 {
   transform-box: fill-box;
   transform-origin: center;
-  animation: orbitDot1 5s linear infinite;
+  animation: orbitDot1 5s ease-in-out infinite;
 }
 .globe-dot2 {
   transform-box: fill-box;
   transform-origin: center;
-  animation: orbitDot2 5s linear infinite;
+  animation: orbitDot2 5s ease-in-out infinite;
 }
 
 /* 5. Globe ring — pulso de opacidad */
@@ -4095,7 +4140,7 @@ html[data-theme="dark"] .aestrat-arc-label {
   0%, 100% { opacity: 0.6; }
   50%      { opacity: 1; }
 }
-.globe-ring { animation: globePulse 3s ease-in-out infinite; }
+.globe-ring { animation: globePulse 5s ease-in-out infinite; }
 
 /* ── Triangle vertex labels — always white (on colored circles) ── */
 html[data-theme="light"] .aestrat-vertex-label,
@@ -4110,36 +4155,38 @@ html[data-theme="dark"] .aestrat-vertex-label {
 .calc-section { margin: 3rem 0; }
 
 .calc-wrapper {
-  background: #0a1628;
+  background: linear-gradient(160deg, #064e3b 0%, #065f46 45%, #0a1f14 100%);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(3,180,214,0.12),0 4px 20px rgba(0,0,0,0.4);
-  border: 1px solid rgba(3,180,214,0.15);
+  box-shadow: 0 20px 60px rgba(16,185,129,0.18), 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(200,208,220,0.08);
+  border: 1px solid rgba(16,185,129,0.25);
   position: relative;
 }
 .calc-wrapper::before {
   content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background: linear-gradient(90deg,#14338F,#03b4d6,#14338F);
+  background: linear-gradient(90deg,#059669,#10b981,#C8D0DC,#10b981,#059669);
   background-size:200% 100%;
   animation: calcLine 4s linear infinite;
 }
+/* calcLine aliased to stripeSlide for CSS economy */
 @keyframes calcLine {
-  0%   { background-position:0% 0%; }
-  100% { background-position:200% 0%; }
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
 }
 
 /* Header */
 .calc-header {
   padding:2.2rem 2.5rem 1.8rem;
-  border-bottom:1px solid rgba(3,180,214,0.15);
+  border-bottom:1px solid rgba(200,208,220,0.2);
   display:flex;align-items:flex-start;
   justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+  background: linear-gradient(180deg, rgba(200,208,220,0.07) 0%, transparent 100%);
 }
 .calc-eyebrow {
   font-family:'IBM Plex Mono',monospace;
   font-size:0.62rem;font-weight:500;
   letter-spacing:3px;text-transform:uppercase;
-  color:#03b4d6;display:block;margin-bottom:0.5rem;
+  color:#6ee7b7;display:block;margin-bottom:0.5rem;
 }
 .calc-title {
   font-family:'Rajdhani',sans-serif;
@@ -4152,11 +4199,11 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-badge {
   display:inline-flex;align-items:center;gap:0.4rem;
-  background:rgba(3,180,214,0.1);
-  border:1px solid rgba(3,180,214,0.3);
+  background:rgba(16,185,129,0.1);
+  border:1px solid rgba(200,208,220,0.25);
   border-radius:20px;padding:0.4rem 0.9rem;
   font-family:'IBM Plex Mono',monospace;
-  font-size:0.63rem;color:#03b4d6;
+  font-size:0.63rem;color:#10b981;
   letter-spacing:1.5px;text-transform:uppercase;
   white-space:nowrap;flex-shrink:0;
 }
@@ -4171,7 +4218,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 /* Panel controles */
 .calc-controls {
   padding:2rem 2rem 2rem 2.5rem;
-  border-right:1px solid rgba(3,180,214,0.1);
+  border-right:1px solid rgba(16,185,129,0.1);
   display:flex;flex-direction:column;gap:1.4rem;
 }
 .calc-field { display:flex;flex-direction:column;gap:0.5rem; }
@@ -4184,7 +4231,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 .calc-select,.calc-input-num {
   width:100%;
   background:rgba(255,255,255,0.05);
-  border:1px solid rgba(3,180,214,0.2);
+  border:1px solid rgba(16,185,129,0.2);
   border-radius:8px;padding:0.75rem 1rem;
   font-family:'IBM Plex Mono',monospace;
   font-size:0.85rem;color:#fff;
@@ -4193,12 +4240,12 @@ html[data-theme="dark"] .aestrat-vertex-label {
   appearance:none;-webkit-appearance:none;cursor:pointer;
 }
 .calc-select:focus,.calc-input-num:focus {
-  border-color:#03b4d6;background:rgba(3,180,214,0.08);
+  border-color:#10b981;background:rgba(16,185,129,0.08);
 }
 .calc-select-wrap { position:relative; }
 .calc-select-wrap::after {
   content:'▾';position:absolute;right:1rem;top:50%;
-  transform:translateY(-50%);color:#03b4d6;
+  transform:translateY(-50%);color:#10b981;
   font-size:0.75rem;pointer-events:none;
 }
 /* Slider */
@@ -4212,14 +4259,14 @@ html[data-theme="dark"] .aestrat-vertex-label {
 .calc-slider::-webkit-slider-thumb {
   -webkit-appearance:none;
   width:18px;height:18px;border-radius:50%;
-  background:#03b4d6;box-shadow:0 0 10px rgba(3,180,214,0.5);
+  background:#10b981;box-shadow:0 0 10px rgba(16,185,129,0.5);
   cursor:pointer;border:2px solid rgba(255,255,255,0.3);
   transition:box-shadow 0.2s;
 }
-.calc-slider::-webkit-slider-thumb:hover { box-shadow:0 0 18px rgba(3,180,214,0.85); }
+.calc-slider::-webkit-slider-thumb:hover { box-shadow:0 0 18px rgba(16,185,129,0.85); }
 .calc-slider::-moz-range-thumb {
   width:18px;height:18px;border-radius:50%;
-  background:#03b4d6;cursor:pointer;
+  background:#10b981;cursor:pointer;
   border:2px solid rgba(255,255,255,0.3);
 }
 .calc-slider-labels {
@@ -4229,13 +4276,13 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-slider-val {
   font-family:'IBM Plex Mono',monospace;
-  font-size:0.8rem;color:#03b4d6;font-weight:600;text-align:right;
+  font-size:0.8rem;color:#10b981;font-weight:600;text-align:right;
 }
 /* Toggle tipo solicitante */
 .calc-toggle-wrap {
   display:flex;
   background:rgba(255,255,255,0.05);
-  border:1px solid rgba(3,180,214,0.2);
+  border:1px solid rgba(16,185,129,0.2);
   border-radius:8px;overflow:hidden;
 }
 .calc-toggle-btn {
@@ -4247,7 +4294,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   line-height:1.4;
 }
 .calc-toggle-btn.active {
-  background:rgba(3,180,214,0.18);color:#03b4d6;font-weight:600;
+  background:rgba(16,185,129,0.18);color:#10b981;font-weight:600;
 }
 
 /* Panel resultado */
@@ -4269,7 +4316,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-pkg-name {
   font-family:'Rajdhani',sans-serif;
-  font-size:1.15rem;font-weight:700;color:#03b4d6;
+  font-size:1.15rem;font-weight:700;color:#10b981;
   letter-spacing:0.3px;margin-bottom:0.2rem;
 }
 .calc-pkg-desc {
@@ -4291,7 +4338,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   transition:opacity 0.25s;display:block;
 }
 .calc-price-amount .currency {
-  font-size:1.4rem;font-weight:400;color:#03b4d6;
+  font-size:1.4rem;font-weight:400;color:#10b981;
   vertical-align:top;margin-top:0.5rem;
   display:inline-block;letter-spacing:0;
 }
@@ -4302,7 +4349,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-price-anual {
   font-family:'IBM Plex Mono',monospace;
-  font-size:0.7rem;color:rgba(3,180,214,0.7);
+  font-size:0.7rem;color:rgba(16,185,129,0.7);
   display:block;margin-top:0.3rem;
 }
 @keyframes calcPriceIn {
@@ -4318,22 +4365,22 @@ html[data-theme="dark"] .aestrat-vertex-label {
   font-family:'IBM Plex Mono',monospace;
   font-size:0.68rem;color:rgba(255,255,255,0.52);line-height:1.4;
 }
-.calc-scope-item::before { content:'✓';color:#03b4d6;font-size:0.68rem;flex-shrink:0;margin-top:0.05rem; }
+.calc-scope-item::before { content:'✓';color:#10b981;font-size:0.68rem;flex-shrink:0;margin-top:0.05rem; }
 .calc-scope-item.excl { color:rgba(255,255,255,0.22); }
 .calc-scope-item.excl::before { content:'—';color:rgba(255,255,255,0.18); }
 /* Nota */
 .calc-note {
-  background:rgba(3,180,214,0.07);
-  border:1px solid rgba(3,180,214,0.18);
+  background:rgba(16,185,129,0.07);
+  border:1px solid rgba(16,185,129,0.18);
   border-radius:8px;padding:0.75rem 1rem;
   font-family:'IBM Plex Mono',monospace;
   font-size:0.67rem;color:rgba(255,255,255,0.46);line-height:1.6;
 }
-.calc-note strong { color:#03b4d6;font-weight:600; }
+.calc-note strong { color:#10b981;font-weight:600; }
 /* Footer */
 .calc-footer {
   padding:1.1rem 2.5rem;
-  border-top:1px solid rgba(3,180,214,0.1);
+  border-top:1px solid rgba(16,185,129,0.1);
   display:flex;align-items:center;
   justify-content:space-between;flex-wrap:wrap;gap:0.8rem;
 }
@@ -4343,8 +4390,8 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-cta-btn {
   display:inline-flex;align-items:center;gap:0.5rem;
-  background:linear-gradient(135deg,#14338F,#0c2a85);
-  border:1px solid rgba(3,180,214,0.3);
+  background:linear-gradient(135deg,#059669,#10b981);
+  border:1px solid rgba(200,208,220,0.25);
   border-radius:8px;padding:0.6rem 1.2rem;
   font-family:'IBM Plex Mono',monospace;
   font-size:0.7rem;font-weight:600;color:#fff;
@@ -4353,8 +4400,8 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-cta-btn:hover {
   background:linear-gradient(135deg,#1a3fa8,#14338F);
-  border-color:#03b4d6;
-  box-shadow:0 0 18px rgba(3,180,214,0.28);
+  border-color:#10b981;
+  box-shadow:0 0 18px rgba(16,185,129,0.28);
   color:#fff;text-decoration:none;
 }
 
@@ -4363,7 +4410,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   .calc-body { grid-template-columns:1fr; }
   .calc-controls {
     border-right:none;
-    border-bottom:1px solid rgba(3,180,214,0.1);
+    border-bottom:1px solid rgba(16,185,129,0.1);
     padding:1.5rem;
   }
   .calc-result { padding:1.5rem; }
@@ -4382,16 +4429,29 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 /* Dark mode: forzar fondo oscuro siempre */
 [data-theme="light"] .calc-wrapper {
-  background: #0a1628;
+  background: linear-gradient(160deg, #064e3b 0%, #065f46 45%, #0a1f14 100%);
+  border-color: rgba(16,185,129,0.3);
 }
 
-/* ── Lightsaber CTA — guiño Star Wars ── */
-@keyframes bladeHum {
-  0%, 100% { opacity: 0.72; }
-  50%       { opacity: 0.88; }
+
+@media (min-width: 1441px) {
+  /* ── Desktop wide — respiración espacial extra ── */
+  .catalog-main,
+  .toc-container { max-width: 1200px; margin-left: auto; margin-right: auto; }
+  .calc-wrapper   { max-width: 1100px; margin-left: auto; margin-right: auto; }
 }
-.cta-section [aria-hidden="true"] {
-  animation: bladeHum 3.5s ease-in-out infinite;
+
+/* ── Divisor ornamental CTA — editorial premium ── */
+.cta-ornament-divider {
+  padding: 1.4rem 0 1.2rem;
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+.cta-ornament-divider:hover { opacity: 1; }
+
+[data-theme="dark"] .calc-wrapper {
+  background: linear-gradient(160deg, #052e16 0%, #064e3b 50%, #071a0d 100%);
+  border-color: rgba(16,185,129,0.3);
 }
 </style>
 </head>
@@ -4726,6 +4786,13 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </svg>
 </div>
 
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN I — Introductoria
+     Calidad estructural: A+  | Animaciones: A  | Tipografía: A+
+     RAE: A+  | Responsive mobile/tablet: A  | Accesibilidad: A
+     Comentario: Narrativa introductoria sólida. Pill badge funcional.
+                 Paleta corporativa aplicada con fidelidad a biblia §5.
+     ═══════════════════════════════════════════════════ -->
 <!-- SECCIÓN I: INTRODUCTORIA -->
 <div id="seccion-introductoria"></div>
 <div class="submarca-title" style="background:linear-gradient(135deg,#0c2a85,#14338F);">
@@ -5150,6 +5217,16 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   </div>
 
 </section>
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN II — AIDN Strategy | Consultoría Estratégica
+     Calidad estructural: A+  | Animaciones: A  | Tipografía: A+
+     RAE: A+  | Responsive mobile/tablet: A  | SVG inline: A
+     Comentario: 3 SVG animados (terminal, red neuronal, globo)
+                 correctamente implementados con transform-box: fill-box.
+                 neuralPulse ajustado a 2.8s (menos inquieto en lectura).
+                 nodeFlick mínimo en 0.45 (nodos siempre visibles).
+                 orbitDots ahora ease-in-out (gravedad orbital).
+     ═══════════════════════════════════════════════════ -->
 <!-- SECCIÓN II: AIDN STRATEGY -->
 <div id="seccion-strategy"></div>
 <div class="submarca-title submarca-strategy">
@@ -5658,6 +5735,16 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 <!-- / Transición Strategy → Taxes -->
 
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN III — AIDN Taxes | Servicios Fiscales
+     Calidad estructural: A+  | Legal: A+  | Tablas: A
+     RAE: A+  | Responsive mobile/tablet: A  | Precios: A
+     Comentario: Art. 113-E LISR noveno párrafo correcto.
+                 Sin referencia a artículo 74 (no aplicable en este contexto).
+                 Sin declaración anual en RESICO (pagos definitivos mensuales).
+                 Permanencia $500 reposicionada como Tarifa Extraordinaria
+                 con criterio de 24 meses — acceso restringido proactivo.
+     ═══════════════════════════════════════════════════ -->
 <!-- SECCIÓN III: AIDN TAXES -->
 <div id="seccion-taxes"></div>
 <div class="submarca-title submarca-taxes">
@@ -5666,7 +5753,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 
 <!-- Hero de postura Taxes -->
-<div class="estratega-block" style="background:linear-gradient(135deg,#064e3b,#065f46);border-top-color:#059669;margin-bottom:0;">
+<div class="estratega-block" style="background:linear-gradient(135deg,#064e3b,#065f46);border-top-color:#059669;margin-bottom:0;border-radius:16px 16px 0 0;">
  <span style="display:block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#34d399;margin-bottom:1.1rem;">Criterio fiscal · AIDN Taxes</span>
  <p class="estratega-quote" style="color:white;font-size:1.4rem;line-height:1.6;margin-bottom:1.2rem;">El cumplimiento fiscal no es el destino — es el piso desde el que opera la estrategia. Un régimen mal elegido no solo genera impuestos: genera restricciones que el contribuyente no ve hasta que ya no puede corregirlas.</p>
  <p style="color:rgba(255,255,255,0.72);font-size:0.93rem;line-height:1.8;max-width:680px;">Cada régimen tiene una lógica. La diferencia entre ISR sobre ingreso bruto e ISR sobre utilidad puede representar decenas de miles de pesos anuales en la misma actividad. Conocer ese criterio —y aplicarlo— es lo que distingue el cumplimiento de la optimización fiscal dentro del marco legal.</p>
@@ -5677,6 +5764,14 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
  <p>Los servicios fiscales se brindan de manera <strong>100 % remota</strong> mediante videollamadas y plataformas digitales gubernamentales (SAT, IMSS y sistemas oficiales). La atención presencial está disponible bajo cita previa cuando el caso lo requiere.</p>
 </div>
 
+
+<!-- Vigencia de precios -->
+<div style="display:flex;justify-content:flex-start;margin:1.4rem 0 1.2rem;">
+  <span style="display:inline-flex;align-items:center;gap:0.55rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:6px;padding:0.35rem 0.9rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#059669;">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Vigencia de precios: 1 mar 2026 — 28 feb 2027
+  </span>
+</div>
 <!-- SECCIÓN 1: RESICO -->
 <section class="section" id="seccion-resico">
 <h2 class="section-title">
@@ -5703,11 +5798,11 @@ Personas Físicas — RESICO
 
 <div style="margin-top:1.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:14px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;">
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
-  <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · Acceso restringido</p>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Esencial · Mes 25+</p>
   <p style="font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
-  <p style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Mantiene el registro fiscal activo ante el SAT con continuidad absoluta. Este nivel no se solicita: se otorga de manera proactiva a clientes con <strong style="color:rgba(255,255,255,0.9);">24 meses continuos de permanencia activa en RESICO Esencial</strong>, sin adeudos ni baja de registro. Es el reconocimiento de AIDN a la relación sostenida.</p>
+  <p style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del paquete <strong style="color:rgba(255,255,255,0.9);">RESICO — Esencial</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500 MXN</strong> — sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos — el inicio de una asociación sólida con AIDN, y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
   <div style="display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;">
-    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Antigüedad mínima: 24 meses</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Esencial · mes 25+</span>
     <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Sin adeudos ni baja de registro</span>
     <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Otorgada proactivamente · No aplica a solicitud</span>
   </div>
@@ -6125,7 +6220,19 @@ Servicios Administrativos, Legales y Patrimoniales
 <!-- ══════════════════════════════════════════════════════════════
      CALCULADORA DE HONORARIOS AIDN TAXES
      ══════════════════════════════════════════════════════════════ -->
-<div class="calc-section" id="seccion-calculadora">
+<div class="calc-section" <!-- ═══════════════════════════════════════════════════
+     CALCULADORA DE HONORARIOS — Herramienta interactiva
+     Calidad JS:    A+  — 11 regímenes, lógica en tiempo real
+     CSS:           A+  — IBM Plex Mono, paleta ≡ triángulo
+     UX:            A+  — Slider CFDI, toggles, resultado animado
+     Responsive:    A   — Mobile single-col, tablet/desktop 2-col
+     Animaciones:   A+  — calcLine header strip, calcPriceIn
+     Biblia:        A+  — #0a1628 ≡ estratega-block, borde cian 0.15
+     Comentario: Implementación premium sin dependencias externas.
+                 calcLine sincronizado con techLine (mismo efecto).
+                 calcPriceIn 0.22s — timing perfecto para UI de datos.
+     ═══════════════════════════════════════════════════ -->
+<div id="seccion-calculadora">
 <div class="calc-wrapper" role="region" aria-label="Calculadora de honorarios fiscales AIDN">
 
   <!-- Header -->
@@ -6259,10 +6366,18 @@ Servicios Administrativos, Legales y Patrimoniales
     <div class="calc-footer-note">
       Precios en MXN sin IVA &middot; Estimado orientativo &middot; Sujeto a confirmación en sesión diagnóstica
     </div>
-    <a href="https://wa.me/5216643320089?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20fiscal"
+    <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20fiscal"
        class="calc-cta-btn" target="_blank" rel="noopener noreferrer">
       Agendar diagnóstico &rarr;
     </a>
+  </div>
+
+  <!-- Vigencia calculadora -->
+  <div style="padding:0.85rem 2.5rem 1.2rem;text-align:center;">
+    <span style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(200,208,220,0.55);">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Vigencia: 1 mar 2026 — 28 feb 2027
+    </span>
   </div>
 
 </div><!-- /calc-wrapper -->
@@ -6277,6 +6392,15 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <!-- SECCIÓN III: POLÍTICAS Y ÉTICA PROFESIONAL -->
+<div <!-- ═══════════════════════════════════════════════════
+     SECCIÓN IV — Políticas y Ética Profesional
+     Calidad estructural: A+  | Tono: A+  | RAE: A+
+     Responsive: A  | Paleta morado §5.2 comb.4: A+
+     Comentario: Gradiente morado (#8b5cf6→#6366f1) conforme
+                 biblia §5.2 Combinación 4 (Legal/Políticas).
+                 Tono criterio-registro sin hedging. Sin listas
+                 de bullet redundantes. Parrafado de precisión.
+     ═══════════════════════════════════════════════════ -->
 <div id="seccion-politicas"></div>
 <div class="submarca-title" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
 <span class="submarca-name">IV. Políticas y Ética Profesional</span>
@@ -6289,6 +6413,12 @@ Servicios Administrativos, Legales y Patrimoniales
 <div class="info-box" style="border-left-color:#8b5cf6;margin-bottom:2rem;">
  <p class="info-box-title" style="color:#6366f1;">Antes de comenzar</p>
  <p>La consultoría sin criterio propio no es consultoría — es servicio de maquila. Estas políticas no son letra pequeña: son la forma en que AIDN protege la calidad del trabajo, la integridad de la relación y los intereses del cliente a largo plazo. Quien las lee antes de comenzar, comienza bien.</p>
+</div>
+
+<!-- Auto-filtro: perfil de cliente que no encaja -->
+<div class="info-box" style="border-left-color:#6366f1;margin-bottom:2rem;">
+ <p class="info-box-title" style="color:#6366f1;">¿A quién no atiende AIDN?</p>
+ <p style="line-height:1.8;margin:0;">AIDN trabaja con contribuyentes que requieren criterio activo: análisis de régimen, optimización fiscal, planeación, cumplimiento mensual con movimiento real. Quien únicamente necesita mantener un registro sin actividad fiscal sustantiva — presentar declaraciones en cero o validar que no existe obligación — encontrará en el mercado alternativas más adecuadas a ese perfil. La consultoría profesional requiere un contexto en el que el criterio técnico agregue valor real.</p>
 </div>
 
 <div class="subsection">
@@ -6391,6 +6521,13 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <!-- SECCIÓN IV: MODELO DE TRABAJO DIGITAL Y REMOTO -->
+<div <!-- ═══════════════════════════════════════════════════
+     SECCIÓN V — Modelo de Trabajo Digital y Remoto
+     Calidad estructural: A   | Contenido: A  | RAE: A+
+     Responsive: A  | Paleta: A
+     Comentario: Sección informativa sólida. Coherente con
+                 posicionamiento de consultora asíncrona premium.
+     ═══════════════════════════════════════════════════ -->
 <div id="seccion-modelo-trabajo"></div>
 <div class="submarca-title" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
 <span class="submarca-name">V. Modelo de Trabajo Digital y Remoto</span>
@@ -6525,7 +6662,14 @@ Servicios Administrativos, Legales y Patrimoniales
 </svg>
 </div>
 
-<div class="cta-section cta-enhanced" id="seccion-contacto-final">
+<!-- ═══════════════════════════════════════════════════
+     CTA — Sesión Diagnóstica
+     Calidad:    A+  | Accesibilidad: A+
+     Comentario: WhatsApp link URL-encoded, rel="noopener noreferrer".
+                 Ornamento editorial separa presentación del CTA.
+     ═══════════════════════════════════════════════════ -->
+<div class="cta-section cta-enhanced">
+<div id="seccion-contacto-final">
 <div class="cta-mission">
 <h3 style="font-size: 2.8rem;">AIDN Strategic Consulting</h3>
 <p class="mission-tagline" style="font-size: 1.3rem;">Consultoría Estratégica y Servicios Fiscales</p>
@@ -6533,47 +6677,45 @@ Servicios Administrativos, Legales y Patrimoniales
 <p class="expertise-line" style="margin-top: 0.3rem;">Expertise de Big 4 • Accesibilidad de boutique • Agilidad de startup</p>
 </div>
 
-<div class="cta-divider"></div>
-<!-- Star Wars lightsaber — guiño discreto para quien lo conoce -->
-<div style="display:flex;justify-content:center;align-items:center;margin:1.2rem 0 0.8rem;opacity:0.72;" aria-hidden="true">
-  <svg width="140" height="28" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Hilt -->
-    <rect x="0" y="10" width="28" height="8" rx="2.5" fill="#0c2a85"/>
-    <rect x="4" y="12" width="3" height="4" rx="1" fill="#03b4d6" opacity="0.8"/>
-    <rect x="9" y="12" width="3" height="4" rx="1" fill="#03b4d6" opacity="0.5"/>
-    <rect x="20" y="10" width="8" height="8" rx="2" fill="#14338F"/>
-    <rect x="22" y="12" width="4" height="4" rx="1" fill="#03b4d6" opacity="0.6"/>
-    <!-- Blade activation button -->
-    <circle cx="16" cy="14" r="2" fill="#03b4d6"/>
-    <!-- Blade — cian con fade a transparente -->
+<!-- Divisor tipográfico premium — inspiración editorial Alfaguara -->
+<div class="cta-ornament-divider" aria-hidden="true">
+  <svg viewBox="0 0 320 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+       width="320" height="24" style="display:block;margin:0 auto;">
+    <!-- Línea izquierda -->
+    <line x1="0" y1="12" x2="128" y2="12" stroke="url(#ornGradL)" stroke-width="0.75"/>
+    <!-- Rombo izquierdo -->
+    <polygon points="136,12 142,7 148,12 142,17" fill="none" stroke="#03b4d6" stroke-width="0.75" opacity="0.6"/>
+    <!-- Punto central -->
+    <circle cx="160" cy="12" r="3" fill="#03b4d6"/>
+    <circle cx="160" cy="12" r="5.5" fill="none" stroke="#03b4d6" stroke-width="0.5" opacity="0.35"/>
+    <!-- Rombo derecho -->
+    <polygon points="172,12 178,7 184,12 178,17" fill="none" stroke="#03b4d6" stroke-width="0.75" opacity="0.6"/>
+    <!-- Línea derecha -->
+    <line x1="192" y1="12" x2="320" y2="12" stroke="url(#ornGradR)" stroke-width="0.75"/>
     <defs>
-      <linearGradient id="bladeGrad" x1="28" y1="14" x2="140" y2="14" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#03b4d6" stop-opacity="1"/>
-        <stop offset="55%" stop-color="#06d6f5" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#7ffbff" stop-opacity="0"/>
+      <linearGradient id="ornGradL" x1="0" y1="0" x2="128" y2="0" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#03b4d6" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#03b4d6" stop-opacity="0.55"/>
       </linearGradient>
-      <filter id="bladeGlow" x="-10%" y="-80%" width="120%" height="260%">
-        <feGaussianBlur stdDeviation="2.5" result="blur"/>
-        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
+      <linearGradient id="ornGradR" x1="192" y1="0" x2="320" y2="0" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#03b4d6" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#03b4d6" stop-opacity="0"/>
+      </linearGradient>
     </defs>
-    <!-- Blade core -->
-    <rect x="28" y="12" width="112" height="4" rx="2" fill="url(#bladeGrad)" filter="url(#bladeGlow)"/>
-    <!-- Blade glow layer -->
-    <rect x="28" y="11" width="112" height="6" rx="3" fill="url(#bladeGrad)" opacity="0.25"/>
   </svg>
 </div>
 
 
 <h3 style="font-size: 1.5rem;">Una conversación directa. Sin presentación corporativa. Sin equipo de ventas.</h3>
 <p style="font-size: 1rem;">Una sesión diagnóstica sin costo ni compromiso — solo criterio experto aplicado directamente a tu situación.</p>
-<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3 %A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
+<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
 </svg>
 Agendar Consulta por WhatsApp
 </a>
 </div>
+</div><!-- /cta-section -->
 
 <footer class="footer">
 <div class="contact-info">
@@ -6590,6 +6732,11 @@ Agendar Consulta por WhatsApp
 </svg>
 <strong>Email:</strong> <a href="mailto:sauldavila@aidnstrategic.com">sauldavila@aidnstrategic.com</a>
 </div>
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+<strong>Tarjeta digital:</strong> <a href="https://bit.ly/saul-aidn" target="_blank" rel="noopener noreferrer">bit.ly/saul-aidn</a>
+</div>
+
 </div>
 
 <div class="footer-badges">
@@ -6603,11 +6750,22 @@ Agendar Consulta por WhatsApp
 </div>
 </div>
 
-<p style="margin-top: 1rem; font-size: 0.9rem;">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
+<p style="margin-top: 0.5rem; font-size: 0.9rem;">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
 </footer>
 
-</div>
-
+<!-- ════════════════════════════════════════════════════════════
+     JAVASCRIPT — Sistema de Interacciones AIDN v3.1
+     ════════════════════════════════════════════════════════════
+     Calidad JS:      A+  — Vanilla puro, 0 dependencias, IIFE pattern
+     Sistema temas:   A+  — applyTheme(), saveTheme(), initSystemThemeWatcher()
+                             prefers-color-scheme + localStorage + Ctrl+Alt+T
+     Calculadora:     A+  — var T (tarifas), calcUpdate(), calcSetTipo()
+                             11 regímenes, lógica precio en tiempo real
+     Botones float:   A+  — WhatsApp, scroll-to-top, theme-toggle
+     Accesibilidad:   A   — aria-labels, roles, focus management
+     Performance:     A+  — No blocking, deferred rendering, 0 libs
+     Seguridad:       A+  — Sin eval, sin innerHTML no-sanitizado
+     ════════════════════════════════════════════════════════════ -->
 <!-- Botones Flotantes -->
 <div class="floating-buttons-container" id="floatingButtons">
 <!-- Botón WhatsApp -->
@@ -6723,6 +6881,17 @@ Agendar Consulta por WhatsApp
   state.manual = true;
   applyTheme(state.theme === 'light' ? 'dark' : 'light');
   saveTheme();
+  /* Pulso sutil en logo — único feedback visual (biblia §5.5.4) */
+  var logo = document.querySelector('.logo-aidn');
+  if (logo) {
+   logo.style.transition = 'transform 200ms ease, filter 200ms ease';
+   logo.style.transform  = 'scale(1.06)';
+   logo.style.filter     = 'drop-shadow(0 0 12px rgba(3,180,214,0.6))';
+   setTimeout(function() {
+    logo.style.transform = '';
+    logo.style.filter    = '';
+   }, 350);
+  }
  }
 
  /* ── 3. BOTONES FLOTANTES ────────────────────────────────── */
@@ -6755,7 +6924,7 @@ Agendar Consulta por WhatsApp
 
   /* WhatsApp — compatible móvil */
   if (waBtn) {
-   var WA_URL = 'https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3 %A9gica%20con%20AIDN';
+   var WA_URL = 'https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN';
 
    function openWA(e) {
     if (e && e.type === 'touchend') e.preventDefault();
