@@ -168,24 +168,6 @@ html[data-theme="dark"] body {
 background: linear-gradient(135deg, #060d1f 0%, #0c1a3a 100%);
 }
 
-.new-badge {
-display: inline-flex;
-align-items: center;
-background: linear-gradient(135deg, #10b981, #059669);
-color: white;
-padding: 0.2rem 0.6rem;
-border-radius: 12px;
-font-size: 0.7rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-vertical-align: middle;
-box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-white-space: nowrap;
-flex-shrink: 0;
-animation: pulse-new 2.5s ease-in-out infinite;
-}
-
 @keyframes pulse-new {
   0%, 100% {
     box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
@@ -3066,12 +3048,6 @@ color: var(--border);
 line-height: 1;
 }
 
-.valor-emoji {
-font-size: 1.8rem;
-display: block;
-margin-bottom: 0.6rem;
-}
-
 .valor-nombre {
 font-family: 'Rajdhani', sans-serif;
 font-size: 1.2rem;
@@ -3174,10 +3150,6 @@ backdrop-filter: blur(4px);
 min-width: 180px;
 }
 
-.hero-badge-icon {
-font-size: 1.4rem;
-}
-
 .hero-badge-label {
 font-size: 0.7rem;
 text-transform: uppercase;
@@ -3268,10 +3240,6 @@ font-size: 1.8rem;
 font-weight: 700;
 color: rgba(255,255,255,0.9);
 line-height: 1;
-}
-
-.pilar-emoji {
-font-size: 1.6rem;
 }
 
 .pilar-body {
@@ -3812,12 +3780,6 @@ html[data-theme="dark"] .aestrat-label-sub {
 .estratega-pilar:nth-child(2) { border-color: #14338F; }
 .estratega-pilar:nth-child(3) { border-color: #10b981; }
 
-.estratega-pilar-icon {
- font-size: 1.3rem;
- display: block;
- margin-bottom: 0.4rem;
-}
-
 .estratega-pilar-name {
  font-family: 'Rajdhani', sans-serif;
  font-size: 1rem;
@@ -4306,7 +4268,6 @@ html[data-theme="dark"] .aestrat-vertex-label {
   display:flex;flex-direction:column;
   justify-content:space-between;gap:1.2rem;
 }
-/* Paquete */
 .calc-pkg {
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
@@ -4532,12 +4493,11 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   gap: 0.6rem;
   flex-wrap: wrap;
  ">
-  <span style="font-size:1rem; flex-shrink:0;">🗺️</span>
   <span>
-   <strong style="color:var(--text-dark);">Un catálogo sin autor visible.</strong> Lo que importa es lo que produce, no quién lo produce — El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice</a> te lleva directamente a lo que te interesa:
+   Este catálogo está organizado para que encuentres lo que necesitas sin rodeos. El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice</a> te lleva directamente a cada sección:
    <a href="#seccion-strategy" style="color:#14338F;font-weight:600;">AIDN Strategy</a> para consultoría estratégica,
    <a href="#seccion-taxes" style="color:#14338F;font-weight:600;">AIDN Taxes</a> para servicios fiscales,
-   o la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> si te interesa el fundamento conceptual.
+   o la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> si te interesa conocer el fundamento y a quien está detrás de la firma.
   </span>
  </p>
 
@@ -4551,9 +4511,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
- ">
-  <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🤝</span>
-  <p style="margin:0;font-size:0.83rem;line-height:1.65;color:var(--text-light);">
+ "> <p style="margin:0;font-size:0.83rem;line-height:1.65;color:var(--text-light);">
    <strong style="color:var(--text-dark);font-weight:600;">Antes de solicitar cualquier servicio,</strong>
    te invitamos a revisar las
    <a href="#seccion-politicas" style="color:#14338F;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(20,51,143,0.3);">Políticas y Ética Profesional</a>
@@ -4807,8 +4765,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <!-- ── Breve intro al Marco Filosófico ─────────────────────── -->
 <div class="info-box info" style="margin-bottom:2rem;">
- <p class="info-box-title">📌 ¿Por qué compartimos nuestro Marco Filosófico?</p>
- <p>Antes de presentar nuestros servicios, consideramos relevante compartir el fundamento que orienta cada decisión de la firma. En AIDN creemos que un cliente bien informado sobre los valores y propósito de su consultor toma mejores decisiones — y establece relaciones profesionales más sólidas. Lo que sigue no es un ejercicio de marketing: es la declaración de quiénes somos y por qué hacemos lo que hacemos.</p>
+ <p class="info-box-title">¿Por qué compartimos nuestro Marco Filosófico?</p>
+ <p>Antes de presentar nuestros servicios, creemos relevante presentar a quien toma cada decisión de la firma y el fundamento que lo orienta. Un cliente bien informado sobre los valores y propósito de quien lo asesora toma mejores decisiones — y construye relaciones profesionales más sólidas. Lo que sigue no es un ejercicio de marketing: es la declaración de quién soy y por qué hago lo que hago.</p>
+ <p style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(3,180,214,0.2);margin-bottom:0;"><strong>MAE Saúl Dávila Pantoja</strong><br>
+ <span style="font-size:0.9rem;color:var(--text-light);">Maestro en Administración de Empresas &nbsp;·&nbsp; Consultor Estratégico Certificado OLA/CICA &nbsp;·&nbsp; Licenciado en Contaduría Pública<br>Fundador, AIDN Strategic Consulting &nbsp;·&nbsp; Nuevo León, México</span></p>
 </div>
 
 <!-- ── Marco Filosófico (contenedor independiente) ─────────── -->
@@ -4847,49 +4807,42 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
   <div class="valor-card">
    <span class="valor-numero">01</span>
-   <span class="valor-emoji">💡</span>
    <div class="valor-nombre">Creatividad</div>
    <p class="valor-def">Diseñamos soluciones originales ante desafíos complejos, explorando enfoques no convencionales que generen ventajas reales. En un entorno de cambio acelerado, la creatividad estratégica no es un lujo, es una competencia central.</p>
   </div>
 
   <div class="valor-card">
    <span class="valor-numero">02</span>
-   <span class="valor-emoji">🤝</span>
    <div class="valor-nombre">Empatía</div>
    <p class="valor-def">Comprendemos la realidad de cada organización —su cultura, su gente y su contexto— porque solo desde ahí las estrategias son verdaderamente pertinentes. Escuchar antes de proponer es nuestra práctica, no nuestra excepción.</p>
   </div>
 
   <div class="valor-card">
    <span class="valor-numero">03</span>
-   <span class="valor-emoji">🛡️</span>
    <div class="valor-nombre">Integridad</div>
    <p class="valor-def">Actuamos con transparencia y consistencia en cada compromiso. Nuestra reputación se construye con hechos, no con promesas. Cero tolerancia a prácticas que comprometan la ética profesional, la legalidad o la confianza del cliente.</p>
   </div>
 
   <div class="valor-card">
    <span class="valor-numero">04</span>
-   <span class="valor-emoji">🧭</span>
    <div class="valor-nombre">Liderazgo</div>
    <p class="valor-def">Guiamos con criterio y decisión, inspirando a las organizaciones a tomar el control de su futuro y enfrentar el cambio con confianza. El liderazgo auténtico se ejerce desde el conocimiento, la coherencia y el ejemplo.</p>
   </div>
 
   <div class="valor-card">
    <span class="valor-numero">05</span>
-   <span class="valor-emoji">🎯</span>
    <div class="valor-nombre">Objetividad</div>
    <p class="valor-def">Basamos cada análisis en datos, evidencia y metodologías rigurosas. La imparcialidad es la base de toda recomendación estratégica. Los juicios de valor no reemplazan al diagnóstico; la intuición se valida con información.</p>
   </div>
 
   <div class="valor-card">
    <span class="valor-numero">06</span>
-   <span class="valor-emoji">🌱</span>
    <div class="valor-nombre">Resiliencia</div>
    <p class="valor-def">Acompañamos a las organizaciones a desarrollar la capacidad de absorber perturbaciones, adaptarse al cambio y salir fortalecidas de la adversidad. La resiliencia no es resistir pasivamente: es aprender, reconfigurar y avanzar con mayor solidez.</p>
   </div>
 
   <div class="valor-card">
    <span class="valor-numero">07</span>
-   <span class="valor-emoji">⚡</span>
    <div class="valor-nombre">Sinergia</div>
    <p class="valor-def">Potenciamos el trabajo colaborativo dentro y fuera de las organizaciones, porque los mejores resultados emergen cuando las capacidades se integran con propósito común. La consultoría real no opera en silos: conecta perspectivas para multiplicar el valor generado.</p>
   </div>
@@ -4908,7 +4861,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <!-- ── Administración y su Proceso ─────────────────────────── -->
 <div id="seccion-admin-proceso"></div>
 <h2 class="section-title" style="margin-top:0;">
- <span class="section-icon">⚙️</span>
+ 
  Administración y su Proceso
 </h2>
 
@@ -5190,17 +5143,14 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
    <div class="estratega-triptych">
     <div class="estratega-pilar">
-     <span class="estratega-pilar-icon">📊</span>
      <span class="estratega-pilar-name">Contaduría</span>
      <p>Ve el dinero real, no el proyectado. Diagnóstico fiscal sin filtros.</p>
     </div>
     <div class="estratega-pilar">
-     <span class="estratega-pilar-icon">🎯</span>
      <span class="estratega-pilar-name">Administración</span>
      <p>Diseña la estructura que genera resultados sostenibles y medibles.</p>
     </div>
     <div class="estratega-pilar">
-     <span class="estratega-pilar-icon">⚖️</span>
      <span class="estratega-pilar-name">Derecho Mercantil</span>
      <p>Identifica los riesgos que destruyen lo que las otras dos construyeron.</p>
     </div>
@@ -5238,7 +5188,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 
 <div class="info-box info" style="margin-top:2rem; border-left-color:#14338F;">
- <p class="info-box-title" style="color:#14338F;">💼 Inversión en Consultoría Estratégica</p>
+ <p class="info-box-title" style="color:#14338F;">Inversión en Consultoría Estratégica</p>
  <p>Los proyectos de AIDN Strategy se estructuran a la medida de cada organización — alcance, complejidad y horizonte de acompañamiento determinan la inversión. Como referencia orientativa, los compromisos de consultoría estratégica parten desde <strong>$8,000 MXN por sesión diagnóstica</strong> hasta esquemas de acompañamiento continuo. La primera sesión diagnóstica es sin costo y sin compromiso.</p>
 </div>
 
@@ -5248,7 +5198,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <section class="section" id="seccion-consultoria">
 
 <div class="info-box premium">
-<p class="info-box-title">💼 Servicios Premium Personalizados</p>
+<p class="info-box-title">Servicios Premium Personalizados</p>
 <p>Cada empresa tiene su propia realidad, desafíos y oportunidades. Por ello, nuestros servicios de consultoría estratégica se diseñan <strong>a la medida</strong> de cada organización, sin tarifas estándar. Agendamos una sesión diagnóstica y construimos una propuesta de valor específica para tu empresa.</p>
 <p style="margin-top: 1rem;"><strong>Nota importante:</strong> Para los servicios de consultoría es necesario acudir a las instalaciones del cliente para conocer su contexto, realizar análisis, entrevistas, aplicar test y estudios de campo que permitan un diagnóstico preciso.</p>
 </div>
@@ -5256,7 +5206,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <div class="strategy-subsection" id="strategy-planeacion">
 <h3><span class="subsection-number">1</span> Planeación y Dirección Estratégica</h3>
 <div class="consulting-card">
-<h4>📊 Planeación y Dirección Estratégica</h4>
+<h4>Planeación y Dirección Estratégica</h4>
 <p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
 <ul class="consulting-features">
 <li>Análisis FODA y diagnóstico organizacional profundo.</li>
@@ -5270,7 +5220,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <div class="strategy-subsection" id="strategy-financiero">
 <h3><span class="subsection-number">2</span> Análisis Financiero y Proyecciones</h3>
 <div class="consulting-card">
-<h4>💰 Análisis Financiero y Proyecciones</h4>
+<h4>Análisis Financiero y Proyecciones</h4>
 <p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
 <ul class="consulting-features">
 <li>Proyecciones financieras a 1, 3 y 5 años.</li>
@@ -5284,7 +5234,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <div class="strategy-subsection" id="strategy-reestructuracion">
 <h3><span class="subsection-number">3</span> Reestructuración Organizacional</h3>
 <div class="consulting-card">
-<h4>🔄 Reestructuración Organizacional</h4>
+<h4>Reestructuración Organizacional</h4>
 <p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
 <ul class="consulting-features">
 <li>Rediseño de estructura organizacional y organigramas.</li>
@@ -5298,7 +5248,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <div class="strategy-subsection" id="strategy-desarrollo">
 <h3><span class="subsection-number">4</span> Desarrollo de Modelos de Negocio</h3>
 <div class="consulting-card">
-<h4>🚀 Desarrollo de Modelos de Negocio</h4>
+<h4>Desarrollo de Modelos de Negocio</h4>
 <p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
 <ul class="consulting-features">
 <li>Canvas de modelo de negocio y propuesta de valor.</li>
@@ -5312,96 +5262,96 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <div class="strategy-subsection" id="strategy-herramientas">
 <h3><span class="subsection-number">5</span> Herramientas Estratégicas</h3>
 <div class="tools-highlight">
-<h4>🛠️ Arsenal de Herramientas Estratégicas Internacionales</h4>
+<h4>Arsenal de Herramientas Estratégicas Internacionales</h4>
 <p>Utilizamos las metodologías y frameworks más reconocidos a nivel mundial para garantizar análisis rigurosos y decisiones fundamentadas:</p>
 
 <div class="tools-grid">
 <div class="tool-card">
-<h5>🌊 Estrategia del Océano Azul</h5>
+<h5>Estrategia del Océano Azul</h5>
 <p>Crea nuevos espacios de mercado inexplorados y deja de competir en mercados saturados.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Busques diferenciación radical o nuevos modelos de negocio.</p>
 </div>
 
 <div class="tool-card">
-<h5>⚔️ 5 Fuerzas de Porter</h5>
+<h5>5 Fuerzas de Porter</h5>
 <p>Analiza la competitividad de tu industria evaluando competidores, proveedores, clientes, sustitutos y nuevos entrantes.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Necesites entender la dinámica competitiva de tu sector.</p>
 </div>
 
 <div class="tool-card">
-<h5>📊 Cuadro de Mando Integral (BSC)</h5>
+<h5>Cuadro de Mando Integral (BSC)</h5>
 <p>Traduce la estrategia en objetivos medibles desde 4 perspectivas: financiera, cliente, procesos y aprendizaje.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Requieras alinear toda la organización con la estrategia.</p>
 </div>
 
 <div class="tool-card">
-<h5>⚠️ Matriz de Análisis de Riesgos</h5>
+<h5>Matriz de Análisis de Riesgos</h5>
 <p>Identifica, evalúa y prioriza riesgos según probabilidad e impacto para tomar decisiones informadas.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Enfrentes incertidumbre o proyectos de alto riesgo.</p>
 </div>
 
 <div class="tool-card">
-<h5>📍 Matriz PEYEA</h5>
+<h5>Matriz PEYEA</h5>
 <p>Determina la postura estratégica óptima (agresiva, defensiva, competitiva o conservadora) según tu contexto.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Necesites decidir entre crecimiento, estabilidad o reestructuración.</p>
 </div>
 
 <div class="tool-card">
-<h5>📈 Matriz de Ansoff</h5>
+<h5>Matriz de Ansoff</h5>
 <p>Define estrategias de crecimiento: penetración de mercado, desarrollo de productos, desarrollo de mercados o diversificación.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Planifiques expansión o diversificación.</p>
 </div>
 
 <div class="tool-card">
-<h5>⛓️ Cadena de Valor</h5>
+<h5>Cadena de Valor</h5>
 <p>Identifica actividades que generan valor y ventajas competitivas en tu operación.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Busques optimizar procesos y reducir costos.</p>
 </div>
 
 <div class="tool-card">
-<h5>🎯 Matriz de McKinsey (GE)</h5>
+<h5>Matriz de McKinsey (GE)</h5>
 <p>Prioriza unidades de negocio o productos según atractivo del mercado y fortaleza competitiva.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Gestiones portafolios complejos de productos o servicios.</p>
 </div>
 
 <div class="tool-card">
-<h5>💎 Análisis VRIO</h5>
+<h5>Análisis VRIO</h5>
 <p>Evalúa si tus recursos son Valiosos, Raros, Inimitables y Organizados para generar ventaja competitiva sostenible.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Identifiques tus fortalezas competitivas únicas.</p>
 </div>
 
 <div class="tool-card">
-<h5>🐄 Matriz BCG (Boston Consulting Group)</h5>
+<h5>Matriz BCG (Boston Consulting Group)</h5>
 <p>Clasifica productos en estrellas, vacas lecheras, interrogantes o perros según crecimiento y participación de mercado.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Gestiones portafolios de productos y decidas inversiones.</p>
 </div>
 
 <div class="tool-card">
-<h5>📉 Curva de Experiencia</h5>
+<h5>Curva de Experiencia</h5>
 <p>Reduce costos unitarios conforme aumenta la producción acumulada, generando ventaja en precio.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Planifiques escalamiento o busques liderazgo en costos.</p>
 </div>
 
 <div class="tool-card">
-<h5>🌍 Análisis PESTEL</h5>
+<h5>Análisis PESTEL</h5>
 <p>Examina factores externos: Políticos, Económicos, Sociales, Tecnológicos, Ecológicos y Legales.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Analices el macroentorno y tendencias externas.</p>
 </div>
 
 <div class="tool-card">
-<h5>🔍 Matriz FODA (SWOT)</h5>
+<h5>Matriz FODA (SWOT)</h5>
 <p>Identifica Fortalezas, Oportunidades, Debilidades y Amenazas para diseñar estrategias coherentes.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Realices diagnósticos integrales y planeación estratégica.</p>
 </div>
 
 <div class="tool-card">
-<h5>⏱️ Matriz de Eisenhower</h5>
+<h5>Matriz de Eisenhower</h5>
 <p>Prioriza tareas según urgencia e importancia para maximizar productividad y enfoque estratégico.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Necesites gestionar tiempo y prioridades eficazmente.</p>
 </div>
 
 <div class="tool-card">
-<h5>🎯 KPIs y OKRs</h5>
+<h5>KPIs y OKRs</h5>
 <p>KPIs miden desempeño continuo. OKRs establecen objetivos ambiciosos y resultados clave medibles.</p>
 <p class="tool-usage"><strong>Úsalos cuando:</strong> Monitorees progreso y alinees equipos con metas estratégicas.</p>
 </div>
@@ -5437,21 +5387,21 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   </div>
   <div class="hero-badge-block">
    <div class="hero-badge">
-    <span class="hero-badge-icon">🏛️</span>
+    
     <div>
      <span class="hero-badge-label">Pilar I</span>
      <span class="hero-badge-value">Cultura Org.</span>
     </div>
    </div>
    <div class="hero-badge">
-    <span class="hero-badge-icon">🧠</span>
+    
     <div>
      <span class="hero-badge-label">Pilar II</span>
      <span class="hero-badge-value">Comportamiento</span>
     </div>
    </div>
    <div class="hero-badge">
-    <span class="hero-badge-icon">👥</span>
+    
     <div>
      <span class="hero-badge-label">Pilar III</span>
      <span class="hero-badge-value">Capital Humano</span>
@@ -5473,7 +5423,6 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
  <div class="pilar">
   <div class="pilar-numero-wrap">
    <div class="pilar-numero">01</div>
-   <span class="pilar-emoji">🏛️</span>
   </div>
   <div class="pilar-body">
    <span class="pilar-tag">Primer pilar</span>
@@ -5504,19 +5453,19 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
    <div class="pilar-puntos">
     <div class="punto">
-     <div class="punto-head"><span>🔍</span> Diagnóstico Cultural</div>
+     <div class="punto-head">Diagnóstico Cultural</div>
      <p class="punto-desc">Identificamos la cultura real frente a la cultura aspiracional, y diseñamos la ruta para acercarlas con propósito y método.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>⚓</span> Valores como Ancla</div>
+     <div class="punto-head">Valores como Ancla</div>
      <p class="punto-desc">Los valores compartidos son el sistema inmunológico de la organización. Los fortalecemos para que sean operativos, no ornamentales: que guíen decisiones reales, no que decoren paredes.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>📈</span> Cultura de Aprendizaje</div>
+     <div class="punto-head">Cultura de Aprendizaje</div>
      <p class="punto-desc">Los errores no son fracasos: enriquecen y perfeccionan objetivos, metas y planes de acción, haciéndolos más robustos. Institucionalizamos el aprendizaje continuo como capacidad organizacional, no individual.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>🎯</span> Alineación Estratégica</div>
+     <div class="punto-head">Alineación Estratégica</div>
      <p class="punto-desc">Involucramos a los colaboradores en el proceso estratégico, creando sinergias que potencian los resultados colectivos. Cuando cada persona entiende cómo su trabajo contribuye al propósito mayor, la estrategia se convierte en acción coordinada.</p>
     </div>
    </div>
@@ -5527,7 +5476,6 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
  <div class="pilar comportamiento">
   <div class="pilar-numero-wrap">
    <div class="pilar-numero comportamiento">02</div>
-   <span class="pilar-emoji">🧠</span>
   </div>
   <div class="pilar-body">
    <span class="pilar-tag">Segundo pilar</span>
@@ -5535,19 +5483,19 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
    <p class="pilar-intro">Las organizaciones no se comportan: se comportan las personas que las integran. Entender cómo piensan, deciden y actúan colectivamente bajo presión es la clave de la ejecución real.</p>
    <div class="pilar-puntos">
     <div class="punto">
-     <div class="punto-head"><span>🔄</span> Gestión del Cambio</div>
+     <div class="punto-head">Gestión del Cambio</div>
      <p class="punto-desc">Acompañamos transiciones organizacionales con metodología y enfoque humano, reduciendo la resistencia y acelerando la adopción.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>⚡</span> Decisiones bajo Presión</div>
+     <div class="punto-head">Decisiones bajo Presión</div>
      <p class="punto-desc">Desarrollamos estructuras y capacidades para que los equipos tomen decisiones fundamentadas incluso en contextos de incertidumbre y urgencia.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>🤝</span> Cohesión y Conflicto</div>
+     <div class="punto-head">Cohesión y Conflicto</div>
      <p class="punto-desc">Trabajamos la gestión del conflicto constructivo y la cohesión de equipos como palancas de alto desempeño, no como problemas a suprimir.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>🛡️</span> Autonomía Operativa</div>
+     <div class="punto-head">Autonomía Operativa</div>
      <p class="punto-desc">Equipos capaces de operar, decidir y adaptarse con autonomía son organizaciones resilientes. Los preparamos para que funcionen más allá de quien los dirige.</p>
     </div>
    </div>
@@ -5558,7 +5506,6 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
  <div class="pilar capital">
   <div class="pilar-numero-wrap">
    <div class="pilar-numero capital">03</div>
-   <span class="pilar-emoji">👥</span>
   </div>
   <div class="pilar-body">
    <span class="pilar-tag">Tercer pilar · El más valioso</span>
@@ -5566,19 +5513,19 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
    <p class="pilar-intro">Las personas no son un recurso más: son el único activo de una organización que crece con el tiempo, si se le cuida. El único que aprende, que innova, que construye relaciones y que decide. Todo lo demás se puede comprar o imitar. El talento humano bien desarrollado, no.</p>
    <div class="pilar-puntos">
     <div class="punto">
-     <div class="punto-head"><span>💎</span> Inversión, No Gasto</div>
+     <div class="punto-head">Inversión, No Gasto</div>
      <p class="punto-desc">El desarrollo de competencias y el bienestar de las personas generan retornos reales y medibles. Ayudamos a las organizaciones a verlo así y a justificarlo estratégicamente.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>🌱</span> Estructuras que Liberan</div>
+     <div class="punto-head">Estructuras que Liberan</div>
      <p class="punto-desc">Rediseñamos estructuras organizacionales para que potencien la contribución humana en lugar de asfixiarla con burocracia innecesaria o jerarquías obsoletas.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>🧲</span> Retención con Propósito</div>
+     <div class="punto-head">Retención con Propósito</div>
      <p class="punto-desc">El talento se retiene con propósito, reconocimiento y desarrollo, no solo con compensación. Diseñamos estrategias que crean pertenencia y compromiso real.</p>
     </div>
     <div class="punto">
-     <div class="punto-head"><span>🔭</span> Potencial como Ventaja</div>
+     <div class="punto-head">Potencial como Ventaja</div>
      <p class="punto-desc">Identificamos y activamos el potencial no utilizado dentro de la organización. Con frecuencia, la solución a los desafíos ya está adentro: solo necesita condiciones para emerger.</p>
     </div>
    </div>
@@ -5620,7 +5567,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
  <!-- Cabecera hero -->
  <div class="ruta-hero-header">
   <span class="ruta-hero-eyebrow">Cierre de AIDN Strategy · Ecosistema Integral</span>
-  <h2 class="ruta-hero-title">🚀 Ruta del Emprendedor <em>AIDN</em></h2>
+  <h2 class="ruta-hero-title">Ruta del Emprendedor <em>AIDN</em></h2>
   <p class="ruta-hero-sub">De la idea a la empresa consolidada — AIDN te acompaña en cada etapa del proceso. No vendemos pasos sueltos: construimos el camino completo desde la estrategia hasta el régimen fiscal correcto.</p>
  </div>
 
@@ -5763,7 +5710,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 
 <div class="info-box info" style="margin-top:0;border-radius:0 0 12px 12px;border-top:none;">
- <p class="info-box-title">🌐 Modelo de operación</p>
+ <p class="info-box-title">Modelo de operación</p>
  <p>Los servicios fiscales se brindan de manera <strong>100 % remota</strong> mediante videollamadas y plataformas digitales gubernamentales (SAT, IMSS y sistemas oficiales). La atención presencial está disponible bajo cita previa cuando el caso lo requiere.</p>
 </div>
 
@@ -5794,18 +5741,18 @@ Personas Físicas — RESICO
 </div>
 
 <div class="info-box warning" style="margin-top:1rem;">
- <p class="info-box-title">⚖️ RESICO vs. Actividad Empresarial y Profesional — criterio de decisión</p>
+ <p class="info-box-title">RESICO vs. Actividad Empresarial y Profesional — criterio de decisión</p>
  <p style="line-height:1.8;margin-bottom:0.8rem;">En <strong>AEyP</strong>, el ISR se determina sobre la <strong>utilidad</strong> (ingresos menos gastos estrictamente indispensables y deducibles conforme al Art. 103 LISR), con la tarifa progresiva del Art. 152 LISR que va del 1.92 % al 35 %. Cuando los gastos deducibles son altos en proporción al ingreso, la base gravable se reduce sustancialmente y AEyP puede resultar más favorable. Por el contrario, cuando los gastos son bajos o el contribuyente no mantiene un control estricto de comprobantes fiscales, RESICO —con sus tasas reducidas sobre ingreso bruto— es casi siempre la opción más eficiente.</p>
  <p style="line-height:1.8;margin:0;font-style:italic;color:var(--text-light);">La elección de régimen no es trivial ni permanente. AIDN analiza cada caso antes de recomendar o gestionar cualquier cambio ante el SAT.</p>
 </div>
 
 <div style="margin-top:1.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:14px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;">
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
-  <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Esencial · Mes 25+</p>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Base · Mes 25+</p>
   <p style="font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
-  <p style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del paquete <strong style="color:rgba(255,255,255,0.9);">RESICO — Esencial</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500 MXN</strong> — sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos — el inicio de una asociación sólida con AIDN, y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
+  <p style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del alcance <strong style="color:rgba(255,255,255,0.9);">RESICO — Base</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500 MXN</strong> — sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos — el inicio de una asociación sólida con AIDN, y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
   <div style="display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;">
-    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Esencial · mes 25+</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Base · mes 25+</span>
     <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Sin adeudos ni baja de registro</span>
     <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Otorgada proactivamente · No aplica a solicitud</span>
   </div>
@@ -5815,12 +5762,12 @@ Personas Físicas — RESICO
 <h3 class="subsection-title">RESICO — Servicios Profesionales y Emprendedores</h3>
 <table class="service-table">
 <thead>
-<tr><th>Paquete</th><th>Volumen mensual</th><th>Honorario mensual</th></tr>
+<tr><th>Alcance</th><th>Volumen mensual</th><th>Honorario mensual</th></tr>
 </thead>
 <tbody>
 <tr>
 <td>
-<strong>Esencial</strong>
+<strong>Base</strong>
 <ul class="scope-list">
 <li class="included">Cumplimiento fiscal mensual completo</li>
 <li class="included">Asesoría fiscal vía WhatsApp</li>
@@ -5833,7 +5780,7 @@ Personas Físicas — RESICO
 </tr>
 <tr>
 <td>
-<strong>Profesional</strong>
+<strong>Integral</strong>
 <ul class="scope-list">
 <li class="included">Cumplimiento fiscal mensual completo</li>
 <li class="included">Asesoría fiscal estratégica vía WhatsApp</li>
@@ -5850,7 +5797,7 @@ Personas Físicas — RESICO
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">RESICO — Médicos y Dentistas <span class="new-badge">Actualizado 2026</span></h3>
+<h3 class="subsection-title">RESICO — Médicos y Dentistas</h3>
 
 <div class="info-box info" style="margin-bottom:1rem;">
  <p class="info-box-title">ℹ️ Criterio de régimen para profesionales de la salud</p>
@@ -5860,16 +5807,16 @@ Personas Físicas — RESICO
 
 <table class="service-table">
 <thead>
-<tr><th>Paquete</th><th>Honorario mensual</th><th>Alcance</th></tr>
+<tr><th>Alcance</th><th>Honorario mensual</th><th>Cobertura</th></tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Esencial</strong></td>
+<td><strong>Base</strong></td>
 <td class="price">$1,250</td>
 <td>Cumplimiento fiscal mensual, presentación de declaraciones y validación de CFDI (1 a 9 facturas sin costo adicional).</td>
 </tr>
 <tr>
-<td><strong>Profesional</strong></td>
+<td><strong>Integral</strong></td>
 <td class="price">$1,900</td>
 <td>Incluye análisis de acreditamientos de IVA y revisión de carga fiscal efectiva. Facturas adicionales a partir de la décima: $50 MXN c/u.</td>
 </tr>
@@ -5888,12 +5835,12 @@ Personas Físicas — RESICO
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">RESICO — Sector Primario <span class="new-badge">Cobro anual único</span></h3>
+<h3 class="subsection-title">RESICO — Sector Primario</h3>
 
 <div class="info-box info" style="margin-bottom:1rem;">
- <p class="info-box-title">🌱 ¿A quién aplica este paquete?</p>
+ <p class="info-box-title">¿A quién aplica este paquete?</p>
  <p style="line-height:1.8;margin-bottom:0.7rem;">Está dirigido a contribuyentes con actividades agrícolas, ganaderas, silvícolas o pesqueras cuyos ingresos anuales no excedan los <strong>$900,000</strong>. El Art. 113-E, noveno párrafo, LISR establece que estos contribuyentes están exentos del ISR correspondiente a dichas actividades hasta ese umbral, lo que reduce la complejidad operativa al mínimo y concentra el servicio en el cumplimiento formal del ejercicio.</p>
- <p style="line-height:1.8;margin:0;">La facturación en este sector es predominantemente anual, en operaciones de mayoreo con pocos comprobantes de alto valor. El servicio cubre el cumplimiento fiscal del ejercicio y la gestión de los CFDI emitidos, con hasta <strong>9 comprobantes anuales incluidos</strong> en el paquete base.</p>
+ <p style="line-height:1.8;margin:0;">La facturación en este sector es predominantemente anual, en operaciones de mayoreo con pocos comprobantes de alto valor. El servicio cubre el cumplimiento fiscal del ejercicio y la gestión de los CFDI emitidos, con hasta <strong>9 comprobantes anuales incluidos</strong> en el alcance base.</p>
 </div>
 
 <table class="service-table">
@@ -5968,24 +5915,24 @@ Actividad Empresarial y Minoristas
 <h3 class="subsection-title">Actividad Empresarial y Profesional</h3>
 <table class="service-table">
 <thead>
-<tr><th>Paquete</th><th>Honorario mensual</th></tr>
+<tr><th>Alcance</th><th>Honorario mensual</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Esencial</strong></td><td class="price">$875</td></tr>
-<tr><td><strong>Profesional</strong></td><td class="price">$1,300</td></tr>
+<tr><td><strong>Base</strong></td><td class="price">$875</td></tr>
+<tr><td><strong>Integral</strong></td><td class="price">$1,300</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">Médicos y Dentistas — Actividad Empresarial y Profesional <span class="new-badge">Actualizado 2026</span></h3>
+<h3 class="subsection-title">Médicos y Dentistas — Actividad Empresarial y Profesional</h3>
 <table class="service-table">
 <thead>
-<tr><th>Paquete</th><th>Honorario mensual</th></tr>
+<tr><th>Alcance</th><th>Honorario mensual</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Esencial</strong></td><td class="price">$1,650</td></tr>
-<tr><td><strong>Profesional</strong></td><td class="price">$2,300</td></tr>
+<tr><td><strong>Base</strong></td><td class="price">$1,650</td></tr>
+<tr><td><strong>Integral</strong></td><td class="price">$2,300</td></tr>
 </tbody>
 </table>
 </div>
@@ -5994,11 +5941,11 @@ Actividad Empresarial y Minoristas
 <h3 class="subsection-title">Minoristas (Abarrotes, Ropa, Panaderías)</h3>
 <table class="service-table">
 <thead>
-<tr><th>Paquete</th><th>Honorario mensual</th></tr>
+<tr><th>Alcance</th><th>Honorario mensual</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Esencial</strong></td><td class="price">$1,100</td></tr>
-<tr><td><strong>Profesional</strong></td><td class="price">$1,800</td></tr>
+<tr><td><strong>Base</strong></td><td class="price">$1,100</td></tr>
+<tr><td><strong>Integral</strong></td><td class="price">$1,800</td></tr>
 </tbody>
 </table>
 </div>
@@ -6007,11 +5954,11 @@ Actividad Empresarial y Minoristas
 <h3 class="subsection-title">Hoteles y Mueblerías</h3>
 <table class="service-table">
 <thead>
-<tr><th>Paquete</th><th>Honorario mensual</th></tr>
+<tr><th>Alcance</th><th>Honorario mensual</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Esencial</strong></td><td class="price">$1,300</td></tr>
-<tr><td><strong>Profesional</strong></td><td class="price">$2,200</td></tr>
+<tr><td><strong>Base</strong></td><td class="price">$1,300</td></tr>
+<tr><td><strong>Integral</strong></td><td class="price">$2,200</td></tr>
 </tbody>
 </table>
 </div>
@@ -6022,18 +5969,17 @@ Actividad Empresarial y Minoristas
 <h2 class="section-title">
 <span class="section-number">4</span>
 Servicios Administrativos, Legales y Patrimoniales
-<span class="new-badge">Actualizado 2026</span>
 </h2>
 
 <div class="subsection">
-<h3 class="subsection-title">📄 Servicios Legales y Corporativos</h3>
+<h3 class="subsection-title">Servicios Legales y Corporativos</h3>
 <table class="service-table">
 <thead>
 <tr><th>Servicio</th><th>Honorario</th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Paquete Integral: Constitución de Nueva Sociedad</strong></td>
+<td><strong>Constitución de Nueva Sociedad</strong></td>
 <td class="price">$8,700</td>
 <td>
 <p><strong>Solución completa para constituir una empresa desde cero.</strong></p>
@@ -6047,7 +5993,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </td>
 </tr>
 <tr>
-<td><strong>Paquete Integral: Actualización de Estatutos de Sociedad Existente</strong></td>
+<td><strong>Actualización de Estatutos de Sociedad Existente</strong></td>
 <td class="price">$8,000</td>
 <td>
 <p><strong>Para sociedades que requieren modernizar o reformar sus estatutos sociales.</strong></p>
@@ -6063,7 +6009,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <tr>
 <td><strong>Redacción de Actas de Sociedades Mercantiles</strong></td>
 <td class="price">$1,150</td>
-<td>Actas complementarias y modificaciones menores: cambios de domicilio, nombramientos o revocaciones, aumentos o disminuciones de capital simples, poderes y otras actas que no impliquen reformas integrales a estatutos. Para reformas mayores, véanse los paquetes anteriores.</td>
+<td>Actas complementarias y modificaciones menores: cambios de domicilio, nombramientos o revocaciones, aumentos o disminuciones de capital simples, poderes y otras actas que no impliquen reformas integrales a estatutos. Para reformas mayores, véanse los servicios anteriores.</td>
 </tr>
 <tr>
 <td><strong>Redacción de Contratos Legales</strong></td>
@@ -6074,9 +6020,9 @@ Servicios Administrativos, Legales y Patrimoniales
 </table>
 
 <div class="subsection">
-<h3 class="subsection-title">💧 DECLAR@GUA — Asesoría Profesional</h3>
+<h3 class="subsection-title">DECLAR@GUA — Asesoría Profesional</h3>
 <div class="info-box info">
- <p class="info-box-title">🔹 Servicio especializado en derechos de agua</p>
+ <p class="info-box-title">Servicio especializado en derechos de agua</p>
  <p>Asesoría integral para el cumplimiento de obligaciones ante CONAGUA. Incluye cálculos técnicos, presentación electrónica y descarga de CFDI oficiales.</p>
 </div>
 <table class="service-table">
@@ -6117,14 +6063,14 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">🏥 IMSS — Seguridad Social y Retiro <span class="new-badge">Actualizado 2026</span></h3>
+<h3 class="subsection-title">IMSS — Seguridad Social y Retiro</h3>
 <table class="service-table">
 <thead>
 <tr><th>Servicio</th><th>Alcance</th><th>Honorario</th></tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Paquete Integral: Análisis de Retiro y Alta en Modalidad 40</strong></td>
+<td><strong>Análisis de Retiro y Alta en Modalidad 40</strong></td>
 <td>
 <ul class="scope-list">
 <li class="included">Descarga oficial del historial de semanas cotizadas</li>
@@ -6166,13 +6112,13 @@ Servicios Administrativos, Legales y Patrimoniales
 </tbody>
 </table>
 <div class="info-box premium">
- <p class="info-box-title">💎 Ventaja competitiva</p>
- <p>El Paquete Integral de Retiro IMSS es uno de los más completos disponibles en este segmento. La diferencia entre una pensión digna y prestaciones mínimas puede depender de una sola decisión tomada con información correcta. El servicio cubre desde el análisis técnico hasta la inscripción oficial en Modalidad 40.</p>
+ <p class="info-box-title">Ventaja competitiva</p>
+ <p>El Servicio de Retiro IMSS es uno de los más completos disponibles en este segmento. La diferencia entre una pensión digna y prestaciones mínimas puede depender de una sola decisión tomada con información correcta. El servicio cubre desde el análisis técnico hasta la inscripción oficial en Modalidad 40.</p>
 </div>
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">🏛️ Trámites y Actualizaciones SAT <span class="new-badge">Actualizado 2026</span></h3>
+<h3 class="subsection-title">Trámites y Actualizaciones SAT</h3>
 <table class="service-table">
 <thead>
 <tr><th>Servicio</th><th>Honorario</th><th>Observaciones</th></tr>
@@ -6203,7 +6149,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <div class="subsection">
-<h3 class="subsection-title">📋 Declaraciones Patrimoniales y Documentos</h3>
+<h3 class="subsection-title">Declaraciones Patrimoniales y Documentos</h3>
 <table class="service-table">
 <thead>
 <tr><th>Servicio</th><th>Honorario</th><th>Detalle</th></tr>
@@ -6342,8 +6288,8 @@ Servicios Administrativos, Legales y Patrimoniales
     <div class="calc-result">
 
       <div class="calc-pkg">
-        <span class="calc-pkg-label">Paquete recomendado</span>
-        <div class="calc-pkg-name" id="calc-pkg-name">Esencial</div>
+        <span class="calc-pkg-label">Alcance recomendado</span>
+        <div class="calc-pkg-name" id="calc-pkg-name">Base</div>
         <div class="calc-pkg-desc" id="calc-pkg-desc">Cumplimiento fiscal mensual &middot; asesoría vía WhatsApp</div>
       </div>
 
@@ -6428,7 +6374,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <h3 class="subsection-title">1. Cómo trabajamos — Modelo de atención</h3>
 <p style="line-height:1.8;margin-bottom:1.2rem;">La relación con AIDN opera principalmente en remoto — videoconferencia, plataformas digitales, comunicación directa. No hay capa de intermediarios entre el cliente y el criterio. La atención presencial existe y está disponible bajo cita previa; no es la regla, pero tampoco la excepción cuando el caso lo requiere.</p>
 <div class="info-box premium">
- <p class="info-box-title">📅 Horarios de operación</p>
+ <p class="info-box-title">Horarios de operación</p>
  <p style="margin:0 0 0.6rem;"><strong>Atención operativa:</strong> lunes a viernes 11:00–19:00 h</p>
  <p style="margin:0 0 0.6rem;"><strong>Gestión de citas:</strong> lunes a sábado 8:00–20:00 h</p>
  <p style="margin:0 0 0.6rem;"><strong>Sábado presencial:</strong> bajo acuerdo previo, 11:00–18:00 h</p>
@@ -6440,7 +6386,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <h3 class="subsection-title">2. Honorarios, pago y facturación</h3>
 <p style="line-height:1.8;margin-bottom:1.2rem;"><strong>Todo servicio se factura.</strong> El CFDI se emite en el momento del pago, sea anticipo o liquidación final. No hay servicios sin registro.</p>
 <div class="info-box premium">
- <p class="info-box-title">💼 Métodos de pago aceptados</p>
+ <p class="info-box-title">Métodos de pago aceptados</p>
  <p style="margin:0 0 0.6rem;">✓ <strong>Transferencia electrónica</strong> — preferente, registro contable inmediato</p>
  <p style="margin:0 0 0.6rem;">✓ <strong>Depósito en sucursal</strong> — depósitos directos en ventanilla</p>
  <p style="margin:0 0 0.6rem;">✓ <strong>Oxxo</strong> — máxima accesibilidad para depósitos en efectivo</p>
@@ -6497,7 +6443,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <h3 class="subsection-title">7. Personas morales — proceso de cotización</h3>
 <p style="line-height:1.8;margin-bottom:1.2rem;">Las empresas tienen una realidad operativa distinta — mayor complejidad contable, mayor exposición legal, mayor volumen de documentación. Las tarifas reflejan esa diferencia porque el criterio aplicado también es diferente.</p>
 <div class="info-box info">
- <p class="info-box-title">📊 Proceso de cotización corporativa</p>
+ <p class="info-box-title">Proceso de cotización corporativa</p>
  <p style="margin:0 0 0.6rem;">1. <strong>Sesión informativa:</strong> análisis de necesidades, alcance, complejidad y periodicidad requerida.</p>
  <p style="margin:0 0 0.6rem;">2. <strong>Propuesta formal:</strong> entregada en máximo <strong>72 horas</strong> — desglose de servicios, honorarios, cronograma y condiciones.</p>
  <p style="margin:0 0 0.8rem;">3. <strong>Confirmación explícita del cliente</strong> antes de iniciar cualquier trabajo — por escrito, vía correo o WhatsApp oficial.</p>
@@ -6508,7 +6454,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <div class="subsection" id="seccion-legal">
 <h3 class="subsection-title">8. Derechos del contribuyente</h3>
 <div class="info-box" style="border-left-color:#14338F;">
- <p class="info-box-title" style="color:#14338F;">⚖️ Marco constitucional</p>
+ <p class="info-box-title" style="color:#14338F;">Marco constitucional</p>
  <p style="margin:0;">En AIDN entendemos y respetamos plenamente los derechos del contribuyente. Ningún acto de autoridad puede llevarse a cabo sin que medie mandamiento escrito de autoridad competente, fundado y motivado <span style="font-style:italic;">(Art. 16 Constitucional)</span>. Nuestro criterio siempre se ejerce en defensa del cliente, dentro del marco legal.</p>
 </div>
 </div>
@@ -7010,14 +6956,14 @@ Agendar Consulta por WhatsApp
       nombre:'RESICO &middot; Servicios Profesionales',
       periodo:'MXN / MES', anual:true, usaCFDI:true,
       pkgs:[
-        { nombre:'Esencial',
+        { nombre:'Base',
           desc:'Cumplimiento fiscal mensual &middot; hasta 9 CFDI &middot; asesoría vía WhatsApp',
           precio:{cliente:600,externo:600}, desde:0, hasta:9,
           scope:['Cumplimiento fiscal mensual completo',
                  'Asesoría fiscal vía WhatsApp',
                  'Revisión y validación de CFDI (1 a 9 sin costo adicional)'],
           excl:['No incluye acudir físicamente ante autoridades'] },
-        { nombre:'Profesional',
+        { nombre:'Integral',
           desc:'Cumplimiento + análisis de acreditamientos de IVA &middot; hasta 25 CFDI',
           precio:{cliente:900,externo:900}, desde:10, hasta:99,
           scope:['Cumplimiento fiscal mensual completo',
@@ -7032,14 +6978,14 @@ Agendar Consulta por WhatsApp
       nombre:'RESICO &middot; Médicos y Dentistas',
       periodo:'MXN / MES', anual:true, usaCFDI:true,
       pkgs:[
-        { nombre:'Esencial',
+        { nombre:'Base',
           desc:'Cumplimiento mensual &middot; 1 a 9 CFDI incluidos sin costo adicional',
           precio:{cliente:1250,externo:1250}, desde:0, hasta:9,
           scope:['Cumplimiento fiscal mensual completo',
                  'Presentación de declaraciones mensuales',
                  'Validación de CFDI (1 a 9 sin costo adicional)'],
           excl:['No incluye acudir físicamente ante autoridades'] },
-        { nombre:'Profesional',
+        { nombre:'Integral',
           desc:'Cumplimiento + análisis de IVA + revisión de carga fiscal efectiva',
           precio:{cliente:1900,externo:1900}, desde:10, hasta:99,
           scope:['Cumplimiento fiscal mensual completo',
@@ -7077,11 +7023,11 @@ Agendar Consulta por WhatsApp
       nombre:'Actividad Empresarial y Profesional &middot; General',
       periodo:'MXN / MES', anual:true, usaCFDI:false,
       pkgs:[
-        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual + procesamiento XML',
+        { nombre:'Base',    desc:'Cumplimiento fiscal mensual + procesamiento XML',
           precio:{cliente:875,externo:875}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML para ISR e IVA'],
           excl:['El cliente emite sus propios CFDI'] },
-        { nombre:'Profesional', desc:'Cumplimiento + análisis de carga fiscal efectiva',
+        { nombre:'Integral', desc:'Cumplimiento + análisis de carga fiscal efectiva',
           precio:{cliente:1300,externo:1300}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
                  'Análisis de carga fiscal efectiva'],
@@ -7093,11 +7039,11 @@ Agendar Consulta por WhatsApp
       nombre:'AEyP &middot; Médicos y Dentistas',
       periodo:'MXN / MES', anual:true, usaCFDI:false,
       pkgs:[
-        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual para profesionales de la salud',
+        { nombre:'Base',    desc:'Cumplimiento fiscal mensual para profesionales de la salud',
           precio:{cliente:1650,externo:1650}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de CFDI','Asesoría fiscal'],
           excl:[] },
-        { nombre:'Profesional', desc:'Cumplimiento + análisis integral de carga fiscal',
+        { nombre:'Integral', desc:'Cumplimiento + análisis integral de carga fiscal',
           precio:{cliente:2300,externo:2300}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual completo',
                  'Análisis de deducciones AEyP (Art. 103 LISR)',
@@ -7110,11 +7056,11 @@ Agendar Consulta por WhatsApp
       nombre:'AEyP &middot; Minoristas (Abarrotes, Ropa, Panaderías)',
       periodo:'MXN / MES', anual:true, usaCFDI:false,
       pkgs:[
-        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual',
+        { nombre:'Base',    desc:'Cumplimiento fiscal mensual',
           precio:{cliente:1100,externo:1100}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML'],
           excl:['El cliente emite sus propios CFDI'] },
-        { nombre:'Profesional', desc:'Cumplimiento + análisis de carga fiscal',
+        { nombre:'Integral', desc:'Cumplimiento + análisis de carga fiscal',
           precio:{cliente:1800,externo:1800}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
                  'Análisis de carga fiscal efectiva'],
@@ -7126,11 +7072,11 @@ Agendar Consulta por WhatsApp
       nombre:'AEyP &middot; Hoteles y Mueblerías',
       periodo:'MXN / MES', anual:true, usaCFDI:false,
       pkgs:[
-        { nombre:'Esencial',    desc:'Cumplimiento fiscal mensual',
+        { nombre:'Base',    desc:'Cumplimiento fiscal mensual',
           precio:{cliente:1300,externo:1300}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML'],
           excl:['El cliente emite sus propios CFDI'] },
-        { nombre:'Profesional', desc:'Cumplimiento + análisis de carga fiscal',
+        { nombre:'Integral', desc:'Cumplimiento + análisis de carga fiscal',
           precio:{cliente:2200,externo:2200}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
                  'Análisis de carga fiscal efectiva'],
@@ -7156,7 +7102,7 @@ Agendar Consulta por WhatsApp
       nombre:'IMSS &middot; Análisis de Retiro + Alta Modalidad 40',
       periodo:'MXN / SERVICIO', anual:false, usaCFDI:false,
       pkgs:[
-        { nombre:'Paquete Integral de Retiro',
+        { nombre:'Servicio de Retiro',
           desc:'Análisis técnico completo + alta oficial en Modalidad 40 ante el IMSS',
           precio:{cliente:875,externo:875}, desde:0, hasta:99,
           scope:['Descarga del historial de semanas cotizadas',
@@ -7243,7 +7189,7 @@ Agendar Consulta por WhatsApp
     document.getElementById('calc-cfdi-val').textContent =
       cfdi + ' CFDI / ' + (esAnual ? 'año' : 'mes');
 
-    /* Elegir paquete */
+    /* Seleccionar alcance */
     var pkgs = data.pkgs;
     var pkg  = pkgs[pkgs.length - 1];
     if (data.usaCFDI) {
