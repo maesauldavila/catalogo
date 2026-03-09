@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
+<script>
+/* ── Anti-FOUT: tema aplicado antes del primer paint ── */
+(function(){
+  var LS='aidn_catalog_theme';
+  var theme='light';
+  try{
+    var raw=localStorage.getItem(LS);
+    if(raw){
+      var p=JSON.parse(raw);
+      if(p&&p.manual&&(p.theme==='dark'||p.theme==='light')){theme=p.theme;}
+      else if(!p||!p.manual){
+        theme=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+      }
+    } else {
+      theme=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+    }
+  }catch(e){
+    try{theme=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}catch(e2){}
+  }
+  document.documentElement.setAttribute('data-theme',theme);
+}());
+</script>
 <!-- ════════════════════════════════════════════════════════════
      HEAD — Meta, SEO, Fuentes y Configuración
      ════════════════════════════════════════════════════════════
@@ -161,6 +183,7 @@ color: var(--text-dark);
 background: linear-gradient(135deg, var(--silver-dark) 0%, var(--silver-light) 50%, #dde3ec 100%);
 overflow-x: hidden;
 padding: 2rem 1rem;
+min-height: 100vh;
 transition: background var(--transition-base), color var(--transition-base);
 }
 
@@ -1358,6 +1381,9 @@ display: none;
   ══════════════════════════════════════════════════════════════ */
 @media (min-width: 769px) and (max-width: 1024px) {
 
+ /* ── Línea conectora Ruta — ocultar en 3 columnas ── */
+ .ruta-hero-steps::before { display: none; }
+
  /* ── Contenedor y espaciado ── */
  .container { border-radius: 12px; }
  .content  { padding: 2.5rem 2.2rem; }
@@ -2144,12 +2170,11 @@ position: relative;
 .ruta-hero-steps::before {
 content: '';
 position: absolute;
-top: 50%;
+top: 5.75rem;
 left: 10%;
 right: 10%;
 height: 2px;
 background: linear-gradient(90deg, #14338F, #0c2a85, #03b4d6, #10b981);
-transform: translateY(-50%);
 z-index: 0;
 opacity: 0.25;
 }
@@ -3550,8 +3575,8 @@ html[data-theme="dark"] .aestrat-vertex-label {
 
 
 @media (min-width: 1441px) {
-  /* ── Desktop wide — respiración espacial extra ── */
-  .calc-wrapper   { max-width: 1100px; margin-left: auto; margin-right: auto; }
+  /* ── Desktop wide — calc wrapper centrado —— */
+  .calc-wrapper { max-width: 1100px; margin-left: auto; margin-right: auto; }
 }
 
 /* ── Divisor ornamental CTA — editorial premium ── */
@@ -3713,6 +3738,84 @@ html[data-theme="dark"] .aestrat-vertex-label {
   .aidn-tech-pillar-badge { font-size: 0.68rem; }
   .aidn-tech-eyebrow { font-size: 0.72rem; }
 }
+
+/* ── Footer: copyright y pills de ubicación ── */
+.footer-copyright {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.footer-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-location-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  opacity: 0.7;
+  margin-right: 0.15rem;
+}
+
+.footer-loc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Sans', sans-serif;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.footer-loc-pill:hover {
+  transform: translateY(-1px);
+}
+
+.footer-loc-pill {
+  background: rgba(3, 180, 214, 0.08);
+  border: 1px solid rgba(3, 180, 214, 0.22);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .footer-loc-pill {
+  background: rgba(3, 180, 214, 0.07);
+  border-color: rgba(3, 180, 214, 0.18);
+  color: rgba(3, 180, 214, 0.80);
+}
+
+.footer-loc-sep {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.footer-loc-coverage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.8px;
+  color: var(--text-light);
+  opacity: 0.65;
+  margin-left: 0.3rem;
+}
+
+
+
+
+
 </style>
 </head>
 
@@ -3750,7 +3853,14 @@ html[data-theme="dark"] .aestrat-vertex-label {
 <div class="content">
 
 <section class="intro-section">
-<h2>Más que cumplimiento fiscal: Estrategias que impactan</h2>
+<h2 style="display:flex;align-items:center;gap:0.6rem;">
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;opacity:0.85;">
+  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+  <polyline points="2 17 12 22 22 17"/>
+  <polyline points="2 12 12 17 22 12"/>
+</svg>
+Más que cumplimiento fiscal: Estrategias que impactan
+</h2>
 <p>En <strong>AIDN Strategic Consulting</strong>, nuestra prioridad es <strong>crear valor en las organizaciones de nuestros clientes</strong> más allá de buscar simples estrategias fiscales de ahorro. Entendemos que una empresa exitosa no se construye solo desde una perspectiva de finanzas o impuestos, cuyo rango de operación es limitado y con frecuencia deja de lado aspectos de impacto trascendente como <strong>la cultura organizacional, la mejora continua, la toma de decisiones estratégicas y la creación de planes de acción objetivos y monitoreables</strong>.</p>
 <p>Para nosotros, es más importante una <strong>planeación estratégica que busque el desempeño superior con una visión holística</strong>, integrando todas las áreas funcionales de la empresa, que centrarse únicamente en estrategias fiscales de ahorro ínfimo. Nuestra visión como consultores es <strong>360 grados</strong>: consideramos tanto el contexto interno de la organización como el entorno externo, porque solo con una comprensión completa se pueden diseñar soluciones verdaderamente transformadoras.</p>
 <p>Combinamos rigor técnico en servicios fiscales con una visión estratégica de negocio. Nuestro enfoque integra herramientas de planeación probadas internacionalmente y tecnología de vanguardia para ofrecer soluciones personalizadas que impulsan el crecimiento sostenible de tu empresa.</p>
@@ -4173,23 +4283,12 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 <!-- / Fin Bloque A -->
 
-
-<div class="separator-minor" role="presentation" aria-hidden="true">
- <div class="separator-minor-diamond" data-diamond="1"></div>
-</div>
-
-
 <!-- ── Administración y su Proceso ─────────────────────────── -->
 <div id="seccion-admin-proceso"></div>
-<h2 class="section-title sr" style="margin-top:0;">
- 
- Administración y su Proceso
+<h2 class="section-title sr">
+  <span style="font-size:1.4rem;margin-right:0.5rem;">⬡</span>
+  Administración y su Proceso
 </h2>
-
-
-<div class="separator-minor" role="presentation" aria-hidden="true">
- <div class="separator-minor-diamond" data-diamond="1"></div>
-</div>
 
 <div id="seccion-admin-estrategica"></div>
 
@@ -6088,20 +6187,16 @@ Agendar Consulta por WhatsApp
 <footer class="footer">
 <div class="contact-info">
 <div class="contact-item">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-</svg>
-<strong>WhatsApp:</strong> +52 81 1063 2844
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+<strong>Cel:</strong>
+<a href="tel:+528110632844" aria-label="Llamar a AIDN">+52 81 1063 2844</a>
 </div>
 <div class="contact-item">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-<polyline points="22,6 12,13 2,6"/>
-</svg>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
 <strong>Email:</strong> <a href="mailto:sauldavila@aidnstrategic.com">sauldavila@aidnstrategic.com</a>
 </div>
 <div class="contact-item">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
 <strong>Tarjeta digital:</strong> <a href="https://bit.ly/saul-aidn" target="_blank" rel="noopener noreferrer">bit.ly/saul-aidn</a>
 </div>
 
@@ -6118,7 +6213,14 @@ Agendar Consulta por WhatsApp
 </div>
 </div>
 
-<p style="margin-top: 0.5rem; font-size: 0.9rem;">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
+<p class="footer-copyright">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
+<div class="footer-location" role="contentinfo" aria-label="Origen de AIDN Strategic Consulting">
+  <span class="footer-location-label">Fundada en</span>
+  <span class="footer-loc-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuevo León</span>
+  <span class="footer-loc-sep">·</span>
+  <span class="footer-loc-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> San Luis Potosí</span>
+  <span class="footer-loc-coverage"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Servicios en todo México</span>
+</div>
 </div><!-- /section-block modelo -->
 </footer>
 
