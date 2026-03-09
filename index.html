@@ -16,7 +16,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Primary Meta Tags -->
-<title>AIDN</title>
+<title>AIDN Strategic Consulting | Consultoría Estratégica y Servicios Fiscales · Nuevo León</title>
 <meta name="title" content="AIDN Strategic Consulting">
 <meta name="description" content="Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad. Consultoría estratégica, servicios fiscales RESICO y administración empresarial.">
 <meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png">
@@ -64,7 +64,7 @@
 <!-- Google Fonts - IBM Plex Sans & Rajdhani -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Rajdhani:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 
 <!-- Security -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://fonts.googleapis.com https://fonts.gstatic.com;">
@@ -82,7 +82,7 @@
    Sistema temas:   A+  — Ctrl+Alt+T, localStorage, prefers-color-scheme
                           Conforme biblia §5.5 (dark mode AIDN v3.1)
    Paleta cromática:A+  — #03b4d6 cian, #0c2a85 azul, #14338F láser
-                          #060d1f nocturno, #10b981 verde Taxes
+                          #0a1628 navy, #10b981 verde Taxes
                           Sin oro (eliminado biblia v3.1), sin negro puro
    Responsive:      A   — Mobile ≤768px, MatePad portrait 769-1024px,
                           MatePad landscape 1025-1440px, desktop >1440px
@@ -168,13 +168,7 @@ html[data-theme="dark"] body {
 background: linear-gradient(135deg, #060d1f 0%, #0c1a3a 100%);
 }
 
-@keyframes pulse-new {
-  0%, 100% {
-    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-    transform: scale(1);
-    filter: drop-shadow(0 0 0px rgba(16, 185, 129, 0));
-  }
-  50% {
+50% {
     box-shadow: 0 4px 16px rgba(16, 185, 129, 0.55);
     transform: scale(1.08);
     filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
@@ -307,92 +301,8 @@ margin-top: 0.5rem;
 box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
-.tech-highlight {
-background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-border: 2px solid var(--tech-cyan);
-border-radius: 16px;
-padding: 2rem;
-margin-bottom: 3.5rem;
-position: relative;
-overflow: hidden;
-box-shadow: 0 8px 24px rgba(6, 182, 212, 0.15);
-}
-
-[data-theme="dark"] .tech-highlight {
-background: linear-gradient(135deg, #1e293b, #1e3a5f);
-border-color: var(--tech-cyan);
-}
-
-.tech-highlight::before {
-content: '';
-position: absolute;
-top: -50%;
-right: -10%;
-width: 300px;
-height: 300px;
-background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-pointer-events: none;
-}
-
-.tech-highlight h3 {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.5rem;
-color: var(--primary);
-margin-bottom: 1rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-font-weight: 600;
-}
-
-[data-theme="dark"] .tech-highlight h3 {
-color: var(--tech-cyan);
-}
-
-.tech-highlight .tech-icon {
-width: 28px;
-height: 28px;
-}
-
-.tech-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 1.5rem;
-margin-top: 1.5rem;
-}
-
-.tech-card {
-background: var(--bg-white);
-border: 1px solid var(--border);
-border-radius: 12px;
-padding: 1.5rem;
-transition: all var(--transition-base);
-cursor: default;
-}
-
-.tech-card:hover {
-transform: translateY(-4px);
-box-shadow: 0 8px 24px var(--shadow);
-border-color: var(--tech-cyan);
-background: linear-gradient(135deg, var(--bg-white), var(--bg-light));
-}
-
-.tech-card h4 {
-font-size: 1.15rem;
-color: var(--text-dark);
-margin-bottom: 0.8rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-.tech-card p {
-color: var(--text-light);
-font-size: 0.95rem;
-line-height: 1.6;
-}
-
 .section {
+margin-top: 2.5rem;
 margin-bottom: 3.5rem;
 max-width: 100%;
 overflow-x: hidden;
@@ -436,6 +346,7 @@ padding: 0 0.8rem;
 }
 
 .subsection {
+margin-top: 2rem;
 margin-bottom: 2rem;
 }
 
@@ -820,23 +731,6 @@ gap: 0.8rem;
 }
 
 /* AIDN Taxes - Verde Corporativo */
-.taxes-subsection {
-margin-bottom: 2.5rem;
-}
-
-.taxes-subsection h3 {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.6rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 1.5rem;
-padding-left: 1rem;
-border-left: 5px solid #059669;
-display: flex;
-align-items: center;
-gap: 0.8rem;
-}
-
 .consulting-card {
 background: linear-gradient(135deg, #e0f2fe, #dbeafe);
 border: 2px solid #06b6d4;
@@ -1017,13 +911,6 @@ color: rgba(255,255,255,0.85);
 font-style: italic;
 }
 
-.cta-divider {
-height: 2px;
-background: rgba(255,255,255,0.3);
-margin: 2rem auto;
-max-width: 400px;
-}
-
 .cta-section h3 {
 font-family: 'Rajdhani', sans-serif;
 font-size: 1.8rem;
@@ -1175,6 +1062,7 @@ transform: translateY(0);
 .floating-btn {
 width: 56px;
 height: 56px;
+touch-action: manipulation;
 border-radius: 50%;
 border: none;
 background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -1323,12 +1211,6 @@ font-size: 1.2rem;
 }
 
 /* ── Más allá hero fusionado ── */
-.mas-alla-hero-top {
-flex-direction: column;
-gap: 1.2rem;
-padding: 1.8rem 1.2rem 1.5rem;
-}
-
 .hero-badge-block {
 flex-direction: row;
 flex-wrap: wrap;
@@ -1350,39 +1232,9 @@ font-size: 1.2rem;
 }
 
 /* ── Admin block titles ── */
-.admin-block-title {
-font-size: 1.3rem;
-}
-
-.plan-class-title {
-font-size: 1.15rem;
-}
-
 /* ── Cierre estratega / firma ── */
-.cierre-estratega {
-padding: 2rem 1.2rem;
-}
-
-.cierre-firma-name {
-font-size: 1.5rem;
-letter-spacing: 1px;
-}
-
 /* ── Diagramas SVG ── */
-.fases-svg-container,
-.aestrat-svg-container {
-max-width: 100%;
-}
-
 /* ── Fases grid ── */
-.fases-grid {
-grid-template-columns: 1fr;
-}
-
-.plan-tipos-grid {
-grid-template-columns: 1fr;
-}
-
 /* ── Filosofico valores grid ── */
 .valores-grid {
 grid-template-columns: 1fr;
@@ -1392,11 +1244,6 @@ grid-template-columns: 1fr;
 .contact-info {
 flex-direction: column;
 gap: 1rem;
-}
-
-.tech-grid,
-.tools-grid {
-grid-template-columns: 1fr;
 }
 
 .floating-buttons-container {
@@ -1445,9 +1292,6 @@ word-break: break-word;
 }
 
 /* ── Nota de lectura ── */
-.reading-note-container {
-padding: 1rem 1.2rem;
-}
 }
 
 @media print {
@@ -1466,13 +1310,6 @@ display: none;
 .ruta-hero-title,
 .hero-title,
 .admin-block-title,
-.plan-class-title,
-.toc-text {
-overflow-wrap: break-word;
-word-break: break-word;
-min-width: 0;
-}
-
 /* ── Extra small phones (≤480px) ── */
 @media (max-width: 480px) {
 .submarca-name {
@@ -1513,17 +1350,8 @@ min-width: 0;
  padding: 1.5rem 1rem;
 }
 
-.fases-grid,
-.plan-tipos-grid {
- grid-template-columns: 1fr;
-}
 }
 
-/* ── Tablet breakpoint: Huawei MatePad 11.5" & similar (portrait ~720-900px) ── */
-/* ══════════════════════════════════════════════════════════════
-  TABLET PORTRAIT — 769–1024px
-  Huawei MatePad 11.5"S portrait (920px CSS) · iPad Pro
-  ══════════════════════════════════════════════════════════════ */
 /* ══════════════════════════════════════════════════════════════
   MATEPAD 11.5"S — PORTRAIT · 769–1024px CSS
   2800×1840 @~2x DPR · orientación vertical · ~920px CSS width
@@ -1563,15 +1391,8 @@ min-width: 0;
  .estratega-triptych { grid-template-columns: repeat(3, 1fr); }
 
  /* ── SVG diagrams ── */
- .aestrat-svg-container,
- .fases-svg-container {
-  max-width: 420px;
-  margin: 0 auto;
- }
-
+ .aestrat-svg-container { max-width: 380px; }
  /* ── Grids ── */
- .fases-grid   { grid-template-columns: repeat(2, 1fr); }
- .plan-tipos-grid { grid-template-columns: repeat(2, 1fr); }
  .valores-grid  { grid-template-columns: repeat(2, 1fr); }
 
  /* ── Pilares Strategy (Cultura / Liderazgo / Capital) ── */
@@ -1595,18 +1416,12 @@ min-width: 0;
  .ruta-hero-cta-text h4 { font-size: 1.3rem; }
 
  /* ── Más allá / hero fusionado ── */
- .mas-alla-hero-top {
-  flex-direction: row;
-  gap: 2rem;
- }
  .hero-badge-block {
   flex-direction: column;
   align-items: flex-start;
  }
 
  /* ── Para quién (buyer personas) ── */
- .para-quien-grid { grid-template-columns: repeat(2, 1fr); }
-
  /* ── Tech Stack Hero ── */
  .aidn-tech-header { padding: 2rem 2rem 1.8rem; }
  .aidn-tech-title  { font-size: 1.7rem; }
@@ -1636,12 +1451,24 @@ min-width: 0;
  }
  .cierre-firma { align-self: auto; }
  .cta-mission h3 { font-size: 2rem !important; }
+
+ /* ── Definición Central admin-est-def ── */
+ .admin-est-def { padding: 1.8rem 2rem 1.8rem 1.6rem; }
+ .admin-est-def h4 { font-size: 1.3rem; }
+
+ /* ── Más allá hero fusionado ── */
+ .mas-alla-hero-fused { border-radius: 14px; }
+ .mas-alla-hero-top { padding: 2.2rem 2.2rem 1.8rem; gap: 2rem; }
+ .hero-title { font-size: 1.9rem; }
+ .hero-badge { min-width: 200px; }
+
+ /* ── Pilares cuerpo ── */
+ .pilar-intro { font-size: 0.92rem; }
+
+ /* ── Footer ── */
+ .footer { padding: 1.5rem 2rem 1.2rem; }
 }
 
-/* ══════════════════════════════════════════════════════════════
-  TABLET LANDSCAPE — 1025–1440px
-  Huawei MatePad 11.5"S landscape (1400px CSS)
-  ══════════════════════════════════════════════════════════════ */
 /* ══════════════════════════════════════════════════════════════
   MATEPAD 11.5"S — LANDSCAPE · 1025–1440px CSS
   2800×1840 @~2x DPR · orientación horizontal · ~1400px CSS width
@@ -1677,15 +1504,8 @@ min-width: 0;
  .estratega-triptych { grid-template-columns: repeat(3, 1fr); }
 
  /* ── SVG diagrams — generosos ── */
- .aestrat-svg-container,
- .fases-svg-container {
-  max-width: 460px;
-  margin: 0 auto;
- }
-
+ .aestrat-svg-container { max-width: 420px; }
  /* ── Grids — landscape permite más columnas ── */
- .fases-grid    { grid-template-columns: repeat(2, 1fr); }
- .plan-tipos-grid { grid-template-columns: repeat(3, 1fr); }
  .valores-grid   { grid-template-columns: repeat(3, 1fr); }
 
  /* ── Strategy pilares ── */
@@ -1708,14 +1528,7 @@ min-width: 0;
  }
 
  /* ── Más allá / hero fusionado ── */
- .mas-alla-hero-top {
-  flex-direction: row;
-  gap: 2.5rem;
- }
-
  /* ── Para quién ── */
- .para-quien-grid { grid-template-columns: repeat(3, 1fr); }
-
  /* ── Tech Stack Hero — landscape pleno ── */
  .aidn-tech-header { padding: 2.5rem 2.5rem 2rem; }
  .aidn-tech-title  { font-size: 1.9rem; }
@@ -1743,6 +1556,18 @@ min-width: 0;
  }
  .cierre-firma { align-self: auto; }
  .cta-mission h3 { font-size: 2.4rem !important; }
+ /* ── Definición Central admin-est-def ── */
+ .admin-est-def { padding: 2rem 2.5rem 2rem 2rem; }
+ .admin-est-def h4 { font-size: 1.45rem; }
+
+ /* ── Más allá hero fusionado ── */
+ .mas-alla-hero-fused { border-radius: 16px; }
+ .mas-alla-hero-top { padding: 2.8rem 2.8rem 2rem; gap: 2.5rem; }
+ .hero-title { font-size: 2.1rem; }
+ .hero-badge { min-width: 220px; }
+
+ /* ── Footer ── */
+ .footer { padding: 1.8rem 2.5rem 1.4rem; }
 }
 
 
@@ -1860,395 +1685,19 @@ color: #e5e7eb !important;
   Opción B · Filtro por identificación emocional
   ============================================================ */
 
-.para-quien-wrapper {
-margin: 0 0 2.5rem 0;
-}
-
-.para-quien-header {
-display: flex;
-align-items: center;
-gap: 0.8rem;
-margin-bottom: 1.2rem;
-}
-
-.para-quien-eyebrow {
-font-size: 0.78rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 2px;
-color: #14338F;
-}
-
-[data-theme="dark"] .para-quien-eyebrow {
-color: var(--primary);
-}
-
-.para-quien-title {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.35rem;
-font-weight: 700;
-color: var(--text-dark);
-margin: 0;
-}
-
-.pq-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-gap: 1.2rem;
-}
-
-.pq-card {
-border-radius: 14px;
-border: 1px solid var(--border);
-border-top: 4px solid #14338F;
-padding: 1.4rem;
-background: var(--bg-white);
-transition: all var(--transition-base);
-position: relative;
-overflow: hidden;
-}
-
-.pq-card::before {
-content: '';
-position: absolute;
-top: 0; right: 0;
-width: 80px; height: 80px;
-background: radial-gradient(circle at top right, rgba(20,51,143,0.05) 0%, transparent 70%);
-pointer-events: none;
-}
-
-.pq-card:hover {
-transform: translateY(-4px);
-box-shadow: 0 10px 28px rgba(20,51,143,0.12);
-border-top-color: var(--primary);
-}
-
-.pq-card.pq-accent {
-border-top-color: var(--primary);
-background: linear-gradient(135deg, var(--bg-white), #f0f4ff);
-}
-
-[data-theme="dark"] .pq-card.pq-accent {
-background: linear-gradient(135deg, #0f1d42, #1a2f6b);
-}
-
-.pq-card.pq-consejo {
-border-top-color: #06b6d4;
-}
-
-.pq-tag {
-display: inline-block;
-font-size: 0.7rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-color: #14338F;
-background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-padding: 0.25rem 0.6rem;
-border-radius: 20px;
-margin-bottom: 0.8rem;
-}
-
-[data-theme="dark"] .pq-tag {
-background: rgba(20,51,143,0.25);
-color: var(--primary);
-}
-
-.pq-card.pq-consejo .pq-tag {
-color: #06b6d4;
-background: linear-gradient(135deg, #e0f9ff, #cffafe);
-}
-
-[data-theme="dark"] .pq-card.pq-consejo .pq-tag {
-background: rgba(6,182,212,0.2);
-}
-
-.pq-emoji {
-font-size: 1.8rem;
-display: block;
-margin-bottom: 0.6rem;
-}
-
-.pq-titulo {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.2rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.5rem;
-line-height: 1.2;
-}
-
-.pq-trigger {
-font-style: italic;
-font-size: 0.88rem;
-color: #14338F;
-font-weight: 600;
-margin-bottom: 0.8rem;
-line-height: 1.5;
-border-left: 3px solid #14338F;
-padding-left: 0.7rem;
-}
-
-[data-theme="dark"] .pq-trigger {
-color: var(--primary);
-border-left-color: var(--primary);
-}
-
-.pq-card.pq-consejo .pq-trigger {
-color: #06b6d4;
-border-left-color: #06b6d4;
-}
-
-.pq-desc {
-font-size: 0.88rem;
-color: var(--text-light);
-line-height: 1.6;
-margin-bottom: 1rem;
-}
-
-.pq-tags-list {
-display: flex;
-flex-wrap: wrap;
-gap: 0.4rem;
-}
-
-.pq-pill {
-font-size: 0.72rem;
-font-weight: 600;
-background: var(--bg-light);
-color: var(--text-dark);
-padding: 0.2rem 0.5rem;
-border-radius: 10px;
-border: 1px solid var(--border);
-transition: all var(--transition-fast);
-}
-
-.pq-card:hover .pq-pill {
-background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-border-color: #14338F;
-color: #14338F;
-}
-
-.pq-card.pq-consejo:hover .pq-pill {
-background: linear-gradient(135deg, #e0f9ff, #cffafe);
-border-color: #06b6d4;
-color: #06b6d4;
-}
-
 /* Bloque de no-cobertura — Taxes */
-.pq-taxes-wrapper {
-margin: 0 0 2.5rem 0;
-}
 
-.pq-taxes-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 1.2rem;
-}
-
-@media (max-width: 600px) {
-.pq-taxes-grid { grid-template-columns: 1fr; }
-}
-
-.pq-taxes-card {
-border-radius: 14px;
-border: 1px solid var(--border);
-border-top: 4px solid #10b981;
-padding: 1.4rem;
-background: var(--bg-white);
-transition: all var(--transition-base);
-}
-
-.pq-taxes-card:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 22px rgba(16,185,129,0.12);
-}
-
-.pq-taxes-tag {
-display: inline-block;
-font-size: 0.7rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-color: #10b981;
-background: linear-gradient(135deg, #d1fae5, #ecfdf5);
-padding: 0.25rem 0.6rem;
-border-radius: 20px;
-margin-bottom: 0.8rem;
-}
-
-[data-theme="dark"] .pq-taxes-tag {
-background: rgba(16,185,129,0.2);
-}
 
 /* Nota de Especialización Consciente — Exclusiones */
-.especializacion-block {
-background: var(--bg-light);
-border: 1px solid var(--border);
-border-left: 5px solid #14338F;
-border-radius: 12px;
-padding: 1.8rem 2rem;
-margin-bottom: 2rem;
-}
 
-[data-theme="dark"] .especializacion-block {
-background: linear-gradient(135deg, #0d1530, #0f1d42);
-border-color: #1a2d6b;
-border-left-color: #14338F;
-}
-
-.especializacion-block h4 {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.3rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.5rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-.especializacion-block .esp-intro {
-color: var(--text-light);
-font-size: 0.92rem;
-line-height: 1.7;
-margin-bottom: 1.2rem;
-}
-
-.excl-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-gap: 0.6rem;
-margin-bottom: 1.2rem;
-}
-
-.excl-item {
-display: flex;
-align-items: flex-start;
-gap: 0.5rem;
-background: var(--bg-white);
-border: 1px solid var(--border);
-border-radius: 8px;
-padding: 0.6rem 0.8rem;
-font-size: 0.85rem;
-color: var(--text-light);
-transition: all var(--transition-fast);
-}
-
-.excl-item svg {
-flex-shrink: 0;
-margin-top: 1px;
-color: var(--warning);
-width: 14px;
-height: 14px;
-}
-
-.esp-closing {
-font-size: 0.88rem;
-color: var(--text-dark);
-line-height: 1.7;
-font-style: italic;
-padding: 0.8rem 1rem;
-background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-border-radius: 8px;
-}
-
-[data-theme="dark"] .esp-closing {
-background: linear-gradient(135deg, #1a2a5e, #1e2f6b);
-}
-
-@media (max-width: 768px) {
-.pq-grid { grid-template-columns: 1fr; }
-.excl-grid { grid-template-columns: 1fr; }
-}
-
-.pq-nota-especializacion {
-margin-top: 1.2rem;
-padding: 1rem 1.2rem;
-background: linear-gradient(135deg, #fef9ec, #fef3c7);
-border-left: 4px solid var(--warning);
-border-radius: 8px;
-font-size: 0.88rem;
-color: var(--text-dark);
-line-height: 1.6;
-}
-
-[data-theme="dark"] .pq-nota-especializacion {
-background: linear-gradient(135deg, #2d1f00, #3a2800);
-border-left-color: #f59e0b;
-color: #fde68a;
-}
-
-[data-theme="dark"] .pq-nota-especializacion strong {
-color: #fbbf24;
-}
 
 /* ============================================================
   BLOQUE ADMINISTRACIÓN Y PLANEACIÓN ESTRATÉGICA
   Segunda parte complementaria de intro-section
   ============================================================ */
 
-.admin-block {
-margin-top: 2.5rem;
-padding-top: 2rem;
-border-top: 2px dashed var(--border);
-}
-
-.admin-block-title {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.55rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.4rem;
-display: flex;
-align-items: center;
-gap: 0.6rem;
-}
-
-.admin-block-title span {
-font-size: 1.3rem;
-}
-
-.admin-def {
-color: var(--text-dark);
-line-height: 1.8;
-font-size: 0.95rem;
-margin-bottom: 2rem;
-}
-
-.admin-def em {
-color: #14338F;
-font-style: normal;
-font-weight: 600;
-}
-
-[data-theme="dark"] .admin-def em {
-color: var(--primary);
-}
-
 /* --- Diagrama SVG circular-cruzado --- */
-.fases-diagram-wrap {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 2rem 0;
-gap: 1.5rem;
-}
-
-.fases-svg-container {
-width: 100%;
-max-width: 360px;
-filter: drop-shadow(0 8px 24px rgba(12,42,133,0.15));
-}
-
-.fases-svg-container svg {
-width: 100%;
-height: auto;
-}
-
 /* Animaciones SVG */
-@keyframes spin-slow {
-from { transform: rotate(0deg); }
 to  { transform: rotate(360deg); }
 }
 @keyframes pulse-ring {
@@ -2258,8 +1707,6 @@ to  { transform: rotate(360deg); }
 @keyframes dash-flow {
 to { stroke-dashoffset: -20; }
 }
-@keyframes fade-in-phase {
-from { opacity: 0; transform: scale(0.92); }
 to  { opacity: 1; transform: scale(1); }
 }
 
@@ -2278,205 +1725,27 @@ transition: opacity 0.3s ease;
 transform-origin: center;
 }
 
-.fases-svg-container:hover .fases-seg {
-opacity: 0.85;
-}
-
 /* Labels SVG hover glow */
-.fases-svg-container text {
-transition: fill 0.3s ease;
-}
-
 /* --- Grid descriptivo de 4 fases --- */
-.fases-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-margin-bottom: 2rem;
-}
 
-@media (max-width: 600px) {
-.fases-grid { grid-template-columns: 1fr; }
-}
-
-.fase-card {
-border-radius: 12px;
-padding: 1.2rem;
-border-left: 4px solid;
-background: var(--bg-light);
-transition: all var(--transition-base);
-}
-
-.fase-card:hover {
-transform: translateY(-3px);
-box-shadow: 0 6px 18px var(--shadow);
-}
-
-.fase-card.fase-plan { border-color: #03b4d6; }
-.fase-card.fase-org  { border-color: #14338F; }
-.fase-card.fase-dir  { border-color: #0c2a85; }
-.fase-card.fase-ctrl { border-color: #10b981; }
-
-[data-theme="dark"] .fase-card { background: #0d1d52; }
-
-.fase-card-head {
-display: flex;
-align-items: center;
-gap: 0.5rem;
-margin-bottom: 0.5rem;
-}
-
-.fase-card-icon {
-width: 32px;
-height: 32px;
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1rem;
-flex-shrink: 0;
-}
-
-.fase-plan .fase-card-icon { background: rgba(3,180,214,0.15); }
-.fase-org  .fase-card-icon { background: rgba(20,51,143,0.12); }
-.fase-dir  .fase-card-icon { background: rgba(12,42,133,0.12); }
-.fase-ctrl .fase-card-icon { background: rgba(16,185,129,0.12); }
-
-.fase-card-name {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.1rem;
-font-weight: 700;
-color: var(--text-dark);
-}
-
-.fase-card p {
-font-size: 0.88rem;
-color: var(--text-light);
-line-height: 1.6;
-margin: 0;
-}
-
-/* --- Clasificación de la Planeación --- */
-.plan-class-title {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.35rem;
-font-weight: 700;
-color: var(--text-dark);
-margin: 2rem 0 0.4rem;
-padding-left: 1rem;
-border-left: 4px solid #14338F;
-}
-
-.plan-class-intro {
-font-size: 0.92rem;
-color: var(--text-light);
-line-height: 1.7;
-margin-bottom: 1.4rem;
-}
-
-.plan-tipos-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 1rem;
-margin-bottom: 2rem;
-}
-
-.plan-tipo {
-background: var(--bg-white);
-border: 1px solid var(--border);
-border-radius: 12px;
-padding: 1.2rem;
-position: relative;
-overflow: hidden;
-transition: all var(--transition-base);
-}
-
-.plan-tipo::before {
-content: '';
-position: absolute;
-top: 0; left: 0; right: 0;
-height: 3px;
-}
-
-.plan-tipo.tipo-op::before  { background: #10b981; }
-.plan-tipo.tipo-tac::before { background: #03b4d6; }
-.plan-tipo.tipo-est::before { background: #14338F; }
-.plan-tipo.tipo-norm::before { background: #8b5cf6; }
-
-.plan-tipo:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 20px var(--shadow);
-}
-
-.plan-tipo-badge {
-font-size: 0.68rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-padding: 0.2rem 0.5rem;
-border-radius: 10px;
-display: inline-block;
-margin-bottom: 0.6rem;
-}
-
-.tipo-op  .plan-tipo-badge { background: rgba(16,185,129,0.12); color: #059669; }
-.tipo-tac .plan-tipo-badge { background: rgba(3,180,214,0.12); color: #0891b2; }
-.tipo-est .plan-tipo-badge { background: rgba(20,51,143,0.12); color: #14338F; }
-.tipo-norm .plan-tipo-badge { background: rgba(139,92,246,0.12); color: #7c3aed; }
-
-.plan-tipo-name {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.1rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.4rem;
-}
-
-.plan-tipo-horizon {
-font-size: 0.75rem;
-color: var(--text-light);
-margin-bottom: 0.5rem;
-font-style: italic;
-}
-
-.plan-tipo p {
-font-size: 0.85rem;
-color: var(--text-light);
-line-height: 1.6;
-margin: 0;
-}
-
-.plan-autores {
-display: flex;
-gap: 0.5rem;
-flex-wrap: wrap;
-margin-top: 0.6rem;
-}
-
-.plan-autor-tag {
-font-size: 0.68rem;
-font-weight: 600;
-background: var(--bg-light);
-color: var(--text-light);
-padding: 0.15rem 0.5rem;
-border-radius: 8px;
-border: 1px solid var(--border);
-}
 
 /* --- Definición Administración Estratégica --- */
 .admin-est-def {
-background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-border: 2px solid #14338F;
+background: linear-gradient(135deg, #e8edff 0%, #dce4ff 60%, #d4ddff 100%);
+border: 1px solid rgba(20,51,143,0.25);
+border-left: 4px solid #14338F;
 border-radius: 16px;
-padding: 2rem;
+padding: 2rem 2rem 2rem 1.8rem;
 margin-top: 2rem;
 position: relative;
 overflow: hidden;
+box-shadow: 0 4px 20px rgba(20,51,143,0.10), 0 1px 4px rgba(20,51,143,0.08);
 }
 
 [data-theme="dark"] .admin-est-def {
 background: linear-gradient(135deg, #1a2a5e, #1e2f6b);
-border-color: #14338F;
+border-color: rgba(3,180,214,0.2);
+border-left-color: var(--primary);
 }
 
 .admin-est-def::before {
@@ -2494,12 +1763,18 @@ font-weight: 700;
 text-transform: uppercase;
 letter-spacing: 2px;
 color: #14338F;
-display: block;
-margin-bottom: 0.5rem;
+display: inline-block;
+margin-bottom: 0.75rem;
+background: rgba(20,51,143,0.08);
+border: 1px solid rgba(20,51,143,0.18);
+border-radius: 6px;
+padding: 0.2rem 0.65rem;
 }
 
 [data-theme="dark"] .admin-est-def-label {
 color: var(--primary);
+background: rgba(3,180,214,0.12);
+border-color: rgba(3,180,214,0.25);
 }
 
 .admin-est-def h4 {
@@ -2563,36 +1838,203 @@ border-color: rgba(3,180,214,0.2);
 }
 
 /* ============================================================
-  MÁS ALLÁ — HERO FUSIONADO (hero + statement integrados)
+  MÁS ALLÁ DE LA ESTRATEGIA — Hero fusionado
+  Encabezado introductor de los tres pilares
   ============================================================ */
 
 .mas-alla-hero-fused {
-background: linear-gradient(135deg, #14338F 0%, #0c2a85 55%, #083070 100%);
-border-radius: 16px;
-padding: 0;
-overflow: hidden;
-box-shadow: 0 8px 32px rgba(20,51,143,0.25);
-margin-bottom: 2rem;
+  background: linear-gradient(135deg, #14338F 0%, #0c2a85 55%, #083070 100%);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(20,51,143,0.32);
+  margin-bottom: 2.5rem;
+  position: relative;
+  border: 1px solid rgba(3,180,214,0.18);
+}
+
+/* Línea superior animada — igual que tech-hero */
+.mas-alla-hero-fused::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #14338F, #03b4d6, #f59e0b, #03b4d6, #14338F);
+  background-size: 200% 100%;
+  animation: techLine 5s linear infinite;
+}
+
+/* Noise texture sutil */
+.mas-alla-hero-fused::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(3,180,214,0.08) 0%, transparent 65%);
+  pointer-events: none;
 }
 
 .mas-alla-hero-top {
-padding: 2.5rem 2rem 2rem;
-display: flex;
-gap: 2rem;
-align-items: center;
-flex-wrap: wrap;
-position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 2.8rem 2.8rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-.mas-alla-hero-top::before {
-content: '';
-position: absolute;
-top: 0; left: 0; right: 0; bottom: 0;
-background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 55%);
-pointer-events: none;
+/* ── Texto principal ── */
+.hero-text {
+  flex: 1;
+  min-width: 0;
 }
 
+.hero-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #03b4d6;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.hero-title em {
+  font-style: normal;
+  color: #03b4d6;
+}
+
+.hero-subtitle {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+  font-size: 0.97rem;
+  max-width: 560px;
+}
+
+/* ── Badges de pilares ── */
+.hero-badge-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.hero-badge {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 12px;
+  padding: 0.8rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  backdrop-filter: blur(6px);
+  min-width: 210px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-badge:hover {
+  background: rgba(255,255,255,0.17);
+  border-color: rgba(3,180,214,0.5);
+  transform: translateX(3px);
+}
+
+.hero-badge-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.55);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.hero-badge-value {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  line-height: 1.2;
+}
+
+/* Accent color per pilar */
+.hero-badge:nth-child(1) { border-left: 3px solid #03b4d6; }
+.hero-badge:nth-child(2) { border-left: 3px solid rgba(255,255,255,0.6); }
+.hero-badge:nth-child(3) { border-left: 3px solid #f59e0b; }
+
+/* ── Statement final ── */
 .mas-alla-statement {
+  background: rgba(0,0,0,0.28);
+  border-top: 1px solid rgba(255,255,255,0.10);
+  padding: 1.5rem 2.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.mas-alla-statement svg {
+  width: 24px;
+  height: 24px;
+  color: #03b4d6;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.mas-alla-statement p {
+  color: rgba(255,255,255,0.88);
+  line-height: 1.78;
+  font-size: 0.96rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.mas-alla-statement strong {
+  color: #03b4d6;
+  font-style: normal;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .mas-alla-hero-top {
+    flex-direction: column;
+    padding: 2rem 1.5rem 1.5rem;
+    gap: 1.8rem;
+  }
+  .hero-badge-block { flex-direction: row; flex-wrap: wrap; }
+  .hero-badge { min-width: calc(50% - 0.4rem); flex: 1; }
+  .hero-title { font-size: 1.7rem; }
+  .mas-alla-statement { padding: 1.2rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-badge-block { flex-direction: column; }
+  .hero-badge { min-width: unset; }
+  .mas-alla-hero-top { padding: 1.5rem 1.2rem 1.2rem; }
+  .hero-title { font-size: 1.5rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mas-alla-hero-top { padding: 2.2rem 2.2rem 1.8rem; gap: 2rem; }
+  .hero-title { font-size: 1.9rem; }
+  .hero-badge { min-width: 190px; }
+}
+
+[data-theme="light"] .mas-alla-hero-fused {
+  background: linear-gradient(135deg, #14338F 0%, #0c2a85 55%, #083070 100%);
+}
+
+
 background: rgba(0,0,0,0.25);
 border-top: 1px solid rgba(255,255,255,0.12);
 padding: 1.4rem 2rem;
@@ -2866,27 +2308,6 @@ color: rgba(255,255,255,0.6);
 }
 
 /* Persona moral dark fix */
-.pq-taxes-nota-moral {
-margin-top: 1rem;
-padding: 1rem 1.2rem;
-background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-border-left: 4px solid #10b981;
-border-radius: 8px;
-font-size: 0.87rem;
-color: var(--text-dark);
-line-height: 1.7;
-}
-
-[data-theme="dark"] .pq-taxes-nota-moral {
-background: linear-gradient(135deg, #052e16, #064e3b);
-border-left-color: #10b981;
-color: #a7f3d0;
-}
-
-[data-theme="dark"] .pq-taxes-nota-moral strong {
-color: #34d399;
-}
-
 @media (max-width: 768px) {
 .ruta-hero-steps {
  grid-template-columns: repeat(2, 1fr);
@@ -2901,8 +2322,6 @@ color: #34d399;
  text-align: center;
 }
 .ruta-hero-title { font-size: 2rem; }
-.fases-grid { grid-template-columns: 1fr; }
-.plan-tipos-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
@@ -3070,28 +2489,6 @@ line-height: 1.6;
   MÁS ALLÁ DE LA ESTRATEGIA — Bloque B
   ============================================================ */
 
-.mas-alla-hero {
-background: linear-gradient(135deg, #14338F 0%, #0c2a85 60%, #06b6d4 100%);
-border-radius: 16px;
-padding: 2.5rem 2rem;
-margin-bottom: 0;
-display: flex;
-gap: 2rem;
-align-items: center;
-flex-wrap: wrap;
-position: relative;
-overflow: hidden;
-box-shadow: 0 8px 32px rgba(20, 51, 143, 0.25);
-}
-
-.mas-alla-hero::before {
-content: '';
-position: absolute;
-top: 0; left: 0; right: 0; bottom: 0;
-background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
-pointer-events: none;
-}
-
 .hero-text {
 flex: 1;
 min-width: 0;
@@ -3164,32 +2561,6 @@ font-size: 1rem;
 font-weight: 700;
 color: white;
 display: block;
-}
-
-.statement-band {
-background: linear-gradient(135deg, #0c2a85, #14338F);
-padding: 1.5rem 2rem;
-display: flex;
-align-items: flex-start;
-gap: 1.2rem;
-margin-bottom: 2rem;
-border-radius: 0 0 16px 16px;
-}
-
-.statement-band svg {
-width: 28px;
-height: 28px;
-color: #03b4d6;
-flex-shrink: 0;
-margin-top: 0.2rem;
-}
-
-.statement-band p {
-color: rgba(255,255,255,0.9);
-line-height: 1.7;
-font-size: 0.95rem;
-font-style: italic;
-margin: 0;
 }
 
 .pilares-wrapper {
@@ -3425,82 +2796,6 @@ letter-spacing: 1.5px;
   RUTA DEL EMPRENDEDOR — Journey Banner
   ============================================================ */
 
-.ruta-emprendedor {
-background: var(--bg-white);
-border: 2px solid #14338F;
-border-radius: 16px;
-padding: 2rem;
-margin: 3.5rem 0;
-box-shadow: 0 6px 20px rgba(20, 51, 143, 0.12);
-overflow: hidden;
-position: relative;
-}
-
-.ruta-emprendedor::before {
-content: '';
-position: absolute;
-top: 0; left: 0; right: 0;
-height: 4px;
-background: linear-gradient(90deg, #14338F, #0c2a85, #06b6d4, #10b981);
-}
-
-[data-theme="dark"] .ruta-emprendedor {
-background: linear-gradient(135deg, #0d1d52, #0f1d42);
-border-color: #14338F;
-}
-
-.ruta-header {
-text-align: center;
-margin-bottom: 1.8rem;
-}
-
-.ruta-eyebrow {
-font-size: 0.78rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 2px;
-color: #14338F;
-display: block;
-margin-bottom: 0.5rem;
-}
-
-[data-theme="dark"] .ruta-eyebrow {
-color: var(--primary);
-}
-
-.ruta-title {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1.7rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.4rem;
-}
-
-.ruta-subtitle {
-color: var(--text-light);
-font-size: 0.9rem;
-line-height: 1.6;
-}
-
-.ruta-steps {
-display: flex;
-align-items: stretch;
-gap: 0;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.ruta-step {
-flex: 1;
-min-width: 130px;
-max-width: 180px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-position: relative;
-}
-
 .ruta-step:not(:last-child)::after {
 content: '→';
 position: absolute;
@@ -3516,138 +2811,9 @@ z-index: 2;
 color: var(--primary);
 }
 
-.step-icon-wrap {
-width: 56px;
-height: 56px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 0.7rem;
-font-size: 1.4rem;
-border: 2px solid var(--border);
-background: var(--bg-light);
-transition: all var(--transition-base);
-}
-
-.ruta-step.step-strategy .step-icon-wrap {
-background: linear-gradient(135deg, #e0e7ff, #dbeafe);
-border-color: #14338F;
-}
-
-.ruta-step.step-plan .step-icon-wrap {
-background: linear-gradient(135deg, #dbeafe, #e0f2fe);
-border-color: var(--primary);
-}
-
-.ruta-step.step-legal .step-icon-wrap {
-background: linear-gradient(135deg, #fef3c7, #fde68a);
-border-color: var(--warning);
-}
-
-.ruta-step.step-fiscal .step-icon-wrap {
-background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-border-color: #10b981;
-}
-
-.ruta-step.step-growth .step-icon-wrap {
-background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-border-color: #10b981;
-}
-
-.step-label {
-font-family: 'Rajdhani', sans-serif;
-font-size: 1rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 0.25rem;
-line-height: 1.2;
-}
-
-.step-desc {
-font-size: 0.78rem;
-color: var(--text-light);
-line-height: 1.4;
-}
-
-.step-link {
-font-size: 0.75rem;
-color: #14338F;
-font-weight: 600;
-text-decoration: none;
-display: inline-block;
-margin-top: 0.3rem;
-transition: color var(--transition-fast);
-}
-
-[data-theme="dark"] .step-link {
-color: var(--primary);
-}
-
-.step-link:hover {
-color: var(--primary);
-text-decoration: underline;
-}
-
-.ruta-cta {
-margin-top: 1.8rem;
-padding-top: 1.5rem;
-border-top: 1px solid var(--border);
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 1rem;
-}
-
-.ruta-cta-text {
-font-size: 0.9rem;
-color: var(--text-dark);
-line-height: 1.5;
-}
-
-.ruta-cta-text strong {
-color: #14338F;
-}
-
-[data-theme="dark"] .ruta-cta-text strong {
-color: var(--primary);
-}
-
-.ruta-cta-btn {
-display: inline-flex;
-align-items: center;
-gap: 0.5rem;
-background: linear-gradient(135deg, #14338F, #0c2a85);
-color: white;
-padding: 0.7rem 1.5rem;
-border-radius: 50px;
-text-decoration: none;
-font-weight: 700;
-font-size: 0.9rem;
-transition: all var(--transition-base);
-box-shadow: 0 4px 14px rgba(20, 51, 143, 0.3);
-white-space: nowrap;
-}
-
-.ruta-cta-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 8px 20px rgba(20, 51, 143, 0.4);
-background: linear-gradient(135deg, #0c2a85, #14338F);
-}
-
 @media (max-width: 768px) {
-.ruta-steps {
-gap: 0.8rem;
-}
 .ruta-step:not(:last-child)::after {
 display: none;
-}
-.ruta-step {
-min-width: 100px;
-}
-.mas-alla-hero {
-flex-direction: column;
 }
 .hero-badge-block {
 flex-direction: row;
@@ -3667,10 +2833,6 @@ grid-template-columns: 1fr;
 }
 .valores-grid {
 grid-template-columns: 1fr;
-}
-.ruta-cta {
-flex-direction: column;
-text-align: center;
 }
 }
 
@@ -3837,11 +2999,11 @@ html[data-theme="dark"] .aestrat-arc-label {
   TECH STACK HERO — Modelo de Trabajo Digital
   ══════════════════════════════════════════════════════════════ */
 .aidn-tech-hero {
- background: #060d1f;
+ background: #0a1628;
  border-radius: 20px;
  overflow: hidden;
  margin-bottom: 1.5rem;
- border: 1px solid rgba(3,180,214,0.12);
+ border: 1px solid rgba(3,180,214,0.22);
  position: relative;
 }
 
@@ -3855,23 +3017,26 @@ html[data-theme="dark"] .aestrat-arc-label {
  animation: techLine 4s linear infinite;
 }
 
-@keyframes techLine {
-  0%   { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
-}
-@keyframes stripeSlide {
+@keyframes calcTopLine {
   0%   { background-position: 0% 0%; }
   100% { background-position: 200% 0%; }
 }
 
+@keyframes techLine {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+100% { background-position: 200% 0%; }
+}
+
 [data-theme="light"] .aidn-tech-hero {
- background: linear-gradient(135deg, #060d1f, #0a1a3a);
+ background: linear-gradient(135deg, #0a1628, #0d1e3a);
 }
 
 .aidn-tech-header {
  padding: 2.5rem 2.5rem 2rem;
  text-align: center;
- border-bottom: 1px solid rgba(255,255,255,0.06);
+ border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
 .aidn-tech-eyebrow {
@@ -3895,7 +3060,7 @@ html[data-theme="dark"] .aestrat-arc-label {
 
 .aidn-tech-sub {
  font-size: 0.9rem;
- color: rgba(255,255,255,0.65);
+ color: rgba(255,255,255,0.82);
  line-height: 1.75;
  max-width: 620px;
  margin: 0 auto;
@@ -3921,7 +3086,7 @@ html[data-theme="dark"] .aestrat-arc-label {
 
 .aidn-tech-pillar {
  padding: 2rem 1.5rem;
- border-right: 1px solid rgba(255,255,255,0.06);
+ border-right: 1px solid rgba(255,255,255,0.10);
  display: flex;
  flex-direction: column;
  gap: 0.7rem;
@@ -3970,16 +3135,16 @@ html[data-theme="dark"] .aestrat-arc-label {
  font-weight: 600;
  text-transform: uppercase;
  letter-spacing: 1.5px;
- color: rgba(255,255,255,0.35);
+ color: rgba(255,255,255,0.58);
 }
 
-.pillar-linux .aidn-tech-pillar-tag { color: rgba(0,255,65,0.75); }
-.pillar-ai  .aidn-tech-pillar-tag { color: rgba(3,180,214,0.8); }
-.pillar-remote .aidn-tech-pillar-tag { color: rgba(99,102,241,0.8); }
+.pillar-linux .aidn-tech-pillar-tag { color: rgba(0,255,65,0.92); }
+.pillar-ai  .aidn-tech-pillar-tag { color: rgba(3,180,214,0.92); }
+.pillar-remote .aidn-tech-pillar-tag { color: rgba(99,102,241,0.92); }
 
 .aidn-tech-pillar-desc {
  font-size: 0.84rem;
- color: rgba(255,255,255,0.75);
+ color: rgba(255,255,255,0.88);
  line-height: 1.7;
  flex: 1;
 }
@@ -4007,7 +3172,7 @@ html[data-theme="dark"] .aestrat-arc-label {
 
 .stat-label {
  font-size: 0.72rem;
- color: rgba(255,255,255,0.55);
+ color: rgba(255,255,255,0.72);
  line-height: 1.4;
 }
 
@@ -4028,7 +3193,7 @@ html[data-theme="dark"] .aestrat-arc-label {
 
 .aidn-tech-remate-text {
  font-size: 0.88rem;
- color: rgba(255,255,255,0.55);
+ color: rgba(255,255,255,0.72);
  line-height: 1.7;
  text-align: center;
  max-width: 500px;
@@ -4145,18 +3310,18 @@ html[data-theme="dark"] .aestrat-vertex-label {
   background: linear-gradient(180deg, rgba(200,208,220,0.07) 0%, transparent 100%);
 }
 .calc-eyebrow {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.62rem;font-weight:500;
   letter-spacing:3px;text-transform:uppercase;
   color:#6ee7b7;display:block;margin-bottom:0.5rem;
 }
 .calc-title {
-  font-family:'Rajdhani',sans-serif;
+  font-family:'Rajdhani', sans-serif;
   font-size:1.6rem;font-weight:700;color:#fff;
   letter-spacing:0.5px;line-height:1.2;margin-bottom:0.3rem;
 }
 .calc-subtitle {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.73rem;color:rgba(255,255,255,0.42);line-height:1.5;
 }
 .calc-badge {
@@ -4164,7 +3329,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   background:rgba(16,185,129,0.1);
   border:1px solid rgba(200,208,220,0.25);
   border-radius:20px;padding:0.4rem 0.9rem;
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.63rem;color:#10b981;
   letter-spacing:1.5px;text-transform:uppercase;
   white-space:nowrap;flex-shrink:0;
@@ -4185,26 +3350,12 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-field { display:flex;flex-direction:column;gap:0.5rem; }
 .calc-label {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.67rem;font-weight:500;
   letter-spacing:2px;text-transform:uppercase;
   color:rgba(255,255,255,0.48);
 }
-.calc-select,.calc-input-num {
-  width:100%;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(16,185,129,0.2);
-  border-radius:8px;padding:0.75rem 1rem;
-  font-family:'IBM Plex Mono',monospace;
-  font-size:0.85rem;color:#fff;
-  outline:none;
-  transition:border-color 0.2s,background 0.2s;
-  appearance:none;-webkit-appearance:none;cursor:pointer;
-}
-.calc-select:focus,.calc-input-num:focus {
-  border-color:#10b981;background:rgba(16,185,129,0.08);
-}
-.calc-select option {
+.calc-select,.calc-select:focus,.calc-select option {
   background:Field;color:FieldText;
 }
 .calc-select-wrap { position:relative; }
@@ -4236,11 +3387,11 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-slider-labels {
   display:flex;justify-content:space-between;
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.6rem;color:rgba(255,255,255,0.28);
 }
 .calc-slider-val {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.8rem;color:#10b981;font-weight:600;text-align:right;
 }
 /* Toggle tipo solicitante */
@@ -4252,7 +3403,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 .calc-toggle-btn {
   flex:1;padding:0.65rem 0.5rem;
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.7rem;color:rgba(255,255,255,0.38);
   background:none;border:none;cursor:pointer;
   transition:background 0.2s,color 0.2s;letter-spacing:0.3px;
@@ -4274,29 +3425,29 @@ html[data-theme="dark"] .aestrat-vertex-label {
   border-radius:12px;padding:1.2rem 1.4rem;
 }
 .calc-pkg-label {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.6rem;letter-spacing:2.5px;text-transform:uppercase;
   color:rgba(255,255,255,0.32);display:block;margin-bottom:0.5rem;
 }
 .calc-pkg-name {
-  font-family:'Rajdhani',sans-serif;
+  font-family:'Rajdhani', sans-serif;
   font-size:1.15rem;font-weight:700;color:#10b981;
   letter-spacing:0.3px;margin-bottom:0.2rem;
 }
 .calc-pkg-desc {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.68rem;color:rgba(255,255,255,0.38);line-height:1.6;
 }
 /* Precio */
 .calc-price-block { text-align:center;padding:1.5rem 0; }
 .calc-price-prefix {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.68rem;color:rgba(255,255,255,0.32);
   display:block;margin-bottom:0.4rem;
   letter-spacing:2px;text-transform:uppercase;
 }
 .calc-price-amount {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:3.2rem;font-weight:600;color:#fff;
   line-height:1;letter-spacing:-1px;
   transition:opacity 0.25s;display:block;
@@ -4307,12 +3458,12 @@ html[data-theme="dark"] .aestrat-vertex-label {
   display:inline-block;letter-spacing:0;
 }
 .calc-price-period {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.63rem;color:rgba(255,255,255,0.32);
   display:block;margin-top:0.4rem;letter-spacing:2px;
 }
 .calc-price-anual {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.7rem;color:rgba(16,185,129,0.7);
   display:block;margin-top:0.3rem;
 }
@@ -4326,7 +3477,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 .calc-scope { display:flex;flex-direction:column;gap:0.45rem; }
 .calc-scope-item {
   display:flex;align-items:flex-start;gap:0.55rem;
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.68rem;color:rgba(255,255,255,0.52);line-height:1.4;
 }
 .calc-scope-item::before { content:'✓';color:#10b981;font-size:0.68rem;flex-shrink:0;margin-top:0.05rem; }
@@ -4337,7 +3488,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   background:rgba(16,185,129,0.07);
   border:1px solid rgba(16,185,129,0.18);
   border-radius:8px;padding:0.75rem 1rem;
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.67rem;color:rgba(255,255,255,0.46);line-height:1.6;
 }
 .calc-note strong { color:#10b981;font-weight:600; }
@@ -4349,7 +3500,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   justify-content:space-between;flex-wrap:wrap;gap:0.8rem;
 }
 .calc-footer-note {
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.61rem;color:rgba(255,255,255,0.22);line-height:1.5;
 }
 .calc-cta-btn {
@@ -4357,7 +3508,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
   background:linear-gradient(135deg,#059669,#10b981);
   border:1px solid rgba(200,208,220,0.25);
   border-radius:8px;padding:0.6rem 1.2rem;
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'IBM Plex Mono', monospace;
   font-size:0.7rem;font-weight:600;color:#fff;
   text-decoration:none;letter-spacing:0.4px;
   transition:background 0.2s,border-color 0.2s,box-shadow 0.2s;cursor:pointer;
@@ -4400,8 +3551,6 @@ html[data-theme="dark"] .aestrat-vertex-label {
 
 @media (min-width: 1441px) {
   /* ── Desktop wide — respiración espacial extra ── */
-  .catalog-main,
-  .toc-container { max-width: 1200px; margin-left: auto; margin-right: auto; }
   .calc-wrapper   { max-width: 1100px; margin-left: auto; margin-right: auto; }
 }
 
@@ -4416,6 +3565,153 @@ html[data-theme="dark"] .aestrat-vertex-label {
 [data-theme="dark"] .calc-wrapper {
   background: linear-gradient(160deg, #052e16 0%, #064e3b 50%, #071a0d 100%);
   border-color: rgba(16,185,129,0.3);
+}
+
+/* ============================================================
+   MICROANIMACIONES — AIDN v3.2
+   6 animaciones quirúrgicas · prefers-reduced-motion safe
+   ============================================================ */
+
+/* ── 1. SCROLL-REVEAL — fade + rise al entrar en viewport ── */
+.sr {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+.sr.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger delays para grids */
+.sr-d1  { transition-delay: 0.00s; }
+.sr-d2  { transition-delay: 0.08s; }
+.sr-d3  { transition-delay: 0.16s; }
+.sr-d4  { transition-delay: 0.24s; }
+.sr-d5  { transition-delay: 0.32s; }
+.sr-d6  { transition-delay: 0.40s; }
+.sr-d7  { transition-delay: 0.48s; }
+
+/* ── 2. UNDERLINE ANIMADO en section-title ── */
+.section-title {
+  border-bottom: none !important;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--secondary);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-title.sr-visible::after {
+  transform: scaleX(1);
+}
+/* Preserve custom border colors via data attribute */
+.section-title[style*="border-bottom-color"]::after {
+  background: var(--secondary);
+}
+
+/* ── 3. COUNTER STATS tech stack — solo el número ── */
+.stat-num[data-target] {
+  display: inline-block;
+}
+
+/* ── 4. SHIMMER en precio calculadora ── */
+@keyframes priceShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.calc-price-amount.shimmer-active .calc-num {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #fff 40%,
+    rgba(255,255,255,0.4) 50%,
+    #fff 60%,
+    #fff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: priceShimmer 0.55s ease forwards;
+}
+
+/* ── 5. DIAMOND PULSE al entrar en viewport ── */
+@keyframes diamondEntrance {
+  0%   { transform: rotate(45deg) scale(0);   opacity: 0; }
+  70%  { transform: rotate(45deg) scale(1.25); opacity: 1; }
+  100% { transform: rotate(45deg) scale(1);   opacity: 1; }
+}
+@keyframes diamondGlow {
+  0%, 100% { box-shadow: none; }
+  50%       { box-shadow: 0 0 8px rgba(3,180,214,0.5); }
+}
+.separator-minor-diamond {
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+}
+.separator-minor-diamond.diamond-visible {
+  animation: diamondEntrance 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards,
+             diamondGlow 1.2s ease-in-out 0.4s 1 forwards;
+}
+
+/* ── 6. GLOW HOVER en admin-est-pilar pills ── */
+.admin-est-pilar {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+.admin-est-pilar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(3,180,214,0.35);
+  border-color: rgba(3,180,214,0.5);
+}
+[data-theme="dark"] .admin-est-pilar:hover {
+  box-shadow: 0 0 14px rgba(3,180,214,0.45);
+  border-color: rgba(3,180,214,0.6);
+  background: rgba(3,180,214,0.18);
+}
+
+/* ── REDUCED MOTION — desactiva todo si el sistema lo pide ── */
+@media (prefers-reduced-motion: reduce) {
+  .sr, .sr.sr-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .section-title::after {
+    transform: scaleX(1) !important;
+    transition: none !important;
+  }
+  .separator-minor-diamond,
+  .separator-minor-diamond.diamond-visible {
+    opacity: 1 !important;
+    transform: rotate(45deg) scale(1) !important;
+    animation: none !important;
+  }
+  .calc-price-amount.shimmer-active .calc-num {
+    animation: none !important;
+    background: none !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+  .admin-est-pilar:hover {
+    transform: none !important;
+  }
+}
+
+/* ── Tiny label readability at small mobile ── */
+@media (max-width: 480px) {
+  .calc-scope-item { font-size: 0.75rem; }
+  .calc-price-period { font-size: 0.68rem; }
+  .calc-price-anual  { font-size: 0.75rem; }
+  .aidn-tech-pillar-badge { font-size: 0.68rem; }
+  .aidn-tech-eyebrow { font-size: 0.72rem; }
 }
 </style>
 </head>
@@ -4472,7 +3768,6 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </section>
 
 
-
 <!-- ═══════════════════════════════════════════════════════
    NOTA DE LECTURA — Antesala del Índice
    ═══════════════════════════════════════════════════════ -->
@@ -4482,43 +3777,33 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
  background: var(--bg-light);
  border-top: 1px solid var(--border);
  border-bottom: 1px solid var(--border);
+ display: flex;
+ flex-direction: column;
+ gap: 0.75rem;
 ">
- <p style="
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--text-light);
-  line-height: 1.7;
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  flex-wrap: wrap;
- ">
-  <span>
-   Este catálogo está organizado para que encuentres lo que necesitas sin rodeos. El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice</a> te lleva directamente a cada sección:
-   <a href="#seccion-strategy" style="color:#14338F;font-weight:600;">AIDN Strategy</a> para consultoría estratégica,
-   <a href="#seccion-taxes" style="color:#14338F;font-weight:600;">AIDN Taxes</a> para servicios fiscales,
-   o la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> si te interesa conocer el fundamento y a quien está detrás de la firma.
-  </span>
+ <p style="margin:0;font-size:0.88rem;color:var(--text-light);line-height:1.7;display:flex;align-items:flex-start;gap:0.55rem;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#14338F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:0.18rem;">
+   <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+   <line x1="9" y1="3" x2="9" y2="18"/>
+   <line x1="15" y1="6" x2="15" y2="21"/>
+  </svg>
+  <span>Este catálogo está organizado para que encuentres lo que necesitas. El <a href="#toc-nav" style="color:#14338F;font-weight:600;">Índice</a> te lleva directamente a cada sección:
+  <a href="#seccion-strategy" style="color:#14338F;font-weight:600;">AIDN Strategy</a> para consultoría estratégica,
+  <a href="#seccion-taxes" style="color:#14338F;font-weight:600;">AIDN Taxes</a> para servicios fiscales,
+  o la <a href="#seccion-introductoria" style="color:#14338F;font-weight:600;">Sección Introductoria</a> si te interesa conocer el fundamento y a quien está detrás de la firma.</span>
  </p>
-
- <!-- Políticas notice -->
- <div style="
-  margin-top: 0.9rem;
-  padding: 0.75rem 1.1rem;
-  background: linear-gradient(135deg, rgba(20,51,143,0.06), rgba(3,180,214,0.06));
-  border-radius: 10px;
-  border: 1px solid rgba(20,51,143,0.12);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
- "> <p style="margin:0;font-size:0.83rem;line-height:1.65;color:var(--text-light);">
-   <strong style="color:var(--text-dark);font-weight:600;">Antes de solicitar cualquier servicio,</strong>
-   te invitamos a revisar las
-   <a href="#seccion-politicas" style="color:#14338F;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(20,51,143,0.3);">Políticas y Ética Profesional</a>
-   — son el marco que definirá la armonía y evolución de nuestra convergencia como cliente y consultor.
-   Leerlas antes es parte de comenzar bien.
-  </p>
- </div>
+ <p style="margin:0;font-size:0.88rem;color:var(--text-light);line-height:1.7;display:flex;align-items:flex-start;gap:0.55rem;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#14338F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:0.18rem;">
+   <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+   <path d="M15 3v4"/>
+   <path d="M9 3v4"/>
+   <path d="M3 9h18"/>
+   <path d="M9 13h.01"/>
+   <path d="M15 13h.01"/>
+   <path d="M9 17h.01"/>
+  </svg>
+  <span>Las <a href="#seccion-politicas" style="color:#14338F;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(20,51,143,0.3);">Políticas y Ética Profesional</a> no son letra chica: son el marco que define cómo trabajamos, qué esperamos y qué puedes esperar. Leerlas antes de solicitar cualquier servicio es parte de comenzar bien.</span>
+ </p>
 </div>
 
 <div class="separator" role="presentation">
@@ -4775,13 +4060,17 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <div id="seccion-marco-filosofico"></div>
 
 <div class="filosofico-header">
+ <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0 auto 0.7rem;position:relative;z-index:1;">
+  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+ </svg>
  <span class="filosofico-header-name">Marco Filosófico</span>
  <span class="filosofico-header-sub">Identidad, propósito y valores que guían cada decisión</span>
 </div>
 
 <div class="section" style="margin-bottom:2.5rem;">
 
- <h2 class="section-title" style="border-bottom-color:#14338F;">
+ <h2 class="section-title sr">
   <span style="font-size:1.4rem;margin-right:0.5rem;">◈</span>
   Nuestra Identidad Organizacional
  </h2>
@@ -4796,7 +4085,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   <p>Ser la firma de consultoría estratégica de referencia en México, reconocida por generar organizaciones más inteligentes, resilientes y humanas — capaces de convertir cada desafío en un plan de acción más robusto, cada error en aprendizaje superior y cada persona en un activo estratégico que multiplica el desempeño colectivo.</p>
  </div>
 
- <h2 class="section-title" style="margin-top:2.5rem;border-bottom-color:#14338F;">
+ <h2 class="section-title sr" style="margin-top:2.5rem;">
   <span style="font-size:1.4rem;margin-right:0.5rem;">◇</span>
   Valores que nos Definen
  </h2>
@@ -4805,45 +4094,77 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
  <div class="valores-grid">
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d1">
    <span class="valor-numero">01</span>
    <div class="valor-nombre">Creatividad</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <polyline points="13 2 13 9 20 9"/>
+  <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/>
+  <polygon points="13 2 22 11 13 11 13 2"/>
+ </svg>
    <p class="valor-def">Diseñamos soluciones originales ante desafíos complejos, explorando enfoques no convencionales que generen ventajas reales. En un entorno de cambio acelerado, la creatividad estratégica no es un lujo, es una competencia central.</p>
   </div>
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d2">
    <span class="valor-numero">02</span>
    <div class="valor-nombre">Empatía</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+ </svg>
    <p class="valor-def">Comprendemos la realidad de cada organización —su cultura, su gente y su contexto— porque solo desde ahí las estrategias son verdaderamente pertinentes. Escuchar antes de proponer es nuestra práctica, no nuestra excepción.</p>
   </div>
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d3">
    <span class="valor-numero">03</span>
    <div class="valor-nombre">Integridad</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  <polyline points="9 12 11 14 15 10"/>
+ </svg>
    <p class="valor-def">Actuamos con transparencia y consistencia en cada compromiso. Nuestra reputación se construye con hechos, no con promesas. Cero tolerancia a prácticas que comprometan la ética profesional, la legalidad o la confianza del cliente.</p>
   </div>
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d4">
    <span class="valor-numero">04</span>
    <div class="valor-nombre">Liderazgo</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+  <polyline points="17 6 23 6 23 12"/>
+ </svg>
    <p class="valor-def">Guiamos con criterio y decisión, inspirando a las organizaciones a tomar el control de su futuro y enfrentar el cambio con confianza. El liderazgo auténtico se ejerce desde el conocimiento, la coherencia y el ejemplo.</p>
   </div>
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d5">
    <span class="valor-numero">05</span>
    <div class="valor-nombre">Objetividad</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <line x1="18" y1="20" x2="18" y2="10"/>
+  <line x1="12" y1="20" x2="12" y2="4"/>
+  <line x1="6" y1="20" x2="6" y2="14"/>
+ </svg>
    <p class="valor-def">Basamos cada análisis en datos, evidencia y metodologías rigurosas. La imparcialidad es la base de toda recomendación estratégica. Los juicios de valor no reemplazan al diagnóstico; la intuición se valida con información.</p>
   </div>
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d6">
    <span class="valor-numero">06</span>
    <div class="valor-nombre">Resiliencia</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <polyline points="23 4 23 10 17 10"/>
+  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+ </svg>
    <p class="valor-def">Acompañamos a las organizaciones a desarrollar la capacidad de absorber perturbaciones, adaptarse al cambio y salir fortalecidas de la adversidad. La resiliencia no es resistir pasivamente: es aprender, reconfigurar y avanzar con mayor solidez.</p>
   </div>
 
-  <div class="valor-card">
+  <div class="valor-card sr sr-d7">
    <span class="valor-numero">07</span>
    <div class="valor-nombre">Sinergia</div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:0.4rem 0 0.6rem;">
+  <circle cx="18" cy="18" r="3"/>
+  <circle cx="6" cy="6" r="3"/>
+  <circle cx="6" cy="18" r="3"/>
+  <line x1="6" y1="9" x2="6" y2="15"/>
+  <path d="M9 6h3a6 6 0 0 1 6 6v3"/>
+ </svg>
    <p class="valor-def">Potenciamos el trabajo colaborativo dentro y fuera de las organizaciones, porque los mejores resultados emergen cuando las capacidades se integran con propósito común. La consultoría real no opera en silos: conecta perspectivas para multiplicar el valor generado.</p>
   </div>
 
@@ -4854,20 +4175,20 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 
 <div class="separator-minor" role="presentation" aria-hidden="true">
- <div class="separator-minor-diamond"></div>
+ <div class="separator-minor-diamond" data-diamond="1"></div>
 </div>
 
 
 <!-- ── Administración y su Proceso ─────────────────────────── -->
 <div id="seccion-admin-proceso"></div>
-<h2 class="section-title" style="margin-top:0;">
+<h2 class="section-title sr" style="margin-top:0;">
  
  Administración y su Proceso
 </h2>
 
 
 <div class="separator-minor" role="presentation" aria-hidden="true">
- <div class="separator-minor-diamond"></div>
+ <div class="separator-minor-diamond" data-diamond="1"></div>
 </div>
 
 <div id="seccion-admin-estrategica"></div>
@@ -5143,14 +4464,27 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
    <div class="estratega-triptych">
     <div class="estratega-pilar">
+     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#03b4d6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/>
+      <line x1="8" y1="14" x2="12" y2="14"/>
+      <rect x="12" y="13" width="4" height="4" rx="0.5"/>
+     </svg>
      <span class="estratega-pilar-name">Contaduría</span>
      <p>Ve el dinero real, no el proyectado. Diagnóstico fiscal sin filtros.</p>
     </div>
     <div class="estratega-pilar">
+     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#14338F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+      <circle cx="12" cy="12" r="10"/>
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+     </svg>
      <span class="estratega-pilar-name">Administración</span>
      <p>Diseña la estructura que genera resultados sostenibles y medibles.</p>
     </div>
     <div class="estratega-pilar">
+     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+     </svg>
      <span class="estratega-pilar-name">Derecho Mercantil</span>
      <p>Identifica los riesgos que destruyen lo que las otras dos construyeron.</p>
     </div>
@@ -5169,6 +4503,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
    <span class="admin-est-pilar">Ventaja Competitiva Sostenible</span>
   </div>
 
+</div><!-- /admin-est-def -->
 </section>
 <!-- ═══════════════════════════════════════════════════
      SECCIÓN II — AIDN Strategy | Consultoría Estratégica
@@ -5187,12 +4522,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <span class="submarca-descriptor">Consultoría Estratégica</span>
 </div>
 
-<div class="info-box info" style="margin-top:2rem; border-left-color:#14338F;">
+<div class="info-box info" style="border-left-color:#14338F;">
  <p class="info-box-title" style="color:#14338F;">Inversión en Consultoría Estratégica</p>
  <p>Los proyectos de AIDN Strategy se estructuran a la medida de cada organización — alcance, complejidad y horizonte de acompañamiento determinan la inversión. Como referencia orientativa, los compromisos de consultoría estratégica parten desde <strong>$8,000 MXN por sesión diagnóstica</strong> hasta esquemas de acompañamiento continuo. La primera sesión diagnóstica es sin costo y sin compromiso.</p>
 </div>
-
-
 
 
 <section class="section" id="seccion-consultoria">
@@ -5205,7 +4538,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <div class="strategy-subsection" id="strategy-planeacion">
 <h3><span class="subsection-number">1</span> Planeación y Dirección Estratégica</h3>
-<div class="consulting-card">
+<div class="consulting-card sr sr-d1">
 <h4>Planeación y Dirección Estratégica</h4>
 <p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
 <ul class="consulting-features">
@@ -5219,7 +4552,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <div class="strategy-subsection" id="strategy-financiero">
 <h3><span class="subsection-number">2</span> Análisis Financiero y Proyecciones</h3>
-<div class="consulting-card">
+<div class="consulting-card sr sr-d2">
 <h4>Análisis Financiero y Proyecciones</h4>
 <p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
 <ul class="consulting-features">
@@ -5233,7 +4566,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <div class="strategy-subsection" id="strategy-reestructuracion">
 <h3><span class="subsection-number">3</span> Reestructuración Organizacional</h3>
-<div class="consulting-card">
+<div class="consulting-card sr sr-d3">
 <h4>Reestructuración Organizacional</h4>
 <p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
 <ul class="consulting-features">
@@ -5247,7 +4580,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <div class="strategy-subsection" id="strategy-desarrollo">
 <h3><span class="subsection-number">4</span> Desarrollo de Modelos de Negocio</h3>
-<div class="consulting-card">
+<div class="consulting-card sr sr-d4">
 <h4>Desarrollo de Modelos de Negocio</h4>
 <p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
 <ul class="consulting-features">
@@ -5266,91 +4599,174 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <p>Utilizamos las metodologías y frameworks más reconocidos a nivel mundial para garantizar análisis rigurosos y decisiones fundamentadas:</p>
 
 <div class="tools-grid">
-<div class="tool-card">
+<div class="tool-card sr sr-d1">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/>
+  <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/>
+  <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/>
+ </svg>
 <h5>Estrategia del Océano Azul</h5>
 <p>Crea nuevos espacios de mercado inexplorados y deja de competir en mercados saturados.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Busques diferenciación radical o nuevos modelos de negocio.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d2">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="3"/>
+  <line x1="12" y1="3" x2="12" y2="9"/>
+  <line x1="12" y1="15" x2="12" y2="21"/>
+  <line x1="3" y1="12" x2="9" y2="12"/>
+  <line x1="15" y1="12" x2="21" y2="12"/>
+ </svg>
 <h5>5 Fuerzas de Porter</h5>
 <p>Analiza la competitividad de tu industria evaluando competidores, proveedores, clientes, sustitutos y nuevos entrantes.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Necesites entender la dinámica competitiva de tu sector.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d3">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <rect x="3" y="3" width="7" height="7"/>
+  <rect x="14" y="3" width="7" height="7"/>
+  <rect x="14" y="14" width="7" height="7"/>
+  <rect x="3" y="14" width="7" height="7"/>
+ </svg>
 <h5>Cuadro de Mando Integral (BSC)</h5>
 <p>Traduce la estrategia en objetivos medibles desde 4 perspectivas: financiera, cliente, procesos y aprendizaje.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Requieras alinear toda la organización con la estrategia.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d4">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+  <line x1="12" y1="9" x2="12" y2="13"/>
+  <line x1="12" y1="17" x2="12.01" y2="17"/>
+ </svg>
 <h5>Matriz de Análisis de Riesgos</h5>
 <p>Identifica, evalúa y prioriza riesgos según probabilidad e impacto para tomar decisiones informadas.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Enfrentes incertidumbre o proyectos de alto riesgo.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d1">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="10"/>
+  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+ </svg>
 <h5>Matriz PEYEA</h5>
 <p>Determina la postura estratégica óptima (agresiva, defensiva, competitiva o conservadora) según tu contexto.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Necesites decidir entre crecimiento, estabilidad o reestructuración.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d2">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <polyline points="15 3 21 3 21 9"/>
+  <polyline points="9 21 3 21 3 15"/>
+  <line x1="21" y1="3" x2="14" y2="10"/>
+  <line x1="3" y1="21" x2="10" y2="14"/>
+ </svg>
 <h5>Matriz de Ansoff</h5>
 <p>Define estrategias de crecimiento: penetración de mercado, desarrollo de productos, desarrollo de mercados o diversificación.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Planifiques expansión o diversificación.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d3">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+ </svg>
 <h5>Cadena de Valor</h5>
 <p>Identifica actividades que generan valor y ventajas competitivas en tu operación.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Busques optimizar procesos y reducir costos.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d4">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <rect x="3" y="3" width="5" height="5"/>
+  <rect x="10" y="3" width="5" height="5"/>
+  <rect x="17" y="3" width="5" height="5"/>
+  <rect x="3" y="10" width="5" height="5"/>
+  <rect x="10" y="10" width="5" height="5"/>
+  <rect x="17" y="10" width="5" height="5"/>
+  <rect x="3" y="17" width="5" height="5"/>
+  <rect x="10" y="17" width="5" height="5"/>
+  <rect x="17" y="17" width="5" height="5"/>
+ </svg>
 <h5>Matriz de McKinsey (GE)</h5>
 <p>Prioriza unidades de negocio o productos según atractivo del mercado y fortaleza competitiva.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Gestiones portafolios complejos de productos o servicios.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d1">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  <polyline points="9 12 11 14 15 10"/>
+ </svg>
 <h5>Análisis VRIO</h5>
 <p>Evalúa si tus recursos son Valiosos, Raros, Inimitables y Organizados para generar ventaja competitiva sostenible.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Identifiques tus fortalezas competitivas únicas.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d2">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <line x1="12" y1="20" x2="12" y2="10"/>
+  <line x1="18" y1="20" x2="18" y2="4"/>
+  <line x1="6" y1="20" x2="6" y2="16"/>
+ </svg>
 <h5>Matriz BCG (Boston Consulting Group)</h5>
 <p>Clasifica productos en estrellas, vacas lecheras, interrogantes o perros según crecimiento y participación de mercado.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Gestiones portafolios de productos y decidas inversiones.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d3">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+  <polyline points="17 18 23 18 23 12"/>
+ </svg>
 <h5>Curva de Experiencia</h5>
 <p>Reduce costos unitarios conforme aumenta la producción acumulada, generando ventaja en precio.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Planifiques escalamiento o busques liderazgo en costos.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d4">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="10"/>
+  <line x1="2" y1="12" x2="22" y2="12"/>
+  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+ </svg>
 <h5>Análisis PESTEL</h5>
 <p>Examina factores externos: Políticos, Económicos, Sociales, Tecnológicos, Ecológicos y Legales.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Analices el macroentorno y tendencias externas.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d1">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="10"/>
+  <circle cx="12" cy="12" r="3"/>
+  <line x1="12" y1="2" x2="12" y2="9"/>
+  <line x1="12" y1="15" x2="12" y2="22"/>
+  <line x1="2" y1="12" x2="9" y2="12"/>
+  <line x1="15" y1="12" x2="22" y2="12"/>
+ </svg>
 <h5>Matriz FODA (SWOT)</h5>
 <p>Identifica Fortalezas, Oportunidades, Debilidades y Amenazas para diseñar estrategias coherentes.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Realices diagnósticos integrales y planeación estratégica.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d2">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 16 14"/>
+ </svg>
 <h5>Matriz de Eisenhower</h5>
 <p>Prioriza tareas según urgencia e importancia para maximizar productividad y enfoque estratégico.</p>
 <p class="tool-usage"><strong>Úsala cuando:</strong> Necesites gestionar tiempo y prioridades eficazmente.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-card sr sr-d3">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="10"/>
+  <circle cx="12" cy="12" r="6"/>
+  <circle cx="12" cy="12" r="2"/>
+ </svg>
 <h5>KPIs y OKRs</h5>
 <p>KPIs miden desempeño continuo. OKRs establecen objetivos ambiciosos y resultados clave medibles.</p>
 <p class="tool-usage"><strong>Úsalos cuando:</strong> Monitorees progreso y alinees equipos con metas estratégicas.</p>
@@ -5387,21 +4803,30 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   </div>
   <div class="hero-badge-block">
    <div class="hero-badge">
-    
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#03b4d6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+     </svg>
     <div>
      <span class="hero-badge-label">Pilar I</span>
-     <span class="hero-badge-value">Cultura Org.</span>
+     <span class="hero-badge-value" style="font-size:0.88rem;">Cultura Organizacional</span>
     </div>
    </div>
    <div class="hero-badge">
-    
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+     </svg>
     <div>
      <span class="hero-badge-label">Pilar II</span>
      <span class="hero-badge-value">Comportamiento</span>
     </div>
    </div>
    <div class="hero-badge">
-    
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+     </svg>
     <div>
      <span class="hero-badge-label">Pilar III</span>
      <span class="hero-badge-value">Capital Humano</span>
@@ -5548,7 +4973,6 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </section>
 
 
-
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 <circle cx="12" cy="12" r="10"/>
@@ -5576,7 +5000,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
   <div class="ruta-hero-step rh-step1">
    <div class="rh-step-num">Paso 01</div>
-   <div class="rh-icon-wrap">💡</div>
+   <div class="rh-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14338F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+    <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+   </svg></div>
    <div class="rh-step-label">Idea &amp; Modelo</div>
    <div class="rh-step-desc">Validamos y estructuramos tu modelo de negocio con metodología Canvas</div>
    <a href="#strategy-desarrollo" class="rh-step-link">Ver servicio →</a>
@@ -5584,7 +5011,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
   <div class="ruta-hero-step rh-step2">
    <div class="rh-step-num">Paso 02</div>
-   <div class="rh-icon-wrap">📊</div>
+   <div class="rh-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0c2a85" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+    <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+   </svg></div>
    <div class="rh-step-label">Plan Estratégico</div>
    <div class="rh-step-desc">Objetivos, KPIs, BSC y plan de acción estructurado con seguimiento</div>
    <a href="#strategy-planeacion" class="rh-step-link">Ver servicio →</a>
@@ -5592,7 +5022,12 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
   <div class="ruta-hero-step rh-step3">
    <div class="rh-step-num">Paso 03</div>
-   <div class="rh-icon-wrap">⚖️</div>
+   <div class="rh-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="12" y1="3" x2="12" y2="21"/>
+    <path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/>
+    <path d="M6 6l-3 6c0 1.66 1.34 3 3 3s3-1.34 3-3L6 6z"/>
+    <path d="M18 6l-3 6c0 1.66 1.34 3 3 3s3-1.34 3-3L18 6z"/>
+   </svg></div>
    <div class="rh-step-label">Constitución Legal</div>
    <div class="rh-step-desc">Estructura societaria óptima + estatutos personalizados <em>ad hoc</em></div>
    <a href="#seccion-administrativos" class="rh-step-link">Ver servicio →</a>
@@ -5600,7 +5035,12 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
   <div class="ruta-hero-step rh-step4">
    <div class="rh-step-num">Paso 04</div>
-   <div class="rh-icon-wrap">🧾</div>
+   <div class="rh-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+    <polyline points="10 9 9 9 8 9"/>
+   </svg></div>
    <div class="rh-step-label">Régimen Fiscal</div>
    <div class="rh-step-desc">Alta SAT, régimen óptimo y cumplimiento fiscal desde el primer día</div>
    <a href="#seccion-resico" class="rh-step-link">Ver servicio →</a>
@@ -5608,7 +5048,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
   <div class="ruta-hero-step rh-step5">
    <div class="rh-step-num">Paso 05</div>
-   <div class="rh-icon-wrap">📈</div>
+   <div class="rh-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#03b4d6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+    <polyline points="17 6 23 6 23 12"/>
+   </svg></div>
    <div class="rh-step-label">Escala &amp; Crece</div>
    <div class="rh-step-desc">Consultoría estratégica continua para organizaciones que van en serio</div>
    <a href="#seccion-strategy" class="rh-step-link">Ver servicio →</a>
@@ -5717,14 +5160,14 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 
 <!-- Vigencia de precios -->
 <div style="display:flex;justify-content:flex-start;margin:1.4rem 0 1.2rem;">
-  <span style="display:inline-flex;align-items:center;gap:0.55rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:6px;padding:0.35rem 0.9rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#059669;">
+  <span style="display:inline-flex;align-items:center;gap:0.55rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:6px;padding:0.35rem 0.9rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#059669;">
     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
     Vigencia de precios: 1 mar 2026 — 28 feb 2027
   </span>
 </div>
 <!-- SECCIÓN 1: RESICO -->
 <section class="section" id="seccion-resico">
-<h2 class="section-title">
+<h2 class="section-title sr">
 <span class="section-number">1</span>
 Personas Físicas — RESICO
 </h2>
@@ -5740,22 +5183,10 @@ Personas Físicas — RESICO
  </ul>
 </div>
 
-<div class="info-box warning" style="margin-top:1rem;">
+<div class="info-box warning">
  <p class="info-box-title">RESICO vs. Actividad Empresarial y Profesional — criterio de decisión</p>
  <p style="line-height:1.8;margin-bottom:0.8rem;">En <strong>AEyP</strong>, el ISR se determina sobre la <strong>utilidad</strong> (ingresos menos gastos estrictamente indispensables y deducibles conforme al Art. 103 LISR), con la tarifa progresiva del Art. 152 LISR que va del 1.92 % al 35 %. Cuando los gastos deducibles son altos en proporción al ingreso, la base gravable se reduce sustancialmente y AEyP puede resultar más favorable. Por el contrario, cuando los gastos son bajos o el contribuyente no mantiene un control estricto de comprobantes fiscales, RESICO —con sus tasas reducidas sobre ingreso bruto— es casi siempre la opción más eficiente.</p>
  <p style="line-height:1.8;margin:0;font-style:italic;color:var(--text-light);">La elección de régimen no es trivial ni permanente. AIDN analiza cada caso antes de recomendar o gestionar cualquier cambio ante el SAT.</p>
-</div>
-
-<div style="margin-top:1.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:14px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;">
-  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
-  <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Base · Mes 25+</p>
-  <p style="font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
-  <p style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del alcance <strong style="color:rgba(255,255,255,0.9);">RESICO — Base</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500 MXN</strong> — sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos — el inicio de una asociación sólida con AIDN, y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
-  <div style="display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;">
-    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Base · mes 25+</span>
-    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Sin adeudos ni baja de registro</span>
-    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Otorgada proactivamente · No aplica a solicitud</span>
-  </div>
 </div>
 
 <div class="subsection">
@@ -5796,6 +5227,18 @@ Personas Físicas — RESICO
 </table>
 </div>
 
+<div style="margin-top:2rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:14px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
+  <p style="font-family:'IBM Plex Mono', monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Base · Mes 25+</p>
+  <p style="font-family:'Rajdhani', sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
+  <p style="font-family:'IBM Plex Sans', sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del alcance <strong style="color:rgba(255,255,255,0.9);">RESICO — Base</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500 MXN</strong> — sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos — el inicio de una asociación sólida con AIDN, y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
+  <div style="display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;">
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Base · mes 25+</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Sin adeudos ni baja de registro</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Otorgada proactivamente · No aplica a solicitud</span>
+  </div>
+</div>
+
 <div class="subsection">
 <h3 class="subsection-title">🩺 RESICO — Médicos y Dentistas</h3>
 
@@ -5805,6 +5248,7 @@ Personas Físicas — RESICO
  <p style="line-height:1.8;margin:0;">AEyP conviene cuando los gastos deducibles son significativos y están correctamente documentados —equipo médico, renta de consultorio, honorarios de personal—, ya que la base gravable (utilidad) se reduce en proporción a esos comprobantes. La decisión óptima requiere análisis de la situación particular de cada profesional.</p>
 </div>
 
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
 <table class="service-table">
 <thead>
 <tr><th>Alcance</th><th>Honorario mensual</th><th>Cobertura</th></tr>
@@ -5822,6 +5266,7 @@ Personas Físicas — RESICO
 </tr>
 </tbody>
 </table>
+</div>
 
 <div class="info-box warning" style="margin-top:1rem;">
  <p class="info-box-title">⚠️ Requisito obligatorio — Médicos y Dentistas</p>
@@ -5843,6 +5288,7 @@ Personas Físicas — RESICO
  <p style="line-height:1.8;margin:0;">La facturación en este sector es predominantemente anual, en operaciones de mayoreo con pocos comprobantes de alto valor. El servicio cubre el cumplimiento fiscal del ejercicio y la gestión de los CFDI emitidos, con hasta <strong>9 comprobantes anuales incluidos</strong> en el alcance base.</p>
 </div>
 
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
 <table class="service-table">
 <thead>
 <tr><th>Tipo de cliente</th><th>Honorario anual</th></tr>
@@ -5859,15 +5305,17 @@ Personas Físicas — RESICO
 </tbody>
 </table>
 </div>
+</div>
 </section>
 
 <!-- SECCIÓN 2: SUELDOS Y SALARIOS -->
 <section class="section" id="seccion-sueldos">
-<h2 class="section-title">
+<h2 class="section-title sr">
 <span class="section-number">2</span>
 Sueldos y Salarios
 </h2>
 
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
 <table class="service-table">
 <thead>
 <tr><th>Servicio</th><th>Clientes</th><th>Externos</th></tr>
@@ -5893,6 +5341,7 @@ Sueldos y Salarios
 </tr>
 </tbody>
 </table>
+</div>
 <div class="info-box info" style="margin-top:1rem;">
  <p class="info-box-title">ℹ️ Tarifa según tipo de solicitante</p>
  <p>La tarifa <strong>Clientes</strong> aplica a personas con <strong>al menos dos años de antigüedad continua</strong> como clientes activos de la firma. Cualquier otra persona recibe la tarifa <strong>Externos</strong>. Ver definición completa en la Sección IV — Políticas y Ética Profesional.</p>
@@ -5901,7 +5350,7 @@ Sueldos y Salarios
 
 <!-- SECCIÓN 3: ACTIVIDAD EMPRESARIAL -->
 <section class="section" id="seccion-empresarial">
-<h2 class="section-title">
+<h2 class="section-title sr">
 <span class="section-number">3</span>
 Actividad Empresarial y Minoristas
 </h2>
@@ -5966,7 +5415,7 @@ Actividad Empresarial y Minoristas
 
 <!-- SECCIÓN 4: SERVICIOS ADMINISTRATIVOS -->
 <section class="section" id="seccion-administrativos">
-<h2 class="section-title">
+<h2 class="section-title sr">
 <span class="section-number">4</span>
 Servicios Administrativos, Legales y Patrimoniales
 </h2>
@@ -6025,6 +5474,7 @@ Servicios Administrativos, Legales y Patrimoniales
  <p class="info-box-title">Servicio especializado en derechos de agua</p>
  <p>Asesoría integral para el cumplimiento de obligaciones ante CONAGUA. Incluye cálculos técnicos, presentación electrónica y descarga de CFDI oficiales.</p>
 </div>
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
 <table class="service-table">
 <thead>
 <tr><th>Servicio</th><th>Detalle</th><th>Honorario</th></tr>
@@ -6056,6 +5506,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </tr>
 </tbody>
 </table>
+</div>
 <div class="info-box success">
  <p class="info-box-title">✅ Inversión anual total</p>
  <p><strong>Alta inicial + 4 declaraciones trimestrales = $3,930</strong> (primer año). Años subsecuentes: $3,480 anuales.</p>
@@ -6162,25 +5613,15 @@ Servicios Administrativos, Legales y Patrimoniales
 </tbody>
 </table>
 
-</div>
+</div><!-- /subsection -->
+</div><!-- /subsection -->
 </section>
 
 
 <!-- ══════════════════════════════════════════════════════════════
      CALCULADORA DE HONORARIOS AIDN TAXES
      ══════════════════════════════════════════════════════════════ -->
-<div class="calc-section" <!-- ═══════════════════════════════════════════════════
-     CALCULADORA DE HONORARIOS — Herramienta interactiva
-     Calidad JS:    A+  — 11 regímenes, lógica en tiempo real
-     CSS:           A+  — IBM Plex Mono, paleta ≡ triángulo
-     UX:            A+  — Slider CFDI, toggles, resultado animado
-     Responsive:    A   — Mobile single-col, tablet/desktop 2-col
-     Animaciones:   A+  — calcLine header strip, calcPriceIn
-     Biblia:        A+  — #0a1628 ≡ estratega-block, borde cian 0.15
-     Comentario: Implementación premium sin dependencias externas.
-                 calcLine sincronizado con techLine (mismo efecto).
-                 calcPriceIn 0.22s — timing perfecto para UI de datos.
-     ═══════════════════════════════════════════════════ -->
+<div class="calc-section">
 <div id="seccion-calculadora">
 <div class="calc-wrapper" role="region" aria-label="Calculadora de honorarios fiscales AIDN">
 
@@ -6323,13 +5764,14 @@ Servicios Administrativos, Legales y Patrimoniales
 
   <!-- Vigencia calculadora -->
   <div style="padding:0.85rem 2.5rem 1.2rem;text-align:center;">
-    <span style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(200,208,220,0.55);">
+    <span style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'IBM Plex Mono', monospace;font-size:0.6rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(200,208,220,0.55);">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       Vigencia: 1 mar 2026 — 28 feb 2027
     </span>
   </div>
 
 </div><!-- /calc-wrapper -->
+</div><!-- /seccion-calculadora -->
 </div><!-- /calc-section -->
 
 <div class="separator" role="presentation">
@@ -6341,15 +5783,7 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 
 <!-- SECCIÓN III: POLÍTICAS Y ÉTICA PROFESIONAL -->
-<div <!-- ═══════════════════════════════════════════════════
-     SECCIÓN IV — Políticas y Ética Profesional
-     Calidad estructural: A+  | Tono: A+  | RAE: A+
-     Responsive: A  | Paleta morado §5.2 comb.4: A+
-     Comentario: Gradiente morado (#8b5cf6→#6366f1) conforme
-                 biblia §5.2 Combinación 4 (Legal/Políticas).
-                 Tono criterio-registro sin hedging. Sin listas
-                 de bullet redundantes. Parrafado de precisión.
-     ═══════════════════════════════════════════════════ -->
+<div class="section-block">
 <div id="seccion-politicas"></div>
 <div class="submarca-title" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
 <span class="submarca-name">IV. Políticas y Ética Profesional</span>
@@ -6469,28 +5903,13 @@ Servicios Administrativos, Legales y Patrimoniales
 </svg>
 </div>
 
+</div><!-- /section-block politicas -->
+
 <!-- SECCIÓN IV: MODELO DE TRABAJO DIGITAL Y REMOTO -->
-<div <!-- ═══════════════════════════════════════════════════
-     SECCIÓN V — Modelo de Trabajo Digital y Remoto
-     Calidad estructural: A   | Contenido: A  | RAE: A+
-     Responsive: A  | Paleta: A
-     Comentario: Sección informativa sólida. Coherente con
-                 posicionamiento de consultora asíncrona premium.
-     ═══════════════════════════════════════════════════ -->
+<div class="section-block">
 <div id="seccion-modelo-trabajo"></div>
-<div class="submarca-title" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
-<span class="submarca-name">V. Modelo de Trabajo Digital y Remoto</span>
-<span class="submarca-descriptor">Tecnología al Servicio de tu Negocio</span>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════════════
-   TECH STACK HERO — Vanguardia Tecnológica AIDN
-   ═══════════════════════════════════════════════════════ -->
 <div class="aidn-tech-hero">
-
- <!-- Header -->
- <div class="aidn-tech-header">
+<div class="aidn-tech-header">
   <span class="aidn-tech-eyebrow">Stack Tecnológico · AIDN Strategic Consulting</span>
   <h3 class="aidn-tech-title">Consultoría del siglo XXI.<br>Sin infraestructura del pasado.</h3>
   <p class="aidn-tech-sub">Mientras la consultoría tradicional opera con hojas de cálculo heredadas y software propietario costoso, AIDN construyó su práctica sobre una tríada tecnológica que amplifica el criterio estratégico y entrega resultados imposibles de replicar con metodologías convencionales.</p>
@@ -6516,7 +5935,7 @@ Servicios Administrativos, Legales y Patrimoniales
    <div class="aidn-tech-pillar-tag">Open Source Infrastructure</div>
    <p class="aidn-tech-pillar-desc">Donde otros pagan licencias y dependen de terceros, AIDN opera con infraestructura auditada, libre y bajo control total. Sin backdoors propietarios. Sin costos ocultos que el cliente subsidia.</p>
    <div class="aidn-tech-pillar-stat">
-    <span class="stat-num">0</span>
+    <span class="stat-num" data-target="0" data-suffix="">0</span>
     <span class="stat-label">dependencias de software propietario</span>
    </div>
   </div>
@@ -6534,20 +5953,20 @@ Servicios Administrativos, Legales y Patrimoniales
      <circle cx="56" cy="62" r="5" fill="#03b4d6" class="neural-n1"/>
      <circle cx="40" cy="40" r="8" fill="#03b4d6" class="neural-core"/>
      <!-- Connections -->
-     <line x1="40" y1="17" x2="40" y2="32" stroke="rgba(3,180,214,0.4)" stroke-width="1.5"/>
-     <line x1="21" y1="35" x2="32" y2="38" stroke="rgba(3,180,214,0.4)" stroke-width="1.5"/>
-     <line x1="59" y1="35" x2="48" y2="38" stroke="rgba(3,180,214,0.4)" stroke-width="1.5"/>
-     <line x1="28" y1="58" x2="36" y2="46" stroke="rgba(3,180,214,0.4)" stroke-width="1.5"/>
-     <line x1="52" y1="58" x2="44" y2="46" stroke="rgba(3,180,214,0.4)" stroke-width="1.5"/>
-     <line x1="40" y1="17" x2="21" y2="30" stroke="rgba(3,180,214,0.25)" stroke-width="1"/>
-     <line x1="40" y1="17" x2="59" y2="30" stroke="rgba(3,180,214,0.25)" stroke-width="1"/>
+     <line x1="40" y1="17" x2="40" y2="32" stroke="rgba(3,180,214,0.72)" stroke-width="1.5"/>
+     <line x1="21" y1="35" x2="32" y2="38" stroke="rgba(3,180,214,0.72)" stroke-width="1.5"/>
+     <line x1="59" y1="35" x2="48" y2="38" stroke="rgba(3,180,214,0.72)" stroke-width="1.5"/>
+     <line x1="28" y1="58" x2="36" y2="46" stroke="rgba(3,180,214,0.72)" stroke-width="1.5"/>
+     <line x1="52" y1="58" x2="44" y2="46" stroke="rgba(3,180,214,0.72)" stroke-width="1.5"/>
+     <line x1="40" y1="17" x2="21" y2="30" stroke="rgba(3,180,214,0.52)" stroke-width="1"/>
+     <line x1="40" y1="17" x2="59" y2="30" stroke="rgba(3,180,214,0.52)" stroke-width="1"/>
     </svg>
    </div>
    <div class="aidn-tech-pillar-label">AI-Augmented<br>Consulting</div>
    <div class="aidn-tech-pillar-tag">Intelligence Layer</div>
    <p class="aidn-tech-pillar-desc">La IA no reemplaza el criterio — lo amplifica. Cada análisis, modelo estratégico y entregable pasa por una capa de inteligencia que profundiza el diagnóstico y acelera la precisión del resultado final.</p>
    <div class="aidn-tech-pillar-stat">
-    <span class="stat-num">∞</span>
+    <span class="stat-num stat-num-inf" style="opacity:0;transition:opacity 0.6s ease 0.3s;">∞</span>
     <span class="stat-label">profundidad analítica sin horas extra</span>
    </div>
   </div>
@@ -6557,23 +5976,23 @@ Servicios Administrativos, Legales y Patrimoniales
    <div class="aidn-tech-pillar-icon">
     <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="54" height="54" aria-hidden="true">
      <!-- Globe/network distributed -->
-     <circle cx="40" cy="40" r="26" fill="none" stroke="rgba(99,102,241,0.6)" stroke-width="1.5" class="globe-ring"/>
-     <ellipse cx="40" cy="40" rx="12" ry="26" fill="none" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
-     <line x1="14" y1="40" x2="66" y2="40" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
-     <line x1="17" y1="28" x2="63" y2="28" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
-     <line x1="17" y1="52" x2="63" y2="52" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+     <circle cx="40" cy="40" r="26" fill="none" stroke="rgba(99,102,241,0.90)" stroke-width="1.5" class="globe-ring"/>
+     <ellipse cx="40" cy="40" rx="12" ry="26" fill="none" stroke="rgba(99,102,241,0.72)" stroke-width="1"/>
+     <line x1="14" y1="40" x2="66" y2="40" stroke="rgba(99,102,241,0.72)" stroke-width="1"/>
+     <line x1="17" y1="28" x2="63" y2="28" stroke="rgba(99,102,241,0.60)" stroke-width="1"/>
+     <line x1="17" y1="52" x2="63" y2="52" stroke="rgba(99,102,241,0.60)" stroke-width="1"/>
      <circle cx="40" cy="40" r="5" fill="#6366f1" class="neural-core"/>
      <circle cx="22" cy="28" r="3.5" fill="#6366f1" opacity="0.8" class="globe-dot1"/>
      <circle cx="58" cy="52" r="3.5" fill="#6366f1" opacity="0.8" class="globe-dot2"/>
-     <line x1="24" y1="30" x2="37" y2="38" stroke="rgba(99,102,241,0.5)" stroke-width="1.5"/>
-     <line x1="56" y1="50" x2="43" y2="42" stroke="rgba(99,102,241,0.5)" stroke-width="1.5"/>
+     <line x1="24" y1="30" x2="37" y2="38" stroke="rgba(99,102,241,0.85)" stroke-width="1.5"/>
+     <line x1="56" y1="50" x2="43" y2="42" stroke="rgba(99,102,241,0.85)" stroke-width="1.5"/>
     </svg>
    </div>
    <div class="aidn-tech-pillar-label">100 % Digital<br>& Remote</div>
    <div class="aidn-tech-pillar-tag">Zero Geographic Limits</div>
    <p class="aidn-tech-pillar-desc">Sin oficina física que el cliente pague. La infraestructura digital permite costos de operación menores, cobertura sin fronteras y respuesta ágil que una firma con estructura física no puede igualar.</p>
    <div class="aidn-tech-pillar-stat">
-    <span class="stat-num">MX+</span>
+    <span class="stat-num stat-num-inf" style="opacity:0;transition:opacity 0.6s ease 0.5s;">MX+</span>
     <span class="stat-label">operación sin restricción geográfica</span>
    </div>
   </div>
@@ -6700,6 +6119,7 @@ Agendar Consulta por WhatsApp
 </div>
 
 <p style="margin-top: 0.5rem; font-size: 0.9rem;">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
+</div><!-- /section-block modelo -->
 </footer>
 
 <!-- ════════════════════════════════════════════════════════════
@@ -7239,6 +6659,126 @@ Agendar Consulta por WhatsApp
   };
 
   document.addEventListener('DOMContentLoaded', function() { calcUpdate(); });
+
+}());
+
+/* ============================================================
+   MICROANIMACIONES v3.2 — IntersectionObserver + counters
+   Quirúrgico: no toca ningún sistema existente
+   ============================================================ */
+(function() {
+  'use strict';
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── 1 & 2. SCROLL-REVEAL + section-title underline ── */
+  var srEls = document.querySelectorAll('.sr');
+  if (srEls.length && 'IntersectionObserver' in window) {
+    var srObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('sr-visible');
+          srObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    srEls.forEach(function(el) { srObserver.observe(el); });
+  } else {
+    /* Fallback sin IO — mostrar todo */
+    srEls.forEach(function(el) { el.classList.add('sr-visible'); });
+  }
+
+  /* ── 3. COUNTER STATS — animación numérica ── */
+  function animateCounter(el) {
+    if (reduced) {
+      el.style.opacity = '1';
+      return;
+    }
+    var target  = parseFloat(el.getAttribute('data-target'));
+    var suffix  = el.getAttribute('data-suffix') || '';
+    var duration = 1200;
+    var start   = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      /* easeOutQuart */
+      var eased = 1 - Math.pow(1 - progress, 4);
+      var current = Math.round(eased * target);
+      el.textContent = current + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* Infinity fade-in */
+  function animateInfinity(el) {
+    if (reduced) { el.style.opacity = '1'; return; }
+    el.style.opacity = '1';
+  }
+
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      if (el.classList.contains('stat-num-inf')) {
+        animateInfinity(el);
+      } else if (el.hasAttribute('data-target')) {
+        animateCounter(el);
+      }
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-num[data-target], .stat-num-inf').forEach(function(el) {
+    counterObserver.observe(el);
+  });
+
+  /* ── 4. SHIMMER en precio calculadora ── */
+  var origAnimPrice = window.calcUpdate;
+  /* Hook shimmer into animPrice — patch the function */
+  var calcPriceEl = document.getElementById('calc-price-el');
+  if (calcPriceEl) {
+    var origCalcUpdate = window.calcUpdate;
+    window.calcUpdate = function() {
+      origCalcUpdate.apply(this, arguments);
+      /* Shimmer sweep after price updates */
+      setTimeout(function() {
+        calcPriceEl.classList.remove('shimmer-active');
+        void calcPriceEl.offsetWidth;
+        calcPriceEl.classList.add('shimmer-active');
+        setTimeout(function() {
+          calcPriceEl.classList.remove('shimmer-active');
+        }, 600);
+      }, 30);
+    };
+  }
+
+  /* ── 5. DIAMOND PULSE al entrar en viewport ── */
+  var diamonds = document.querySelectorAll('[data-diamond]');
+  if (diamonds.length && 'IntersectionObserver' in window) {
+    var dObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (reduced) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'rotate(45deg) scale(1)';
+          } else {
+            entry.target.classList.add('diamond-visible');
+          }
+          dObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 1.0 });
+    diamonds.forEach(function(d) { dObserver.observe(d); });
+  } else {
+    diamonds.forEach(function(d) {
+      d.style.opacity = '1';
+      d.style.transform = 'rotate(45deg) scale(1)';
+    });
+  }
+
+  /* ── 6. GLOW HOVER pills — pure CSS, no JS needed ── */
+  /* (handled entirely in stylesheet above) */
 
 }());
 </script>
