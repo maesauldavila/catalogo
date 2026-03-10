@@ -38,7 +38,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Primary Meta Tags -->
-<title>AIDN Strategic Consulting | Consultoría Estratégica y Servicios Fiscales</title>
+<title>AIDN Strategic Consulting</title>
 <meta name="title" content="AIDN Strategic Consulting">
 <meta name="description" content="Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad. Consultoría estratégica, servicios fiscales RESICO y administración empresarial.">
 <meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png">
@@ -182,6 +182,7 @@ line-height: 1.6;
 color: var(--text-dark);
 background: linear-gradient(135deg, var(--silver-dark) 0%, var(--silver-light) 50%, #dde3ec 100%);
 overflow-x: hidden;
+overscroll-behavior: contain;
 padding: 2rem 1rem;
 min-height: 100vh;
 transition: background var(--transition-base), color var(--transition-base);
@@ -1032,35 +1033,7 @@ color: var(--secondary);
 text-decoration: underline;
 }
 
-.footer-badges {
-display: flex;
-justify-content: center;
-gap: 1.2rem;
-margin-bottom: 0.7rem;
-flex-wrap: wrap;
-}
 
-.footer-badge {
-display: flex;
-align-items: center;
-gap: 0.5rem;
-background: var(--bg-white);
-padding: 0.6rem 1.2rem;
-border-radius: 20px;
-border: 2px solid var(--border);
-font-size: 0.85rem;
-color: var(--text-dark);
-transition: all var(--transition-base);
-}
-
-.footer-badge:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 12px var(--shadow);
-}
-
-.badge-icon {
-font-size: 1.2rem;
-}
 
 .floating-buttons-container {
 position: fixed;
@@ -1318,10 +1291,57 @@ word-break: break-word;
 }
 
 @media print {
-.floating-buttons-container,
-.cta-section {
-display: none;
-}
+  /* ── Ocultar elementos no imprimibles ── */
+  .floating-buttons-container,
+  .cta-section,
+  .aidn-tech-hero,
+  .mas-alla-hero-fused,
+  .ruta-hero,
+  .toc-section,
+  .separator,
+  .separator-minor,
+  .header-read-time {
+    display: none !important;
+  }
+
+  /* ── Reset de fondo y colores para impresión ── */
+  body, .container, .content {
+    background: white !important;
+    color: #1f2937 !important;
+    box-shadow: none !important;
+  }
+
+  .header {
+    background: white !important;
+    border-bottom: 3px solid #0c2a85;
+    padding: 1.5rem 2rem !important;
+  }
+  .header h1, .header .subtitle, .header .tagline {
+    color: #0c2a85 !important;
+    text-shadow: none !important;
+  }
+
+  /* ── Tablas: bordes visibles en impresión ── */
+  .service-table th { background: #0c2a85 !important; color: white !important; }
+  .service-table td { border: 1px solid #e5e7eb !important; }
+
+  /* ── Secciones oscuras → fondo blanco ── */
+  .cierre-block, .calc-wrapper, .intro-section {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    color: #1f2937 !important;
+    box-shadow: none !important;
+  }
+  .cierre-text p, .cierre-text strong { color: #1f2937 !important; }
+  .cierre-firma-logo { color: #0c2a85 !important; }
+
+  /* ── Footer limpio ── */
+  .footer { border-top: 2px solid #0c2a85; }
+  .footer-loc-pill { border: 1px solid #0c2a85 !important; }
+
+  /* ── Page breaks ── */
+  .section { page-break-inside: avoid; }
+  h2.section-title { page-break-after: avoid; }
 }
 
 /* ── Safety net: never overflow horizontally ── */
@@ -1372,6 +1392,91 @@ display: none;
 .content {
  padding: 1.5rem 1rem;
 }
+
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MÓVIL COMPACTO — 360px
+   Moto G, Samsung A-series, Redmi — dominantes en MX
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+ .content {
+  padding: 1.2rem 0.85rem;
+ }
+
+ .submarca-name {
+  font-size: 1.15rem;
+  letter-spacing: 0;
+ }
+
+ .header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+ }
+
+ .section-title {
+  font-size: 1.3rem;
+ }
+
+ .subsection-title {
+  font-size: 1rem;
+ }
+
+ /* Calculadora — evitar overflow horizontal */
+ .calc-wrapper {
+  border-radius: 14px;
+ }
+ .calc-header {
+  padding: 1.2rem 1rem 1rem;
+  gap: 0.8rem;
+ }
+ .calc-title {
+  font-size: 1.25rem;
+ }
+ .calc-body {
+  padding: 1rem;
+ }
+ .calc-price-num {
+  font-size: 2.2rem;
+ }
+
+ /* Tablas — forzar scroll horizontal */
+ .service-table {
+  font-size: 0.75rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+ }
+ .service-table th,
+ .service-table td {
+  padding: 0.55rem 0.45rem;
+  white-space: nowrap;
+ }
+
+ .contact-info {
+  gap: 1rem;
+ }
+
+ .contact-item {
+  font-size: 0.78rem;
+ }
+
+ .ruta-hero-title {
+  font-size: 1.25rem;
+ }
+
+ .filosofico-header-name {
+  font-size: 1.05rem;
+ }
+
+ .admin-est-def h4 {
+  font-size: 1rem;
+ }
+
+ .footer {
+  padding: 1rem 0.85rem 0.8rem;
+ }
 
 }
 
@@ -1493,6 +1598,53 @@ display: none;
 
  /* ── Footer ── */
  .footer { padding: 1.5rem 2rem 1.2rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MATEPAD 11.5"S — PORTRAIT HiDPI · ~900–1024px @ ≥2x DPR
+   Refinamientos sobre el bloque 769–1024 base.
+   Se activa sólo cuando el dispositivo reporta pantalla de alta
+   densidad (≥2dppx), descartando tablets de 1x comunes.
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width: 900px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 900px) and (max-width: 1024px) and (min-resolution: 192dpi) {
+
+ /* Márgenes internos más generosos — pantalla física grande */
+ .content { padding: 2.8rem 2.6rem; }
+
+ /* Headers — aprovechar el ancho real */
+ .header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 2.2px;
+ }
+ .submarca-name {
+  font-size: 2.1rem;
+  letter-spacing: 1.8px;
+ }
+ .section-title    { font-size: 1.82rem; }
+ .subsection-title { font-size: 1.28rem; }
+
+ /* Calculadora — margen simétrico y mayor padding */
+ .calc-wrapper {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+ }
+ .calc-header { padding: 2rem 2.2rem 1.6rem; }
+ .calc-title  { font-size: 1.55rem; }
+
+ /* Tablas — texto un pelo más grande para pantalla 2K */
+ .service-table { font-size: 0.92rem; }
+ .service-table th,
+ .service-table td { padding: 0.9rem 0.7rem; }
+
+ /* Tech Stack — 3 cols fluidas */
+ .aidn-tech-stack { grid-template-columns: repeat(3, 1fr); }
+
+ /* Estratega triptych — 3 cols en portrait amplio */
+ .estratega-triptych { grid-template-columns: repeat(3, 1fr); }
+
+ /* Footer */
+ .footer { padding: 1.6rem 2.2rem 1.3rem; }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -3304,8 +3456,6 @@ html[data-theme="dark"] .aestrat-vertex-label {
    CALCULADORA DE HONORARIOS — AIDN TAXES
    Diseño premium · Paleta corporativa · IBM Plex Mono
    ══════════════════════════════════════════════════════════════ */
-.calc-section { margin: 3rem 0; }
-
 .calc-wrapper {
   background: linear-gradient(160deg, #064e3b 0%, #065f46 45%, #0a1f14 100%);
   border-radius: 20px;
@@ -3553,7 +3703,18 @@ html[data-theme="dark"] .aestrat-vertex-label {
     border-bottom:1px solid rgba(16,185,129,0.1);
     padding:1.5rem;
   }
-  .calc-result { padding:1.5rem; }
+  .calc-result {
+    padding:1.5rem;
+    width:100%;
+    box-sizing:border-box;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .calc-scope { width:100%; box-sizing:border-box; }
+  .calc-scope-item { width:100%; box-sizing:border-box; overflow-wrap:break-word; }
+  .calc-note { width:100%; box-sizing:border-box; overflow-wrap:break-word; }
+  .calc-pkg-desc { overflow-wrap:break-word; word-break:break-word; }
+  .calc-wrapper { overflow:hidden; }
   .calc-header { padding:1.5rem 1.5rem 1.2rem; }
   .calc-footer { padding:1rem 1.5rem;flex-direction:column;align-items:flex-start; }
   .calc-price-amount { font-size:2.4rem; }
@@ -3794,11 +3955,6 @@ html[data-theme="dark"] .aestrat-vertex-label {
   color: rgba(3, 180, 214, 0.80);
 }
 
-.footer-loc-sep {
-  color: var(--text-light);
-  font-size: 0.8rem;
-  opacity: 0.5;
-}
 
 .footer-loc-coverage {
   display: inline-flex;
@@ -3816,10 +3972,155 @@ html[data-theme="dark"] .aestrat-vertex-label {
 
 
 
+
+/* ── Caballo de ajedrez — cierre-block AIDN Strategy ── */
+@keyframes knightBreathe {
+  0%   { transform: scale(1)    rotate(-2deg); filter: drop-shadow(0 0 4px rgba(3,180,214,0.25)); }
+  35%  { transform: scale(1.06) rotate(0deg);  filter: drop-shadow(0 0 10px rgba(3,180,214,0.65)); }
+  70%  { transform: scale(1.02) rotate(1deg);  filter: drop-shadow(0 0 7px rgba(3,180,214,0.4)); }
+  100% { transform: scale(1)    rotate(-2deg); filter: drop-shadow(0 0 4px rgba(3,180,214,0.25)); }
+}
+
+.cierre-knight {
+  display: block;
+  margin-bottom: 0.4rem;
+  animation: knightBreathe 4.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+
+/* ── Tiempo de lectura — header ── */
+.header-read-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── TOC: sección activa en scroll ── */
+.toc-link.toc-active {
+  background: linear-gradient(135deg, rgba(3,180,214,0.12), rgba(12,42,133,0.10));
+  border-color: rgba(3,180,214,0.35);
+  color: var(--primary);
+}
+.toc-link.toc-active .toc-number {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+.toc-link.toc-active .toc-icon {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+[data-theme="dark"] .toc-link.toc-active {
+  background: linear-gradient(135deg, rgba(3,180,214,0.10), rgba(12,42,133,0.15));
+  border-color: rgba(3,180,214,0.28);
+}
+
+/* ── Transición suave entre secciones de contraste ── */
+.calc-section {
+  border-radius: 18px;
+  margin: 2.5rem 0;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.08), 0 4px 24px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.aidn-tech-hero {
+  border-radius: 18px !important;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+
+/* ── Scroll margin — compensar borde superior en anchor jumps ── */
+div[id], section[id] {
+  scroll-margin-top: 1.5rem;
+}
+
+
+/* ── Separador editorial ante Calculadora ── */
+.separator-calc {
+  display: flex;
+  align-items: center;
+  margin: 2.4rem 0 0;
+  gap: 0;
+}
+
+.separator-calc::before,
+.separator-calc::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--border) 25%,
+    var(--border) 75%,
+    transparent
+  );
+  transition: background var(--transition-base);
+}
+
+.separator-calc-hex {
+  width: 20px;
+  height: 20px;
+  margin: 0 1.1rem;
+  color: var(--primary);
+  opacity: 0.55;
+  flex-shrink: 0;
+  transition: opacity var(--transition-base), color var(--transition-base);
+}
+
+[data-theme="dark"] .separator-calc::before,
+[data-theme="dark"] .separator-calc::after {
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(3,180,214,0.18) 25%,
+    rgba(3,180,214,0.18) 75%,
+    transparent
+  );
+}
+
+[data-theme="dark"] .separator-calc-hex {
+  opacity: 0.45;
+}
+
+
+/* ── Skip-link — accesibilidad teclado ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+  outline: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 </style>
 </head>
 
 <body>
+
+<a href="#seccion-introductoria" class="skip-link">Saltar al contenido principal</a>
 
 <div class="container">
 
@@ -3848,6 +4149,10 @@ html[data-theme="dark"] .aestrat-vertex-label {
 <h1>AIDN STRATEGIC CONSULTING</h1>
 <p class="subtitle">Consultoría Estratégica y Servicios Fiscales</p>
 <p class="tagline">Catapultamos empresas para liderar el cambio</p>
+<p class="header-read-time" aria-label="Tiempo estimado de lectura">
+  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+  Lectura: ~12 min
+</p>
 </header>
 
 <div class="content">
@@ -3956,7 +4261,7 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 <li class="toc-item">
 <a href="#seccion-admin-estrategica" class="toc-link">
 <span class="toc-number">1</span>
-<span class="toc-text">Administración Estratégica Holística</span>
+<span class="toc-text">Administración Estratégica y su Proceso</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -4283,11 +4588,11 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 <!-- / Fin Bloque A -->
 
-<!-- ── Administración y su Proceso ─────────────────────────── -->
+<!-- ── Administración Estratégica y su Proceso ──────────────── -->
 <div id="seccion-admin-proceso"></div>
 <h2 class="section-title sr">
   <span style="font-size:1.4rem;margin-right:0.5rem;">⬡</span>
-  Administración y su Proceso
+  Administración Estratégica y su Proceso
 </h2>
 
 <div id="seccion-admin-estrategica"></div>
@@ -5063,6 +5368,13 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
   <p>En AIDN, entendemos que <strong>ninguna estrategia sobrevive al contacto con la realidad si no está respaldada por una cultura que la soporte, personas comprometidas que la ejecuten y estructuras que las liberen para hacerlo.</strong> Por eso nuestro enfoque va más allá del plan: acompañamos la transformación real de las organizaciones, desde adentro.</p>
  </div>
  <div class="cierre-firma">
+  <svg class="cierre-knight" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#03b4d6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/>
+    <path d="M16.5 18c1-2 2.5-5 2.5-9a7 7 0 0 0-7-7H6.635a1 1 0 0 0-.768 1.64L7 5l-2.32 5.802a2 2 0 0 0 .95 2.526l2.87 1.456"/>
+    <path d="m15 5 1.425-1.425"/>
+    <path d="m17 8 1.53-1.53"/>
+    <path d="M9.713 12.185 7 18"/>
+  </svg>
   <span class="cierre-firma-logo">AIDN</span>
   <span class="cierre-firma-sub">Strategic Consulting</span>
  </div>
@@ -5326,7 +5638,7 @@ Personas Físicas — RESICO
 </table>
 </div>
 
-<div style="margin-top:2rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:14px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;">
+<div style="margin-top:2.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:18px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;box-shadow:0 -4px 24px rgba(0,0,0,0.10),0 4px 24px rgba(0,0,0,0.10),0 0 0 1px rgba(3,180,214,0.08);">
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
   <p style="font-family:'IBM Plex Mono', monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Base · Mes 25+</p>
   <p style="font-family:'Rajdhani', sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
@@ -5720,6 +6032,12 @@ Servicios Administrativos, Legales y Patrimoniales
 <!-- ══════════════════════════════════════════════════════════════
      CALCULADORA DE HONORARIOS AIDN TAXES
      ══════════════════════════════════════════════════════════════ -->
+<div class="separator-calc" role="presentation" aria-hidden="true">
+  <svg class="separator-calc-hex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 2 L20.66 7 L20.66 17 L12 22 L3.34 17 L3.34 7 Z"/>
+    <path d="M12 6 L17.2 9 L17.2 15 L12 18 L6.8 15 L6.8 9 Z" stroke-width="0.8" opacity="0.5"/>
+  </svg>
+</div>
 <div class="calc-section">
 <div id="seccion-calculadora">
 <div class="calc-wrapper" role="region" aria-label="Calculadora de honorarios fiscales AIDN">
@@ -5744,24 +6062,24 @@ Servicios Administrativos, Legales y Patrimoniales
         <label class="calc-label" for="calc-regimen">Régimen fiscal</label>
         <div class="calc-select-wrap">
           <select id="calc-regimen" class="calc-select" onchange="calcUpdate()">
-            <optgroup label="── RESICO ──">
-              <option value="resico_prof">RESICO &middot; Profesionales / Emprendedores</option>
-              <option value="resico_medico">RESICO &middot; Médicos y Dentistas</option>
-              <option value="resico_primario">RESICO &middot; Sector Primario (cobro anual)</option>
+            <optgroup label="RESICO">
+              <option value="resico_prof">RESICO — Profesionales y Emprendedores</option>
+              <option value="resico_medico">RESICO — Médicos y Dentistas</option>
+              <option value="resico_primario">RESICO — Sector Primario, cobro anual</option>
             </optgroup>
-            <optgroup label="── Actividad Empresarial y Profesional ──">
-              <option value="aeyp_gen">AEyP &middot; General</option>
-              <option value="aeyp_medico">AEyP &middot; Médicos y Dentistas</option>
-              <option value="aeyp_minorista">AEyP &middot; Minoristas (Abarrotes, Ropa, Panaderías)</option>
-              <option value="aeyp_hotel">AEyP &middot; Hoteles y Mueblerías</option>
+            <optgroup label="Actividad Empresarial y Profesional">
+              <option value="aeyp_gen">Actividad Empresarial y Profesional — General</option>
+              <option value="aeyp_medico">Actividad Empresarial y Profesional — Médicos y Dentistas</option>
+              <option value="aeyp_minorista">Actividad Empresarial y Profesional — Minoristas</option>
+              <option value="aeyp_hotel">Actividad Empresarial y Profesional — Hoteles y Mueblerías</option>
             </optgroup>
-            <optgroup label="── Sueldos y Salarios ──">
-              <option value="sueldos">Sueldos y Salarios &middot; Declaración Anual</option>
+            <optgroup label="Sueldos y Salarios">
+              <option value="sueldos">Sueldos y Salarios — Declaración Anual</option>
             </optgroup>
-            <optgroup label="── IMSS ──">
-              <option value="imss_mod40">IMSS &middot; Análisis de Retiro + Alta Modalidad 40</option>
-              <option value="imss_mod10">IMSS &middot; Modalidad 10 (Seguro de Salud Familiar)</option>
-              <option value="imss_pagos">IMSS &middot; Hojas de Pago Mensuales</option>
+            <optgroup label="IMSS">
+              <option value="imss_mod40">IMSS — Análisis de Retiro y Alta Modalidad 40</option>
+              <option value="imss_mod10">IMSS — Modalidad 10, Seguro de Salud Familiar</option>
+              <option value="imss_pagos">IMSS — Hojas de Pago Mensuales</option>
             </optgroup>
           </select>
         </div>
@@ -6202,23 +6520,11 @@ Agendar Consulta por WhatsApp
 
 </div>
 
-<div class="footer-badges">
-<div class="footer-badge badge-opensource">
-<span class="badge-icon">💻</span>
-<span>Operado bajo GNU/Linux</span>
-</div>
-<div class="footer-badge badge-security">
-<span class="badge-icon">🔐</span>
-<span>Seguridad superior y confidencialidad profesional</span>
-</div>
-</div>
 
 <p class="footer-copyright">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
 <div class="footer-location" role="contentinfo" aria-label="Origen de AIDN Strategic Consulting">
   <span class="footer-location-label">Fundada en</span>
-  <span class="footer-loc-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuevo León</span>
-  <span class="footer-loc-sep">·</span>
-  <span class="footer-loc-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> San Luis Potosí</span>
+  <span class="footer-loc-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuevo León · San Luis Potosí</span>
   <span class="footer-loc-coverage"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Servicios en todo México</span>
 </div>
 </div><!-- /section-block modelo -->
@@ -6451,17 +6757,64 @@ Agendar Consulta por WhatsApp
    });
  }
 
+
+ /* ── 7. TOC ACTIVO EN SCROLL ─────────────────────────────── */
+ function initTocObserver() {
+  var tocLinks = document.querySelectorAll('.toc-link[href^="#"]');
+  if (!tocLinks.length || !window.IntersectionObserver) return;
+
+  var sectionIds = Array.from(tocLinks).map(function(a) {
+   return a.getAttribute('href').slice(1);
+  }).filter(Boolean);
+
+  var sections = sectionIds.map(function(id) {
+   return document.getElementById(id);
+  }).filter(Boolean);
+
+  if (!sections.length) return;
+
+  var activeId = null;
+
+  var observer = new IntersectionObserver(function(entries) {
+   entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+     activeId = entry.target.id;
+    }
+   });
+   tocLinks.forEach(function(link) {
+    var href = link.getAttribute('href').slice(1);
+    link.classList.toggle('toc-active', href === activeId);
+   });
+  }, {
+   rootMargin: '-10% 0px -80% 0px',
+   threshold: 0
+  });
+
+  sections.forEach(function(s) { observer.observe(s); });
+ }
+
  /* ── INICIALIZACIÓN ──────────────────────────────────────── */
+ /* Restaurar state.manual para que initSystemThemeWatcher
+    no sobreescriba una elección manual previa del usuario */
+ if (isLSAvailable()) {
+  try {
+   var _raw = localStorage.getItem(LS_KEY);
+   if (_raw) {
+    var _parsed = JSON.parse(_raw);
+    if (_parsed && _parsed.manual === true) { state.manual = true; }
+   }
+  } catch (e) {}
+ }
  applyTheme(detectTheme());
 
  if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function () {
    initFloatingButtons(); initKeyboardShortcut();
-   initSmoothAnchors(); initSystemThemeWatcher();
+   initSmoothAnchors(); initSystemThemeWatcher(); initTocObserver();
   });
  } else {
   initFloatingButtons(); initKeyboardShortcut();
-  initSmoothAnchors(); initSystemThemeWatcher();
+  initSmoothAnchors(); initSystemThemeWatcher(); initTocObserver();
  }
  window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: function () { return state.theme; } };
 }());
@@ -6836,8 +7189,7 @@ Agendar Consulta por WhatsApp
   });
 
   /* ── 4. SHIMMER en precio calculadora ── */
-  var origAnimPrice = window.calcUpdate;
-  /* Hook shimmer into animPrice — patch the function */
+  /* Hook shimmer into calcUpdate — patch the function */
   var calcPriceEl = document.getElementById('calc-price-el');
   if (calcPriceEl) {
     var origCalcUpdate = window.calcUpdate;
