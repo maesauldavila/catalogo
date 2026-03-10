@@ -979,6 +979,7 @@ background: #f0f9ff;
 .cta-icon {
 width: 24px;
 height: 24px;
+flex-shrink: 0;
 }
 
 .footer {
@@ -1391,6 +1392,16 @@ word-break: break-word;
 
 .content {
  padding: 1.5rem 1rem;
+}
+
+/* CTA button — full-width en móvil para evitar compresión del icono */
+.cta-button {
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ box-sizing: border-box;
+ padding: 1rem 1.5rem;
+ font-size: 1rem;
 }
 
 }
