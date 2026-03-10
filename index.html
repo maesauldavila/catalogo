@@ -608,10 +608,8 @@ padding-bottom: 1rem;
 }
 
 .toc-title svg {
-display: block;
 width: 24px;
 height: 24px;
-flex-shrink: 0;
 color: var(--primary);
 }
 
@@ -1084,10 +1082,8 @@ transform: scale(0.95);
 }
 
 .floating-btn svg {
-display: block;
 width: 24px;
 height: 24px;
-flex-shrink: 0;
 }
 
 .whatsapp-btn {
@@ -1342,7 +1338,7 @@ word-break: break-word;
 
   /* ── Footer limpio ── */
   .footer { border-top: 2px solid #0c2a85; }
-  .footer-loc-pill { border: 1px solid #0c2a85 !important; }
+  .footer-loc-pill { border: 1.5px solid rgba(3,180,214,0.55) !important; }
 
   /* ── Page breaks ── */
   .section { page-break-inside: avoid; }
@@ -1357,11 +1353,7 @@ word-break: break-word;
 .filosofico-header-sub,
 .ruta-hero-title,
 .hero-title,
-.admin-block-title {
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
+.admin-block-title,
 /* ── Extra small phones (≤480px) ── */
 @media (max-width: 480px) {
 .submarca-name {
@@ -3213,6 +3205,11 @@ html[data-theme="dark"] .aestrat-arc-label {
  animation: techLine 4s linear infinite;
 }
 
+@keyframes calcTopLine {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
 @keyframes techLine {
   0%   { background-position: 0% 0%; }
   100% { background-position: 200% 0%; }
@@ -3940,57 +3937,37 @@ html[data-theme="dark"] .aestrat-vertex-label {
   justify-content: center;
 }
 
-.footer-location-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--text-light);
-  opacity: 0.7;
-  margin-right: 0.15rem;
-}
+
 
 .footer-loc-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.22rem 0.7rem;
-  border-radius: 20px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  font-family: 'IBM Plex Sans', sans-serif;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  padding: 0.28rem 0.85rem !important;
+  border-radius: 20px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  font-family: 'IBM Plex Sans', sans-serif !important;
+  background: rgba(3, 180, 214, 0.12) !important;
+  border: 1.5px solid rgba(3, 180, 214, 0.55) !important;
+  color: #03b4d6 !important;
   transition: transform 180ms ease, box-shadow 180ms ease;
+  text-decoration: none !important;
 }
 
 .footer-loc-pill:hover {
   transform: translateY(-1px);
-}
-
-.footer-loc-pill {
-  background: rgba(3, 180, 214, 0.08);
-  border: 1px solid rgba(3, 180, 214, 0.22);
-  color: var(--primary);
+  background: rgba(3, 180, 214, 0.20) !important;
 }
 
 [data-theme="dark"] .footer-loc-pill {
-  background: rgba(3, 180, 214, 0.07);
-  border-color: rgba(3, 180, 214, 0.18);
-  color: rgba(3, 180, 214, 0.80);
+  background: rgba(3, 180, 214, 0.12) !important;
+  border-color: rgba(3, 180, 214, 0.45) !important;
+  color: rgba(3, 180, 214, 0.90) !important;
 }
 
 
-.footer-loc-coverage {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.75rem;
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 0.8px;
-  color: var(--text-light);
-  opacity: 0.65;
-  margin-left: 0.3rem;
-}
+
 
 
 
@@ -4013,21 +3990,7 @@ html[data-theme="dark"] .aestrat-vertex-label {
 }
 
 
-/* ── Tiempo de lectura — header ── */
-.header-read-time {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  margin-top: 0.6rem;
-  position: relative;
-  z-index: 1;
-}
+
 
 /* ── TOC: sección activa en scroll ── */
 .toc-link.toc-active {
@@ -4068,81 +4031,17 @@ div[id], section[id] {
 }
 
 
-/* ── Separador editorial ante Calculadora ── */
-.separator-calc {
-  display: flex;
-  align-items: center;
-  margin: 2.4rem 0 0;
-  gap: 0;
-}
-
-.separator-calc::before,
-.separator-calc::after {
-  content: '';
-  flex: 1;
-  height: 1.5px;
-  background: linear-gradient(90deg,
-    transparent,
-    var(--border) 25%,
-    var(--border) 75%,
-    transparent
-  );
-  transition: background var(--transition-base);
-}
-
-.separator-calc-hex {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin: 0 1.1rem;
-  color: var(--primary);
-  opacity: 0.55;
-  flex-shrink: 0;
-  transition: opacity var(--transition-base), color var(--transition-base);
-}
-
-[data-theme="dark"] .separator-calc::before,
-[data-theme="dark"] .separator-calc::after {
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(3,180,214,0.18) 25%,
-    rgba(3,180,214,0.18) 75%,
-    transparent
-  );
-}
-
-[data-theme="dark"] .separator-calc-hex {
-  opacity: 0.45;
-}
 
 
-/* ── Skip-link — accesibilidad teclado ── */
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: 1rem;
-  z-index: 9999;
-  padding: 0.6rem 1.2rem;
-  background: var(--primary);
-  color: #fff;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border-radius: 0 0 8px 8px;
-  text-decoration: none;
-  transition: top 0.2s ease;
-  outline: none;
-}
-.skip-link:focus {
-  top: 0;
-}
+
+
 
 </style>
 </head>
 
 <body>
 
-<a href="#seccion-introductoria" class="skip-link">Saltar al contenido principal</a>
+
 
 <div class="container">
 
@@ -4171,10 +4070,7 @@ div[id], section[id] {
 <h1>AIDN STRATEGIC CONSULTING</h1>
 <p class="subtitle">Consultoría Estratégica y Servicios Fiscales</p>
 <p class="tagline">Catapultamos empresas para liderar el cambio</p>
-<p class="header-read-time" aria-label="Tiempo estimado de lectura">
-  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-  Lectura: ~12 min
-</p>
+
 </header>
 
 <div class="content">
@@ -5661,7 +5557,7 @@ Personas Físicas — RESICO
 </div>
 
 <div style="margin-top:2.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:18px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;box-shadow:0 -4px 24px rgba(0,0,0,0.10),0 4px 24px rgba(0,0,0,0.10),0 0 0 1px rgba(3,180,214,0.08);">
-  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcLine 4s linear infinite;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
   <p style="font-family:'IBM Plex Mono', monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa Extraordinaria · RESICO Base · Mes 25+</p>
   <p style="font-family:'Rajdhani', sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo — <span style="color:#03b4d6;">$500 MXN mensuales</span></p>
   <p style="font-family:'IBM Plex Sans', sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del alcance <strong style="color:rgba(255,255,255,0.9);">RESICO — Base</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500 MXN</strong> — sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos — el inicio de una asociación sólida con AIDN, y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
@@ -6054,12 +5950,126 @@ Servicios Administrativos, Legales y Patrimoniales
 <!-- ══════════════════════════════════════════════════════════════
      CALCULADORA DE HONORARIOS AIDN TAXES
      ══════════════════════════════════════════════════════════════ -->
-<div class="separator-calc" role="presentation" aria-hidden="true">
-  <svg class="separator-calc-hex" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M12 2 L20.66 7 L20.66 17 L12 22 L3.34 17 L3.34 7 Z"/>
-    <path d="M12 6 L17.2 9 L17.2 15 L12 18 L6.8 15 L6.8 9 Z" stroke-width="0.8" opacity="0.5"/>
-  </svg>
+
+<div class="aidn-calc-divider" aria-hidden="true">
+  <div class="aidn-calc-divider__track aidn-calc-divider__track--left"></div>
+  <div class="aidn-calc-divider__core">
+    <svg class="aidn-calc-divider__ring aidn-calc-divider__ring--outer" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="36" fill="none" stroke="url(#calcGradOuter)" stroke-width="1" stroke-dasharray="6 3" />
+    </svg>
+    <svg class="aidn-calc-divider__ring aidn-calc-divider__ring--inner" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="24" fill="none" stroke="url(#calcGradInner)" stroke-width="1.2" stroke-dasharray="4 4" />
+    </svg>
+    <svg class="aidn-calc-divider__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <defs>
+        <linearGradient id="calcGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#03b4d6" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#0c2a85" stop-opacity="0.4"/>
+        </linearGradient>
+        <linearGradient id="calcGradInner" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0c2a85" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#03b4d6" stop-opacity="0.6"/>
+        </linearGradient>
+      </defs>
+      <rect x="4" y="4" width="16" height="16" rx="2"/>
+      <line x1="8" y1="9" x2="16" y2="9"/>
+      <line x1="8" y1="12" x2="10" y2="12"/>
+      <line x1="8" y1="15" x2="10" y2="15"/>
+      <line x1="14" y1="12" x2="16" y2="12"/>
+      <line x1="14" y1="15" x2="16" y2="15"/>
+    </svg>
+    <div class="aidn-calc-divider__glow"></div>
+  </div>
+  <div class="aidn-calc-divider__track aidn-calc-divider__track--right"></div>
 </div>
+
+<style>
+.aidn-calc-divider {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0 0;
+  padding: 0 2rem;
+  position: relative;
+}
+.aidn-calc-divider__track {
+  flex: 1;
+  height: 1px;
+  position: relative;
+  overflow: visible;
+}
+.aidn-calc-divider__track--left {
+  background: linear-gradient(90deg, transparent, #03b4d6 60%, #0c2a85);
+}
+.aidn-calc-divider__track--right {
+  background: linear-gradient(90deg, #0c2a85, #03b4d6 40%, transparent);
+}
+.aidn-calc-divider__track::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 100%;
+  height: 3px;
+  background: inherit;
+  filter: blur(4px);
+  opacity: 0.4;
+}
+.aidn-calc-divider__core {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 0 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aidn-calc-divider__ring {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.aidn-calc-divider__ring--outer {
+  animation: calcSpinCW 12s linear infinite;
+}
+.aidn-calc-divider__ring--inner {
+  animation: calcSpinCCW 8s linear infinite;
+}
+.aidn-calc-divider__icon {
+  width: 22px;
+  height: 22px;
+  color: #03b4d6;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 6px rgba(3,180,214,0.7));
+}
+.aidn-calc-divider__glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(3,180,214,0.15) 0%, transparent 70%);
+  animation: calcPulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes calcSpinCW {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes calcSpinCCW {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+@keyframes calcPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.15); }
+}
+[data-theme="dark"] .aidn-calc-divider__track--left {
+  background: linear-gradient(90deg, transparent, rgba(3,180,214,0.5) 60%, rgba(12,42,133,0.7));
+}
+[data-theme="dark"] .aidn-calc-divider__track--right {
+  background: linear-gradient(90deg, rgba(12,42,133,0.7), rgba(3,180,214,0.5) 40%, transparent);
+}
+</style>
+
 <div class="calc-section">
 <div id="seccion-calculadora">
 <div class="calc-wrapper" role="region" aria-label="Calculadora de honorarios fiscales AIDN">
@@ -6212,7 +6222,6 @@ Servicios Administrativos, Legales y Patrimoniales
 </div><!-- /calc-wrapper -->
 </div><!-- /seccion-calculadora -->
 </div><!-- /calc-section -->
-</div><!-- /section-block modelo-trabajo -->
 
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -6545,11 +6554,18 @@ Agendar Consulta por WhatsApp
 
 
 <p class="footer-copyright">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
-<div class="footer-location" role="contentinfo" aria-label="Origen de AIDN Strategic Consulting">
-  <span class="footer-location-label">Fundada en</span>
-  <span class="footer-loc-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuevo León · San Luis Potosí</span>
-  <span class="footer-loc-coverage"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Servicios en todo México</span>
+<div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-top:0.6rem; flex-wrap:wrap;">
+  <span style="display:inline-flex; align-items:center; gap:0.3rem; padding:0.28rem 0.85rem; border-radius:20px; font-size:0.78rem; font-weight:600; font-family:'IBM Plex Sans',sans-serif; background:rgba(3,180,214,0.12); border:1.5px solid rgba(3,180,214,0.55); color:#03b4d6;">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuevo León
+  </span>
+  <span style="display:inline-flex; align-items:center; gap:0.3rem; padding:0.28rem 0.85rem; border-radius:20px; font-size:0.78rem; font-weight:600; font-family:'IBM Plex Sans',sans-serif; background:rgba(3,180,214,0.12); border:1.5px solid rgba(3,180,214,0.55); color:#03b4d6;">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> San Luis Potosí
+  </span>
+  <span style="display:inline-flex; align-items:center; gap:0.3rem; padding:0.28rem 0.85rem; border-radius:20px; font-size:0.78rem; font-weight:600; font-family:'IBM Plex Sans',sans-serif; background:rgba(12,42,133,0.12); border:1.5px solid rgba(12,42,133,0.55); color:#0c2a85;">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Servicios en todo México
+  </span>
 </div>
+</div><!-- /section-block modelo -->
 </footer>
 
 <!-- ════════════════════════════════════════════════════════════
@@ -7258,9 +7274,6 @@ Agendar Consulta por WhatsApp
 
 }());
 </script>
-
-</div><!-- /content -->
-</div><!-- /container -->
 
 </body>
 </html>
