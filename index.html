@@ -1203,7 +1203,8 @@ gap: 0.6rem;
 color: var(--text-dark);
 font-size: 0.9rem;
 flex-wrap: wrap;
-word-break: break-all;
+overflow-wrap: break-word;
+word-break: break-word;
 }
 
 .contact-item svg {
@@ -1665,7 +1666,8 @@ word-break: break-word;
  .service-table th,
  .service-table td {
   padding: 0.55rem 0.45rem;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
  }
 
  .contact-info {
@@ -1702,6 +1704,9 @@ word-break: break-word;
 
  /* ── Línea conectora Ruta — ocultar en 3 columnas ── */
  .ruta-hero-steps::before { display: none; }
+
+ /* ── Body — padding generoso para pantalla tablet ── */
+ body { padding: 2rem 2rem; }
 
  /* ── Contenedor y espaciado ── */
  .container { border-radius: 12px; }
@@ -1866,6 +1871,9 @@ word-break: break-word;
   2800×1840 @~2x DPR · orientación horizontal · ~1400px CSS width
   ══════════════════════════════════════════════════════════════ */
 @media (min-width: 1025px) and (max-width: 1440px) {
+
+ /* ── Body — padding simétrico landscape MatePad ── */
+ body { padding: 2rem 3rem; }
 
  /* ── Contenedor y espaciado — lectura holgada ── */
  .content { padding: 3rem 2.5rem; }
@@ -3235,6 +3243,11 @@ html[data-theme="dark"] .aestrat-label-sub {
 [data-theme="light"] .estratega-block {
  background: linear-gradient(135deg, #0c1f4a, #0f2560);
 }
+
+.estratega-block--taxes::before {
+ background: linear-gradient(90deg, #059669, #10b981, #059669);
+}
+
 
 [data-theme="light"] .estratega-quote {
  color: white;
@@ -5717,10 +5730,10 @@ Certificación Internacional en Administración Estratégica OLA/CICA 2025-2031
 </div>
 
 <!-- Hero de postura Taxes -->
-<div class="estratega-block" style="background:linear-gradient(135deg,#064e3b,#065f46);border-top-color:#059669;margin-bottom:0;border-radius:16px 16px 0 0;">
+<div class="estratega-block estratega-block--taxes" style="background:linear-gradient(135deg,#064e3b,#065f46);margin-bottom:0;border-radius:16px 16px 0 0;">
  <span style="display:block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#34d399;margin-bottom:1.1rem;">AIDN Taxes · Servicios Fiscales</span>
- <p class="estratega-quote" style="color:white;font-size:1.4rem;line-height:1.6;margin-bottom:1.2rem;">La mayoría paga lo que le dicen que debe pagar. Pocos entienden por qué — y esa diferencia tiene nombre: régimen equivocado, deducción no aplicada, estructura que no se revisó a tiempo.</p>
- <p style="color:rgba(255,255,255,0.72);font-size:0.93rem;line-height:1.8;max-width:680px;">AIDN Taxes no entrega declaraciones — entrega claridad. Cada servicio está diseñado para que el contribuyente entienda su situación real, opere dentro del marco legal con eficiencia, y no descubra tarde que había una mejor forma de hacerlo. El cumplimiento es la base. Lo que se construye sobre esa base es lo que importa.</p>
+ <p class="estratega-quote" style="color:white;line-height:1.6;margin-bottom:1.2rem;">La mayoría paga lo que le dicen que debe pagar. Pocos entienden por qué — y esa diferencia tiene nombre: régimen equivocado, deducción no aplicada, estructura que no se revisó a tiempo.</p>
+ <p style="color:rgba(255,255,255,0.72);font-size:0.93rem;line-height:1.8;max-width:100%;">AIDN Taxes no entrega declaraciones — entrega claridad. Cada servicio está diseñado para que el contribuyente entienda su situación real, opere dentro del marco legal con eficiencia, y no descubra tarde que había una mejor forma de hacerlo. El cumplimiento es la base. Lo que se construye sobre esa base es lo que importa.</p>
 </div>
 
 <div class="info-box info" style="margin-top:0;border-radius:0 0 12px 12px;border-top:none;">
@@ -6803,7 +6816,7 @@ Agendar Consulta por WhatsApp
 </button>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ============================================================
   AIDN Strategic Consulting — Interacciones del Catálogo
   Sistema de Tema, Botones Flotantes y Accesibilidad
