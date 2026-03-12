@@ -1968,6 +1968,12 @@ word-break: break-word;
  }
  .ruta-hero-cta-text h4,
  .ruta-hero-cta-text p { text-align: left; }
+ .rh-cta-btn {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+ }
 
  /* ── Más allá / hero fusionado ── */
  /* ── Para quién ── */
@@ -2736,20 +2742,21 @@ text-decoration: underline;
 background: linear-gradient(135deg, #0c2a85, #14338F);
 padding: 2.5rem;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 2rem;
-flex-wrap: wrap;
 text-align: center;
+box-sizing: border-box;
 }
 
 .ruta-hero-cta-text {
-flex: 1;
-min-width: 0;
-max-width: 680px;
+width: 100%;
+max-width: 100%;
 overflow-wrap: break-word;
 word-break: break-word;
 text-align: center;
+box-sizing: border-box;
 }
 
 .ruta-hero-cta-text h4 {
@@ -2758,6 +2765,7 @@ font-size: 1.5rem;
 font-weight: 700;
 color: white;
 margin-bottom: 0.5rem;
+text-align: center;
 }
 
 .ruta-hero-cta-text p {
@@ -2765,6 +2773,7 @@ color: rgba(255,255,255,0.85);
 font-size: 0.92rem;
 line-height: 1.6;
 margin: 0;
+text-align: center;
 }
 
 .ruta-hero-cta-text em {
@@ -2776,6 +2785,7 @@ font-weight: 600;
 .rh-cta-btn {
 display: inline-flex;
 align-items: center;
+justify-content: center;
 gap: 0.7rem;
 background: white;
 color: #0c2a85;
@@ -2786,8 +2796,11 @@ font-weight: 700;
 font-size: 1rem;
 transition: all var(--transition-base);
 box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-white-space: nowrap;
-flex-shrink: 0;
+white-space: normal;
+text-align: center;
+max-width: 400px;
+width: 100%;
+box-sizing: border-box;
 }
 
 .rh-cta-btn:hover {
