@@ -1403,12 +1403,25 @@ box-sizing: border-box;
 width: 100%;
 max-width: 100%;
 text-align: center;
+box-sizing: border-box;
 }
 
 .ruta-hero-cta-text h4 {
 font-size: 1.2rem;
 overflow-wrap: break-word;
 text-align: center;
+}
+
+.ruta-hero-cta-text p {
+text-align: center;
+}
+
+.rh-cta-btn {
+width: 100%;
+max-width: 340px;
+box-sizing: border-box;
+justify-content: center;
+white-space: normal;
 }
 
 /* ── Más allá hero fusionado ── */
@@ -1611,6 +1624,16 @@ word-break: break-word;
  box-sizing: border-box;
  padding: 1rem 1.5rem;
  font-size: 1rem;
+}
+
+/* Botón Ruta Emprendedor — no desbordarse en 480px */
+.rh-cta-btn {
+ width: 100%;
+ max-width: 320px;
+ box-sizing: border-box;
+ justify-content: center;
+ white-space: normal;
+ padding: 0.85rem 1.2rem;
 }
 
 }
@@ -1987,6 +2010,91 @@ word-break: break-word;
 
  /* ── Footer ── */
  .footer { padding: 1.8rem 2.5rem 1.4rem; }
+
+ /* ── Botón CTA — row mode, sin overflow ── */
+ .rh-cta-btn {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 1rem 2rem;
+ }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MATEPAD 11.5"S — PORTRAIT SEGURO (DPR variable)
+   2800×1840 · DPR=2 → 920px · DPR=2.5 → 736px
+   Usa resolución física mínima para atrapar cualquier DPR
+   que reporte el dispositivo en portrait.
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width: 700px) and (max-width: 1024px)
+  and (min-resolution: 220dpi) {
+ body { padding: 2rem 2rem; }
+ .container { border-radius: 12px; }
+ .content  { padding: 2.5rem 2.2rem; }
+ .service-table   { font-size: 0.9rem; }
+ .service-table th,
+ .service-table td { padding: 0.85rem 0.65rem; }
+ /* CTA — columna, texto centrado, botón acotado */
+ .ruta-hero-cta {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.2rem 2.5rem;
+ }
+ .ruta-hero-cta-text {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+ }
+ .ruta-hero-cta-text h4,
+ .ruta-hero-cta-text p { text-align: center; }
+ .rh-cta-btn {
+  width: auto;
+  max-width: 400px;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
+ }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MATEPAD 11.5"S — LANDSCAPE SEGURO (DPR variable)
+   2800×1840 · DPR=2 → 1400px CSS  (cubierto por 1025-1440)
+   DPR=2.5 → 1120px CSS            (también 1025-1440)
+   Refinamiento HiDPI para pantalla 2.8K en landscape
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width: 1025px) and (max-width: 1440px)
+  and (min-resolution: 220dpi) {
+ body { padding: 2rem 3rem; }
+ .header h1 { font-size: 2.6rem; }
+ .submarca-name { font-size: 2.4rem; }
+ .section-title { font-size: 1.85rem; }
+ .content { padding: 3rem 2.8rem; }
+ .service-table { font-size: 0.95rem; }
+ .service-table th,
+ .service-table td { padding: 1rem 0.8rem; }
+ /* CTA en landscape — row correcto */
+ .ruta-hero-cta {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.8rem;
+ }
+ .ruta-hero-cta-text {
+  flex: 1;
+  max-width: 620px;
+  text-align: left;
+ }
+ .ruta-hero-cta-text h4,
+ .ruta-hero-cta-text p { text-align: left; }
+ .rh-cta-btn {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+ }
 }
 
 
@@ -2708,7 +2816,25 @@ color: rgba(255,255,255,0.6);
 }
 .ruta-hero-cta {
  flex-direction: column;
+ align-items: center;
  text-align: center;
+ padding: 1.8rem 1.2rem;
+ box-sizing: border-box;
+}
+.ruta-hero-cta-text {
+ width: 100%;
+ max-width: 100%;
+ text-align: center;
+ box-sizing: border-box;
+}
+.ruta-hero-cta-text h4,
+.ruta-hero-cta-text p { text-align: center; }
+.rh-cta-btn {
+ width: 100%;
+ max-width: 360px;
+ box-sizing: border-box;
+ justify-content: center;
+ white-space: normal;
 }
 .ruta-hero-title { font-size: 2rem; }
 }
@@ -3962,8 +4088,32 @@ html[data-theme="dark"] .aestrat-vertex-label {
 
 
 @media (min-width: 1441px) {
-  /* ── Desktop wide — calc wrapper centrado —— */
+  /* ── MatePad 11.5s landscape alta resolución / Desktop wide ── */
+  body { padding: 3rem 4rem; }
+  .container { border-radius: 20px; }
+  /* calc wrapper centrado */
   .calc-wrapper { max-width: 1100px; margin-left: auto; margin-right: auto; }
+  /* CTA Ruta del Emprendedor — en row con texto izquierda */
+  .ruta-hero-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+  }
+  .ruta-hero-cta-text {
+    flex: 1;
+    max-width: 640px;
+    text-align: left;
+  }
+  .ruta-hero-cta-text h4,
+  .ruta-hero-cta-text p { text-align: left; }
+  .rh-cta-btn {
+    width: auto;
+    max-width: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 }
 
 /* ── Divisor ornamental CTA — editorial premium ── */
