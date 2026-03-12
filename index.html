@@ -1392,18 +1392,23 @@ grid-column: 1 / -1;
 
 .ruta-hero-cta {
 flex-direction: column;
+align-items: center;
 text-align: center;
-padding: 1.8rem 1rem;
+padding: 1.8rem 1.2rem;
 width: 100%;
+box-sizing: border-box;
 }
 
-.ruta-hero-cta-text h4 {
-font-size: 1.05rem;
-overflow-wrap: break-word;
+.ruta-hero-cta-text {
+width: 100%;
+max-width: 100%;
+text-align: center;
 }
 
 .ruta-hero-cta-text h4 {
 font-size: 1.2rem;
+overflow-wrap: break-word;
+text-align: center;
 }
 
 /* ── Más allá hero fusionado ── */
@@ -1758,10 +1763,16 @@ word-break: break-word;
  }
  .ruta-hero-step:last-child { grid-column: 2; }
  .ruta-hero-cta {
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem 2.5rem;
+  text-align: center;
+  gap: 1.8rem;
+  padding: 2.2rem 2.5rem;
+ }
+ .ruta-hero-cta-text {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
  }
  .ruta-hero-cta-text h4 { font-size: 1.3rem; }
 
@@ -1923,9 +1934,17 @@ word-break: break-word;
  .ruta-hero-cta {
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
   padding: 2.5rem;
  }
+ .ruta-hero-cta-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+ }
+ .ruta-hero-cta-text h4,
+ .ruta-hero-cta-text p { text-align: left; }
 
  /* ── Más allá / hero fusionado ── */
  /* ── Para quién ── */
