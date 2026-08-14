@@ -504,10 +504,16 @@ body {
   background:linear-gradient(135deg,rgba(3,180,214,.10),rgba(12,42,133,.15));
   border-color:rgba(3,180,214,.28);
 }
+/* TOC — Taxes como ítem complementario */
+.toc-link.toc-taxes { opacity:.82; }
+.toc-link.toc-taxes .toc-number { background:linear-gradient(135deg,#059669,#047857); font-size:.8rem; }
+.toc-link.toc-taxes .toc-text { font-weight:500; font-size:.9rem; }
+.toc-link.toc-taxes:hover { background:linear-gradient(135deg,#059669,#047857); }
+.toc-taxes-note { font-size:.75rem; color:var(--txt2); font-style:italic; margin-top:.2rem; display:block; font-weight:400; }
 
 /* ── SUBMARCA HEADERS ── */
 .submarca-title {
-  padding:2rem; border-radius:16px; margin-bottom:2.5rem;
+  padding:2rem; border-radius:16px; margin-bottom:2.5rem; margin-top:1rem;
   text-align:center; position:relative; overflow:hidden;
   box-shadow:0 8px 24px var(--shad);
 }
@@ -517,8 +523,8 @@ body {
   pointer-events:none;
 }
 .submarca-title-intro  { background:linear-gradient(135deg,#0c2a85,#14338F); }
-.submarca-strategy { background:linear-gradient(135deg,#06b6d4,#0c2a85); }
-.submarca-taxes    { background:linear-gradient(135deg,#059669,#047857); }
+.submarca-strategy { background:linear-gradient(135deg,#06b6d4,#0c2a85); padding:2.8rem 2rem; }
+.submarca-taxes    { background:linear-gradient(135deg,#059669,#047857); padding:1.4rem 2rem; }
 .submarca-politicas{ background:linear-gradient(135deg,#8b5cf6,#6366f1); }
 .submarca-name {
   display:block; font-family:var(--fh); font-size:clamp(1.5rem,3vw,2.5rem);
@@ -526,11 +532,21 @@ body {
   position:relative; z-index:1; text-shadow:0 2px 12px rgba(0,0,0,.3);
   overflow-wrap:break-word; word-break:break-word; hyphens:auto;
 }
+.submarca-strategy .submarca-name { font-size:clamp(2rem,4vw,3.2rem); letter-spacing:3px; }
+.submarca-taxes .submarca-name { font-size:clamp(1.1rem,2.2vw,1.8rem); letter-spacing:1px; font-weight:600; }
 .submarca-descriptor {
   display:block; font-size:clamp(.9rem,1.5vw,1.2rem); color:rgba(255,255,255,.9);
   font-weight:500; position:relative; z-index:1;
   overflow-wrap:break-word; word-break:break-word;
 }
+.submarca-taxes .submarca-descriptor { font-size:clamp(.8rem,1.2vw,.95rem); color:rgba(255,255,255,.75); }
+.submarca-eyebrow {
+  display:block; font-size:.68rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:3px; color:rgba(255,255,255,.7); margin-bottom:.9rem;
+  position:relative; z-index:1;
+}
+.submarca-strategy .submarca-eyebrow { color:rgba(255,255,255,.85); letter-spacing:4px; }
+.submarca-taxes .submarca-eyebrow { font-size:.65rem; color:rgba(255,255,255,.6); }
 
 /* ── SECCIONES ── */
 .section { margin-top:2.5rem; margin-bottom:3.5rem; max-width:100%; overflow-x:hidden; }
@@ -554,7 +570,8 @@ body {
   background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white; border-radius:8px; font-size:1.1rem; font-weight:700; padding:0 .8rem;
 }
-.subsection { margin-top:2rem; margin-bottom:2rem; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.subsection { margin-top:1rem; margin-bottom:3rem; overflow-x:auto; -webkit-overflow-scrolling:touch; position:relative; }
+.subsection + .subsection::before { content:''; display:block; height:1px; background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent); margin-bottom:3rem; opacity:.6; }
 .subsection-title {
   font-family:var(--fh); font-size:clamp(1rem,2vw,1.4rem); font-weight:700; color:var(--txt1);
   margin-bottom:1rem; padding-left:1rem; border-left:4px solid var(--secondary);
@@ -592,6 +609,7 @@ body {
   border-left:5px solid; background:var(--bg-alt);
   transition:all var(--t-base);
 }
+.info-box + .info-box { margin-top:1rem; }
 .info-box.info { border-color:var(--info); background:linear-gradient(135deg,var(--premium-bg-b),#eff6ff); }
 [data-theme="dark"] .info-box.info { background:linear-gradient(135deg,#1e3a5f,#2a4a6f); }
 .info-box.success { border-color:var(--success-dk); background:linear-gradient(135deg,#d1fae5,#ecfdf5); }
@@ -1005,7 +1023,14 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 /* ── BOTONES FLOTANTES ── */
 .floating-buttons-container { position:fixed; bottom:2rem; right:2rem; display:flex; flex-direction:column; gap:1rem; z-index:1000; opacity:0; visibility:hidden; transform:translateY(20px); transition:all var(--t-base); }
 .floating-buttons-container.visible { opacity:1; visibility:visible; transform:translateY(0); }
-.floating-btn { width:56px; height:56px; touch-action:manipulation; border-radius:50%; border:none; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px var(--shad); transition:all var(--t-base); }
+.floating-btn { width:60px; height:60px; touch-action:manipulation; border-radius:50%; border:none; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px var(--shad); transition:all var(--t-base); position:relative; }
+.floating-btn[aria-label]::before { content:attr(aria-label); position:absolute; right:calc(100% + .8rem); top:50%; transform:translateY(-50%); background:rgba(0,0,0,.8); color:white; font-size:.78rem; font-weight:600; padding:.35rem .75rem; border-radius:6px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .2s ease; font-family:var(--fb); }
+.floating-btn[aria-label]:hover::before { opacity:1; }
+[data-theme="dark"] .whatsapp-btn { box-shadow:0 4px 20px rgba(37,211,102,.45) !important; }
+@media(max-width:768px){
+  .subsection::after { content:''; position:absolute; top:0; right:0; bottom:0; width:3rem; background:linear-gradient(to left,var(--bg-card),transparent); pointer-events:none; transition:opacity .3s ease; }
+  .subsection.scrolled-right::after { opacity:0; }
+}
 .floating-btn:hover { transform:scale(1.1); box-shadow:0 8px 24px var(--shad-hov); }
 .floating-btn:active { transform:scale(.95); }
 .floating-btn svg { width:24px; height:24px; }
@@ -1502,9 +1527,11 @@ El problema no es el impuesto. Es la estructura que lo genera.
 </a>
 </li>
 <li class="toc-item">
-<a href="#seccion-taxes" class="toc-link">
-
-<span class="toc-text">III. AIDN Taxes | Servicios Fiscales</span>
+<a href="#seccion-taxes" class="toc-link toc-taxes">
+<span class="toc-number" style="background:linear-gradient(135deg,#059669,#047857);">III</span>
+<span class="toc-text">III. AIDN Taxes | Servicios Fiscales
+<span class="toc-taxes-note">Servicios complementarios · Puerta de entrada a Strategy</span>
+</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2059,10 +2086,10 @@ El problema no es el impuesto. Es la estructura que lo genera.
     El estratega no firma el catálogo. <strong>Firma el resultado.</strong>
    </p>
 
-   <div class="info-box" style="border-left-color:#03b4d6;margin-top:1.8rem;background:rgba(3,180,214,0.04);">
+   <div class="info-box" style="border-left-color:#03b4d6;margin-top:1.8rem;background:linear-gradient(135deg,rgba(3,180,214,0.15),rgba(12,42,133,0.12));">
     <p class="info-box-title" style="color:#03b4d6;">Especialistas. No generalistas.</p>
-    <p style="line-height:1.8;margin-bottom:0.8rem;">El conocimiento que respalda a AIDN es amplio por diseño: abarca administración, finanzas, fiscalidad y derecho mercantil. Pero el conocimiento amplio sin criterio de selección es mera erudición — no consultoría. La diferencia de AIDN no está en lo que sabe, está en lo que elige hacer con ello.</p>
-    <p style="line-height:1.8;margin:0;">AIDN no cubre áreas funcionales en específico ni ejecuta tareas operativas. No porque no exista el conocimiento — sino porque la especialización es una decisión estratégica en sí misma. Un especialista que filtra su trabajo es más valioso que un generalista que lo acepta todo. Esa es la postura de esta firma.</p>
+    <p style="line-height:1.8;margin-bottom:0.8rem;color:#e8edf5;">El conocimiento que respalda a AIDN es amplio por diseño: abarca administración, finanzas, fiscalidad y derecho mercantil. Pero el conocimiento amplio sin criterio de selección es mera erudición — no consultoría. La diferencia de AIDN no está en lo que sabe, está en lo que elige hacer con ello.</p>
+    <p style="line-height:1.8;margin:0;color:#e8edf5;">AIDN no cubre áreas funcionales concretas ni ejecuta tareas operativas. No porque no exista el conocimiento — sino porque la especialización es una decisión estratégica en sí misma. Un especialista que filtra su trabajo es más valioso que un generalista que lo acepta todo. Esa es la postura de esta firma.</p>
    </div>
   </div>
   <!-- / Bloque estratega -->
@@ -2090,15 +2117,10 @@ El problema no es el impuesto. Es la estructura que lo genera.
 <!-- SECCIÓN II: AIDN STRATEGY -->
 <div id="seccion-strategy"></div>
 <div class="submarca-title submarca-strategy">
+<span class="submarca-eyebrow">Servicio principal · Núcleo de la firma</span>
 <span class="submarca-name">II. AIDN Strategy</span>
 <span class="submarca-descriptor">Consultoría Estratégica</span>
 </div>
-
-<div class="info-box info" style="border-left-color:#14338F;">
- <p class="info-box-title" style="color:#14338F;">Inversión en Consultoría Estratégica</p>
- <p>Los proyectos de AIDN Strategy se estructuran a la medida de cada organización — alcance, complejidad y horizonte de acompañamiento determinan la inversión. Como referencia orientativa, los compromisos de consultoría estratégica parten desde <strong>$8,000 MXN por sesión diagnóstica</strong> hasta esquemas de acompañamiento continuo. La primera sesión diagnóstica es sin costo y sin compromiso.</p>
-</div>
-
 
 <section class="section" id="seccion-consultoria">
 
@@ -2551,6 +2573,10 @@ El problema no es el impuesto. Es la estructura que lo genera.
 
 </section>
 
+<div class="info-box info" style="border-left-color:#14338F;margin-top:2rem;">
+ <p class="info-box-title" style="color:#14338F;">Inversión en Consultoría Estratégica</p>
+ <p>Los proyectos de AIDN Strategy se estructuran a la medida de cada organización — alcance, complejidad y horizonte de acompañamiento determinan la inversión. Como referencia orientativa, los compromisos de consultoría estratégica parten desde <strong>$8,000 MXN por sesión diagnóstica</strong> hasta esquemas de acompañamiento continuo. La primera sesión diagnóstica es sin costo y sin compromiso.</p>
+</div>
 
 <div class="separator" role="presentation">
 <svg class="target-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2673,7 +2699,7 @@ El problema no es el impuesto. Es la estructura que lo genera.
   letter-spacing: 3px;
   color: #059669;
   margin-bottom: 1.4rem;
- ">Fiscal primero. Estrategia cuando estés listo.</span>
+ ">AIDN Taxes — Acceso estratégico a la firma</span>
 
  <p style="
   font-family: 'Rajdhani', sans-serif;
@@ -2682,7 +2708,7 @@ El problema no es el impuesto. Es la estructura que lo genera.
   line-height: 1.55;
   color: var(--txt1);
   margin-bottom: 1.2rem;
- ">Empezar por los impuestos no es empezar pequeño.<br>Es empezar con los pies en la tierra.</p>
+ ">La mayoría de los clientes de AIDN Strategy<br>llegan por lo fiscal — y está bien.</p>
 
  <p style="
   font-size: 0.95rem;
@@ -2690,7 +2716,7 @@ El problema no es el impuesto. Es la estructura que lo genera.
   color: var(--txt2);
   max-width: 560px;
   margin: 0 auto 1.4rem;
- ">Lo que me interesa no es el cumplimiento por sí mismo — es lo que ocurre cuando una organización toma decisiones fiscales con criterio estratégico. Un contador ve la obligación. Un estratega ve la palanca. AIDN Taxes existe en ese espacio intermedio: rigor técnico al servicio de una visión de largo plazo.</p>
+ ">El cumplimiento tributario es la primera conversación porque es la más urgente. Pero no es la definitiva. AIDN Taxes existe para que quien aún no está listo para consultoría estratégica tenga un primer punto de contacto con la firma — riguroso, útil, construido sobre el mismo criterio. Cuando la operación lo requiera, la puerta a Strategy ya está abierta.</p>
 
  <div style="
   display: inline-flex;
@@ -2702,7 +2728,7 @@ El problema no es el impuesto. Es la estructura que lo genera.
   border: 1px solid rgba(5,150,105,0.2);
  ">
   <span style="width:8px;height:8px;border-radius:50%;background:#059669;flex-shrink:0;"></span>
-  <span style="font-size:0.82rem;color:#059669;font-weight:600;letter-spacing:0.3px;">Fiscal riguroso. Visión de negocio. Sin mezclar lo que no debe mezclarse.</span>
+  <span style="font-size:0.82rem;color:#059669;font-weight:600;letter-spacing:0.3px;">Fiscal riguroso hoy. Estrategia cuando la operación lo exija.</span>
  </div>
 </div>
 <!-- / Transición Strategy → Taxes -->
@@ -2720,11 +2746,15 @@ El problema no es el impuesto. Es la estructura que lo genera.
 <!-- SECCIÓN III: AIDN TAXES -->
 <div id="seccion-taxes"></div>
 <div class="submarca-title submarca-taxes">
+<span class="submarca-eyebrow">Servicios complementarios · Puerta de entrada a Strategy</span>
 <span class="submarca-name">III. AIDN Taxes</span>
 <span class="submarca-descriptor">Servicios Fiscales</span>
 </div>
 
 <!-- Hero de postura Taxes -->
+<div class="info-box" style="border-left-color:#059669;background:linear-gradient(135deg,rgba(5,150,105,.06),rgba(4,120,87,.04));margin-bottom:1.5rem;">
+ <p style="margin:0;line-height:1.8;color:var(--txt2);font-style:italic;font-size:.93rem;"><strong style="color:var(--txt1);font-style:normal;">AIDN Taxes es el punto de entrada fiscal de la firma.</strong> No un despacho contable — una antesala estratégica. El mismo criterio técnico y la misma postura profesional de AIDN Strategy, aplicados al cumplimiento tributario de personas físicas.</p>
+</div>
 <div class="estratega-block estratega-block--taxes" style="background:linear-gradient(135deg,#064e3b,#065f46);margin-bottom:0;border-radius:16px 16px 0 0;">
  <span style="display:block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#34d399;margin-bottom:1.1rem;">AIDN Taxes · Servicios Fiscales</span>
  <p class="estratega-quote" style="color:white;line-height:1.6;margin-bottom:1.2rem;">La mayoría paga lo que le dicen que debe pagar. Pocos entienden por qué — y esa diferencia tiene nombre: régimen equivocado, deducción no aplicada, estructura que no se revisó a tiempo.</p>
@@ -3361,10 +3391,10 @@ Servicios Administrativos, Legales y Patrimoniales
 <p style="line-height:1.8;margin-bottom:1.2rem;">La relación con AIDN opera principalmente en remoto — videoconferencia, plataformas digitales, comunicación directa. No hay capa de intermediarios entre el cliente y el criterio. La atención presencial existe y está disponible bajo cita previa; no es la regla, pero tampoco la excepción cuando el caso lo requiere.</p>
 <div class="info-box premium">
  <p class="info-box-title">Horarios de operación</p>
- <p style="margin:0 0 0.6rem;"><strong>Atención operativa:</strong> lunes a viernes 11:00–19:00 h</p>
- <p style="margin:0 0 0.6rem;"><strong>Gestión de citas:</strong> lunes a sábado 8:00–20:00 h</p>
- <p style="margin:0 0 0.6rem;"><strong>Sábado presencial:</strong> bajo acuerdo previo, 11:00–18:00 h</p>
- <p style="margin:0;font-style:italic;color:var(--txt2);font-size:0.9rem;">Los clientes activos tienen atención preferencial y acceso prioritario a la agenda — no como privilegio arbitrario, sino como reconocimiento a una relación establecida y en curso.</p>
+ <p style="margin:0 0 0.6rem;"><strong>Lunes a viernes:</strong> 11:00–19:00 h</p>
+ <p style="margin:0 0 0.6rem;"><strong>Sábados:</strong> 11:00–14:00 h</p>
+ <p style="margin:0 0 0.6rem;"><strong>Domingos:</strong> cerrado</p>
+ <p style="margin:0;font-style:italic;color:var(--txt2);font-size:0.9rem;">Los mensajes recibidos fuera de esta jornada se atienden a primera hora del siguiente día hábil. Los clientes activos tienen atención preferencial y acceso prioritario a la agenda.</p>
 </div>
 </div>
 
@@ -3806,6 +3836,16 @@ function initFloatingButtons() {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Mobile table scroll fade indicator
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.subsection').forEach(function(sub) {
+      sub.addEventListener('scroll', function() {
+        var atEnd = sub.scrollLeft + sub.clientWidth >= sub.scrollWidth - 4;
+        sub.classList.toggle('scrolled-right', atEnd);
+      }, { passive: true });
+    });
+  }
 
   if (scrollBtn) {
     scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
