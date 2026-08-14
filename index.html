@@ -488,7 +488,7 @@ body {
 .toc-container {
   background:var(--bg-card); border:2px solid var(--border);
   border-radius:16px; padding:2rem; margin-bottom:3rem;
-  box-shadow:0 4px 16px var(--shad); overflow:hidden;
+  box-shadow:0 4px 16px var(--shad);
 }
 .toc-title {
   font-family:var(--fh); font-size:1.75rem; font-weight:700; color:var(--txt1);
@@ -506,7 +506,7 @@ body {
 }
 .toc-link:hover {
   background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:white; transform:translateX(4px);
+  color:white; transform:translateX(8px);
   border-color:var(--primary); box-shadow:0 4px 12px var(--shad);
 }
 .toc-link:hover .toc-icon { color:white; transform:translateX(4px); }
@@ -595,8 +595,7 @@ body {
   background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white; border-radius:8px; font-size:1.1rem; font-weight:700; padding:0 .8rem;
 }
-.subsection { margin-top:1rem; margin-bottom:3rem; overflow-x:auto; -webkit-overflow-scrolling:touch; position:relative; }
-.subsection + .subsection::before { content:''; display:block; height:1px; background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent); margin-bottom:3rem; opacity:.6; }
+.subsection { margin-top:1rem; margin-bottom:3rem; overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .subsection-title {
   font-family:var(--fh); font-size:clamp(1rem,2vw,1.4rem); font-weight:700; color:var(--txt1);
   margin-bottom:1rem; padding-left:1rem; border-left:4px solid var(--secondary);
@@ -621,7 +620,7 @@ body {
 .service-table td { padding:1rem; border-bottom:1px solid var(--border); word-wrap:break-word; overflow-wrap:break-word; text-align:left; vertical-align:top; }
 .service-table tbody tr:hover { background:var(--bg-alt); transition:background var(--t-base); }
 .service-table tbody tr:last-child td { border-bottom:none; }
-.price { font-weight:700; color:var(--primary); font-size:1.1rem; white-space:nowrap; }
+.price { font-weight:700; color:var(--primary); font-size:1.1rem; }
 [data-theme="dark"] .price { color:var(--plata); }
 .scope-list { list-style:none; padding-left:0; margin:.5rem 0 0 0; }
 .scope-list li { padding:.3rem 0 .3rem 1.8rem; position:relative; font-size:.9rem; line-height:1.5; }
@@ -1052,10 +1051,6 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 .floating-btn[aria-label]::before { content:attr(aria-label); position:absolute; right:calc(100% + .8rem); top:50%; transform:translateY(-50%); background:rgba(0,0,0,.8); color:white; font-size:.78rem; font-weight:600; padding:.35rem .75rem; border-radius:6px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .2s ease; font-family:var(--fb); }
 .floating-btn[aria-label]:hover::before { opacity:1; }
 [data-theme="dark"] .whatsapp-btn { box-shadow:0 4px 20px rgba(37,211,102,.45) !important; }
-@media(max-width:768px){
-  .subsection::after { content:''; position:absolute; top:0; right:0; bottom:0; width:3rem; background:linear-gradient(to left,var(--bg-card),transparent); pointer-events:none; transition:opacity .3s ease; }
-  .subsection.scrolled-right::after { opacity:0; }
-}
 .floating-btn:hover { transform:scale(1.1); box-shadow:0 8px 24px var(--shad-hov); }
 .floating-btn:active { transform:scale(.95); }
 .floating-btn svg { width:24px; height:24px; }
@@ -1203,10 +1198,8 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .calc-header{padding:1.2rem 1rem 1rem;gap:.8rem}
   .calc-title{font-size:1.25rem}
   .calc-body{padding:1rem}
-  .service-table{font-size:.78rem;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;table-layout:auto}
-  .service-table table{width:100%;min-width:340px}
+  .service-table{font-size:.75rem;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .service-table th,.service-table td{padding:.55rem .45rem;white-space:normal;word-break:break-word}
-  .service-table td.price,.service-table th:last-child{white-space:nowrap;min-width:90px}
   .contact-info{gap:1rem}
   .contact-item{font-size:.78rem}
   .ruta-hero-title{font-size:1.25rem}
@@ -3863,16 +3856,6 @@ function initFloatingButtons() {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-
-  // Mobile table scroll fade indicator
-  if (window.innerWidth <= 768) {
-    document.querySelectorAll('.subsection').forEach(function(sub) {
-      sub.addEventListener('scroll', function() {
-        var atEnd = sub.scrollLeft + sub.clientWidth >= sub.scrollWidth - 4;
-        sub.classList.toggle('scrolled-right', atEnd);
-      }, { passive: true });
-    });
-  }
 
   if (scrollBtn) {
     scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
