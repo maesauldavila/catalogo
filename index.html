@@ -2788,12 +2788,17 @@ El problema no es el impuesto — es la estructura que lo genera
 
 
 <!-- Vigencia de precios -->
-<div style="display:flex;justify-content:flex-start;margin:1.4rem 0 1.2rem;">
+<div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:flex-start;margin:1.4rem 0 0.6rem;">
   <span style="display:inline-flex;align-items:center;gap:0.55rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:6px;padding:0.35rem 0.9rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#059669;">
     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
     Vigencia de precios: 1 mar 2026 — 28 feb 2027
   </span>
+  <span style="display:inline-flex;align-items:center;gap:0.55rem;background:rgba(20,51,143,0.08);border:1px solid rgba(20,51,143,0.25);border-radius:6px;padding:0.35rem 0.9rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--laser);">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    Precio vigente &middot; sin descuentos &middot; IVA incluido
+  </span>
 </div>
+<p style="margin:0 0 1.2rem;font-size:0.82rem;font-style:italic;color:var(--txt2);">Los precios de este catálogo se presentan con fines de evaluación. Las tarifas preferenciales — como la tarifa &laquo;Cliente&raquo; — aplican exclusivamente a clientes vigentes de la firma. Ver <strong>Honorarios, pago y facturación</strong>, Sección IV — Políticas y Ética Profesional.</p>
 <!-- SECCIÓN 1: RESICO -->
 <section class="section" id="seccion-resico">
 <h2 class="section-title sr">
@@ -3130,7 +3135,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included">Seguimiento de gestión</li>
 </ul>
 </td>
-<td class="price">$475</td>
+<td class="price">$575</td>
 </tr>
 <tr>
 <td><strong>Generación de hojas de pago mensuales (líneas de captura)</strong></td>
@@ -3142,13 +3147,17 @@ Servicios Administrativos, Legales y Patrimoniales
 <li class="included">Modalidad 10 o Modalidad 40</li>
 </ul>
 </td>
-<td class="price">$150 <small>mensual</small><br><span style="color:var(--success-dk);font-weight:600;font-size:0.9rem;">$75 clientes con servicios fiscales</span></td>
+<td class="price">$1,500 <small>pago único &middot; 12 meses</small><br><span style="color:var(--success-dk);font-weight:600;font-size:0.9rem;">$800 clientes con servicios fiscales</span><div style="margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid var(--border);font-size:0.82rem;font-weight:400;color:var(--txt2);">Alternativa: $150 mensual &middot; <span style="color:var(--success-dk);font-weight:600;">$75 clientes con servicios fiscales</span></div></td>
 </tr>
 </tbody>
 </table>
 <div class="info-box premium">
  <p class="info-box-title">Ventaja competitiva</p>
  <p>El Servicio de Retiro IMSS es uno de los más completos disponibles en este segmento. La diferencia entre una pensión digna y prestaciones mínimas puede depender de una sola decisión tomada con información correcta. El servicio cubre desde el análisis técnico hasta la inscripción oficial en Modalidad 40.</p>
+</div>
+<div class="info-box info" style="margin-top:1rem;">
+ <p class="info-box-title">ℹ️ Servicios independientes</p>
+ <p>El Análisis de Retiro y Alta en Modalidad 40 y la Inscripción en Modalidad 10 cubren únicamente el trámite de alta. La <strong>generación mensual de líneas de captura y seguimiento</strong> es un servicio independiente, aplicable a ambas modalidades, y se contrata por separado (ver «Generación de hojas de pago mensuales» en esta misma tabla).</p>
 </div>
 </div>
 
@@ -3353,7 +3362,7 @@ Servicios Administrativos, Legales y Patrimoniales
 
   <div class="calc-footer">
     <div class="calc-footer-note">
-      Precios en MXN sin IVA &middot; Estimado orientativo &middot; Sujeto a confirmación en sesión diagnóstica
+      Precios en MXN con IVA incluido &middot; Estimado orientativo &middot; Sujeto a confirmación en sesión diagnóstica
     </div>
     <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20fiscal"
        class="calc-cta-btn" target="_blank" rel="noopener noreferrer">
@@ -3421,6 +3430,7 @@ Servicios Administrativos, Legales y Patrimoniales
 <div class="subsection">
 <h3 class="subsection-title">2. Honorarios, pago y facturación</h3>
 <p style="line-height:1.8;margin-bottom:1.2rem;"><strong>Todo servicio se factura.</strong> El CFDI se emite en el momento del pago, sea anticipo o liquidación final. No hay servicios sin registro.</p>
+<p style="line-height:1.8;margin-bottom:1.2rem;">En todo acuerdo o propuesta de servicio, AIDN señala el <strong>precio vigente</strong> al momento de la evaluación: sin descuentos y con <strong>IVA incluido</strong>. Las tarifas preferenciales — incluida la tarifa «Cliente» descrita en este catálogo — aplican exclusivamente a <strong>clientes vigentes</strong> de la firma; quien evalúa un servicio por primera vez parte siempre del precio de lista.</p>
 <div class="info-box premium">
  <p class="info-box-title">Métodos de pago aceptados</p>
  <p style="margin:0 0 0.6rem;">✓ <strong>Transferencia electrónica</strong> — preferente, registro contable inmediato</p>
@@ -4117,7 +4127,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
                  'Asesoría en selección de base de cotización óptima'],
           excl:[] }
       ],
-      nota:'Servicio de pago único. Incluye desde el análisis técnico hasta la inscripción oficial. Uno de los servicios más competitivos en este segmento en la región.'
+      nota:'Servicio de pago único. Incluye desde el análisis técnico hasta la inscripción oficial. Uno de los servicios más competitivos en este segmento en la región. La generación mensual de líneas de captura es un servicio independiente (ver «IMSS — Hojas de Pago Mensuales»).'
     },
     imss_mod10: {
       nombre:'IMSS &middot; Modalidad 10 (Seguro de Salud Familiar)',
@@ -4125,12 +4135,12 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       pkgs:[
         { nombre:'Inscripción Modalidad 10',
           desc:'Trámite de alta + asesoría documental + seguimiento',
-          precio:{cliente:475,externo:475}, desde:0, hasta:99,
+          precio:{cliente:575,externo:575}, desde:0, hasta:99,
           scope:['Trámite de alta ante el IMSS','Asesoría en documentación requerida',
                  'Seguimiento de gestión'],
           excl:[] }
       ],
-      nota:'Servicio de pago único por inscripción. Permite acceso a servicios médicos del IMSS sin relación laboral activa.'
+      nota:'Servicio de pago único por inscripción. Permite acceso a servicios médicos del IMSS sin relación laboral activa. La generación mensual de líneas de captura es un servicio independiente (ver «IMSS — Hojas de Pago Mensuales»).'
     },
     imss_pagos: {
       nombre:'IMSS &middot; Hojas de Pago Mensuales',
@@ -4145,7 +4155,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
                  'Aplica para Modalidad 10 y Modalidad 40'],
           excl:[] }
       ],
-      nota:'Para clientes con servicios fiscales activos en AIDN: $75 MXN / mes. Para público general sin contrato activo: $150 MXN / mes.'
+      nota:'Para clientes con servicios fiscales activos en AIDN: $75 MXN / mes, o $800 MXN en una sola exhibición por 12 meses. Para público general sin contrato activo: $150 MXN / mes, o $1,500 MXN en una sola exhibición por 12 meses.'
     }
   };
 
