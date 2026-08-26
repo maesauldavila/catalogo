@@ -1049,11 +1049,13 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 .floating-buttons-container.visible { opacity:1; visibility:visible; transform:translateY(0); }
 .floating-btn { width:60px; height:60px; touch-action:manipulation; border-radius:50%; border:none; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px var(--shad); transition:all var(--t-base); position:relative; }
 .floating-btn[aria-label]::before { content:attr(aria-label); position:absolute; right:calc(100% + .8rem); top:50%; transform:translateY(-50%); background:rgba(0,0,0,.8); color:white; font-size:.78rem; font-weight:600; padding:.35rem .75rem; border-radius:6px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .2s ease; font-family:var(--fb); }
-.floating-btn[aria-label]:hover::before { opacity:1; }
 [data-theme="dark"] .whatsapp-btn { box-shadow:0 4px 20px rgba(37,211,102,.45) !important; }
-.floating-btn:hover { transform:scale(1.1); box-shadow:0 8px 24px var(--shad-hov); }
 .floating-btn:active { transform:scale(.95); }
 .floating-btn svg { width:24px; height:24px; }
+@media (hover: hover) and (pointer: fine) {
+  .floating-btn[aria-label]:hover::before { opacity:1; }
+  .floating-btn:hover { transform:scale(1.1); box-shadow:0 8px 24px var(--shad-hov); }
+}
 .whatsapp-btn { background:linear-gradient(135deg,#25D366,#128C7E) !important; transition:transform .2s ease,box-shadow .2s ease; }
 .whatsapp-btn:hover { transform:scale(1.1); box-shadow:0 8px 24px rgba(18,140,126,.4); }
 .whatsapp-btn:active { transform:scale(.95); }
