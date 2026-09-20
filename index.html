@@ -52,7 +52,12 @@
 <meta property="og:url" content="https://aidnstrategic.com">
 <meta property="og:title" content="AIDN Strategic Consulting | Consultoría Estratégica y Servicios Fiscales">
 <meta property="og:description" content="Consultoría estratégica y administración de empresas con criterio deliberado. Planeación estratégica, sociedades mercantiles, RESICO y servicios fiscales SAT. Nuevo León · San Luis Potosí · México.">
-<meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png">
+<meta property="og:image" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png?v=20260920">
+<meta property="og:image:secure_url" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png?v=20260920">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="AIDN Strategic Consulting — logotipo hexagonal y nombre de la firma">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="AIDN Strategic Consulting">
 
@@ -61,7 +66,8 @@
 <meta name="twitter:url" content="https://aidnstrategic.com">
 <meta name="twitter:title" content="AIDN Strategic Consulting | Consultoría Estratégica y Servicios Fiscales">
 <meta name="twitter:description" content="Especialistas en planeación estratégica, administración de empresas, sociedades mercantiles y servicios fiscales RESICO ante el SAT. Nuevo León · San Luis Potosí · México.">
-<meta name="twitter:image" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png">
+<meta name="twitter:image" content="https://maesauldavila.github.io/catalogo/banner.og-aidn.png?v=20260920">
+<meta name="twitter:image:alt" content="AIDN Strategic Consulting — logotipo hexagonal y nombre de la firma">
 
 <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -108,8 +114,8 @@
       "logo": {
         "@type": "ImageObject",
         "url": "https://maesauldavila.github.io/catalogo/banner.og-aidn.png",
-        "width": 1200,
-        "height": 630
+        "width": 1280,
+        "height": 640
       },
       "image": "https://maesauldavila.github.io/catalogo/banner.og-aidn.png",
       "description": "Consultoría estratégica y fiscal con criterio de selección deliberado. Especialistas en planeación tributaria, RESICO y dirección estratégica empresarial. AIDN Strategic Consulting, Nuevo León.",
@@ -483,6 +489,27 @@ body {
   opacity:0; transition:border-color var(--t-base);
 }
 [data-theme="dark"] .separator-minor-diamond { border-color:rgba(255,255,255,.15); }
+
+/* ── RITMO DE SECCIONES ──────────────────────────────────────────
+   Un cambio de sección = 3rem de aire sobre y bajo el separador,
+   medido contra el contenido (no contra márgenes residuales).
+   1) El último bloque de cada .section no deja margen propio:
+      el espacio entre secciones lo define solo .section (3.5rem).
+   2) Junto a un separador, la sección cierra en 3rem (simetría).
+   3) Los bloques que siguen a un separador no suman margen extra:
+      arrancan a 3rem del ícono, igual que el resto. */
+.section > .subsection:last-child,
+.section > .info-box:last-child,
+.section > .subsection:last-child > .subsection:last-child,
+.section > .subsection:last-child > .info-box:last-child,
+.section > .subsection:last-child > .service-table:last-child,
+.section > .subsection:last-child > div:last-child > .service-table:last-child,
+.section > .subsection:last-child > .subsection:last-child > .service-table:last-child { margin-bottom:0; }
+.section:has(+ .separator),
+.section:has(+ .aidn-calc-divider) { margin-bottom:3rem; }
+.separator + .ruta-hero,
+.separator + .cta-section { margin-top:0; }
+.aidn-calc-divider + .calc-section { margin-top:3rem; }
 
 /* ── TOC ── */
 .toc-container {
