@@ -89,7 +89,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Rajdhani:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 
 <!-- Security -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://fonts.googleapis.com https://fonts.gstatic.com;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://fonts.googleapis.com https://fonts.gstatic.com; frame-src https://open.spotify.com;">
 
 <!-- ═══════════════════════════════════════════════════════════
      SCHEMA.ORG — JSON-LD Structured Data
@@ -1044,6 +1044,29 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 [data-theme="dark"] .footer-bill--green{background:rgba(16,185,129,.10);border-color:rgba(16,185,129,.40);color:#10b981}
 .footer-bill__icon{flex-shrink:0}
 
+/* ── PLAYLIST OFICIAL (Spotify · se carga al llegar al final de la página) ── */
+.footer-playlist { max-width:480px; min-height:152px; margin:1.1rem auto .7rem; border-radius:12px; }
+.footer-playlist:not(.is-loaded) { background:var(--bg-card); border:1px solid var(--border); }
+.footer-playlist iframe { display:block; width:100%; height:152px; border:0; }
+@media print { .footer-playlist { display:none !important; } }
+
+/* ── NOTA DE PRIVACIDAD (§ Políticas, subsección 9) ── */
+.privacy-note a { color:var(--secondary); text-decoration:underline; text-underline-offset:2px; }
+.privacy-note a:hover { color:var(--primary); }
+[data-theme="dark"] .privacy-note a { color:var(--primary); }
+[data-theme="dark"] .privacy-note a:hover { color:var(--txt1); }
+
+/* ── PLAYLIST · STORYTELLING (tras «Administración Estratégica y su Proceso») ── */
+.playlist-cta { margin-top:1rem; }
+.playlist-link { display:inline-flex; align-items:center; gap:.45rem; font-family:var(--fm); font-size:.74rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; color:var(--secondary); padding-bottom:2px; border-bottom:1px solid rgba(12,42,133,.35); transition:color var(--t-fast),border-color var(--t-fast); }
+.playlist-link svg { width:14px; height:14px; flex-shrink:0; transition:transform 200ms ease; }
+.playlist-link:hover { color:var(--primary); border-bottom-color:var(--primary); }
+.playlist-link:hover svg { transform:translateY(2px); }
+[data-theme="dark"] .playlist-link { color:var(--primary); border-bottom-color:rgba(3,180,214,.4); }
+[data-theme="dark"] .playlist-link:hover { color:var(--txt1); border-bottom-color:var(--txt1); }
+@media (prefers-reduced-motion:reduce) { .playlist-link svg { transition:none; } .playlist-link:hover svg { transform:none; } }
+@media print { .playlist-cta { display:none !important; } }
+
 /* ── BOTONES FLOTANTES ── */
 .floating-buttons-container { position:fixed; bottom:2rem; right:2rem; display:flex; flex-direction:column; gap:1rem; z-index:1000; opacity:0; visibility:hidden; transform:translateY(20px); transition:all var(--t-base); }
 .floating-buttons-container.visible { opacity:1; visibility:visible; transform:translateY(0); }
@@ -1471,6 +1494,15 @@ El problema no es el impuesto — es la estructura que lo genera
 <a href="#seccion-admin-estrategica" class="toc-link">
 <span class="toc-number">1</span>
 <span class="toc-text">Administración Estratégica y su Proceso</span>
+<svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<polyline points="9 18 15 12 9 6"/>
+</svg>
+</a>
+</li>
+<li class="toc-item">
+<a href="#seccion-playlist" class="toc-link">
+<span class="toc-number">2</span>
+<span class="toc-text">Executive Presence · La <em>Playlist</em> Oficial</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <polyline points="9 18 15 12 9 6"/>
 </svg>
@@ -2125,6 +2157,15 @@ El problema no es el impuesto — es la estructura que lo genera
   </div>
 
 </div><!-- /admin-est-def -->
+
+<!-- ── Executive Presence · playlist oficial (storytelling) ──
+     Copy oficial: Executive_Presence_v2, §4.2. Enlaza al reproductor del footer (#footerPlaylist). -->
+<div class="admin-est-def" id="seccion-playlist">
+  <span class="admin-est-def-label"><em>Playlist</em> oficial · AIDN Strategic Consulting</span>
+  <h4>Executive Presence</h4>
+  <p>No es música de fondo: es el ciclo de Administración Estratégica convertido en sonido. Cinco bloques, uno por etapa (análisis del entorno, formulación, implementación, evaluación y ventaja competitiva), con un solo criterio de curaduría: solo entra lo que sube. Para leer el contexto antes de mover, decidir el rumbo, ejecutar con el equipo, aprender de cada ciclo y sostener la cima.</p>
+  <p class="playlist-cta"><a class="playlist-link" href="#footerPlaylist" aria-label="Ir al reproductor de la playlist, al final de la página">Ir al reproductor<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></a></p>
+</div>
 </section>
 <!-- ═══════════════════════════════════════════════════
      SECCIÓN II — AIDN Strategy | Consultoría Estratégica
@@ -3511,6 +3552,16 @@ Servicios Administrativos, Legales y Patrimoniales
 </div>
 </div>
 
+<div class="subsection" id="seccion-privacidad">
+<h3 class="subsection-title">9. Privacidad y contenido de terceros</h3>
+<div class="info-box info privacy-note">
+ <p class="info-box-title">Sin <em>cookies</em> propias</p>
+ <p style="margin:0 0 0.8rem;">Este sitio no utiliza <em>cookies</em> propias ni herramientas de analítica o publicidad. Solo recuerda, en el navegador de quien lo visita, la preferencia de tema (claro u oscuro); ese dato se queda en el dispositivo y no llega a AIDN.</p>
+ <p style="margin:0 0 0.8rem;">Algunos elementos los entregan terceros, no AIDN: las tipografías se sirven desde Google Fonts y, al llegar al final de la página, se muestra un reproductor de Spotify. Estos servicios pueden recibir datos de la conexión, como la dirección IP, y Spotify puede además usar sus propias <em>cookies</em> o tecnologías similares, conforme a <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">su política de privacidad</a>.</p>
+ <p style="margin:0;font-style:italic;font-size:0.9rem;color:var(--txt2);">Quien prefiera evitarlo puede bloquear el contenido de terceros desde la configuración de su navegador; el resto del sitio funciona con normalidad.</p>
+</div>
+</div>
+
 </section>
 
 <div class="separator" role="presentation">
@@ -3728,6 +3779,12 @@ Agendar Consulta por WhatsApp
 
 </div>
 
+
+<!-- Playlist oficial AIDN (Spotify) — se carga al llegar al final de la página: Spotify no recibe ninguna petición antes.
+     Requiere frame-src https://open.spotify.com en la CSP del <head>. Código del embed sin cambios salvo title y &amp;. -->
+<div class="footer-playlist" id="footerPlaylist">
+<template id="playlistEmbedTpl"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4NZ3FIOtBmfnNtU6LzJUBr?utm_source=generator&amp;si=fa9869ff46fa44ca" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Reproductor de Spotify: Executive Presence, de AIDN Strategic Consulting"></iframe></template>
+</div>
 
 <p class="footer-copyright">© 2026 AIDN Strategic Consulting. Todos los derechos reservados.</p>
 <div class="footer-bills">
@@ -4425,6 +4482,30 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     bills.forEach(b => { b.style.opacity = '1'; b.style.transform = 'none'; });
   }
 
+}());
+</script>
+
+<!-- Playlist oficial AIDN — carga del embed al acercarse al final de la página (bloque independiente) -->
+<script>
+(function () {
+  var box = document.getElementById('footerPlaylist');
+  var tpl = document.getElementById('playlistEmbedTpl');
+  if (!box || !tpl || !tpl.content) return;
+  var loaded = false;
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    box.appendChild(tpl.content.cloneNode(true));
+    box.removeChild(tpl);
+    box.classList.add('is-loaded');
+  }
+  if (!('IntersectionObserver' in window)) { load(); return; }
+  var io = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) { io.disconnect(); load(); break; }
+    }
+  }, { rootMargin: '0px 0px 300px 0px' });
+  io.observe(box);
 }());
 </script>
 
