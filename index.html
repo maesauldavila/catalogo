@@ -135,7 +135,7 @@
       "areaServed": { "@type": "Country", "name": "México" },
       "telephone": "+528149856949",
       "email": "sauldavila@aidnstrategic.com",
-      "sameAs": ["https://bit.ly/saul-aidn"],
+      "sameAs": ["https://maesauldavila.github.io/tarjeta-digital/"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Catálogo de servicios AIDN 2026",
@@ -162,7 +162,7 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Administración Estratégica",
+              "name": "Administración estratégica",
               "description": "Procesos administrativos, análisis financiero y reestructuración organizacional para pymes y empresas en crecimiento.",
               "provider": { "@id": "https://aidnstrategic.com/#organization" }
             }
@@ -171,24 +171,24 @@
       },
       "priceRange": "$$$",
       "knowsAbout": [
-        "Planeación Estratégica",
-        "Planeación Estratégica Empresarial",
-        "Administración de Empresas",
-        "Administración Estratégica",
-        "Servicios fiscales México",
-        "Impuestos México",
+        "Planeación estratégica",
+        "Planeación estratégica empresarial",
+        "Administración de empresas",
+        "Administración estratégica",
+        "Servicios fiscales en México",
+        "Impuestos en México",
         "SAT",
         "RESICO",
         "ISR",
         "IVA",
         "IMSS",
         "Declaración anual ISR",
-        "Asesoría Fiscal",
-        "Sociedades Mercantiles",
+        "Asesoría fiscal",
+        "Sociedades mercantiles",
         "Derecho mercantil",
         "Constitución de Sociedades",
-        "Consultoría Empresarial",
-        "Desempeño Superior"
+        "Consultoría empresarial",
+        "Desempeño superior"
       ]
     },
     {
@@ -199,9 +199,9 @@
       "familyName": "Dávila Pantoja",
       "honorificPrefix": "MAE",
       "jobTitle": "Consultor Estratégico · Fundador AIDN Strategic Consulting",
-      "description": "Maestro en administración de empresas con especialidad en planeación estratégica. Consultor estratégico. Licenciado en contaduría pública.",
+      "description": "Maestro en administración de empresas con especialidad en planeación estratégica. Consultor Estratégico. Licenciado en contaduría pública.",
       "url": "https://aidnstrategic.com",
-      "sameAs": ["https://bit.ly/saul-aidn"],
+      "sameAs": ["https://maesauldavila.github.io/tarjeta-digital/"],
       "worksFor": { "@id": "https://aidnstrategic.com/#organization" },
       "hasCredential": [
         {
@@ -216,19 +216,19 @@
         }
       ],
       "knowsAbout": [
-        "Planeación Estratégica",
-        "Administración Estratégica",
-        "Administración de Empresas",
-        "Sociedades Mercantiles",
+        "Planeación estratégica",
+        "Administración estratégica",
+        "Administración de empresas",
+        "Sociedades mercantiles",
         "Derecho mercantil",
         "Servicios fiscales",
-        "Impuestos México",
+        "Impuestos en México",
         "SAT",
         "RESICO",
-        "Consultoría Empresarial",
-        "Desempeño Superior",
-        "Capital Humano",
-        "Modelos de Negocio"
+        "Consultoría empresarial",
+        "Desempeño superior",
+        "Capital humano",
+        "Modelos de negocio"
       ],
       "address": {
         "@type": "PostalAddress",
@@ -321,6 +321,10 @@
 *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html { scroll-behavior:smooth; scroll-padding-top:100px; font-size:16px; }
 :focus-visible { outline:3px solid var(--secondary); outline-offset:3px; border-radius:4px; }
+.skip-link { position:absolute; left:1rem; top:-4rem; z-index:2000; padding:.75rem 1.25rem; background:#0c2a85; color:#fff; font-weight:600; text-decoration:none; border-radius:8px; border:2px solid #03b4d6; transition:top .15s ease; }
+.skip-link:focus, .skip-link:focus-visible { top:1rem; }
+main:focus { outline:none; }
+@media (prefers-reduced-motion:reduce) { .skip-link { transition:none; } }
 
 body {
   font-family:var(--fb); line-height:1.6;
@@ -712,7 +716,7 @@ body {
 .admin-est-def::before { content:''; position:absolute; top:-40px; right:-40px; width:150px; height:150px; background:radial-gradient(circle,rgba(20,51,143,.08) 0%,transparent 70%); pointer-events:none; }
 .admin-est-def-label { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--laser); display:inline-block; margin-bottom:.75rem; background:rgba(20,51,143,.08); border:1px solid rgba(20,51,143,.18); border-radius:6px; padding:.2rem .65rem; }
 [data-theme="dark"] .admin-est-def-label { color:var(--primary); background:rgba(3,180,214,.12); border-color:rgba(3,180,214,.25); }
-.admin-est-def h4 { font-family:var(--fh); font-size:clamp(1.1rem,2vw,1.4rem); font-weight:700; color:var(--txt1); margin-bottom:1rem; }
+.admin-est-def h4,.admin-est-def h3 { font-family:var(--fh); font-size:clamp(1.1rem,2vw,1.4rem); font-weight:700; color:var(--txt1); margin-bottom:1rem; }
 .admin-est-def p { font-size:.93rem; color:var(--txt1); line-height:1.8; margin-bottom:.8rem; }
 .admin-est-def p:last-child { margin-bottom:0; }
 .aestrat-diagram-wrap { display:flex; justify-content:center; margin:1.8rem 0; filter:drop-shadow(0 8px 28px rgba(12,42,133,.18)); }
@@ -864,7 +868,7 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 .rh-step-link:hover { color:var(--primary); text-decoration:underline; }
 .ruta-hero-cta { background:linear-gradient(135deg,#0c2a85,#14338F); padding:2.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2rem; text-align:center; box-sizing:border-box; }
 .ruta-hero-cta-text { width:100%; max-width:100%; overflow-wrap:break-word; word-break:break-word; text-align:center; box-sizing:border-box; }
-.ruta-hero-cta-text h4 { font-family:var(--fh); font-size:1.5rem; font-weight:700; color:white; margin-bottom:.5rem; text-align:center; overflow-wrap:break-word; }
+.ruta-hero-cta-text h4,.ruta-hero-cta-text h3 { font-family:var(--fh); font-size:1.5rem; font-weight:700; color:white; margin-bottom:.5rem; text-align:center; overflow-wrap:break-word; }
 .ruta-hero-cta-text p { color:rgba(255,255,255,.85); font-size:.92rem; line-height:1.6; margin:0; text-align:center; }
 .rh-cta-btn { display:inline-flex; align-items:center; justify-content:center; gap:.7rem; background:white; color:#0c2a85; padding:1rem 2rem; border-radius:50px; text-decoration:none; font-weight:700; font-size:1rem; transition:all var(--t-base); box-shadow:0 8px 24px rgba(0,0,0,.2); white-space:normal; text-align:center; max-width:400px; width:100%; box-sizing:border-box; touch-action:manipulation; }
 .rh-cta-btn:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,0,0,.3); background:#f0f9ff; }
@@ -961,6 +965,7 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 .calc-select { width:100%; box-sizing:border-box; max-width:100%; }
 .calc-slider-wrap { display:flex; flex-direction:column; gap:.6rem; }
 .calc-slider { width:100%; height:4px; background:rgba(255,255,255,.1); border-radius:2px; outline:none; cursor:pointer; -webkit-appearance:none; appearance:none; }
+.calc-slider:focus-visible { outline:3px solid var(--secondary); outline-offset:4px; }
 .calc-slider::-webkit-slider-thumb { -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:#10b981; box-shadow:0 0 10px rgba(16,185,129,.5); cursor:pointer; border:2px solid rgba(255,255,255,.3); transition:box-shadow .2s; }
 .calc-slider::-webkit-slider-thumb:hover { box-shadow:0 0 18px rgba(16,185,129,.85); }
 .calc-slider::-moz-range-thumb { width:18px; height:18px; border-radius:50%; background:#10b981; cursor:pointer; border:2px solid rgba(255,255,255,.3); }
@@ -1056,6 +1061,35 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 @media (prefers-reduced-motion:reduce) { .playlist-link svg { transition:none; } .playlist-link:hover svg { transform:none; } }
 @media print { .playlist-cta { display:none !important; } }
 
+/* ── Tarjeta comodín · Herramientas estratégicas ── */
+.tool-card--grow { grid-column:1 / -1; display:flex; align-items:center; gap:1.25rem 1.75rem; flex-wrap:wrap; min-height:0; padding:1rem 1.75rem; background:linear-gradient(135deg,rgba(3,180,214,.14),rgba(12,42,133,.14)); border:1px dashed var(--secondary); }
+.tool-card--grow:hover { transform:none; }
+.grow-svg { flex:0 0 auto; width:170px; height:84px; display:block; color:var(--secondary); }
+[data-theme="dark"] .grow-svg { color:var(--primary); }
+.grow-text { flex:1 1 260px; }
+.grow-title { margin:0 0 .25rem; font-family:var(--fh); font-size:1.15rem; font-weight:700; color:var(--txt1); }
+.grow-desc { margin:0; color:var(--txt1); }
+.g-base { stroke:currentColor; stroke-opacity:.35; stroke-width:1.5; }
+.g-bar { fill:currentColor; fill-opacity:.55; transform-box:fill-box; transform-origin:50% 100%; animation:g-rise 5.5s ease-in-out infinite; animation-delay:calc(var(--i) * .2s); }
+.g-line { fill:none; stroke:currentColor; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:1; stroke-dashoffset:1; animation:g-draw 5.5s ease-in-out infinite; }
+.g-tip { fill:currentColor; opacity:0; animation:g-tip 5.5s ease-in-out infinite; }
+@keyframes g-rise { 0% { transform:scaleY(0); } 30%,82% { transform:scaleY(1); } 100% { transform:scaleY(0); } }
+@keyframes g-draw { 0%,12% { stroke-dashoffset:1; } 48%,82% { stroke-dashoffset:0; } 100% { stroke-dashoffset:0; opacity:0; } }
+@keyframes g-tip { 0%,44% { opacity:0; } 52%,82% { opacity:1; } 100% { opacity:0; } }
+@media (prefers-reduced-motion:reduce) { .g-bar { animation:none; transform:none; } .g-line { animation:none; stroke-dashoffset:0; } .g-tip { animation:none; opacity:1; } }
+@media print { .tool-card--grow { display:none !important; } }
+/* ── CTA de cierre · Herramientas estratégicas ── */
+.tools-cta { margin-top:2rem; padding:1.5rem 1.75rem; border:1px solid var(--premium-bord,#0ea5e9); border-radius:16px; background:linear-gradient(135deg,rgba(3,180,214,.10),rgba(12,42,133,.10)); display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.5rem; }
+.tools-cta-text { flex:1 1 280px; }
+.tools-cta-title { display:block; font-family:var(--fh); font-size:1.25rem; font-weight:700; color:var(--txt1); margin-bottom:.25rem; }
+.tools-cta-desc { margin:0; color:var(--txt2); }
+.tools-cta-btn { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:.8rem 1.5rem; border-radius:999px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:#fff; font-weight:600; text-decoration:none; transition:transform .2s ease,box-shadow .2s ease; }
+.tools-cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px var(--shad-hov); }
+.tools-cta-alt { flex-basis:100%; margin:0; font-size:.9rem; color:var(--txt2); }
+.tools-cta-alt a { color:var(--txt1); text-decoration:underline; text-underline-offset:3px; }
+@media (prefers-reduced-motion:reduce) { .tools-cta-btn { transition:none; } .tools-cta-btn:hover { transform:none; } }
+@media print { .tools-cta { display:none !important; } }
+
 /* ── BOTONES FLOTANTES ── */
 .floating-buttons-container { position:fixed; bottom:2rem; right:2rem; display:flex; flex-direction:column; gap:1rem; z-index:1000; opacity:0; visibility:hidden; transform:translateY(20px); transition:all var(--t-base); }
 .floating-buttons-container.visible { opacity:1; visibility:visible; transform:translateY(0); }
@@ -1063,6 +1097,7 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 .floating-btn[aria-label]::before { content:attr(aria-label); position:absolute; right:calc(100% + .8rem); top:50%; transform:translateY(-50%); background:rgba(0,0,0,.8); color:white; font-size:.78rem; font-weight:600; padding:.35rem .75rem; border-radius:6px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .2s ease; font-family:var(--fb); }
 [data-theme="dark"] .whatsapp-btn { box-shadow:0 4px 20px rgba(37,211,102,.45) !important; }
 .floating-btn:active { transform:scale(.95); }
+.floating-btn:focus-visible { outline:3px solid var(--secondary); outline-offset:3px; }
 .floating-btn svg { width:24px; height:24px; }
 @media (hover: hover) and (pointer: fine) {
   .floating-btn[aria-label]:hover::before { opacity:1; }
@@ -1071,7 +1106,8 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 .whatsapp-btn { background:linear-gradient(135deg,#25D366,#128C7E) !important; transition:transform .2s ease,box-shadow .2s ease; }
 .whatsapp-btn:hover { transform:scale(1.1); box-shadow:0 8px 24px rgba(18,140,126,.4); }
 .whatsapp-btn:active { transform:scale(.95); }
-.whatsapp-btn:focus { background:linear-gradient(135deg,#25D366,#128C7E) !important; outline:none; }
+.whatsapp-btn:focus { background:linear-gradient(135deg,#25D366,#128C7E) !important; }
+.whatsapp-btn:focus:not(:focus-visible) { outline:none; }
 .theme-toggle-btn { background:linear-gradient(135deg,var(--primary),var(--secondary)) !important; }
 .theme-toggle-btn:hover { background:linear-gradient(135deg,var(--secondary),var(--primary)) !important; transform:translateY(-4px) rotate(20deg); }
 [data-theme="dark"] .theme-toggle-btn { background:linear-gradient(135deg,#fbbf24,#f59e0b) !important; }
@@ -1119,7 +1155,7 @@ html[data-theme="dark"]  .aestrat-vertex-label { fill:white; }
 /* ── SAFETY ── */
 *{box-sizing:border-box}
 img,svg,video,iframe,table{max-width:100%}
-.submarca-name,.submarca-descriptor,.section-title,.filosofico-header-name,.filosofico-header-sub,.ruta-hero-title,.hero-title,.admin-est-def h4{overflow-wrap:break-word;word-break:break-word;hyphens:auto}
+.submarca-name,.submarca-descriptor,.section-title,.filosofico-header-name,.filosofico-header-sub,.ruta-hero-title,.hero-title,.admin-est-def h4,.admin-est-def h3{overflow-wrap:break-word;word-break:break-word;hyphens:auto}
 div[id],section[id]{scroll-margin-top:1.5rem}
 
 /* ── HOVER TOUCH FIX ── */
@@ -1146,7 +1182,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .ruta-hero-step:last-child{grid-column:1/-1}
   .ruta-hero-cta{flex-direction:column;align-items:center;text-align:center;padding:1.8rem 1.2rem;width:100%;box-sizing:border-box}
   .ruta-hero-cta-text{width:100%;max-width:100%;text-align:center;box-sizing:border-box}
-  .ruta-hero-cta-text h4,.ruta-hero-cta-text p{text-align:center;overflow-wrap:break-word}
+  .ruta-hero-cta-text h4,.ruta-hero-cta-text h3,.ruta-hero-cta-text p{text-align:center;overflow-wrap:break-word}
   .rh-cta-btn{width:100%;max-width:340px;box-sizing:border-box;justify-content:center;white-space:normal}
   .hero-badge-block{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:.6rem}
   .hero-badge{min-width:calc(50% - .4rem);flex:1}
@@ -1243,7 +1279,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .ruta-hero-step:last-child{grid-column:2}
   .ruta-hero-cta{flex-direction:column;align-items:center;text-align:center;gap:1.8rem;padding:2.2rem 2.5rem}
   .ruta-hero-cta-text{width:100%;max-width:100%;text-align:center}
-  .ruta-hero-cta-text h4{font-size:1.3rem}
+  .ruta-hero-cta-text h4,.ruta-hero-cta-text h3{font-size:1.3rem}
   .hero-badge-block{flex-direction:column;align-items:flex-start}
   .aidn-tech-header{padding:2rem 2rem 1.8rem}
   .aidn-tech-title{font-size:1.7rem}
@@ -1298,7 +1334,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .ruta-hero-step:last-child{grid-column:auto}
   .ruta-hero-cta{flex-direction:row;align-items:center;justify-content:center;gap:3rem;padding:2.5rem}
   .ruta-hero-cta-text{flex:1;max-width:600px;text-align:left}
-  .ruta-hero-cta-text h4,.ruta-hero-cta-text p{text-align:left}
+  .ruta-hero-cta-text h4,.ruta-hero-cta-text h3,.ruta-hero-cta-text p{text-align:left}
   .rh-cta-btn{width:auto;max-width:none;white-space:nowrap;flex-shrink:0;padding:1rem 2rem}
   .aidn-tech-header{padding:2.5rem 2.5rem 2rem}
   .aidn-tech-title{font-size:1.9rem}
@@ -1328,7 +1364,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .service-table th,.service-table td{padding:1rem .8rem}
   .ruta-hero-cta{flex-direction:row;align-items:center;justify-content:center;gap:3rem;padding:2.8rem}
   .ruta-hero-cta-text{flex:1;max-width:620px;text-align:left}
-  .ruta-hero-cta-text h4,.ruta-hero-cta-text p{text-align:left}
+  .ruta-hero-cta-text h4,.ruta-hero-cta-text h3,.ruta-hero-cta-text p{text-align:left}
   .rh-cta-btn{width:auto;max-width:none;white-space:nowrap;flex-shrink:0}
 }
 /* ── Desktop wide >1440px ── */
@@ -1338,7 +1374,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .calc-wrapper{max-width:1100px;margin-left:auto;margin-right:auto}
   .ruta-hero-cta{flex-direction:row;align-items:center;justify-content:center;gap:3rem;padding:3rem}
   .ruta-hero-cta-text{flex:1;max-width:640px;text-align:left}
-  .ruta-hero-cta-text h4,.ruta-hero-cta-text p{text-align:left}
+  .ruta-hero-cta-text h4,.ruta-hero-cta-text h3,.ruta-hero-cta-text p{text-align:left}
   .rh-cta-btn{width:auto;max-width:none;white-space:nowrap;flex-shrink:0}
 }
 /* ── DPR≥2 border refinement ── */
@@ -1355,7 +1391,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .footer-bill.bill-visible .footer-bill__icon{animation:none !important}
   .admin-est-pilar:hover{transform:none !important}
 }
-/* ── Brújula estratégica · AIDN Strategy ── */
+/* ── Brújula Estratégica · AIDN Strategy ── */
 .bru-section { margin:3rem 0 0; scroll-margin-top:100px; }
 .bru-wrapper { background:linear-gradient(160deg,#06122e 0%,#0c2a85 55%,#071a4d 100%); border-radius:20px; box-shadow:0 20px 60px rgba(3,180,214,.16),0 4px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(200,208,220,.1); border:1px solid rgba(51,204,236,.3); position:relative; color:#fff; color-scheme:dark; }
 .bru-wrapper.bru-anim { opacity:0; transform:translateY(14px); transition:opacity .7s ease,transform .7s ease; }
@@ -1392,6 +1428,10 @@ div[id],section[id]{scroll-margin-top:1.5rem}
 .bru-context-grid { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
 .bru-sel { display:flex; flex-direction:column; gap:.3rem; font-family:var(--fm); font-size:.68rem; color:rgba(255,255,255,.9); }
 .bru-sel select { min-height:44px; padding:.4rem .6rem; border-radius:8px; border:1px solid rgba(200,208,220,.3); background:rgba(255,255,255,.08); color:#fff; font-family:var(--fm); font-size:.72rem; }
+.bru-context-start { margin-bottom:1.25rem; }
+.bru-sel input { min-height:44px; padding:.4rem .6rem; border-radius:8px; border:1px solid rgba(200,208,220,.3); background:rgba(255,255,255,.08); color:#fff; font-family:var(--fm); font-size:1rem; }
+.bru-sel input::placeholder { color:rgba(255,255,255,.62); }
+.bru-context-note { margin:.6rem 0 0; font-size:.78rem; line-height:1.5; color:rgba(255,255,255,.78); }
 .bru-sel select option { color:#06122e; background:#fff; }
 .bru-progress { display:flex; align-items:center; gap:.9rem; font-family:var(--fm); font-size:.7rem; color:rgba(255,255,255,.9); }
 .bru-bar { flex:1; height:6px; border-radius:6px; background:rgba(255,255,255,.14); overflow:hidden; }
@@ -1427,6 +1467,28 @@ div[id],section[id]{scroll-margin-top:1.5rem}
 .bru-next { font-size:.84rem; line-height:1.6; color:rgba(255,255,255,.94); margin:0; }
 .bru-legal { font-family:var(--fm); font-size:.63rem; line-height:1.6; color:rgba(255,255,255,.78); margin:0; }
 .bru-num { font-family:var(--fm); }
+.bru-tools { background:rgba(3,180,214,.1); border:1px solid rgba(51,204,236,.3); border-radius:12px; padding:1rem 1.2rem; }
+.bru-tools h4 { font-family:var(--fh); font-size:1rem; color:#33CCEC; margin:0 0 .6rem; }
+.bru-tools ol { margin:0; padding-left:1.2rem; display:flex; flex-direction:column; gap:.8rem; font-size:.84rem; line-height:1.55; color:rgba(255,255,255,.94); }
+.bru-tools li::marker { color:#33CCEC; font-weight:700; }
+.bru-tools li strong { color:#fff; }
+.bru-tier { margin-left:.45rem; font-family:'IBM Plex Mono',monospace; font-size:.66rem; letter-spacing:1px; text-transform:uppercase; color:#33CCEC; white-space:nowrap; }
+.bru-why, .bru-use { display:block; color:rgba(255,255,255,.84); }
+.bru-tools p { margin:0; font-size:.84rem; line-height:1.55; color:rgba(255,255,255,.94); }
+.bru-note { margin:.2rem 0 .7rem; font-size:.78rem; line-height:1.5; color:rgba(255,255,255,.78); }
+.bru-tools ol + .bru-note { margin-top:.8rem; }
+.bru-badge { margin-left:.35rem; padding:.08rem .45rem; border:1px solid currentColor; border-radius:999px; font-size:.62rem; letter-spacing:.8px; text-transform:uppercase; white-space:nowrap; }
+.bru-badge.firme { color:#6ee7b7; }
+.bru-badge.probable { color:#fcd34d; }
+.bru-badge.confirmar { color:#fdba74; }
+.bru-tools details { margin-top:.2rem; }
+.bru-tools summary { cursor:pointer; min-height:44px; display:flex; align-items:center; font-size:.8rem; color:#33CCEC; }
+.bru-tools details[open] summary { margin-bottom:.2rem; }
+.bru-tools details .bru-use { margin-bottom:.35rem; }
+.bru-later { margin-top:.9rem; padding-top:.8rem; border-top:1px dashed rgba(255,255,255,.3); }
+.bru-later-title { margin:0 0 .4rem !important; font-family:var(--fh); font-size:.92rem !important; font-weight:700; color:#fcd34d !important; }
+.bru-later ul { margin:0; padding-left:1.1rem; display:flex; flex-direction:column; gap:.5rem; font-size:.82rem; line-height:1.55; color:rgba(255,255,255,.9); }
+.bru-later li strong { color:#fff; }
 .bru-result[hidden] { display:none; }
 /* entradas a la Brújula (hero y Strategy) */
 .bru-entry { display:flex; align-items:center; gap:1.2rem; margin:2rem 0; padding:1.05rem 1.3rem; border:1px solid var(--border); border-left:4px solid #03b4d6; border-radius:12px; background:var(--bg-card); }
@@ -1498,6 +1560,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
 <div class="container">
 <header class="header">
@@ -1528,7 +1591,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
 
 </header>
 
-<main id="main" role="main">
+<main id="main" role="main" tabindex="-1">
 <div class="content">
 
 <section class="intro-section">
@@ -1541,7 +1604,7 @@ div[id],section[id]{scroll-margin-top:1.5rem}
 La estrategia empieza cuando termina la improvisación
 </h2>
 <p>Las organizaciones rara vez improvisan por descuido: improvisan porque crecieron más rápido que su dirección. Decisiones sobre la marcha, correcciones tardías, resultados que nadie mide. AIDN ordena esa dirección —análisis, formulación, implementación y evaluación— antes de que el costo de improvisar se vuelva estructural.</p>
-<p>Todo comienza con una lectura. La <a href="#seccion-brujula" style="color:#14338F;font-weight:600;">Brújula estratégica</a> te ubica en esas cuatro dimensiones en 3 a 4 minutos y es la antesala de la evaluación organizacional: allí AIDN analiza tu organización con información real y te presenta una propuesta de trabajo.</p>
+<p>Todo comienza con una lectura. La <a href="#seccion-brujula" style="color:#14338F;font-weight:600;">Brújula Estratégica</a> te ubica en esas cuatro dimensiones en tres o cuatro minutos y es la antesala de la evaluación organizacional: allí AIDN analiza tu organización con información real y te presenta una propuesta de trabajo.</p>
 <p>AIDN no es un despacho que atiende todo lo que llega. Es una firma con un criterio de selección deliberado: análisis técnico, planeación tributaria y consultoría estratégica, aplicados donde el conocimiento genera impacto real, no donde genera volumen de trabajo.</p>
 <p>El conocimiento detrás de AIDN abarca administración, contaduría y derecho mercantil. La decisión de no aplicarlo a tareas operativas no es una limitación: es la condición que hace posible la profundidad.</p>
 <p style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(200, 208, 220, 0.15), rgba(142, 155, 174, 0.10)); border-left: 4px solid var(--plata-deep); border-radius: 8px; font-style: italic; color: var(--txt2); font-size: 0.93rem;">— <strong style="color: var(--txt1); font-style: normal;">MAE Saúl Dávila Pantoja</strong> · Consultor Estratégico · Licenciado en Contaduría Pública · Fundador, AIDN Strategic Consulting</p>
@@ -1552,10 +1615,10 @@ La estrategia empieza cuando termina la improvisación
   <span class="bru-entry-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><g class="bru-needle"><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></g></svg></span>
   <div class="bru-entry-txt">
     <span class="bru-entry-eyebrow">Antesala de la evaluación</span>
-    <p class="bru-entry-title">Brújula estratégica</p>
-    <p class="bru-entry-desc">Una primera lectura de la madurez estratégica de tu organización en cuatro dimensiones: 12 preguntas, 3 a 4 minutos y sin dejar datos.</p>
+    <p class="bru-entry-title">Brújula Estratégica</p>
+    <p class="bru-entry-desc">Una primera lectura de la madurez estratégica de tu organización en cuatro dimensiones: 12 preguntas, tres o cuatro minutos y sin dejar datos.</p>
   </div>
-  <a class="bru-entry-btn" href="#seccion-brujula">Hacer la Brújula estratégica</a>
+  <a class="bru-entry-btn" href="#seccion-brujula">Hacer la Brújula Estratégica</a>
 </div>
 <!-- ═══════════════════════════════════════════════════════
    NOTA DE LECTURA — Antesala del Índice
@@ -1582,7 +1645,7 @@ La estrategia empieza cuando termina la improvisación
    <path d="M15 13h.01"/>
    <path d="M9 17h.01"/>
   </svg>
-  <span>Las <a href="#seccion-politicas" style="color:#14338F;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(20,51,143,0.3);">Políticas y ética profesional</a> no son letra chica: son el marco que define cómo trabajamos, qué esperamos y qué puedes esperar. Leerlas antes de solicitar cualquier servicio es parte de comenzar bien.</span>
+  <span>Las <a href="#seccion-politicas" style="color:#14338F;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(20,51,143,0.3);">políticas y la ética profesional</a> no son letra pequeña: son el marco que define cómo trabajamos, qué esperamos y qué puedes esperar. Leerlas antes de solicitar cualquier servicio es parte de comenzar bien.</span>
  </p>
  <p style="margin:0;font-size:0.88rem;color:var(--txt2);line-height:1.7;display:flex;align-items:flex-start;gap:0.55rem;">
   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:0.18rem;">
@@ -1660,7 +1723,7 @@ La estrategia empieza cuando termina la improvisación
 <li class="toc-item">
 <a href="#seccion-brujula" class="toc-link">
 <span class="toc-number">&#8599;</span>
-<span class="toc-text">Brújula estratégica</span>
+<span class="toc-text">Brújula Estratégica</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
 </a>
 </li>
@@ -1787,7 +1850,7 @@ La estrategia empieza cuando termina la improvisación
 <li class="toc-item">
 <a href="#seccion-calculadora" class="toc-link">
 <span class="toc-number">&#8599;</span>
-<span class="toc-text">Calculadora de honorarios</span>
+<span class="toc-text">Calculadora de Honorarios</span>
 <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
 </a>
 </li>
@@ -1934,7 +1997,7 @@ La estrategia empieza cuando termina la improvisación
   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
   <polyline points="9 12 11 14 15 10"/>
  </svg>
-   <p class="valor-def">Actuamos con transparencia y consistencia en cada compromiso. Nuestra reputación se construye con hechos, no con promesas. Cero tolerancia a prácticas que comprometan la ética profesional, la legalidad o la confianza del cliente.</p>
+   <p class="valor-def">Actuamos con transparencia y consistencia en cada compromiso. Nuestra reputación se construye con hechos, no con promesas. Tolerancia cero ante prácticas que comprometan la ética profesional, la legalidad o la confianza del cliente.</p>
   </div>
 
   <div class="valor-card sr sr-d4">
@@ -1997,7 +2060,7 @@ La estrategia empieza cuando termina la improvisación
 
 <div class="admin-est-def">
   <span class="admin-est-def-label">Definición central · AIDN Strategic Consulting</span>
-  <h4>Administración estratégica con enfoque holístico</h4>
+  <h3>Administración estratégica con enfoque holístico</h3>
   <p>La <strong>administración estratégica</strong> es el proceso continuo e integrado mediante el cual una organización analiza su entorno externo e interno, formula estrategias alineadas con su misión y visión, las implementa a través de su estructura, cultura y personas, y evalúa sistemáticamente su desempeño para aprender y adaptarse. No es un ejercicio de planeación anual: es una capacidad organizacional permanente.</p>
 
   <!-- Diagrama Diamante — Administración Estratégica -->
@@ -2202,14 +2265,18 @@ La estrategia empieza cuando termina la improvisación
   </div>
   <!-- / Secuencia del estratega -->
 
-  <p>El enfoque holístico reconoce que ninguna estrategia opera en aislamiento: involucra simultáneamente la cultura que la sostiene, el liderazgo que la modela, las personas que la ejecutan y los procesos que la hacen medible. Siguiendo a <strong>Hitt, Ireland y Hoskisson</strong>, la ventaja competitiva sostenible emerge de la intersección entre recursos valiosos, capacidades dinámicas y decisiones estratégicas superiores, tomadas con información rigurosa y ejecutadas con disciplina organizacional. Como planteó <strong>Mintzberg</strong>, la estrategia no solo se planea: también emerge; y como sistematizó <strong>Koontz</strong>, solo se realiza cuando la dirección y el control acompañan a la planeación en un ciclo ininterrumpido.</p>
+  <p>El enfoque holístico reconoce que ninguna estrategia opera en aislamiento: involucra simultáneamente la cultura que la sostiene, el liderazgo que la modela, las personas que la ejecutan y los procesos que la hacen medible. Siguiendo a <strong>Hitt et al.</strong> (2027), la ventaja competitiva sostenible emerge de la intersección entre recursos valiosos, capacidades dinámicas y decisiones estratégicas superiores, tomadas con información rigurosa y ejecutadas con disciplina organizacional. Como plantearon <strong>Mintzberg et al.</strong> (2009), la estrategia no solo se planea: también emerge; y como sistematizaron <strong>Weihrich et al.</strong> (2022), solo se realiza cuando la dirección y el control acompañan a la planeación en un ciclo ininterrumpido.</p>
+  <p style="margin-top:1rem;font-size:0.82rem;line-height:1.6;color:var(--txt2);"><strong>Fuentes</strong><br>
+  Hitt, M. A., Ireland, R. D., Hoskisson, R. E. y Fant Cassity, S. (2027). <em>Strategic management: Concepts and cases: Competitiveness and globalization</em> (15.ª ed.). Cengage.<br>
+  Mintzberg, H., Ahlstrand, B. y Lampel, J. (2009). <em>Strategy safari: The complete guide through the wilds of strategic management</em> (2.ª ed.). Financial Times Prentice Hall.<br>
+  Weihrich, H., Cannice, M. V. y Koontz, H. (2022). <em>Administración: una perspectiva global, emprendedora y de innovación</em> (16.ª ed.). McGraw-Hill Interamericana.</p>
 
   <!-- ── Bloque: La ventaja del estratega ── -->
   <div class="estratega-block">
    <span class="estratega-tagline">Ventaja competitiva · AIDN Strategic Consulting</span>
    <p class="estratega-quote">
     Detrás de AIDN hay un solo criterio: el de un contador que entiende el dinero real,
-    un administrador que diseña la estructura que lo genera, y un conocedor del derecho
+    un administrador que diseña la estructura que lo genera y un conocedor del derecho
     mercantil que sabe dónde termina el plan y empieza la exposición legal.
     No tres consultores. Una sola perspectiva integrada.
    </p>
@@ -2358,7 +2425,7 @@ La estrategia empieza cuando termina la improvisación
      Copy oficial: Executive_Presence_v2, §4.2. Enlaza al reproductor del footer (#footerPlaylist). -->
 <div class="admin-est-def" id="seccion-playlist">
   <span class="admin-est-def-label">Lista de reproducción oficial · AIDN Strategic Consulting</span>
-  <h4><em>Executive Presence</em></h4>
+  <h3><em>Executive Presence</em></h3>
   <p>No es música de fondo: es el ciclo de administración estratégica convertido en sonido. Cinco bloques, uno por etapa (análisis del entorno, formulación, implementación, evaluación y ventaja competitiva), con un solo criterio de curaduría: solo entra lo que sube. Para leer el contexto antes de mover, decidir el rumbo, ejecutar con el equipo, aprender de cada ciclo y sostener la cima.</p>
   <p class="playlist-cta"><a class="playlist-link" href="#footerPlaylist" aria-label="Ir al reproductor de la lista de reproducción, al final de la página">Ir al reproductor<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></a></p>
 </div>
@@ -2393,10 +2460,10 @@ La estrategia empieza cuando termina la improvisación
   <span class="bru-entry-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><g class="bru-needle"><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></g></svg></span>
   <div class="bru-entry-txt">
     <span class="bru-entry-eyebrow">Antes de los módulos</span>
-    <p class="bru-entry-title">Brújula estratégica</p>
+    <p class="bru-entry-title">Brújula Estratégica</p>
     <p class="bru-entry-desc">Ubica dónde está tu organización: la Brújula te indica qué módulo de Strategy conviene primero.</p>
   </div>
-  <a class="bru-entry-btn" href="#seccion-brujula">Hacer la Brújula estratégica</a>
+  <a class="bru-entry-btn" href="#seccion-brujula">Hacer la Brújula Estratégica</a>
 </div>
 <div class="strategy-subsection" id="strategy-planeacion">
 <h3><span class="subsection-number">1</span> Planeación y dirección estratégica</h3>
@@ -2404,11 +2471,11 @@ La estrategia empieza cuando termina la improvisación
 <h4>Planeación y dirección estratégica</h4>
 <p>Diseñamos la ruta de crecimiento de tu empresa con metodologías probadas internacionalmente.</p>
 <ul class="consulting-features">
-<li>Análisis FODA y diagnóstico organizacional profundo.</li>
-<li>Definición de objetivos estratégicos y planes de acción.</li>
-<li>Diseño de indicadores clave de desempeño (KPI) y tableros de control gerencial.</li>
-<li>Acompañamiento en ejecución y seguimiento de estrategia.</li>
-<li>Despliegue Hoshin Kanri y matriz X para alinear objetivos de largo plazo con la ejecución diaria.</li>
+<li>Análisis FODA y diagnóstico organizacional profundo</li>
+<li>Definición de objetivos estratégicos y planes de acción</li>
+<li>Diseño de indicadores clave de desempeño (KPI) y tableros de control gerencial</li>
+<li>Acompañamiento en ejecución y seguimiento de estrategia</li>
+<li>Despliegue Hoshin Kanri y matriz X para alinear objetivos de largo plazo con la ejecución diaria</li>
 </ul>
 </div>
 </div>
@@ -2419,10 +2486,10 @@ La estrategia empieza cuando termina la improvisación
 <h4>Análisis financiero y proyecciones</h4>
 <p>Transformamos números en decisiones inteligentes con proyecciones financieras realistas.</p>
 <ul class="consulting-features">
-<li>Proyecciones financieras a 1, 3 y 5 años.</li>
-<li>Análisis de viabilidad de proyectos e inversiones.</li>
-<li>Evaluación de rentabilidad por línea de negocio.</li>
-<li>Optimización de flujo de efectivo y estructura de capital.</li>
+<li>Proyecciones financieras a uno, tres y cinco años</li>
+<li>Análisis de viabilidad de proyectos e inversiones</li>
+<li>Evaluación de rentabilidad por línea de negocio</li>
+<li>Optimización de flujo de efectivo y estructura de capital</li>
 </ul>
 </div>
 </div>
@@ -2433,10 +2500,10 @@ La estrategia empieza cuando termina la improvisación
 <h4>Reestructuración organizacional</h4>
 <p>Rediseñamos procesos, estructuras y modelos de negocio para maximizar eficiencia.</p>
 <ul class="consulting-features">
-<li>Rediseño de estructura organizacional y organigramas.</li>
-<li>Mapeo y optimización de procesos operativos.</li>
-<li>Definición de perfiles de puesto y manuales de funciones.</li>
-<li>Estrategias de cambio organizacional y gestión del talento.</li>
+<li>Rediseño de estructura organizacional y organigramas</li>
+<li>Mapeo y optimización de procesos operativos</li>
+<li>Definición de perfiles de puesto y manuales de funciones</li>
+<li>Estrategias de cambio organizacional y gestión del talento</li>
 </ul>
 </div>
 </div>
@@ -2447,10 +2514,10 @@ La estrategia empieza cuando termina la improvisación
 <h4>Desarrollo de modelos de negocio</h4>
 <p>Creamos o rediseñamos tu modelo de negocio para adaptarlo al mercado actual.</p>
 <ul class="consulting-features">
-<li>Modelo de negocio Canvas y propuesta de valor.</li>
-<li>Análisis de mercado y posicionamiento competitivo.</li>
-<li>Estrategias de diversificación y crecimiento.</li>
-<li>Plan de escalabilidad y expansión.</li>
+<li>Modelo de negocio Canvas y propuesta de valor</li>
+<li>Análisis de mercado y posicionamiento competitivo</li>
+<li>Estrategias de diversificación y crecimiento</li>
+<li>Plan de escalabilidad y expansión</li>
 </ul>
 </div>
 </div>
@@ -2464,18 +2531,6 @@ La estrategia empieza cuando termina la improvisación
 <div class="tools-grid">
 <div class="tool-card sr sr-d1">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
-  <circle cx="12" cy="12" r="3"/>
-  <line x1="12" y1="3" x2="12" y2="9"/>
-  <line x1="12" y1="15" x2="12" y2="21"/>
-  <line x1="3" y1="12" x2="9" y2="12"/>
-  <line x1="15" y1="12" x2="21" y2="12"/>
- </svg>
-<h5>5 fuerzas de Porter</h5>
-<p>Analiza la competitividad de tu industria evaluando competidores, proveedores, clientes, sustitutos y nuevos entrantes.</p>
-<p class="tool-usage"><strong>Úsala cuando</strong> necesites entender la dinámica competitiva de tu sector.</p>
-</div>
-<div class="tool-card sr sr-d2">
-<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
   <circle cx="12" cy="12" r="10"/>
   <line x1="2" y1="12" x2="22" y2="12"/>
   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -2484,7 +2539,7 @@ La estrategia empieza cuando termina la improvisación
 <p>Examina factores externos: políticos, económicos, sociales, tecnológicos, ecológicos y legales.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> analices el macroentorno y tendencias externas.</p>
 </div>
-<div class="tool-card sr sr-d3">
+<div class="tool-card sr sr-d2">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
   <polyline points="9 12 11 14 15 10"/>
@@ -2493,7 +2548,7 @@ La estrategia empieza cuando termina la improvisación
 <p>Evalúa si tus recursos son valiosos, raros, inimitables y organizados para generar ventaja competitiva sostenible.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> identifiques tus fortalezas competitivas únicas.</p>
 </div>
-<div class="tool-card sr sr-d4">
+<div class="tool-card sr sr-d3">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
   <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
   <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
@@ -2501,6 +2556,18 @@ La estrategia empieza cuando termina la improvisación
 <h5>Cadena de valor</h5>
 <p>Identifica actividades que generan valor y ventajas competitivas en tu operación.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> busques optimizar procesos y reducir costos.</p>
+</div>
+<div class="tool-card sr sr-d4">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="12" cy="12" r="3"/>
+  <line x1="12" y1="3" x2="12" y2="9"/>
+  <line x1="12" y1="15" x2="12" y2="21"/>
+  <line x1="3" y1="12" x2="9" y2="12"/>
+  <line x1="15" y1="12" x2="21" y2="12"/>
+ </svg>
+<h5>Cinco fuerzas de Porter</h5>
+<p>Analiza la competitividad de tu industria evaluando competidores, proveedores, clientes, sustitutos y nuevos entrantes.</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> necesites entender la dinámica competitiva de tu sector.</p>
 </div>
 <div class="tool-card sr sr-d1">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
@@ -2510,7 +2577,7 @@ La estrategia empieza cuando termina la improvisación
   <rect x="3" y="14" width="7" height="7"/>
  </svg>
 <h5>Cuadro de mando integral (BSC)</h5>
-<p>Traduce la estrategia en objetivos medibles desde 4 perspectivas: financiera, cliente, procesos y aprendizaje.</p>
+<p>Traduce la estrategia en objetivos medibles desde cuatro perspectivas: financiera, cliente, procesos y aprendizaje.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> requieras alinear toda la organización con la estrategia.</p>
 </div>
 <div class="tool-card sr sr-d2">
@@ -2519,7 +2586,7 @@ La estrategia empieza cuando termina la improvisación
   <polyline points="17 18 23 18 23 12"/>
  </svg>
 <h5>Curva de experiencia</h5>
-<p>Reduce costos unitarios conforme aumenta la producción acumulada, generando ventaja en precio.</p>
+<p>Reduce costos unitarios conforme aumenta la producción acumulada, lo que genera ventaja en precio.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> planifiques escalamiento o busques liderazgo en costos.</p>
 </div>
 <div class="tool-card sr sr-d3">
@@ -2552,7 +2619,7 @@ La estrategia empieza cuando termina la improvisación
  </svg>
 <h5>KPI y OKR</h5>
 <p>Los KPI miden desempeño continuo. Los objetivos y resultados clave (OKR) establecen metas ambiciosas y resultados medibles.</p>
-<p class="tool-usage"><strong>Úsalos cuando</strong> monitorees progreso y alinees equipos con metas estratégicas.</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> monitorees progreso y alinees equipos con metas estratégicas.</p>
 </div>
 <div class="tool-card sr sr-d2">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
@@ -2606,7 +2673,7 @@ La estrategia empieza cuando termina la improvisación
   <rect x="10" y="17" width="5" height="5"/>
   <rect x="17" y="17" width="5" height="5"/>
  </svg>
-<h5>Matriz de McKinsey (GE)</h5>
+<h5>Matriz de McKinsey (General Electric)</h5>
 <p>Prioriza unidades de negocio o productos según atractivo del mercado y fortaleza competitiva.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> gestiones portafolios complejos de productos o servicios.</p>
 </div>
@@ -2620,19 +2687,42 @@ La estrategia empieza cuando termina la improvisación
   <line x1="15" y1="12" x2="22" y2="12"/>
  </svg>
 <h5>Matriz FODA (SWOT)</h5>
-<p>Identifica fortalezas, oportunidades, debilidades y amenazas para diseñar estrategias coherentes.</p>
+<p>Identifica fortalezas, oportunidades, debilidades y amenazas para diagnosticar la situación interna y externa de la organización.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> realices diagnósticos integrales y planeación estratégica.</p>
 </div>
 <div class="tool-card sr sr-d4">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <polyline points="16 3 21 3 21 8"/>
+  <line x1="4" y1="20" x2="21" y2="3"/>
+  <polyline points="21 16 21 21 16 21"/>
+  <line x1="15" y1="15" x2="21" y2="21"/>
+  <line x1="4" y1="4" x2="9" y2="9"/>
+ </svg>
+<h5>Matriz FODA cruzada (TOWS)</h5>
+<p>Cruza los factores internos y externos del FODA para generar estrategias ofensivas (FO), de confrontación (FA), de reorientación (DO) y de supervivencia (DA).</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> ya cuentes con el diagnóstico FODA y necesites convertirlo en líneas de acción priorizadas.</p>
+</div>
+<div class="tool-card sr sr-d1">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
   <circle cx="12" cy="12" r="10"/>
   <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
  </svg>
-<h5>Matriz PEYEA</h5>
+<h5>Matriz PEYEA (posición estratégica y evaluación de la acción)</h5>
 <p>Determina la postura estratégica óptima (agresiva, defensiva, competitiva o conservadora) según tu contexto.</p>
 <p class="tool-usage"><strong>Úsala cuando</strong> necesites decidir entre crecimiento, estabilidad o reestructuración.</p>
 </div>
-<div class="tool-card sr sr-d1">
+<div class="tool-card sr sr-d2">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <circle cx="9" cy="7" r="4"/>
+  <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
+ </svg>
+<h5>Matriz RACI (responsable, aprobador, consultado e informado)</h5>
+<p>Asigna a cada tarea u objetivo quién ejecuta, quién aprueba, a quién se consulta y a quién se informa, para eliminar vacíos y duplicidades.</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> las responsabilidades no estén claras o las decisiones dependan de una sola persona.</p>
+</div>
+<div class="tool-card sr sr-d3">
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
   <rect x="3" y="4" width="18" height="16" rx="1"/>
   <line x1="9" y1="4" x2="9" y2="13"/>
@@ -2641,8 +2731,67 @@ La estrategia empieza cuando termina la improvisación
  </svg>
 <h5>Modelo de negocio Canvas (BMC)</h5>
 <p>Mapea en un solo lienzo los nueve bloques que sostienen un negocio: socios, actividades, propuesta de valor, relaciones, segmentos, canales, recursos, costos e ingresos.</p>
-<p class="tool-usage"><strong>Úsalo cuando</strong> necesites definir o validar el modelo de negocio antes de desplegarlo en objetivos y proyectos.</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> necesites definir o validar el modelo de negocio antes de desplegarlo en objetivos y proyectos.</p>
 </div>
+<div class="tool-card sr sr-d4">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+  <path d="M21 3v5h-5"/>
+  <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+  <path d="M8 16H3v5"/>
+ </svg>
+<h5>Revisión posterior a la acción</h5>
+<p>Compara lo que se esperaba con lo que ocurrió y documenta qué se aprende para ajustar el siguiente ciclo.</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> cierres un proyecto, una campaña o un trimestre y quieras convertir lo aprendido en mejoras.</p>
+</div>
+<div class="tool-card sr sr-d1">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin-bottom:0.5rem;">
+  <rect width="7" height="9" x="3" y="3" rx="1"/>
+  <rect width="7" height="5" x="14" y="3" rx="1"/>
+  <rect width="7" height="9" x="14" y="12" rx="1"/>
+  <rect width="7" height="5" x="3" y="16" rx="1"/>
+ </svg>
+<h5>Tablero de indicadores</h5>
+<p>Concentra en una sola vista los indicadores clave para seguir el avance de los objetivos y detectar desviaciones a tiempo.</p>
+<p class="tool-usage"><strong>Úsala cuando</strong> necesites dar seguimiento periódico al avance sin esperar al cierre del año.</p>
+</div>
+<div class="tool-card tool-card--grow sr sr-d2" id="tools-grow-card">
+<svg class="grow-svg" viewBox="0 0 170 84" aria-hidden="true" focusable="false">
+<line class="g-base" x1="6" y1="72" x2="164" y2="72"/>
+<rect class="g-bar" style="--i:0" x="14" y="56" width="18" height="14" rx="2"/><rect class="g-bar" style="--i:1" x="44" y="46" width="18" height="24" rx="2"/><rect class="g-bar" style="--i:2" x="74" y="36" width="18" height="34" rx="2"/><rect class="g-bar" style="--i:3" x="104" y="24" width="18" height="46" rx="2"/><rect class="g-bar" style="--i:4" x="134" y="10" width="18" height="60" rx="2"/>
+<polyline class="g-line" pathLength="1" points="23,52 53,42 83,32 113,22 136,14.3"/>
+<polygon class="g-tip" points="150.2,9.6 138.1,20.5 133.9,8.2"/>
+</svg>
+<div class="grow-text">
+<p class="grow-title">Estrategia en movimiento</p>
+<p class="grow-desc">Ninguna herramienta funciona sola: la ventaja aparece cuando se aplica con criterio y se sostiene en el tiempo.</p>
+</div>
+</div>
+</div>
+
+<script>
+(function () {
+  var grid = document.querySelector('.tools-grid'), wild = document.getElementById('tools-grow-card'), t;
+  if (!grid || !wild) return;
+  function fit() {
+    var cols, n, r;
+    wild.style.gridColumn = '';
+    cols = getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+    n = grid.querySelectorAll('.tool-card:not(.tool-card--grow)').length;
+    r = n % cols;
+    wild.style.gridColumn = 'span ' + (r === 0 ? cols : cols - r);
+  }
+  fit();
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 120); });
+})();
+</script>
+<div class="tools-cta">
+<div class="tools-cta-text">
+<span class="tools-cta-title">¿No sabes cuál herramienta aplica a tu caso?</span>
+<p class="tools-cta-desc">En la sesión diagnóstica identificamos qué marco responde a tu situación y por dónde conviene empezar. Sin compromiso y sin costo.</p>
+</div>
+<a class="tools-cta-btn" href="https://wa.me/528110632844?text=Hola%2C%20no%20s%C3%A9%20qu%C3%A9%20herramienta%20estrat%C3%A9gica%20aplica%20a%20mi%20caso.%20Me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20inicial%20con%20AIDN." target="_blank" rel="noopener noreferrer">Agendar sesión diagnóstica</a>
+<p class="tools-cta-alt">También puedes llamar al <a href="tel:+528149856949">+52 81 4985 6949</a> o escribir a <a href="mailto:sauldavila@aidnstrategic.com">sauldavila@aidnstrategic.com</a>.</p>
 </div>
 </div>
 </div>
@@ -2651,20 +2800,20 @@ La estrategia empieza cuando termina la improvisación
 <h3><span class="subsection-number">6</span> Hoshin Kanri (matriz X)</h3>
 <div class="consulting-card sr sr-d1">
 <h4>Despliegue estratégico Hoshin Kanri</h4>
-<p><em>Hoshin</em> (dirección) y <em>Kanri</em> (administración y control): la metodología japonesa de despliegue de políticas (<em>Policy Deployment</em>) que conecta la visión de 3 a 5 años de la alta dirección con los proyectos, los indicadores y los responsables de la operación diaria, en un mapa de ejecución de una sola página. Ordena esa visión en cuatro tipos de objetivo —calidad, costo, funcionamiento interno y educación— orientados a un mismo norte: los intereses de los grupos de interés.</p>
+<p><em>Hoshin</em> (dirección) y <em>Kanri</em> (administración y control): la metodología japonesa de despliegue de políticas (<em>Policy Deployment</em>) que conecta la visión de tres a cinco años de la alta dirección con los proyectos, los indicadores y los responsables de la operación diaria, en un mapa de ejecución de una sola página. Ordena esa visión en cuatro tipos de objetivo —calidad, costo, funcionamiento interno y educación— orientados a un mismo norte: los intereses de los grupos de interés.</p>
 
  <p style="margin-top:1rem;">
-  El puente entre los niveles jerárquicos no se impone por decreto: se negocia mediante el <strong><em>catchball</em></strong>, un diálogo bidireccional en el que la visión directiva baja hasta la operación y la realidad operativa sube hasta la alta dirección. Como en un juego de atrapadas, una idea se <em>lanza</em>, el siguiente nivel la <em>atrapa</em> y la reflexiona, y la devuelve mejorada, tantas veces como sea necesario, hasta que el plan madura o se descarta, y es ambicioso y viable a la vez.
+  El puente entre los niveles jerárquicos no se impone por decreto: se negocia mediante el <strong><em>catchball</em></strong>, un diálogo bidireccional en el que la visión directiva baja hasta la operación y la realidad operativa sube hasta la alta dirección. Como en un juego de atrapadas, una idea se <em>lanza</em>, el siguiente nivel la <em>atrapa</em> y la reflexiona, y la devuelve mejorada, tantas veces como sea necesario, hasta que el plan madura —ambicioso y viable a la vez— o se descarta.
  </p>
 
  <ol style="padding-left:1.4rem; margin-top:0.8rem; line-height:1.8; color:var(--txt1); font-size:0.93rem;">
-  <li>Misión, visión y estado actual.</li>
-  <li>Objetivos estratégicos de largo plazo (<em>breakthrough</em>).</li>
-  <li>Objetivos anuales.</li>
-  <li>Despliegue a proyectos e iniciativas.</li>
-  <li><em>Catchball</em>: negociación bidireccional.</li>
-  <li>Revisiones mensuales.</li>
-  <li>Revisión anual.</li>
+  <li>Misión, visión y estado actual</li>
+  <li>Objetivos estratégicos de largo plazo (<em>breakthrough</em>)</li>
+  <li>Objetivos anuales</li>
+  <li>Despliegue a proyectos e iniciativas</li>
+  <li><em>Catchball</em>: negociación bidireccional</li>
+  <li>Revisiones mensuales</li>
+  <li>Revisión anual</li>
  </ol>
 
  <!-- Hoshin Kanri: Matriz X -->
@@ -2719,17 +2868,20 @@ La estrategia empieza cuando termina la improvisación
  <!-- / Matriz X -->
 
 <ul class="consulting-features">
-<li>Sector Norte: proyectos de mejora e iniciativas clave.</li>
-<li>Sector Oeste: objetivos tácticos anuales (1 año).</li>
-<li>Sector Este: indicadores y metas de desempeño (KPI / KRI).</li>
-<li>Sector Sur: objetivos estratégicos a largo plazo (3-5 años).</li>
-<li>Extremo de recursos: líder (●) y dueño de proceso (○) de cada proyecto.</li>
-<li>Matriz RACI y filtro de criterio AIDN —administración, contaduría y derecho mercantil— para blindar la responsabilidad de cada proyecto.</li>
+<li>Sector Norte: proyectos de mejora e iniciativas clave</li>
+<li>Sector Oeste: objetivos tácticos anuales (un año)</li>
+<li>Sector Este: indicadores y metas de desempeño (KPI) y de riesgo (KRI)</li>
+<li>Sector Sur: objetivos estratégicos a largo plazo (de tres a cinco años)</li>
+<li>Extremo de recursos: líder (●) y dueño de proceso (○) de cada proyecto</li>
+<li>Matriz RACI y filtro de criterio AIDN —administración, contaduría y derecho mercantil— para blindar la responsabilidad de cada proyecto</li>
 </ul>
 
 <p style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(3,180,214,0.12), rgba(20,51,143,0.08)); border-left: 4px solid var(--water); border-radius: 8px; font-style: italic; color: var(--txt2); font-size: 0.93rem;">Nuestra metodología de despliegue estratégico sintetiza los modelos de Hoshin Kanri <span style="font-style:normal;">(Akao, 1991/2020; Jackson, 2006/2019)</span>, adaptados al marco de la administración estratégica y al entorno mercantil y tributario mexicano.</p>
 
 <p style="margin-top:1rem;font-size:0.9rem;color:var(--txt2);">Su aplicación práctica retoma también el curso <em>Potenciando el desarrollo de habilidades mediante Hoshin Kanri</em>, impartido por Fernando Molina con el respaldo académico de la Universidad Autónoma de San Luis Potosí (UASLP, 2024).</p>
+<p style="margin-top:1rem;font-size:0.82rem;line-height:1.6;color:var(--txt2);"><strong>Fuentes</strong><br>
+Akao, Y. (2020). <em>Hoshin Kanri: Policy deployment for successful TQM</em>. Productivity Press. (Obra original publicada en 1991)<br>
+Jackson, T. L. (2019). <em>Hoshin Kanri for the lean enterprise: Developing competitive capabilities and managing profit</em>. Productivity Press. (Obra original publicada en 2006)</p>
 
 <p style="margin-top:1rem;">AIDN adopta Hoshin Kanri como columna vertebral de sus propuestas estratégicas porque resuelve la fractura más común en la consultoría: la que separa el diagnóstico teórico de la ejecución real. La matriz X convierte la visión de la alta dirección en un mapa donde cada proyecto tiene un responsable, un presupuesto y una métrica, no una intención archivada. Por eso Hoshin Kanri no es una herramienta aislada del catálogo: es el mecanismo mediante el cual el criterio AIDN (administración, contaduría y derecho mercantil) se traduce en resultados medibles y en una ruta de seguimiento trimestral, en vez de un entregable que se queda en una carpeta.</p>
 </div>
@@ -2832,8 +2984,8 @@ La estrategia empieza cuando termina la improvisación
     </svg>
     <p class="quote-text">La cultura se come a la estrategia en el desayuno.</p>
     <cite class="quote-author">
-     <span class="quote-name">Peter Drucker</span>
-     <span class="quote-role">Padre del <em>management</em> moderno</span>
+     <span class="quote-name">Atribuida a Peter Drucker</span>
+     <span class="quote-role">Padre de la administración moderna</span>
     </cite>
    </blockquote>
 
@@ -2844,7 +2996,7 @@ La estrategia empieza cuando termina la improvisación
     <p class="quote-text">Los errores enriquecen y perfeccionan los objetivos, metas y planes de acción, haciéndolos más robustos y superiores.</p>
     <cite class="quote-author">
      <span class="quote-name">MAE Saúl Dávila</span>
-     <span class="quote-role">Fundador y Consultor Sénior · AIDN Strategic Consulting</span>
+     <span class="quote-role">Fundador y Consultor Estratégico · AIDN Strategic Consulting</span>
     </cite>
    </blockquote>
 
@@ -2907,7 +3059,7 @@ La estrategia empieza cuando termina la improvisación
   <div class="pilar-body">
    <span class="pilar-tag">Tercer pilar · El más valioso</span>
    <h3 class="pilar-titulo">El valor intrínseco del capital humano</h3>
-   <p class="pilar-intro">Las personas no son un recurso más: son el único activo de una organización que crece con el tiempo, si se le cuida. El único que aprende, que innova, que construye relaciones y que decide. Todo lo demás se puede comprar o imitar. El talento humano bien desarrollado, no.</p>
+   <p class="pilar-intro">Las personas no son un recurso más: son el único activo de una organización que crece con el tiempo, si se cuida. El único que aprende, que innova, que construye relaciones y que decide. Todo lo demás se puede comprar o imitar. El talento humano bien desarrollado, no.</p>
    <div class="pilar-puntos">
     <div class="punto">
      <div class="punto-head"><span>💎</span> Inversión, no gasto</div>
@@ -2975,8 +3127,8 @@ La estrategia empieza cuando termina la improvisación
       <span class="bru-emblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><g class="bru-needle"><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></g></svg></span>
       <div>
         <span class="bru-eyebrow">Herramienta · AIDN Strategy</span>
-        <h3 class="bru-title" id="bru-title">Brújula estratégica</h3>
-        <p class="bru-subtitle">12 preguntas · 3 a 4 minutos · Tu lectura de madurez estratégica en cuatro dimensiones</p>
+        <h3 class="bru-title" id="bru-title">Brújula Estratégica</h3>
+        <p class="bru-subtitle">12 preguntas · Tres o cuatro minutos · Tu lectura de madurez estratégica en cuatro dimensiones</p>
       </div>
     </div>
     <div class="bru-head-tools">
@@ -2985,13 +3137,24 @@ La estrategia empieza cuando termina la improvisación
       </button>
       <span class="bru-badge">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Sin captura de datos
+        No guarda tus datos
       </span>
     </div>
   </div>
   <div class="bru-body" id="bru-body">
     <div class="bru-form" id="bru-form">
       <p class="bru-guide">Responde cómo opera hoy tu organización, no cómo debería operar.</p>
+      <div class="bru-context bru-context-start">
+        <p class="bru-context-title">Antes de empezar (opcional)</p>
+        <div class="bru-context-grid">
+          <label class="bru-sel"><span>Nombre de tu organización</span><input type="text" id="bru-org" maxlength="60" autocomplete="organization" placeholder="Por ejemplo, Grupo Alfa"></label>
+          <label class="bru-sel"><span>Giro</span><select id="bru-giro"><option value="">Prefiero no indicarlo</option><option value="Servicios profesionales">Servicios profesionales</option><option value="Comercio">Comercio</option><option value="Manufactura e industria">Manufactura e industria</option><option value="Construcción e inmobiliario">Construcción e inmobiliario</option><option value="Salud">Salud</option><option value="Educación">Educación</option><option value="Tecnología">Tecnología</option><option value="Alimentos y bebidas">Alimentos y bebidas</option><option value="Transporte y logística">Transporte y logística</option><option value="Agroindustria">Agroindustria</option><option value="Turismo y hospitalidad">Turismo y hospitalidad</option><option value="Servicios financieros">Servicios financieros</option><option value="Organizaciones sin fines de lucro">Organizaciones sin fines de lucro</option><option value="Otro">Otro</option></select></label>
+          <label class="bru-sel"><span>Número de personas en tu organización</span><select id="bru-size"><option value="">Prefiero no indicarlo</option><option value="1 a 10 personas">1 a 10 personas</option><option value="11 a 50 personas">11 a 50 personas</option><option value="51 a 250 personas">51 a 250 personas</option><option value="Más de 250 personas">Más de 250 personas</option></select></label>
+          <label class="bru-sel"><span>Líneas de negocio o servicios principales</span><select id="bru-lines"><option value="">Prefiero no indicarlo</option><option value="Una">Una</option><option value="Dos o tres">Dos o tres</option><option value="Cuatro o más">Cuatro o más</option></select></label>
+          <label class="bru-sel"><span>Tu rol</span><select id="bru-role"><option value="">Prefiero no indicarlo</option><option value="Dueño o director general">Dueño o director general</option><option value="Dirección de área">Dirección de área</option><option value="Consultor o asesor">Consultor o asesor</option><option value="Otro">Otro</option></select></label>
+        </div>
+        <p class="bru-context-note">Estos datos son informativos y no se guardan. Solo aparecen en tu lectura y en el mensaje de WhatsApp si decides escribirnos, para ubicar con facilidad a tu organización.</p>
+      </div>
       <div class="bru-dim" data-dim="0">
         <h4 class="bru-dim-title"><span>Análisis · Entorno y posición</span><span class="bru-done" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span></h4>
         <fieldset class="bru-q"><legend>1. ¿Revisas el entorno de tu organización (mercado, competencia, regulación) al menos una vez al año?</legend><div class="bru-opts"><label class="bru-opt"><input type="radio" name="q1" value="0"><span>Nunca</span></label><label class="bru-opt"><input type="radio" name="q1" value="1"><span>A veces</span></label><label class="bru-opt"><input type="radio" name="q1" value="2"><span>Casi siempre</span></label><label class="bru-opt"><input type="radio" name="q1" value="3"><span>Siempre</span></label></div></fieldset>
@@ -3016,13 +3179,6 @@ La estrategia empieza cuando termina la improvisación
         <fieldset class="bru-q"><legend>11. ¿Revisas esos indicadores con una periodicidad fija?</legend><div class="bru-opts"><label class="bru-opt"><input type="radio" name="q11" value="0"><span>Nunca</span></label><label class="bru-opt"><input type="radio" name="q11" value="1"><span>A veces</span></label><label class="bru-opt"><input type="radio" name="q11" value="2"><span>Casi siempre</span></label><label class="bru-opt"><input type="radio" name="q11" value="3"><span>Siempre</span></label></div></fieldset>
         <fieldset class="bru-q"><legend>12. ¿Usas lo aprendido en cada ciclo para ajustar el siguiente?</legend><div class="bru-opts"><label class="bru-opt"><input type="radio" name="q12" value="0"><span>Nunca</span></label><label class="bru-opt"><input type="radio" name="q12" value="1"><span>A veces</span></label><label class="bru-opt"><input type="radio" name="q12" value="2"><span>Casi siempre</span></label><label class="bru-opt"><input type="radio" name="q12" value="3"><span>Siempre</span></label></div></fieldset>
       </div>
-      <div class="bru-context">
-        <p class="bru-context-title">Para orientar la conversación (opcional)</p>
-        <div class="bru-context-grid">
-          <label class="bru-sel"><span>Tamaño de la organización</span><select id="bru-size"><option value="">Prefiero no indicarlo</option><option value="1 a 10 personas">1 a 10 personas</option><option value="11 a 50 personas">11 a 50 personas</option><option value="51 a 250 personas">51 a 250 personas</option><option value="Más de 250 personas">Más de 250 personas</option></select></label>
-          <label class="bru-sel"><span>Tu rol</span><select id="bru-role"><option value="">Prefiero no indicarlo</option><option value="Dueño o director general">Dueño o director general</option><option value="Dirección de área">Dirección de área</option><option value="Consultor o asesor">Consultor o asesor</option><option value="Otro">Otro</option></select></label>
-        </div>
-      </div>
       <div class="bru-progress" aria-live="polite"><span id="bru-count" class="bru-num">0 de 12</span><div class="bru-bar" aria-hidden="true"><i id="bru-fill"></i></div></div>
       <div class="bru-actions">
         <button type="button" class="bru-btn" id="bru-go" aria-controls="bru-result" disabled>Ver mi lectura</button>
@@ -3044,6 +3200,7 @@ La estrategia empieza cuando termina la improvisación
     <div class="bru-res-right">
       <p class="bru-read" id="bru-read"></p>
       <div class="bru-gaps" id="bru-gaps"></div>
+      <div class="bru-tools" id="bru-tools"></div>
       <p class="bru-next">El siguiente paso es la sesión diagnóstica inicial: 40 minutos, por Zoom o presencial, sin costo ni compromiso.</p>
       <a class="bru-btn" id="bru-cta" href="#" target="_blank" rel="noopener noreferrer">Agendar sesión diagnóstica inicial</a>
       <p class="bru-legal">Lectura orientativa basada solo en tus respuestas; los niveles son una convención de AIDN para orientar la conversación, no un estándar. No sustituye la evaluación organizacional, que analiza tu organización con información real. Tus respuestas se procesan en tu navegador y no se guardan ni se envían: solo se comparten si tú abres WhatsApp.</p>
@@ -3072,7 +3229,7 @@ La estrategia empieza cuando termina la improvisación
  <div class="ruta-hero-header">
   <span class="ruta-hero-eyebrow">Tu negocio ya existe: ¿tu estructura lo protege?</span>
   <h2 class="ruta-hero-title">Ruta del Emprendedor <em>AIDN</em></h2>
-  <p class="ruta-hero-sub">Una organización no se estructura al azar: se construye con visión. La Ruta del Emprendedor es el mapa estratégico de cinco decisiones: modelo, plan, estructura legal, régimen fiscal y escala. Lo fiscal es solo uno de sus pasos. Quien hoy tributa bien en el SAT suele llegar a un punto donde su régimen ya no refleja lo que construyó: ahí la Ruta ordena lo que sigue.</p>
+  <p class="ruta-hero-sub">Una organización no se estructura al azar: se construye con visión. La Ruta del Emprendedor es el mapa estratégico de cinco decisiones: modelo, plan, estructura legal, régimen fiscal y escala. Lo fiscal es solo uno de sus pasos. Quien hoy tributa bien en el Servicio de Administración Tributaria (SAT) suele llegar a un punto donde su régimen ya no refleja lo que construyó: ahí la Ruta ordena lo que sigue.</p>
  </div>
 
  <!-- Pasos visuales -->
@@ -3109,7 +3266,7 @@ La estrategia empieza cuando termina la improvisación
     <path d="M18 6l-3 6c0 1.66 1.34 3 3 3s3-1.34 3-3L18 6z"/>
    </svg></div>
    <div class="rh-step-label">Constitución legal</div>
-   <div class="rh-step-desc">Estructura societaria óptima + estatutos personalizados <em>ad hoc</em></div>
+   <div class="rh-step-desc">Estructura societaria óptima y estatutos a la medida</div>
    <a href="#seccion-administrativos" class="rh-step-link">Ver servicio →</a>
   </div>
 
@@ -3132,7 +3289,7 @@ La estrategia empieza cuando termina la improvisación
     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
     <polyline points="17 6 23 6 23 12"/>
    </svg></div>
-   <div class="rh-step-label">Escala y crece</div>
+   <div class="rh-step-label">Escala y crecimiento</div>
    <div class="rh-step-desc">Consultoría estratégica continua para organizaciones que van en serio</div>
    <a href="#seccion-strategy" class="rh-step-link">Ver servicio →</a>
   </div>
@@ -3142,11 +3299,11 @@ La estrategia empieza cuando termina la improvisación
  <!-- CTA potente -->
  <div class="ruta-hero-cta">
   <div class="ruta-hero-cta-text">
-   <h4>Cumples con el SAT. ¿Tu estructura legal y fiscal trabaja a tu favor?</h4>
+   <h3>Cumples con el SAT. ¿Tu estructura legal y fiscal trabaja a tu favor?</h3>
    <p>Hay una diferencia entre estar al corriente con el SAT y operar con estructura. Si tu actividad creció, si tienes socios o empleados, o si simplemente sientes que estás pagando más de lo que deberías: la sesión diagnóstica es el primer paso, y no tiene costo.</p>
    <span class="rh-cta-secondary">Sin compromiso · Primera sesión diagnóstica gratuita</span>
   </div>
-  <a href="https://wa.me/528110632844?text=Hola%2C%20quiero%20saber%20si%20mi%20estructura%20fiscal%20y%20legal%20est%C3%A1%20bien%20armada.%20Me%20interesa%20la%20sesi%C3%B3n%20diagn%C3%B3stica%20gratuita%20de%20AIDN" class="rh-cta-btn" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/528110632844?text=Hola%2C%20quiero%20saber%20si%20mi%20estructura%20fiscal%20y%20legal%20est%C3%A1%20bien%20armada.%20Me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20con%20AIDN." class="rh-cta-btn" target="_blank" rel="noopener noreferrer">
    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
    </svg>
@@ -3233,12 +3390,12 @@ La estrategia empieza cuando termina la improvisación
 <div class="estratega-block estratega-block--taxes" style="background:linear-gradient(135deg,#064e3b,#065f46);margin-bottom:0;border-radius:16px 16px 0 0;">
  <span style="display:block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#34d399;margin-bottom:1.1rem;">AIDN Taxes · Servicios fiscales</span>
  <p class="estratega-quote" style="color:white;line-height:1.6;margin-bottom:1.2rem;">La mayoría paga lo que le dicen que debe pagar. Pocos entienden por qué, y esa diferencia tiene nombre: régimen equivocado, deducción no aplicada, estructura que no se revisó a tiempo.</p>
- <p style="color:rgba(255,255,255,0.72);font-size:0.93rem;line-height:1.8;max-width:100%;">AIDN Taxes no entrega declaraciones: entrega claridad. Cada servicio está diseñado para que el contribuyente entienda su situación real, opere dentro del marco legal con eficiencia, y no descubra tarde que había una mejor forma de hacerlo. El cumplimiento es la base. Lo que se construye sobre esa base es lo que importa.</p>
+ <p style="color:rgba(255,255,255,0.72);font-size:0.93rem;line-height:1.8;max-width:100%;">AIDN Taxes no entrega declaraciones: entrega claridad. Cada servicio está diseñado para que el contribuyente entienda su situación real, opere dentro del marco legal con eficiencia y no descubra tarde que había una mejor forma de hacerlo. El cumplimiento es la base. Lo que se construye sobre esa base es lo que importa.</p>
 </div>
 
 <div class="info-box info" style="margin-top:0;border-radius:0 0 12px 12px;border-top:none;">
  <p class="info-box-title">Modelo de operación</p>
- <p>Los servicios fiscales se brindan de manera <strong>100 % remota</strong> mediante videollamadas y plataformas digitales gubernamentales (SAT, portales del IMSS para trámites de seguridad social personal y sistemas oficiales). La atención presencial está disponible bajo cita previa cuando el caso lo requiere.</p>
+ <p>Los servicios fiscales se brindan de manera <strong>100 % remota</strong> mediante videollamadas y plataformas digitales gubernamentales (SAT, portales del Instituto Mexicano del Seguro Social (IMSS) para trámites de seguridad social personal y sistemas oficiales). La atención presencial está disponible bajo cita previa cuando el caso lo requiere.</p>
 </div>
 
 
@@ -3250,7 +3407,7 @@ La estrategia empieza cuando termina la improvisación
   </span>
   <span style="display:inline-flex;align-items:center;gap:0.55rem;background:rgba(20,51,143,0.08);border:1px solid rgba(20,51,143,0.25);border-radius:6px;padding:0.35rem 0.9rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--laser);">
     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    Precio vigente · Sin descuentos · IVA incluido
+    Precio vigente · Sin descuentos · Impuesto al Valor Agregado (IVA) incluido
   </span>
 </div>
 <p style="margin:0 0 1.2rem;font-size:0.82rem;font-style:italic;color:var(--txt2);">Los precios de este catálogo se presentan con fines de evaluación. Las tarifas preferenciales —como la tarifa &laquo;Cliente&raquo;— aplican exclusivamente a clientes vigentes de la firma. Ver <strong>Honorarios, pago y facturación</strong> en <a href="#taxes-honorarios">Condiciones del servicio fiscal</a>.</p>
@@ -3263,18 +3420,18 @@ Personas físicas · RESICO
 
 <div class="info-box" style="border-left-color:#059669;">
  <p class="info-box-title" style="color:#059669;">¿Quién puede tributar en RESICO?</p>
- <p style="line-height:1.8;margin-bottom:0.8rem;">RESICO (Régimen Simplificado de Confianza, Art. 113-E LISR) aplica a personas físicas con ingresos de hasta <strong>$3.5 millones anuales</strong> que realicen actividades empresariales, profesionales o de arrendamiento. El ISR se calcula sobre <strong>ingreso bruto</strong> con tasas del 1 % al 2.5 %, significativamente menores a las tarifas progresivas del régimen de actividades empresariales y profesionales, que pueden alcanzar el 35 % sobre la utilidad.</p>
+ <p style="line-height:1.8;margin-bottom:0.8rem;">RESICO (Régimen Simplificado de Confianza, Art. 113-E de la Ley del Impuesto sobre la Renta, LISR) aplica a personas físicas con ingresos de hasta <strong>$3.5 millones anuales</strong> que realicen actividades empresariales, profesionales o de arrendamiento. El impuesto sobre la renta (ISR) se calcula sobre <strong>ingreso bruto</strong> con tasas del 1 % al 2.5 %, significativamente menores a las tarifas progresivas del régimen de actividades empresariales y profesionales, que pueden alcanzar el 35 % sobre la utilidad.</p>
  <p style="line-height:1.8;margin-bottom:0.6rem;"><strong>Restricciones principales del régimen:</strong></p>
  <ul style="padding-left:1.4rem;line-height:1.9;margin:0;">
-  <li>No pueden tributar en RESICO quienes sean <strong>socios, accionistas o integrantes de personas morales</strong> (con excepciones para el sector primario y las SOFIPO).</li>
+  <li>No pueden tributar en RESICO quienes sean <strong>socios, accionistas o integrantes de personas morales</strong> (con excepciones para el sector primario y las sociedades financieras populares, SOFIPO).</li>
   <li>Pueden tributar en RESICO quienes también perciban ingresos por sueldos y salarios, <strong>siempre que la suma de ambos no exceda los $3.5 millones anuales</strong> establecidos como límite del régimen (Art. 113-E, fracc. II, LISR).</li>
   <li>Quedan excluidos quienes tributen en el régimen de coordinados o que tengan establecimiento permanente en el extranjero.</li>
  </ul>
 </div>
 
 <div class="info-box warning">
- <p class="info-box-title">RESICO vs. Actividades empresariales y profesionales · Criterio de decisión</p>
- <p style="line-height:1.8;margin-bottom:0.8rem;">En <strong>AEyP</strong>, el ISR se determina sobre la <strong>utilidad</strong> (ingresos menos gastos estrictamente indispensables y deducibles conforme al Art. 103 LISR), con la tarifa progresiva del Art. 152 LISR que va del 1.92 % al 35 %. Cuando los gastos deducibles son altos en proporción al ingreso, la base gravable se reduce sustancialmente y AEyP puede resultar más favorable. Por el contrario, cuando los gastos son bajos o el contribuyente no mantiene un control estricto de comprobantes fiscales, RESICO —con sus tasas reducidas sobre ingreso bruto— es casi siempre la opción más eficiente.</p>
+ <p class="info-box-title">RESICO frente a actividades empresariales y profesionales · Criterio de decisión</p>
+ <p style="line-height:1.8;margin-bottom:0.8rem;">En las <strong>actividades empresariales y profesionales (AEyP)</strong>, el ISR se determina sobre la <strong>utilidad</strong> (ingresos menos gastos estrictamente indispensables y deducibles conforme al Art. 103 LISR), con la tarifa progresiva del Art. 152 LISR, que va del 1.92 % al 35 %. Cuando los gastos deducibles son altos en proporción al ingreso, la base gravable se reduce sustancialmente y AEyP puede resultar más favorable. Por el contrario, cuando los gastos son bajos o el contribuyente no mantiene un control estricto de comprobantes fiscales, RESICO —con sus tasas reducidas sobre ingreso bruto— es casi siempre la opción más eficiente.</p>
  <p style="line-height:1.8;margin:0;font-style:italic;color:var(--txt2);">La elección de régimen no es trivial ni permanente. AIDN analiza cada caso antes de recomendar o gestionar cualquier cambio ante el SAT.</p>
 </div>
 
@@ -3291,11 +3448,11 @@ Personas físicas · RESICO
 <ul class="scope-list">
 <li class="included">Cumplimiento fiscal mensual con criterio de negocio</li>
 <li class="included">Asesoría directa vía WhatsApp: respuesta con contexto, no con formularios</li>
-<li class="included">Revisión y validación de CFDI antes de que generen un problema</li>
+<li class="included">Revisión y validación de facturas (comprobantes fiscales digitales por internet, CFDI) antes de que generen un problema</li>
 <li class="excluded">No incluye gestiones físicas ante autoridades</li>
 </ul>
 </td>
-<td>Hasta 9 facturas incluidas; de la décima a la vigésima, $50 c/u</td>
+<td>Hasta nueve facturas incluidas; de la décima a la vigésima, $50 c/u</td>
 <td class="price">$600</td>
 </tr>
 <tr>
@@ -3304,8 +3461,8 @@ Personas físicas · RESICO
 <ul class="scope-list">
 <li class="included">Cumplimiento fiscal mensual con criterio de negocio</li>
 <li class="included">Asesoría con visión de largo plazo: no solo el mes, sino lo que el mes construye</li>
-<li class="included">Revisión y validación de CFDI antes de que generen un problema</li>
-<li class="included">Análisis de acreditamientos de IVA: recuperas lo que la ley te permite, no lo que el sistema aplica por default</li>
+<li class="included">Revisión y validación de facturas antes de que generen un problema</li>
+<li class="included">Análisis de acreditamientos de IVA: recuperas lo que la ley te permite, no lo que el sistema aplica por defecto</li>
 <li class="excluded">No incluye gestiones físicas ante autoridades</li>
 </ul>
 </td>
@@ -3315,15 +3472,15 @@ Personas físicas · RESICO
 </tbody>
 </table>
 </div>
-<p style="font-size:0.9rem;line-height:1.7;margin:0.8rem 0 0;color:var(--txt2);">Alcance Base: hasta 9 facturas al mes sin costo adicional; de la décima a la vigésima, $50 por factura adicional, que se suma al honorario mensual. Alcance Integral: incluye hasta 20 facturas al mes. Con más de 20 facturas al mes, AIDN capacita al cliente para que las elabore por su cuenta.</p>
+<p style="font-size:0.9rem;line-height:1.7;margin:0.8rem 0 0;color:var(--txt2);">Alcance Base: hasta nueve facturas al mes sin costo adicional; de la décima a la vigésima, $50 por factura adicional, que se suma al honorario mensual. Alcance Integral: incluye hasta 20 facturas al mes. Con más de 20 facturas al mes, AIDN capacita al cliente para que las elabore por su cuenta.</p>
 
 <div style="margin-top:2.5rem;background:linear-gradient(135deg,#0c1f4a,#0f2560);border:1px solid rgba(3,180,214,0.25);border-radius:18px;padding:1.5rem 1.8rem;position:relative;overflow:hidden;box-shadow:0 -4px 24px rgba(0,0,0,0.10),0 4px 24px rgba(0,0,0,0.10),0 0 0 1px rgba(3,180,214,0.08);">
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#03b4d6,#0c2a85,#03b4d6);background-size:200% 100%;animation:calcTopLine 4s linear infinite;"></div>
-  <p style="font-family:'IBM Plex Mono', monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa extraordinaria · RESICO Base · Mes 25+</p>
+  <p style="font-family:'IBM Plex Mono', monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#03b4d6;margin:0 0 0.6rem;">Tarifa extraordinaria · RESICO Base · Mes 25 en adelante</p>
   <p style="font-family:'Rajdhani', sans-serif;font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.8rem;letter-spacing:0.3px;">Permanencia en padrón activo · <span style="color:#03b4d6;">$500 mensuales</span></p>
   <p style="font-family:'IBM Plex Sans', sans-serif;font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.72);margin:0 0 1rem;">Exclusivo del alcance <strong style="color:rgba(255,255,255,0.9);">RESICO · Base</strong>. Al cumplirse el mes 25 de permanencia ininterrumpida, AIDN actualiza de forma automática el honorario mensual a <strong style="color:rgba(255,255,255,0.9);">$500</strong>, sin que el cliente lo solicite. Es el reconocimiento de la firma a quienes han mantenido sus obligaciones al día durante dos años consecutivos: el inicio de una asociación sólida con AIDN y el punto de partida hacia el mediano y largo plazo que define las relaciones que realmente generan valor.</p>
   <div style="display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;">
-    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Base · Mes 25+</span>
+    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.12);border:1px solid rgba(3,180,214,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:#03b4d6;letter-spacing:1.5px;text-transform:uppercase;">✦ Aplica: RESICO Base · Mes 25 en adelante</span>
     <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Sin adeudos ni baja de registro</span>
     <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(3,180,214,0.08);border:1px solid rgba(3,180,214,0.15);border-radius:20px;padding:0.3rem 0.8rem;font-family:'IBM Plex Mono', monospace;font-size:0.63rem;color:rgba(3,180,214,0.75);letter-spacing:1.5px;text-transform:uppercase;">✦ Otorgada proactivamente · No aplica a solicitud</span>
   </div>
@@ -3347,7 +3504,7 @@ Personas físicas · RESICO
 <tr>
 <td><strong>Base</strong></td>
 <td class="price">$1250</td>
-<td>Cumplimiento fiscal mensual, presentación de declaraciones y validación de CFDI (1 a 9 facturas sin costo adicional; de la décima a la vigésima, $50 c/u).</td>
+<td>Cumplimiento fiscal mensual, presentación de declaraciones y validación de facturas (de una a nueve sin costo adicional; de la décima a la vigésima, $50 c/u).</td>
 </tr>
 <tr>
 <td><strong>Integral</strong></td>
@@ -3359,11 +3516,11 @@ Personas físicas · RESICO
 </div>
 
 <div class="info-box warning" style="margin-top:1rem;">
- <p class="info-box-title">⚠️ Requisito obligatorio · Médicos y dentistas</p>
+ <p class="info-box-title">⚠️ Documentos requeridos · Médicos y dentistas</p>
  <p>Para prestar servicios fiscales a profesionales de la salud es <strong>obligatorio</strong> presentar:</p>
  <ul style="margin-top:0.5rem;padding-left:1.5rem;line-height:1.9;">
-  <li><strong>Título profesional</strong> registrado ante la Dirección General de Profesiones (SEP).</li>
-  <li><strong>Cédula profesional</strong> vigente y verificable.</li>
+  <li><strong>Título profesional</strong> registrado ante la Dirección General de Profesiones (SEP)</li>
+  <li><strong>Cédula profesional</strong> vigente y verificable</li>
  </ul>
  <p style="margin-top:0.75rem;font-weight:600;">AIDN no acepta trabajos de profesionales de la salud sin estos documentos acreditados. Esta política protege la legalidad del ejercicio profesional y la responsabilidad de la firma.</p>
 </div>
@@ -3375,7 +3532,7 @@ Personas físicas · RESICO
 <div class="info-box info" style="margin-bottom:1rem;">
  <p class="info-box-title">¿A quién aplica este paquete?</p>
  <p style="line-height:1.8;margin-bottom:0.7rem;">Está dirigido a contribuyentes con actividades agrícolas, ganaderas, silvícolas o pesqueras cuyos ingresos anuales no excedan los <strong>$900&#8239;000</strong>. El Art. 113-E, noveno párrafo, LISR establece que estos contribuyentes están exentos del ISR correspondiente a dichas actividades hasta ese umbral, lo que reduce la complejidad operativa al mínimo y concentra el servicio en el cumplimiento formal del ejercicio.</p>
- <p style="line-height:1.8;margin:0;">La facturación en este sector es predominantemente anual, en operaciones de mayoreo con pocos comprobantes de alto valor. El servicio cubre el cumplimiento fiscal del ejercicio y la gestión de los CFDI emitidos, con hasta <strong>9 comprobantes anuales incluidos</strong> en el alcance base.</p>
+ <p style="line-height:1.8;margin:0;">La facturación en este sector es predominantemente anual, en operaciones de mayoreo con pocas facturas de alto valor. El servicio cubre el cumplimiento fiscal del ejercicio y la gestión de las facturas emitidas, con hasta <strong>nueve facturas anuales incluidas</strong> en el alcance base.</p>
 </div>
 
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
@@ -3413,7 +3570,7 @@ Sueldos y salarios
 <tbody>
 <tr>
 <td>
-<strong>Declaración anual (1 empleador)</strong>
+<strong>Declaración anual (un empleador)</strong>
 <ul class="scope-list">
 <li class="included">Cálculo integral: lo que debes pagar y por qué, sin sorpresas al final</li>
 <li class="included">Presentación electrónica con verificación de acuse</li>
@@ -3451,7 +3608,7 @@ Actividades empresariales y minoristas
 
 <div class="info-box warning">
  <p class="info-box-title">⚠️ Nota de operación</p>
- <p>En este régimen el cliente emite sus propios CFDI. El servicio fiscal de AIDN comprende el procesamiento de archivos XML para el cumplimiento fiscal mensual; la elaboración de facturas es responsabilidad del contribuyente.</p>
+ <p>En este régimen el cliente emite sus propias facturas. El servicio fiscal de AIDN comprende el procesamiento de archivos XML para el cumplimiento fiscal mensual; la elaboración de facturas es responsabilidad del contribuyente.</p>
 </div>
 
 <div class="subsection">
@@ -3529,8 +3686,8 @@ Servicios administrativos, legales y patrimoniales
 <p style="margin-top:0.5rem;"><strong>Incluye:</strong></p>
 <ul class="scope-list">
 <li class="included"><strong>Análisis y asesoría de estructura societaria óptima:</strong> evaluación del tipo de sociedad mercantil más conveniente según las necesidades de la organización (S.&#8239;A., S.&#8239;P.&#8239;R., S. de R.&#8239;L., S. de C.&#8239;V., entre otras).</li>
-<li class="included"><strong>Diseño y elaboración de estatutos sociales:</strong> proyectos completos y personalizados para sociedades mercantiles.</li>
-<li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> redacción de cláusulas especiales adaptadas a los requerimientos particulares y al gobierno corporativo de cada organización.</li>
+<li class="included"><strong>Diseño y elaboración de estatutos sociales:</strong> proyectos completos y personalizados para sociedades mercantiles</li>
+<li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> redacción de cláusulas especiales adaptadas a los requerimientos particulares y al gobierno corporativo de cada organización</li>
 </ul>
 <p style="margin-top:0.5rem;font-size:0.9rem;font-style:italic;">$7500 + IVA (16 %) = $8700</p>
 </td>
@@ -3542,9 +3699,9 @@ Servicios administrativos, legales y patrimoniales
 <p><strong>Para sociedades que requieren modernizar o reformar sus estatutos sociales.</strong></p>
 <p style="margin-top:0.5rem;"><strong>Incluye:</strong></p>
 <ul class="scope-list">
-<li class="included"><strong>Revisión y análisis de estatutos actuales:</strong> evaluación del acta constitutiva vigente.</li>
-<li class="included"><strong>Diseño de modificaciones estatutarias:</strong> elaboración del proyecto de reforma.</li>
-<li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> redacción adaptada a los nuevos requerimientos y al gobierno corporativo de la organización.</li>
+<li class="included"><strong>Revisión y análisis de estatutos actuales:</strong> evaluación del acta constitutiva vigente</li>
+<li class="included"><strong>Diseño de modificaciones estatutarias:</strong> elaboración del proyecto de reforma</li>
+<li class="included"><strong>Cláusulas <em>ad hoc</em> personalizadas:</strong> redacción adaptada a los nuevos requerimientos y al gobierno corporativo de la organización</li>
 </ul>
 <p style="margin-top:0.5rem;font-size:0.9rem;font-style:italic;">$6551.72 + IVA (16 %) = $7600</p>
 </td>
@@ -3646,7 +3803,7 @@ Servicios administrativos, legales y patrimoniales
 <tr>
 <td><strong>Actualización de domicilio fiscal</strong></td>
 <td class="price">$250</td>
-<td>Cambio de domicilio fiscal en el RFC.</td>
+<td>Cambio de domicilio fiscal en el Registro Federal de Contribuyentes (RFC).</td>
 </tr>
 </tbody>
 </table>
@@ -3691,13 +3848,13 @@ Servicios administrativos, legales y patrimoniales
 
 <div class="calc-section">
 <div id="seccion-calculadora">
-<div class="calc-wrapper" role="region" aria-label="Calculadora de honorarios fiscales AIDN">
+<div class="calc-wrapper" role="region" aria-label="Calculadora de Honorarios AIDN">
 
   <!-- Header -->
   <div class="calc-header">
     <div>
       <span class="calc-eyebrow">Herramienta · AIDN Taxes</span>
-      <div class="calc-title">Calculadora de honorarios</div>
+      <div class="calc-title">Calculadora de Honorarios</div>
       <div class="calc-subtitle">Selecciona régimen y perfil &rarr; honorario mensual estimado en tiempo real</div>
     </div>
     <span class="calc-badge">&#9889; Tiempo real</span>
@@ -3728,7 +3885,7 @@ Servicios administrativos, legales y patrimoniales
               <option value="sueldos">Sueldos y salarios · Declaración anual</option>
             </optgroup>
             <optgroup label="IMSS">
-              <option value="imss_mod40">IMSS · Análisis de retiro y alta Modalidad 40</option>
+              <option value="imss_mod40">IMSS · Análisis de retiro y alta en Modalidad 40</option>
               <option value="imss_mod10">IMSS · Modalidad 10, seguro de salud familiar</option>
               <option value="imss_pagos">IMSS · Hojas de pago mensuales</option>
             </optgroup>
@@ -3752,7 +3909,7 @@ Servicios administrativos, legales y patrimoniales
 
       <div class="calc-field" id="calc-field-cfdi">
         <label class="calc-label" for="calc-cfdi">
-          Volumen de CFDI
+          Volumen de facturas
           <span id="calc-cfdi-periodo" style="font-size:0.57rem;color:rgba(255,255,255,0.22);margin-left:0.3rem;">(mensuales)</span>
         </label>
         <div class="calc-slider-wrap">
@@ -3761,8 +3918,8 @@ Servicios administrativos, legales y patrimoniales
           <div class="calc-slider-labels">
             <span>1</span><span>10</span><span>20</span>
           </div>
-          <div class="calc-slider-val" id="calc-cfdi-val">5 CFDI / mes</div>
-          <p style="font-size:0.68rem;line-height:1.5;color:rgba(255,255,255,0.55);margin:0.55rem 0 0;">Con más de 20 CFDI al mes, AIDN capacita al cliente para que los elabore por su cuenta.</p>
+          <div class="calc-slider-val" id="calc-cfdi-val">cinco facturas al mes</div>
+          <p id="calc-cfdi-tope" style="font-size:0.68rem;line-height:1.5;color:rgba(255,255,255,0.55);margin:0.55rem 0 0;">Con más de 20 facturas al mes, AIDN capacita al cliente para que las elabore por su cuenta.</p>
         </div>
       </div>
 
@@ -3771,11 +3928,11 @@ Servicios administrativos, legales y patrimoniales
         <div class="calc-toggle-wrap">
           <button class="calc-toggle-btn active" id="btn-cliente"
                    type="button">
-            Cliente activo<br><span style="font-size:0.57rem;opacity:0.55;">(2+ años)</span>
+            Cliente activo<br><span style="font-size:0.57rem;opacity:0.55;">(dos años o más)</span>
           </button>
           <button class="calc-toggle-btn" id="btn-externo"
                    type="button">
-            Externo /<br><span style="font-size:0.57rem;opacity:0.55;">Público general</span>
+            Externo o<br><span style="font-size:0.57rem;opacity:0.55;">público general</span>
           </button>
         </div>
       </div>
@@ -3784,10 +3941,10 @@ Servicios administrativos, legales y patrimoniales
         <label class="calc-label" for="calc-empleadores">Empleadores adicionales</label>
         <div class="calc-select-wrap">
           <select id="calc-empleadores" class="calc-select" >
-            <option value="0">Ninguno (1 empleador)</option>
-            <option value="1">1 empleador adicional</option>
-            <option value="2">2 empleadores adicionales</option>
-            <option value="3">3 empleadores adicionales</option>
+            <option value="0">Ninguno (un empleador)</option>
+            <option value="1">Un empleador adicional</option>
+            <option value="2">Dos empleadores adicionales</option>
+            <option value="3">Tres empleadores adicionales</option>
           </select>
         </div>
       </div>
@@ -3797,11 +3954,11 @@ Servicios administrativos, legales y patrimoniales
         <div class="calc-toggle-wrap">
           <button class="calc-toggle-btn" id="btn-imss-si"
                    type="button">
-            Sí: tarifa cliente
+            Sí: tarifa Clientes
           </button>
           <button class="calc-toggle-btn active" id="btn-imss-no"
                    type="button">
-            No: tarifa general
+            No: tarifa Externos
           </button>
         </div>
       </div>
@@ -3839,9 +3996,9 @@ Servicios administrativos, legales y patrimoniales
     <div class="calc-footer-note">
       Precios en pesos mexicanos con IVA incluido · Estimado orientativo · Sujeto a confirmación en sesión diagnóstica
     </div>
-    <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20fiscal"
+    <a href="https://wa.me/528110632844?text=Hola%2C%20us%C3%A9%20la%20Calculadora%20de%20Honorarios%20y%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20fiscal%20con%20AIDN."
        class="calc-cta-btn" target="_blank" rel="noopener noreferrer">
-      Agendar diagnóstico &rarr;
+      Agendar sesión diagnóstica &rarr;
     </a>
   </div>
 
@@ -3863,8 +4020,8 @@ Servicios administrativos, legales y patrimoniales
 <details class="tx-acc" id="taxes-honorarios">
 <summary>Honorarios, pago y facturación</summary>
 <div class="tx-acc-body">
-<p style="line-height:1.8;margin-bottom:1.2rem;"><strong>Todo servicio se factura.</strong> El CFDI se emite en el momento del pago, sea anticipo o liquidación final. No hay servicios sin registro.</p>
-<p style="line-height:1.8;margin-bottom:1.2rem;">En todo acuerdo o propuesta de servicio, AIDN señala el <strong>precio vigente</strong> al momento de la evaluación: sin descuentos y con <strong>IVA incluido</strong>. Las tarifas preferenciales —incluida la tarifa «Cliente» descrita en este catálogo— aplican exclusivamente a <strong>clientes vigentes</strong> de la firma; quien evalúa un servicio por primera vez parte siempre del precio de lista.</p>
+<p style="line-height:1.8;margin-bottom:1.2rem;"><strong>Todo servicio se factura.</strong> La factura se emite en el momento del pago, sea anticipo o liquidación final. No hay servicios sin registro.</p>
+<p style="line-height:1.8;margin-bottom:1.2rem;">En todo acuerdo o propuesta de servicio, AIDN señala el <strong>precio vigente</strong> al momento de la evaluación: sin descuentos y con <strong>IVA incluido</strong>. Las tarifas preferenciales —incluida la tarifa «Clientes» descrita en este catálogo— aplican exclusivamente a <strong>clientes vigentes</strong> de la firma; quien evalúa un servicio por primera vez parte siempre del precio de lista.</p>
 <div class="info-box premium">
  <p class="info-box-title">Métodos de pago aceptados</p>
  <p style="margin:0 0 0.6rem;">✓ <strong>Transferencia electrónica</strong>: preferente, registro contable inmediato</p>
@@ -3873,9 +4030,9 @@ Servicios administrativos, legales y patrimoniales
  <p style="margin:0;font-style:italic;font-size:0.9rem;color:var(--txt2);">El efectivo presencial está disponible; sin embargo, representa menor trazabilidad fiscal para el contribuyente.</p>
 </div>
 <ul class="policy-list" style="list-style:none;padding:0;margin:1.2rem 0;">
- <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Momento de pago:</strong> honorarios se liquidan a la entrega final, salvo que aplique anticipo. Clientes externos: 50 % de anticipo en todos los trabajos. Clientes activos: 50 % en trabajos superiores a $2000.</li>
- <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Asesoría fiscal · Sesiones adicionales:</strong> personas físicas, primera sesión sin costo; posteriores sobre la misma temática: <strong>$750</strong>. Personas morales: no aplica tarifa por sesión; cada servicio se cotiza integralmente, con propuesta en máximo 72 h.</li>
- <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Gestión de CFDI:</strong> reemisión o cancelación: <strong>$80</strong> por evento. Facturas adicionales en RESICO, de la décima a la vigésima, donde aplique: <strong>$50</strong> por emisión (el alcance Integral, tanto de profesionales y emprendedores como de médicos y dentistas, incluye hasta 20). En actividades empresariales y profesionales el cliente emite sus propios CFDI, por lo que este cargo no aplica; con más de 20 facturas al mes, AIDN capacita al cliente para que las elabore por su cuenta.</li>
+ <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Momento de pago:</strong> los honorarios se liquidan a la entrega final, salvo que aplique anticipo. Clientes externos: 50 % de anticipo en todos los trabajos. Clientes activos: 50 % en trabajos superiores a $2000.</li>
+ <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Asesoría fiscal · Sesiones adicionales:</strong> personas físicas, primera sesión sin costo; posteriores sobre la misma temática: <strong>$750</strong>. Personas morales: no aplica tarifa por sesión; cada servicio se cotiza integralmente, con propuesta en un máximo de 72 horas.</li>
+ <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Gestión de CFDI · Reemisión o cancelación:</strong> <strong>$80</strong> por evento. Facturas adicionales en RESICO, de la décima a la vigésima, donde aplique: <strong>$50</strong> por emisión (el alcance Integral, tanto de profesionales y emprendedores como de médicos y dentistas, incluye hasta 20). En actividades empresariales y profesionales el cliente emite sus propias facturas, por lo que este cargo no aplica; con más de 20 facturas al mes, AIDN capacita al cliente para que las elabore por su cuenta.</li>
 </ul>
 </div>
 
@@ -3886,7 +4043,7 @@ Servicios administrativos, legales y patrimoniales
 <summary>Alcance del servicio fiscal · Qué incluye y qué no</summary>
 <div class="tx-acc-body">
 <p style="line-height:1.8;margin-bottom:1rem;">Los servicios fiscales comprenden análisis técnico, cumplimiento normativo y planeación tributaria. No incluyen planeación estratégica empresarial, administración de empresas ni aspectos de derecho mercantil o corporativo. Esos servicios <strong>existen en AIDN y se contratan por separado</strong>, porque pertenecen a otra disciplina, con otro nivel de complejidad y otro tipo de criterio.</p>
-<p style="line-height:1.8;margin-bottom:1rem;">El procesamiento fiscal opera sobre los archivos XML que el cliente proporciona. <strong>AIDN no presta servicios de contabilidad financiera, elaboración o maquila de nómina, ni gestión patronal ante el IMSS o el Infonavit</strong>: esas áreas pertenecen a la operación cotidiana de un despacho contable tradicional, no al enfoque estratégico y fiscal de esta firma. Las tareas de carácter secretarial o administrativo están igualmente fuera del alcance profesional.</p>
+<p style="line-height:1.8;margin-bottom:1rem;">El procesamiento fiscal opera sobre los archivos XML que el cliente proporciona. <strong>AIDN no presta servicios de contabilidad financiera, elaboración o maquila de nómina, ni gestión patronal ante el IMSS o el Instituto del Fondo Nacional de la Vivienda para los Trabajadores (INFONAVIT)</strong>: esas áreas pertenecen a la operación cotidiana de un despacho contable tradicional, no al enfoque estratégico y fiscal de esta firma. Las tareas de carácter secretarial o administrativo están igualmente fuera del alcance profesional.</p>
 <p style="line-height:1.8;margin-bottom:1rem;">El sector público tampoco es el terreno de la firma. <strong>AIDN no presta servicios de gestión o administración pública ni de contabilidad gubernamental</strong>, en ningún nivel de gobierno ni a través de órganos desconcentrados: es un campo con su propia especialización, y no es la de AIDN. Cuando un ente público requiere un servicio que sí corresponde al rubro de la firma, AIDN lo evalúa caso por caso antes de aceptarlo. AIDN atiende a los proveedores y contratistas de gobierno como a cualquier otro contribuyente.</p>
 <div class="info-box premium" style="margin-top:1.2rem;">
  <p class="info-box-title">Especialización como criterio, no como límite</p>
@@ -3918,8 +4075,8 @@ Servicios administrativos, legales y patrimoniales
 <div class="info-box info">
  <p class="info-box-title">Proceso de cotización corporativa</p>
  <p style="margin:0 0 0.6rem;">1. <strong>Sesión informativa:</strong> análisis de necesidades, alcance, complejidad y periodicidad requerida.</p>
- <p style="margin:0 0 0.6rem;">2. <strong>Propuesta formal:</strong> entregada en máximo <strong>72 horas</strong>: desglose de servicios, honorarios, cronograma y condiciones.</p>
- <p style="margin:0 0 0.8rem;">3. <strong>Confirmación explícita del cliente</strong> antes de iniciar cualquier trabajo, por escrito, vía correo o WhatsApp oficial.</p>
+ <p style="margin:0 0 0.6rem;">2. <strong>Propuesta formal:</strong> entregada en un máximo de <strong>72 horas</strong>, con desglose de servicios, honorarios, cronograma y condiciones.</p>
+ <p style="margin:0 0 0.8rem;">3. <strong>Confirmación explícita del cliente</strong> antes de iniciar cualquier trabajo, por escrito, vía correo electrónico o WhatsApp oficial.</p>
  <p style="margin:0 0 0.8rem;">Antes de la sesión informativa, AIDN confirma que el mandato corresponde a su ámbito: sector privado y proveedores de gobierno. La firma evalúa caso por caso a los entes públicos y no presta servicios a partidos políticos ni a campañas.</p>
  <p style="margin:0;font-style:italic;font-size:0.9rem;color:var(--txt2);">La tarifa de $750 por sesión no aplica para personas morales. Cada servicio corporativo se cotiza de forma integral.</p>
 </div>
@@ -3940,9 +4097,9 @@ Servicios administrativos, legales y patrimoniales
   <div class="bru-entry-txt">
     <span class="bru-entry-eyebrow">De cumplir a dirigir</span>
     <p class="bru-entry-title">Cuando lo fiscal está en orden, la pregunta cambia</p>
-    <p class="bru-entry-desc">¿Hacia dónde crece tu organización? La <a href="#ruta-emprendedor-hero">Ruta del Emprendedor</a> traza el mapa y la Brújula estratégica te da una primera lectura.</p>
+    <p class="bru-entry-desc">¿Hacia dónde crece tu organización? La <a href="#ruta-emprendedor-hero">Ruta del Emprendedor</a> traza el mapa y la Brújula Estratégica te da una primera lectura.</p>
   </div>
-  <a class="bru-entry-btn" href="#seccion-brujula">Hacer la Brújula estratégica</a>
+  <a class="bru-entry-btn" href="#seccion-brujula">Hacer la Brújula Estratégica</a>
 </div>
 
 
@@ -3974,7 +4131,7 @@ Servicios administrativos, legales y patrimoniales
 <div class="info-box" style="border-left-color:#6366f1;margin-bottom:2rem;">
  <p class="info-box-title" style="color:#6366f1;">¿A quién no atiende AIDN?</p>
  <p style="line-height:1.8;margin-bottom:0.9rem;">AIDN trabaja con contribuyentes que requieren criterio activo: análisis de régimen, optimización fiscal, planeación tributaria y cumplimiento mensual con movimiento real.</p>
- <p style="line-height:1.8;margin-bottom:0.9rem;">El enfoque de la firma es estratégico y fiscal, no contable ni operativo. <strong>AIDN no presta servicios de contabilidad financiera, elaboración o maquila de nómina, ni gestión patronal ante el IMSS o el Infonavit.</strong> Quien necesita ese perfil de despacho encontrará en el mercado opciones diseñadas específicamente para ello.</p>
+ <p style="line-height:1.8;margin-bottom:0.9rem;">El enfoque de la firma es estratégico y fiscal, no contable ni operativo. <strong>AIDN no presta servicios de contabilidad financiera, elaboración o maquila de nómina, ni gestión patronal ante el IMSS o el INFONAVIT.</strong> Quien necesita ese perfil de despacho encontrará en el mercado opciones diseñadas específicamente para ello.</p>
  <p style="line-height:1.8;margin-bottom:0.9rem;">Quien únicamente necesita mantener un registro sin actividad fiscal sustantiva —presentar declaraciones en cero o validar que no existe obligación— encontrará igualmente alternativas más adecuadas a ese perfil. La consultoría profesional requiere un contexto en el que el criterio técnico agregue valor real.</p>
  <p style="line-height:1.8;margin-bottom:0.9rem;"><strong>La gestión pública y la contabilidad gubernamental no son el campo de la firma.</strong> AIDN no presta esos servicios en ningún nivel de gobierno ni a través de órganos desconcentrados. Cuando un ente público requiere un servicio que sí corresponde al rubro de AIDN, la firma evalúa el caso antes de aceptarlo. AIDN atiende a los proveedores y contratistas de gobierno como a cualquier otro contribuyente.</p>
  <p style="line-height:1.8;margin-bottom:0.9rem;"><strong>AIDN no presta servicios a partidos políticos ni a campañas.</strong> Ni la firma ni su titular participan en actividad partidista alguna, ni como militantes ni como simpatizantes. Es una postura cerrada.</p>
@@ -3986,8 +4143,8 @@ Servicios administrativos, legales y patrimoniales
 <p style="line-height:1.8;margin-bottom:1.2rem;">La relación con AIDN opera principalmente en remoto: videoconferencia, plataformas digitales, comunicación directa. No hay capa de intermediarios entre el cliente y el criterio. La atención presencial existe y está disponible bajo cita previa; no es la regla, pero tampoco la excepción cuando el caso lo requiere.</p>
 <div class="info-box premium">
  <p class="info-box-title">Horarios de operación</p>
- <p style="margin:0 0 0.6rem;"><strong>Lunes a viernes:</strong> 11:00–19:00 h</p>
- <p style="margin:0 0 0.6rem;"><strong>Sábados:</strong> 11:00–14:00 h</p>
+ <p style="margin:0 0 0.6rem;"><strong>Lunes a viernes:</strong> 11:00 a 19:00 h</p>
+ <p style="margin:0 0 0.6rem;"><strong>Sábados:</strong> 11:00 a 14:00 h</p>
  <p style="margin:0 0 0.6rem;"><strong>Domingos:</strong> cerrado</p>
  <p style="margin:0;font-style:italic;color:var(--txt2);font-size:0.9rem;">Los mensajes recibidos fuera de esta jornada se atienden a primera hora del siguiente día hábil. Los clientes activos tienen atención preferencial y acceso prioritario a la agenda.</p>
 </div>
@@ -3997,11 +4154,11 @@ Servicios administrativos, legales y patrimoniales
 <h3 class="subsection-title">2. Ética y límites de la relación profesional</h3>
 <div class="info-box success">
  <p class="info-box-title">✅ Postura irrenunciable</p>
- <p style="margin:0 0 0.8rem;">AIDN opera exclusivamente dentro del marco legal vigente. <strong>Cero tolerancia</strong> a prácticas irregulares, omisión de ingresos o cualquier gestión que comprometa la integridad de la firma o la situación fiscal del cliente.</p>
+ <p style="margin:0 0 0.8rem;">AIDN opera exclusivamente dentro del marco legal vigente. <strong>Tolerancia cero</strong> ante prácticas irregulares, omisión de ingresos o cualquier gestión que comprometa la integridad de la firma o la situación fiscal del cliente.</p>
  <p style="margin:0;">Si en algún momento un cliente busca que AIDN actúe fuera de ese marco, la relación profesional termina de forma inmediata y sin responsabilidad para el consultor. No hay negociación en este punto.</p>
 </div>
 <ul class="policy-list" style="list-style:none;padding:0;margin:1.2rem 0;">
- <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Exclusividad durante la vigencia:</strong> AIDN no puede seguir atendiendo a quien establece relación con otra firma mientras es cliente activo. Esto no es cláusula de control: es la condición necesaria para mantener responsabilidad integral sobre cada cuenta.</li>
+ <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Exclusividad durante la vigencia:</strong> AIDN no puede seguir atendiendo a quien establece relación con otra firma mientras es cliente activo. Esto no es una cláusula de control: es la condición necesaria para mantener responsabilidad integral sobre cada cuenta.</li>
  <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Clientes provenientes de otras firmas:</strong> se requiere contrato con cláusula de deslinde por actos de asesores anteriores. AIDN no hereda ni asume consecuencias de decisiones tomadas antes de iniciar la relación.</li>
  <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Independencia política:</strong> AIDN no presta servicios a partidos políticos ni a campañas, y ni la firma ni su titular participan en actividad partidista alguna, ni como militantes ni como simpatizantes. No es un criterio sujeto a evaluación caso por caso: la neutralidad es parte de la independencia con la que se ejerce el criterio profesional.</li>
 </ul>
@@ -4013,7 +4170,7 @@ Servicios administrativos, legales y patrimoniales
 <ul class="policy-list" style="list-style:none;padding:0;margin:0;">
  <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Impago:</strong> tres meses consecutivos de adeudo suspenden definitivamente la presentación de declaraciones y cualquier gestión activa. Las consecuencias fiscales derivadas del abandono de obligaciones son responsabilidad exclusiva del cliente.</li>
  <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Retención de archivos:</strong> AIDN se reserva el derecho de no entregar papeles de trabajo, cálculos internos o archivos de periodos con adeudo pendiente. La información actualizada depende del cumplimiento de honorarios.</li>
- <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Fin por decisión del cliente:</strong> las firmas electrónicas gestionadas por AIDN son eliminadas del sistema al término de la relación. El cliente debe contar con respaldo propio de sus firmas desde el inicio. Esta medida delimita responsabilidades con claridad.</li>
+ <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>Fin por decisión del cliente:</strong> AIDN elimina del sistema las firmas electrónicas que gestiona al término de la relación. El cliente debe contar con respaldo propio de sus firmas desde el inicio. Esta medida delimita responsabilidades con claridad.</li>
  <li style="padding:0.5rem 0 0.5rem 1.8rem;position:relative;line-height:1.7;"><strong>No reembolso:</strong> los honorarios pagados por servicios ya prestados no se reembolsan, independientemente del motivo de terminación.</li>
 </ul>
 </div>
@@ -4028,7 +4185,7 @@ Servicios administrativos, legales y patrimoniales
  <p class="info-box-title">Sin <em>cookies</em> propias</p>
  <p style="margin:0 0 0.8rem;">Este sitio no utiliza <em>cookies</em> propias ni herramientas de analítica o publicidad. Solo recuerda, en el navegador de quien lo visita, la preferencia de tema (claro u oscuro); ese dato se queda en el dispositivo y no llega a AIDN.</p>
  <p style="margin:0 0 0.8rem;">Algunos elementos los entregan terceros, no AIDN: las tipografías se sirven desde Google Fonts y, al llegar al final de la página, se muestra un reproductor de Spotify. Estos servicios pueden recibir datos de la conexión, como la dirección IP, y Spotify puede además usar sus propias <em>cookies</em> o tecnologías similares, conforme a <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">su política de privacidad</a>.</p>
- <p style="margin:0 0 0.8rem;">La Brújula estratégica procesa tus respuestas en tu navegador: no las guarda ni las envía a ningún servidor.</p>
+ <p style="margin:0 0 0.8rem;">La Brújula Estratégica procesa tus respuestas en tu navegador: no las guarda ni las envía a ningún servidor.</p>
  <p style="margin:0;font-style:italic;font-size:0.9rem;color:var(--txt2);">Quien prefiera evitarlo puede bloquear el contenido de terceros desde la configuración de su navegador; el resto del sitio funciona con normalidad.</p>
 </div>
 </div>
@@ -4074,7 +4231,7 @@ Servicios administrativos, legales y patrimoniales
    </div>
    <div class="aidn-tech-pillar-label">GNU / Linux</div>
    <div class="aidn-tech-pillar-tag"><em>Open Source Infrastructure</em></div>
-   <p class="aidn-tech-pillar-desc">Donde otros pagan licencias y dependen de terceros, AIDN opera con infraestructura auditada, libre y bajo control total. Sin backdoors propietarios. Sin costos ocultos que el cliente subsidia.</p>
+   <p class="aidn-tech-pillar-desc">Donde otros pagan licencias y dependen de terceros, AIDN opera con infraestructura auditada, libre y bajo control total. Sin <em>backdoors</em> propietarios. Sin costos ocultos que el cliente subsidia.</p>
    <div class="aidn-tech-pillar-stat">
     <span class="stat-num" data-target="0" data-suffix="">0</span>
     <span class="stat-label">dependencias de <em>software</em> propietario</span>
@@ -4083,7 +4240,7 @@ Servicios administrativos, legales y patrimoniales
 
   <!-- Columna 2: AI-Augmented (centro, destacada) -->
   <div class="aidn-tech-pillar pillar-ai featured">
-   <div class="aidn-tech-pillar-badge">Core</div>
+   <div class="aidn-tech-pillar-badge"><em>Core</em></div>
    <div class="aidn-tech-pillar-icon">
     <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="54" height="54" aria-hidden="true">
      <!-- Neural network nodes -->
@@ -4103,9 +4260,9 @@ Servicios administrativos, legales y patrimoniales
      <line x1="40" y1="17" x2="59" y2="30" stroke="rgba(3,180,214,0.52)" stroke-width="1"/>
     </svg>
    </div>
-   <div class="aidn-tech-pillar-label">AI-Augmented<br>Consulting</div>
+   <div class="aidn-tech-pillar-label"><em>AI-Augmented<br>Consulting</em></div>
    <div class="aidn-tech-pillar-tag"><em>Intelligence Layer</em></div>
-   <p class="aidn-tech-pillar-desc">La IA no reemplaza el criterio: lo amplifica. Cada análisis, modelo estratégico y entregable pasa por una capa de inteligencia que profundiza el diagnóstico y acelera la precisión del resultado final.</p>
+   <p class="aidn-tech-pillar-desc">La inteligencia artificial (IA) no reemplaza el criterio: lo amplifica. Cada análisis, modelo estratégico y entregable pasa por una capa de inteligencia que profundiza el diagnóstico y acelera la precisión del resultado final.</p>
    <div class="aidn-tech-pillar-stat">
     <span class="stat-num stat-num-inf" style="opacity:0;transition:opacity 0.6s ease 0.3s;">∞</span>
     <span class="stat-label">profundidad analítica sin horas extra</span>
@@ -4144,7 +4301,7 @@ Servicios administrativos, legales y patrimoniales
  <div class="aidn-tech-remate">
   <div class="aidn-tech-remate-line"></div>
   <p class="aidn-tech-remate-text">
-   El resultado: análisis más profundos, entregables más precisos y tiempos de respuesta que una firma tradicional no puede igualar —
+   El resultado: análisis más profundos, entregables más precisos y tiempos de respuesta que una firma tradicional no puede igualar,
    <strong>sin que el cliente pague la infraestructura que lo hace posible.</strong>
   </p>
   <div class="aidn-tech-remate-line"></div>
@@ -4158,7 +4315,7 @@ Servicios administrativos, legales y patrimoniales
  <p style="font-size:0.9rem;color:var(--txt2);margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;font-size:0.75rem;">Operación en detalle</p>
  <p style="margin-bottom:0.9rem;line-height:1.7;font-size:0.93rem;"><strong>✓ Atención primaria vía videollamada o videoconferencia</strong>: reuniones efectivas desde cualquier ubicación</p>
  <p style="margin-bottom:0.9rem;line-height:1.7;font-size:0.93rem;"><strong>✓ Instalaciones propias de AIDN, disponibles bajo cita previa</strong>: atención presencial cuando sea necesario</p>
- <p style="margin-bottom:0.9rem;line-height:1.7;font-size:0.93rem;"><strong>✓ Plataformas digitales gubernamentales</strong>: gestiones directas SAT, IMSS y sistemas oficiales</p>
+ <p style="margin-bottom:0.9rem;line-height:1.7;font-size:0.93rem;"><strong>✓ Plataformas digitales gubernamentales</strong>: gestiones directas ante el SAT, el IMSS y otros sistemas oficiales</p>
  <p style="margin-bottom:0;line-height:1.7;font-size:0.93rem;"><strong>✓ Respuesta ágil sin desplazamientos</strong>: ahorra tiempo y reduce costos operativos</p>
 </div>
 
@@ -4183,7 +4340,7 @@ Servicios administrativos, legales y patrimoniales
 <h3 style="font-size: 2.8rem;">AIDN Strategic Consulting</h3>
 <p class="mission-tagline" style="font-size: 1.3rem;">Consultoría estratégica y servicios fiscales</p>
 <p class="expertise-line">Socio estratégico de pymes en crecimiento acelerado</p>
-<p class="expertise-line" style="margin-top: 0.3rem;"><em>Expertise</em> de <em>Big 4</em> • accesibilidad de <em>boutique</em> • agilidad de <em>startup</em></p>
+<p class="expertise-line" style="margin-top: 0.3rem;"><em>Expertise</em> de <em>Big 4</em> · accesibilidad de <em>boutique</em> · agilidad de <em>startup</em></p>
 </div>
 
 <!-- Divisor tipográfico premium — inspiración editorial Alfaguara -->
@@ -4222,11 +4379,11 @@ Servicios administrativos, legales y patrimoniales
 <li><strong>Evaluación organizacional y propuesta</strong><span>Desde $8000 · Se descuenta de la primera entrega si aceptas dentro de los 30 días posteriores a la presentación</span></li>
 <li><strong>Contrato, ejecución y seguimiento</strong><span>Alcance, plazos y entregables por escrito · Indicadores y revisión periódica</span></li>
 </ol>
-<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" class="cta-button" target="_blank" rel="noopener noreferrer">
+<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20inicial%20con%20AIDN." class="cta-button" target="_blank" rel="noopener noreferrer">
 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
 </svg>
-Agendar consulta por WhatsApp
+Agendar sesión diagnóstica por WhatsApp
 </a>
 <p style="font-size:0.85rem;margin:1.5rem 0 0;opacity:0.85;">AIDN atiende al sector privado y a proveedores de gobierno. No presta servicios de gestión pública ni de contabilidad gubernamental, y no presta servicios a partidos políticos ni a campañas.</p>
 </div>
@@ -4246,7 +4403,7 @@ Agendar consulta por WhatsApp
 <div class="contact-item">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
 <strong>WhatsApp:</strong>
-<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" target="_blank" rel="noopener noreferrer" aria-label="Escribir a AIDN por WhatsApp, usuario @aidnstrategic">@aidnstrategic</a> <span aria-hidden="true" style="opacity:.6;">·</span> <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN" target="_blank" rel="noopener noreferrer" aria-label="Escribir a AIDN por WhatsApp al +52 81 1063 2844">+52 81 1063 2844</a>
+<a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20inicial%20con%20AIDN." target="_blank" rel="noopener noreferrer" aria-label="Escribir a AIDN por WhatsApp, usuario @aidnstrategic">@aidnstrategic</a> <span aria-hidden="true" style="opacity:.6;">·</span> <a href="https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20inicial%20con%20AIDN." target="_blank" rel="noopener noreferrer" aria-label="Escribir a AIDN por WhatsApp al +52 81 1063 2844">+52 81 1063 2844</a>
 </div>
 <div class="contact-item">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -4416,7 +4573,7 @@ function initFloatingButtons() {
   }
 
   if (waBtn) {
-    const WA_URL = 'https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta%20estrat%C3%A9gica%20con%20AIDN';
+    const WA_URL = 'https://wa.me/528110632844?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20diagn%C3%B3stica%20inicial%20con%20AIDN.';
     const openWA = (e) => {
       if (e && e.type === 'touchend') e.preventDefault();
       window.open(WA_URL, '_blank', 'noopener,noreferrer');
@@ -4516,45 +4673,45 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       periodo:'POR MES', anual:true, usaCFDI:true,
       pkgs:[
         { nombre:'Base',
-          desc:'Cumplimiento fiscal mensual · 9 CFDI incluidos · Asesoría vía WhatsApp',
+          desc:'Cumplimiento fiscal mensual · Nueve facturas incluidas · Asesoría vía WhatsApp',
           precio:{cliente:600,externo:600}, desde:0, hasta:9, cfdiIncl:9,
           scope:['Cumplimiento fiscal mensual con criterio de negocio',
                  'Asesoría directa vía WhatsApp: respuesta con contexto',
-                 'Revisión y validación de CFDI antes de que generen un problema',
-                 'CFDI adicionales (de la décima a la vigésima): $50 c/u'],
-          excl:['No incluye acudir físicamente ante autoridades'] },
+                 'Revisión y validación de facturas antes de que generen un problema',
+                 'Facturas adicionales (de la décima a la vigésima): $50 c/u'],
+          excl:['No incluye gestiones físicas ante autoridades'] },
         { nombre:'Integral',
-          desc:'Cumplimiento + análisis de acreditamientos de IVA · Hasta 20 CFDI incluidos',
+          desc:'Cumplimiento y análisis de acreditamientos de IVA · Hasta 20 facturas incluidas',
           precio:{cliente:900,externo:900}, desde:10, hasta:20, cfdiIncl:20,
           scope:['Cumplimiento fiscal mensual con criterio de negocio',
                  'Asesoría con visión de largo plazo: no solo el mes, sino lo que el mes construye',
-                 'Revisión y validación de CFDI antes de que generen un problema',
+                 'Revisión y validación de facturas antes de que generen un problema',
                  'Análisis de acreditamientos de IVA: recuperas lo que la ley te permite',
-                 'Hasta 20 CFDI mensuales incluidos'],
-          excl:['No incluye acudir físicamente ante autoridades'] }
+                 'Hasta 20 facturas mensuales incluidas'],
+          excl:['No incluye gestiones físicas ante autoridades'] }
       ],
-      nota:'Régimen ISR sobre ingreso bruto (1 % al 2.5 %). El IVA se determina mediante acreditamiento mensual.'
+      nota:'Régimen ISR sobre ingreso bruto (del 1 % al 2.5 %). El IVA se determina mediante acreditamiento mensual.'
     },
     resico_medico: {
       nombre:'RESICO · Médicos y dentistas',
       periodo:'POR MES', anual:true, usaCFDI:true,
       pkgs:[
         { nombre:'Base',
-          desc:'Cumplimiento mensual · 1 a 9 CFDI incluidos sin costo adicional',
+          desc:'Cumplimiento mensual · De una a nueve facturas incluidas sin costo adicional',
           precio:{cliente:1250,externo:1250}, desde:0, hasta:9, cfdiIncl:9,
           scope:['Cumplimiento fiscal mensual con criterio de negocio',
                  'Presentación de declaraciones con verificación de acuse',
-                 'Validación de CFDI: revisados antes de que generen un problema',
-                 'CFDI adicionales (de la décima a la vigésima): $50 c/u'],
-          excl:['No incluye acudir físicamente ante autoridades'] },
+                 'Validación de facturas: revisadas antes de que generen un problema',
+                 'Facturas adicionales (de la décima a la vigésima): $50 c/u'],
+          excl:['No incluye gestiones físicas ante autoridades'] },
         { nombre:'Integral',
-          desc:'Cumplimiento + análisis de IVA + revisión de carga fiscal efectiva',
+          desc:'Cumplimiento, análisis de IVA y revisión de carga fiscal efectiva',
           precio:{cliente:1900,externo:1900}, desde:10, hasta:20, cfdiIncl:20,
           scope:['Cumplimiento fiscal mensual con criterio de negocio',
                  'Análisis de acreditamientos de IVA: recuperas lo que la ley te permite',
                  'Revisión de carga fiscal efectiva: lo que pagas y por qué',
-                 'Hasta 20 CFDI mensuales incluidos'],
-          excl:['No incluye acudir físicamente ante autoridades'] }
+                 'Hasta 20 facturas mensuales incluidas'],
+          excl:['No incluye gestiones físicas ante autoridades'] }
       ],
       nota:'Requiere título profesional SEP y cédula profesional vigente. Ambos documentos son obligatorios para iniciar el servicio.'
     },
@@ -4563,19 +4720,19 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       periodo:'POR AÑO', anual:false, usaCFDI:false,
       pkgs:[
         { nombre:'Cumplimiento anual · Cliente',
-          desc:'Ejercicio fiscal completo · Hasta 9 comprobantes anuales incluidos',
+          desc:'Ejercicio fiscal completo · Hasta nueve facturas anuales incluidas',
           precio:{cliente:3800,externo:3800}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal del ejercicio',
-                 'Gestión de CFDI emitidos',
-                 'Hasta 9 comprobantes anuales incluidos',
+                 'Gestión de facturas emitidas',
+                 'Hasta nueve facturas anuales incluidas',
                  'Exención ISR hasta $900&#8239;000 (Art. 113-E, noveno párrafo, LISR)'],
           excl:[] },
         { nombre:'Cumplimiento anual · Externo',
-          desc:'Ejercicio fiscal completo · Hasta 9 comprobantes anuales incluidos',
+          desc:'Ejercicio fiscal completo · Hasta nueve facturas anuales incluidas',
           precio:{cliente:3800,externo:5500}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal del ejercicio',
-                 'Gestión de CFDI emitidos',
-                 'Hasta 9 comprobantes anuales incluidos',
+                 'Gestión de facturas emitidas',
+                 'Hasta nueve facturas anuales incluidas',
                  'Exención ISR hasta $900&#8239;000 (Art. 113-E, noveno párrafo, LISR)'],
           excl:[] }
       ],
@@ -4585,15 +4742,15 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       nombre:'Actividades empresariales y profesionales · General',
       periodo:'POR MES', anual:true, usaCFDI:false,
       pkgs:[
-        { nombre:'Base',    desc:'Cumplimiento fiscal mensual + procesamiento XML',
+        { nombre:'Base',    desc:'Cumplimiento fiscal mensual y procesamiento de archivos XML',
           precio:{cliente:875,externo:875}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML para ISR e IVA'],
-          excl:['El cliente emite sus propios CFDI'] },
-        { nombre:'Integral', desc:'Cumplimiento + análisis de carga fiscal efectiva',
+          excl:['El cliente emite sus propias facturas'] },
+        { nombre:'Integral', desc:'Cumplimiento y análisis de carga fiscal efectiva',
           precio:{cliente:1300,externo:1300}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
                  'Análisis de carga fiscal efectiva'],
-          excl:['El cliente emite sus propios CFDI'] }
+          excl:['El cliente emite sus propias facturas'] }
       ],
       nota:'ISR sobre utilidad (ingresos menos gastos deducibles). Tarifa progresiva Art. 152 LISR: del 1.92 % al 35 %. El servicio fiscal comprende el procesamiento de archivos XML para el cumplimiento mensual.'
     },
@@ -4603,9 +4760,9 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       pkgs:[
         { nombre:'Base',    desc:'Cumplimiento fiscal mensual para profesionales de la salud',
           precio:{cliente:1650,externo:1650}, desde:0, hasta:99,
-          scope:['Cumplimiento fiscal mensual','Procesamiento de CFDI','Asesoría fiscal'],
+          scope:['Cumplimiento fiscal mensual','Procesamiento de facturas','Asesoría fiscal'],
           excl:[] },
-        { nombre:'Integral', desc:'Cumplimiento + análisis integral de carga fiscal',
+        { nombre:'Integral', desc:'Cumplimiento y análisis integral de carga fiscal',
           precio:{cliente:2300,externo:2300}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual con criterio de negocio',
                  'Análisis de deducciones AEyP (Art. 103 LISR): base gravable optimizada dentro del marco legal',
@@ -4621,14 +4778,14 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
         { nombre:'Base',    desc:'Cumplimiento fiscal mensual',
           precio:{cliente:1100,externo:1100}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML'],
-          excl:['El cliente emite sus propios CFDI'] },
-        { nombre:'Integral', desc:'Cumplimiento + análisis de carga fiscal',
+          excl:['El cliente emite sus propias facturas'] },
+        { nombre:'Integral', desc:'Cumplimiento y análisis de carga fiscal',
           precio:{cliente:1800,externo:1800}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
                  'Análisis de carga fiscal efectiva'],
-          excl:['El cliente emite sus propios CFDI'] }
+          excl:['El cliente emite sus propias facturas'] }
       ],
-      nota:'Régimen de actividades empresariales. ISR sobre utilidad. El cliente emite sus propios comprobantes; AIDN procesa los archivos XML para el cumplimiento mensual.'
+      nota:'Régimen de actividades empresariales. ISR sobre utilidad. El cliente emite sus propias facturas; AIDN procesa los archivos XML para el cumplimiento mensual.'
     },
     aeyp_hotel: {
       nombre:'AEyP · Hoteles y mueblerías',
@@ -4637,35 +4794,35 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
         { nombre:'Base',    desc:'Cumplimiento fiscal mensual',
           precio:{cliente:1300,externo:1300}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML'],
-          excl:['El cliente emite sus propios CFDI'] },
-        { nombre:'Integral', desc:'Cumplimiento + análisis de carga fiscal',
+          excl:['El cliente emite sus propias facturas'] },
+        { nombre:'Integral', desc:'Cumplimiento y análisis de carga fiscal',
           precio:{cliente:2200,externo:2200}, desde:0, hasta:99,
           scope:['Cumplimiento fiscal mensual','Procesamiento de archivos XML',
                  'Análisis de carga fiscal efectiva'],
-          excl:['El cliente emite sus propios CFDI'] }
+          excl:['El cliente emite sus propias facturas'] }
       ],
-      nota:'Actividades empresariales. El cliente emite sus propios CFDI; AIDN gestiona el cumplimiento fiscal mensual mediante procesamiento de archivos XML.'
+      nota:'Actividades empresariales. El cliente emite sus propias facturas; AIDN gestiona el cumplimiento fiscal mensual mediante procesamiento de archivos XML.'
     },
     sueldos: {
       nombre:'Sueldos y salarios · Declaración anual',
       periodo:'POR AÑO', anual:false, usaCFDI:false,
       pkgs:[
         { nombre:'Declaración anual',
-          desc:'Cálculo + presentación + optimización de deducciones personales',
+          desc:'Cálculo, presentación y optimización de deducciones personales',
           precio:{cliente:550,externo:650}, desde:0, hasta:99,
           scope:['Cálculo integral de obligaciones fiscales anuales',
                  'Presentación electrónica de declaración ante el SAT',
                  'Análisis y optimización de deducciones personales autorizadas'],
-          excl:['No incluye acudir físicamente ante autoridades'] }
+          excl:['No incluye gestiones físicas ante autoridades'] }
       ],
-      nota:'Tarifa «cliente» aplica con al menos 2 años de antigüedad continua. Empleador adicional: $100 (clientes) / $150 (externos).'
+      nota:'Tarifa «Clientes» aplica con al menos dos años de antigüedad continua. Empleador adicional: $100 (clientes) / $150 (externos).'
     },
     imss_mod40: {
-      nombre:'IMSS · Análisis de retiro + alta Modalidad 40',
+      nombre:'IMSS · Análisis de retiro y alta en Modalidad 40',
       periodo:'POR SERVICIO', anual:false, usaCFDI:false,
       pkgs:[
         { nombre:'Servicio de retiro',
-          desc:'Análisis técnico completo + alta oficial en Modalidad 40 ante el IMSS',
+          desc:'Análisis técnico completo y alta oficial en Modalidad 40 ante el IMSS',
           precio:{cliente:875,externo:875}, desde:0, hasta:99,
           scope:['Descarga del historial de semanas cotizadas',
                  'Análisis de cotizaciones y proyección de pensión (Ley 73)',
@@ -4681,7 +4838,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       periodo:'POR SERVICIO', anual:false, usaCFDI:false,
       pkgs:[
         { nombre:'Inscripción Modalidad 10',
-          desc:'Trámite de alta + asesoría documental + seguimiento',
+          desc:'Trámite de alta, asesoría documental y seguimiento',
           precio:{cliente:575,externo:575}, desde:0, hasta:99,
           scope:['Trámite de alta ante el IMSS','Asesoría en documentación requerida',
                  'Seguimiento de gestión'],
@@ -4694,7 +4851,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       periodo:'POR MES', anual:true, usaCFDI:false,
       pkgs:[
         { nombre:'Hojas de pago mensuales',
-          desc:'Líneas de captura IMSS mensuales + seguimiento + alertas de vencimiento',
+          desc:'Líneas de captura IMSS mensuales, seguimiento y alertas de vencimiento',
           precio:{cliente:150,externo:150}, desde:0, hasta:99,
           scope:['Emisión mensual de líneas de captura IMSS',
                  'Seguimiento de cumplimiento de pagos',
@@ -4702,7 +4859,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
                  'Aplica para Modalidad 10 y Modalidad 40'],
           excl:[] }
       ],
-      nota:'Para clientes con servicios fiscales activos en AIDN: $75 / mes, o $800 en una sola exhibición por 12 meses. Para público general sin contrato activo: $150 / mes, o $1500 en una sola exhibición por 12 meses.'
+      nota:'Para clientes con servicios fiscales activos en AIDN: $75 al mes, o $800 en una sola exhibición por 12 meses. Para público general sin contrato activo: $150 al mes, o $1500 en una sola exhibición por 12 meses.'
     }
   };
 
@@ -4757,7 +4914,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     const reg  = regEl.value;
     const data = T[reg];
     if (!data) return;
-    const cfdi = parseInt(cfdiEl ? cfdiEl.value : 5, 10);
+    const cfdi = Math.min(20, Math.max(1, parseInt(cfdiEl ? cfdiEl.value : 5, 10) || 5));
 
     /* Visibilidad de controles */
     const fCfdi = document.getElementById('calc-field-cfdi');
@@ -4774,8 +4931,11 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     const esAnual = (reg === 'resico_primario');
     const cfdiPer = document.getElementById('calc-cfdi-periodo');
     if (cfdiPer) cfdiPer.textContent = esAnual ? '(anuales)' : '(mensuales)';
+    const pal = (n) => (n >= 1 && n <= 9) ? ['', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve'][n] : n;
     const cfdiVal = document.getElementById('calc-cfdi-val');
-    if (cfdiVal) cfdiVal.textContent = cfdi + ' CFDI / ' + (esAnual ? 'año' : 'mes');
+    if (cfdiVal) cfdiVal.textContent = pal(cfdi) + (cfdi === 1 ? ' factura ' : ' facturas ') + (esAnual ? 'al año' : 'al mes');
+    const cfdiTope = document.getElementById('calc-cfdi-tope');
+    if (cfdiTope) cfdiTope.textContent = 'Con más de 20 facturas ' + (esAnual ? 'al año' : 'al mes') + ', AIDN capacita al cliente para que las elabore por su cuenta.';
 
     /* Seleccionar paquete */
     const pkgs = data.pkgs;
@@ -4835,7 +4995,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     if (scopeEl) {
       let html = '';
       (pkg.scope || []).forEach(s => { html += '<div class="calc-scope-item">' + s + '</div>'; });
-      if (extraCfdi > 0) html += '<div class="calc-scope-item">' + (extraCfdi / 50) + ((extraCfdi / 50) === 1 ? ' CFDI adicional' : ' CFDI adicionales') + ' × $50 = $' + fmt(extraCfdi) + ' (incluidos en el estimado)</div>';
+      if (extraCfdi > 0) html += '<div class="calc-scope-item">' + String(pal(extraCfdi / 50)).replace(/^./, (c) => c.toUpperCase()) + ((extraCfdi / 50) === 1 ? ' factura adicional' : ' facturas adicionales') + ' × $50 = $' + fmt(extraCfdi) + ' (importe incluido en el estimado)</div>';
       (pkg.excl  || []).forEach(s => { html += '<div class="calc-scope-item excl">' + s + '</div>'; });
       scopeEl.innerHTML = html;
     }
@@ -4902,7 +5062,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
           srObs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
     srEls.forEach(el => srObs.observe(el));
   } else {
     srEls.forEach(el => el.classList.add('sr-visible'));
@@ -5023,7 +5183,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
 
 </div><!-- /container -->
 <script>
-/* Brújula estratégica · AIDN Strategy — procesamiento local, sin almacenamiento ni red */
+/* Brújula Estratégica · AIDN Strategy — procesamiento local, sin almacenamiento ni red */
 (function () {
   'use strict';
   var root = document.getElementById('seccion-brujula');
@@ -5032,10 +5192,10 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
   var WA = 'https://wa.me/528110632844?text=';
   var calm = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var DIMS = [
-    { n: 'Análisis',       mod: 'Análisis del entorno y herramientas estratégicas (FODA, PESTEL, 5 fuerzas de Porter)' },
+    { n: 'Análisis',       mod: 'Diagnóstico del entorno, del mercado y de la competitividad' },
     { n: 'Formulación',    mod: 'Planeación y dirección estratégica; desarrollo de modelos de negocio' },
-    { n: 'Implementación', mod: 'Reestructuración organizacional, cultura y capital humano' },
-    { n: 'Evaluación',     mod: 'Despliegue <em>Hoshin Kanri</em>, KPI y OKR, cuadro de mando integral' }
+    { n: 'Implementación', mod: 'Estructura organizacional, asignación de responsabilidades, cultura y capital humano' },
+    { n: 'Evaluación',     mod: 'Seguimiento estratégico: indicadores, revisión periódica y aprendizaje de cada ciclo' }
   ];
   var LEVELS = [
     { max: 33,  n: 'intuitiva',       t: 'Las decisiones dependen más de la experiencia de quien dirige que de un sistema. Hay margen amplio para ordenar la dirección antes de invertir en ejecución.' },
@@ -5046,7 +5206,22 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
   var go = document.getElementById('bru-go'), reset = document.getElementById('bru-reset');
   var count = document.getElementById('bru-count'), fill = document.getElementById('bru-fill');
   var cap = document.getElementById('bru-cap'), res = document.getElementById('bru-result'), radarEl = document.getElementById('bru-radar');
-  var sizeSel = document.getElementById('bru-size'), roleSel = document.getElementById('bru-role');
+  var sizeSel = document.getElementById('bru-size'), roleSel = document.getElementById('bru-role'), linesSel = document.getElementById('bru-lines'), orgEl = document.getElementById('bru-org'), giroEl = document.getElementById('bru-giro');
+  var MENOR = { de: 1, del: 1, y: 1, e: 1, o: 1, u: 1, en: 1, para: 1, por: 1, a: 1, al: 1, con: 1, sin: 1 }, ARTIC = { el: 1, la: 1, los: 1, las: 1, un: 1, una: 1 }, PREP = { de: 1, en: 1, a: 1, por: 1, para: 1, con: 1, sin: 1 };
+  /* Nombre de organización: mayúscula inicial en cada palabra; conectores en minúscula; siglas como S.A. o AIDN se conservan */
+  function titulo(v) {
+    var t = clean(v), todoMay = t !== '' && t === t.toLocaleUpperCase('es-MX') && t !== t.toLocaleLowerCase('es-MX'), prev = '';
+    return t.split(' ').map(function (w, i) {
+      var l = w.toLocaleLowerCase('es-MX'), r;
+      if (/^(\p{L}\.)+\p{L}?\.?$/u.test(w)) r = w.toLocaleUpperCase('es-MX');
+      else if (!todoMay && w.length > 1 && w.length < 6 && /^\p{L}+$/u.test(w) && w === w.toLocaleUpperCase('es-MX')) r = w;
+      else if (i > 0 && MENOR[l]) r = l;
+      else if (i > 0 && ARTIC[l] && PREP[prev]) r = l;
+      else r = l.replace(/(^|[-'’])(\p{L})/gu, function (m, p, c) { return p + c.toLocaleUpperCase('es-MX'); });
+      prev = l; return r;
+    }).join(' ');
+  }
+  function clean(v) { return String(v || '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 60); }
   var dimEls = Array.prototype.slice.call(root.querySelectorAll('.bru-dim'));
   var bodyEl = document.getElementById('bru-body'), slot = document.getElementById('bru-radar-slot'), side = root.querySelector('.bru-side');
   var shown = false, cur = [0, 0, 0, 0], raf = 0;
@@ -5101,6 +5276,148 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       if (k < 1) raf = window.requestAnimationFrame(step);
     })(performance.now ? performance.now() : 0);
   }
+  /* Herramientas estratégicas: nivel, dimensión y regla de recomendación
+     (k: título de la tarjeta · s: nombre corto · t: nivel · p/q: dimensión principal/secundaria · a: alcance · x: exigencia · o: orden alfabético · r: prerrequisito
+      d/b/c: puntaje de datos, conocimiento y esfuerzo · e: entregable · qs: preguntas de la Brújula que atiende · m: mínimo de líneas de negocio) */
+  var TIERS = ['básica', 'intermedia', 'avanzada'];
+  var TIEMPO = ['hasta una semana', 'de dos a seis semanas', 'más de seis semanas o ciclo continuo'];
+  var PARTICIPAN = ['una persona o un equipo directivo reducido', 'varias áreas', 'toda la organización y varios niveles jerárquicos'];
+  var DATOS = ['observaciones y juicio del equipo, sin cifras', 'datos internos o externos parciales', 'series históricas o datos por producto, unidad o proceso'];
+  var CONOCE = ['se aplica con una guía de una página', 'exige dominar un marco conceptual específico', 'exige integrar varios marcos o disciplinas'];
+  var LATER = {
+    'Matriz FODA cruzada (TOWS)': { pre: 'Matriz FODA (SWOT)', why: 'sin un diagnóstico FODA priorizado, el cruce genera estrategias sin base.' },
+    'Cuadro de mando integral (BSC)': { pre: 'KPI y OKR', why: 'sin indicadores definidos, el cuadro de mando se llena de datos que nadie usa.' },
+    'Hoshin Kanri (matriz X)': { pre: 'KPI y OKR', why: 'sin indicadores ni objetivos medibles, el despliegue no tiene contra qué alinearse.' },
+    'Curva de experiencia': { pre: '', why: 'requiere costos unitarios históricos por volumen acumulado; sin ellos la curva solo proyecta supuestos.' },
+    'Estrategia del océano azul': { pre: '', why: 'exige conocer a fondo los factores de competencia del sector y validarlos con clientes; antes conviene el diagnóstico del entorno.' },
+    'Matriz de McKinsey (General Electric)': { pre: '', why: 'requiere datos históricos por unidad de negocio y criterios ponderados; sin esa base, la matriz solo ordena supuestos.' }
+  };
+  var TOOLS = [
+    { k: 'Análisis PESTEL', s: 'Análisis PESTEL', t: 0, p: 0, q: -1, a: 1, x: 5, o: 0, r: '', d: 2, b: 1, c: 1, e: 'mapa de factores del entorno, ordenados por impacto y probabilidad', qs: [1], m: 0 },
+    { k: 'Análisis VRIO', s: 'Análisis VRIO', t: 1, p: 0, q: 1, a: 2, x: 7, o: 1, r: '', d: 2, b: 2, c: 1, e: 'inventario de recursos con su ventaja competitiva evaluada', qs: [3], m: 0 },
+    { k: 'Cadena de valor', s: 'Cadena de valor', t: 1, p: 0, q: 2, a: 2, x: 8, o: 2, r: '', d: 2, b: 2, c: 2, e: 'mapa de actividades con sus costos y sus fuentes de valor', qs: [2, 8], m: 0 },
+    { k: 'Cinco fuerzas de Porter', s: 'Cinco fuerzas de Porter', t: 1, p: 0, q: -1, a: 1, x: 7, o: 3, r: '', d: 2, b: 2, c: 2, e: 'lectura de la rivalidad del sector y de su atractivo', qs: [1, 3], m: 0 },
+    { k: 'Cuadro de mando integral (BSC)', s: 'Cuadro de mando integral', t: 2, p: 3, q: 2, a: 3, x: 12, o: 4, r: 'KPI y OKR', d: 3, b: 3, c: 3, e: 'mapa estratégico con objetivos, indicadores y metas en cuatro perspectivas', qs: [6, 10], m: 0 },
+    { k: 'Curva de experiencia', s: 'Curva de experiencia', t: 2, p: 1, q: 0, a: 2, x: 10, o: 5, r: '', d: 3, b: 3, c: 2, e: 'proyección de costos unitarios según la producción acumulada', qs: [2], m: 0 },
+    { k: 'Estrategia del océano azul', s: 'Estrategia del océano azul', t: 2, p: 1, q: -1, a: 2, x: 10, o: 6, r: '', d: 2, b: 3, c: 3, e: 'lienzo estratégico con los factores por eliminar, reducir, incrementar y crear', qs: [3, 5], m: 0 },
+    { k: 'Hoshin Kanri (matriz X)', s: 'Hoshin Kanri', t: 2, p: 2, q: 3, a: 3, x: 12, o: 7, r: 'KPI y OKR', d: 3, b: 3, c: 3, e: 'matriz X con objetivos, proyectos, indicadores y responsables alineados', qs: [6, 7, 8], m: 0 },
+    { k: 'KPI y OKR', s: 'KPI y OKR', t: 1, p: 3, q: 2, a: 2, x: 9, o: 8, r: '', d: 2, b: 2, c: 3, e: 'indicadores y objetivos con resultados clave medibles por trimestre', qs: [6, 10], m: 0 },
+    { k: 'Matriz BCG (Boston Consulting Group)', s: 'Matriz BCG', t: 1, p: 1, q: 3, a: 1, x: 8, o: 9, r: '', d: 3, b: 2, c: 2, e: 'portafolio clasificado por crecimiento y participación, con decisión de inversión', qs: [2], m: 2 },
+    { k: 'Matriz de análisis de riesgos', s: 'Matriz de análisis de riesgos', t: 0, p: 2, q: 1, a: 2, x: 5, o: 10, r: '', d: 1, b: 1, c: 1, e: 'registro de riesgos priorizados, con respuesta y responsable', qs: [8, 9], m: 0 },
+    { k: 'Matriz de Ansoff', s: 'Matriz de Ansoff', t: 0, p: 1, q: -1, a: 1, x: 6, o: 11, r: '', d: 2, b: 2, c: 1, e: 'rutas de crecimiento comparadas, con la ruta elegida', qs: [5], m: 0 },
+    { k: 'Matriz de Eisenhower', s: 'Matriz de Eisenhower', t: 0, p: 2, q: -1, a: 1, x: 4, o: 12, r: '', d: 1, b: 1, c: 1, e: 'lista de tareas clasificadas en cuatro cuadrantes de urgencia e importancia', qs: [6, 9], m: 0 },
+    { k: 'Matriz de McKinsey (General Electric)', s: 'Matriz de McKinsey', t: 2, p: 1, q: 0, a: 2, x: 10, o: 13, r: '', d: 3, b: 3, c: 2, e: 'unidades de negocio posicionadas por atractivo del mercado y fortaleza competitiva', qs: [2, 5], m: 4 },
+    { k: 'Matriz FODA (SWOT)', s: 'Matriz FODA', t: 0, p: 0, q: 1, a: 1, x: 4, o: 14, r: '', d: 1, b: 1, c: 1, e: 'matriz de fortalezas, oportunidades, debilidades y amenazas priorizadas', qs: [1, 3], m: 0 },
+    { k: 'Matriz FODA cruzada (TOWS)', s: 'Matriz FODA cruzada', t: 1, p: 1, q: -1, a: 2, x: 7, o: 15, r: 'Matriz FODA (SWOT)', d: 2, b: 2, c: 1, e: 'estrategias FO, FA, DO y DA derivadas de la matriz FODA', qs: [4, 5], m: 0 },
+    { k: 'Matriz PEYEA (posición estratégica y evaluación de la acción)', s: 'Matriz PEYEA', t: 1, p: 1, q: 0, a: 1, x: 8, o: 16, r: '', d: 3, b: 2, c: 2, e: 'postura estratégica con su fundamento', qs: [4, 5], m: 0 },
+    { k: 'Matriz RACI (responsable, aprobador, consultado e informado)', s: 'Matriz RACI', t: 0, p: 2, q: 3, a: 2, x: 5, o: 17, r: '', d: 1, b: 1, c: 1, e: 'matriz de tareas con responsable, aprobador, consultado e informado', qs: [7, 9], m: 0 },
+    { k: 'Modelo de negocio Canvas (BMC)', s: 'Modelo de negocio Canvas', t: 1, p: 1, q: 2, a: 2, x: 7, o: 18, r: '', d: 2, b: 2, c: 1, e: 'lienzo de nueve bloques con las hipótesis por validar', qs: [3, 4], m: 0 },
+    { k: 'Revisión posterior a la acción', s: 'Revisión posterior a la acción', t: 0, p: 3, q: 2, a: 1, x: 4, o: 19, r: '', d: 1, b: 1, c: 1, e: 'acta con lo esperado, lo ocurrido, sus causas y los ajustes acordados', qs: [11, 12], m: 0 },
+    { k: 'Tablero de indicadores', s: 'Tablero de indicadores', t: 0, p: 3, q: 2, a: 1, x: 5, o: 20, r: '', d: 2, b: 1, c: 1, e: 'tablero con los indicadores clave, su meta y su responsable', qs: [10, 11], m: 0 }
+  ];
+  function toolByKey(k) { for (var i = 0; i < TOOLS.length; i++) if (TOOLS[i].k === k) return TOOLS[i]; return null; }
+  function recommend(dp, tp, small, a, nl) {
+    var lv = level(tp), target = lv.n === 'intuitiva' ? 0 : (lv.n === 'consolidada' ? 2 : 1), weakest = 0, i, r;
+    for (i = 1; i < 4; i++) if (dp[i] < dp[weakest]) weakest = i;
+    function score(h) {
+      var gp = 100 - dp[h.p], adj = h.q >= 0 ? (3 * gp + (100 - dp[h.q])) / 4 : gp, d = Math.abs(h.t - target), aq = 0, j;
+      for (j = 0; j < h.qs.length; j++) aq += (3 - a['q' + h.qs[j]]) / 3 * 100;
+      aq = aq / h.qs.length; adj = (adj + aq) / 2;
+      return adj + (d === 0 ? 30 : (d === 1 ? 15 : 0));
+    }
+    var cand = TOOLS.filter(function (h) { return !(small && h.a === 3 && lv.n !== 'consolidada') && !(nl && nl < h.m); });
+    cand.sort(function (a, b) { return (score(b) - score(a)) || (a.p - b.p) || (a.x - b.x) || (a.o - b.o); });
+    var sel = [], cnt = [0, 0, 0, 0], via = {};
+    function resolve(h) { return (h.r && h.t > target) ? toolByKey(h.r) : h; }
+    function can(h) { return sel.indexOf(h) < 0 && cnt[h.p] < 2; }
+    function add(h, orig) { sel.push(h); cnt[h.p]++; if (orig !== h) via[h.k] = orig; }
+    for (i = 0; i < cand.length; i++) {
+      if (cand[i].p === weakest) { r = resolve(cand[i]); if (can(r)) { add(r, cand[i]); break; } }
+    }
+    for (i = 0; i < cand.length && sel.length < 3; i++) { r = resolve(cand[i]); if (can(r)) add(r, cand[i]); }
+    var alt = [];
+    for (i = 0; i < cand.length && alt.length < 2; i++) { r = resolve(cand[i]); if (sel.indexOf(r) < 0 && alt.indexOf(r) < 0) alt.push(r); }
+    return { sel: sel, alt: alt, via: via, rank: cand };
+  }
+  function recFromAnswers(a, small, nl) {
+    var st = stats(a), dp = dimPct(st), tp = Math.round(st.total / 36 * 100);
+    return { dp: dp, tp: tp, lv: level(tp), rec: recommend(dp, tp, small, a, nl) };
+  }
+  /* Margen de error: cambia una respuesta a la vez (±1) y cuenta cuántas veces se mantiene cada recomendación */
+  function robustness(a, small, base, nl) {
+    var cnt = {}, nv = 0, lvchg = false, q;
+    base.rec.sel.forEach(function (h) { cnt[h.k] = 0; });
+    for (q = 1; q <= 12; q++) {
+      [-1, 1].forEach(function (dl) {
+        var v = a['q' + q] + dl, b = {}, k, r;
+        if (v < 0 || v > 3) return;
+        for (k in a) b[k] = a[k];
+        b['q' + q] = v;
+        r = recFromAnswers(b, small, nl); nv++;
+        r.rec.sel.forEach(function (h) { if (cnt[h.k] !== undefined) cnt[h.k]++; });
+        if (r.lv.n !== base.lv.n) lvchg = true;
+      });
+    }
+    return { cnt: cnt, nv: nv, lvchg: lvchg };
+  }
+  function firmeza(c, nv) { return c === nv ? 'firme' : (c / nv >= 0.6 ? 'probable' : 'a confirmar'); }
+  function laterItems(rec, dp, tp, small) {
+    var out = [], lv = level(tp), target = lv.n === 'intuitiva' ? 0 : (lv.n === 'consolidada' ? 2 : 1), i, h, p;
+    for (i = 0; i < rec.rank.length; i++) {
+      h = rec.rank[i];
+      if (LATER[h.k] && h.t > target && rec.sel.indexOf(h) < 0 && rec.alt.indexOf(h) < 0) {
+        p = LATER[h.k].pre ? toolByKey(LATER[h.k].pre) : null;
+        out.push('<li><strong>' + esc(h.s) + '.</strong> ' + (p ? 'Antes necesitas «' + esc(p.s) + '»: ' : 'Aún no hay base para aplicarla: ') + LATER[h.k].why + (p ? ' Ruta: ' + esc(p.s) + ' → ' + esc(h.s) + '.' : '') + '</li>');
+        break;
+      }
+    }
+    return out;
+  }
+  function listY(a) { return a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' y ' + a[a.length - 1]; }
+  function cardText() {
+    var m = {}, cards = document.querySelectorAll('.tools-grid .tool-card');
+    Array.prototype.forEach.call(cards, function (c) {
+      var h = c.querySelector('h5'), ps = c.querySelectorAll('p');
+      if (h && ps.length > 1) m[h.textContent.trim()] = { d: ps[0].textContent.trim(), u: ps[1].textContent.trim() };
+    });
+    return m;
+  }
+  function esc(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function toolsBlock(dp, lv, order, flat, rec, rob, later, org, giro) {
+    var txt = cardText(), firmes = 0;
+    var items = rec.sel.map(function (h) {
+      var why, f = firmeza(rob.cnt[h.k], rob.nv);
+      if (f === 'firme') firmes++;
+      if (flat) why = 'Encaja con tu nivel de madurez ' + lv.n + '.';
+      else if (h.p === order[0]) why = 'Atiende tu brecha mayor: ' + DIMS[h.p].n + ' (' + pct(dp[h.p]) + ').';
+      else if (h.p === order[1]) why = 'Atiende una de tus brechas: ' + DIMS[h.p].n + ' (' + pct(dp[h.p]) + ').';
+      else why = 'Refuerza ' + DIMS[h.p].n + ' (' + pct(dp[h.p]) + ') y encaja con tu nivel de madurez.';
+      if (rec.via[h.k]) why += ' Es el paso previo para aplicar «' + rec.via[h.k].s + '».';
+      var t = txt[h.k] || { d: '', u: '' };
+      return '<li><strong>' + esc(h.s) + '</strong><span class="bru-tier">' + TIERS[h.t] + '</span><span class="bru-badge ' + (f === 'a confirmar' ? 'confirmar' : f) + '">' + f + '</span>' +
+        '<span class="bru-why">' + esc(why) + '</span>' +
+        '<span class="bru-use">Tiempo estimado: ' + TIEMPO[h.c - 1] + '.</span>' +
+        '<details><summary>Qué es, qué necesitas y qué entregas</summary>' +
+        (t.d ? '<span class="bru-use">' + esc(t.d) + '</span>' : '') + (t.u ? '<span class="bru-use">' + esc(t.u) + '</span>' : '') +
+        '<span class="bru-use"><b>Participan:</b> ' + PARTICIPAN[h.a - 1] + '.</span>' +
+        '<span class="bru-use"><b>Datos necesarios:</b> ' + DATOS[h.d - 1] + '.</span>' +
+        '<span class="bru-use"><b>Conocimiento previo:</b> ' + CONOCE[h.b - 1] + '.</span>' +
+        '<span class="bru-use"><b>Entregable:</b> ' + esc(h.e) + '.</span></details></li>';
+    }).join('');
+    var frase = firmes === 3 ? 'Las tres recomendaciones se mantienen ante cualquier cambio de una respuesta.' :
+      (firmes === 2 ? 'Dos de las tres recomendaciones se mantienen ante cualquier cambio de una respuesta; la otra conviene confirmarla en la sesión.' :
+      (firmes === 1 ? 'Una de las tres recomendaciones se mantiene ante cualquier cambio de una respuesta; las otras dos conviene confirmarlas en la sesión.' :
+      'Ninguna de las tres recomendaciones se mantiene ante cualquier cambio de una respuesta; conviene confirmar las tres en la sesión.'));
+    var margen = 'Margen de lectura: una respuesta distinta mueve una dimensión 11 puntos porcentuales. ' + frase +
+      (rob.lvchg ? ' Tu nivel de madurez está cerca de un límite: una respuesta distinta podría cambiarlo.' : '');
+    return '<h4>Tres herramientas recomendadas</h4>' +
+      ((org || giro) ? '<p class="bru-note">Lectura para <strong>' + esc(org || 'tu organización') + '</strong>' + (giro ? ' · ' + esc(giro.toLowerCase()) : '') + '.</p>' : '') +
+      '<p class="bru-note">Lectura orientativa: el estratega define en la sesión diagnóstica cuáles aplicar y en qué orden.</p>' +
+      '<ol>' + items + '</ol>' +
+      (rec.alt.length ? '<p class="bru-note">Otras opciones cercanas: ' + listY(rec.alt.map(function (h) { return h.s; })) + '.</p>' : '') +
+      (later.length ? '<div class="bru-later"><p class="bru-later-title">Todavía no</p><ul>' + later.join('') + '</ul></div>' : '') +
+      '<p class="bru-note">' + margen + '</p>';
+  }
   function render() {
     var a = answers(), st = stats(a), dp = dimPct(st), tp = Math.round(st.total / 36 * 100), lv = level(tp);
     document.getElementById('bru-level').innerHTML = 'Madurez estratégica ' + lv.n + ' · <b class="bru-num">' + pct(tp) + '</b>';
@@ -5113,11 +5430,19 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     document.getElementById('bru-gaps').innerHTML = flat
       ? '<h4>Dónde conviene empezar</h4><p>Tus cuatro dimensiones están al mismo nivel: el punto de partida lo define el objetivo de tu organización, no una brecha.</p>'
       : '<h4>Dónde conviene empezar</h4><ul>' + order.slice(0, 2).map(function (i) { return '<li><strong>' + DIMS[i].n + ' (' + pct(dp[i]) + ').</strong> ' + DIMS[i].mod + '.</li>'; }).join('') + '</ul>';
+    var small = !!(sizeSel && sizeSel.value === '1 a 10 personas'), nl = ({ 'Una': 1, 'Dos o tres': 2, 'Cuatro o más': 4 })[linesSel ? linesSel.value : ''] || 0;
+    var org = titulo(orgEl && orgEl.value), giro = giroEl ? giroEl.value : '';
+    var rec = recommend(dp, tp, small, a, nl), toolsEl = document.getElementById('bru-tools');
+    var rob = robustness(a, small, { lv: lv, rec: rec }, nl);
+    if (toolsEl) toolsEl.innerHTML = toolsBlock(dp, lv, order, flat, rec, rob, laterItems(rec, dp, tp, small), org, giro);
     var ctx = [];
+    if (org) ctx.push('Organización: ' + org + '.');
+    if (giro) ctx.push('Giro: ' + giro.toLowerCase() + '.');
     if (sizeSel && sizeSel.value) ctx.push('Tamaño: ' + sizeSel.value.toLowerCase() + '.');
+    if (linesSel && linesSel.value) ctx.push('Líneas de negocio: ' + linesSel.value.toLowerCase() + '.');
     if (roleSel && roleSel.value) ctx.push('Rol: ' + roleSel.value.toLowerCase() + '.');
-    var msg = 'Hola, hice la Brújula estratégica de AIDN. Mi lectura: ' + DIMS.map(function (d, i) { return d.n.toLowerCase() + ' ' + plain(dp[i]); }).join(', ') +
-      ' (madurez general: ' + lv.n + ', ' + plain(tp) + '). ' + (ctx.length ? ctx.join(' ') + ' ' : '') + 'Quiero agendar la sesión diagnóstica inicial.';
+    var msg = 'Hola, hice la Brújula Estratégica de AIDN. Mi lectura: ' + DIMS.map(function (d, i) { return d.n.toLowerCase() + ' ' + plain(dp[i]); }).join(', ') +
+      ' (madurez general: ' + lv.n + ', ' + plain(tp) + '). ' + (ctx.length ? ctx.join(' ') + ' ' : '') + 'Herramientas sugeridas: ' + listY(rec.sel.map(function (h) { return h.s; })) + '. Quiero agendar la sesión diagnóstica inicial.';
     document.getElementById('bru-cta').setAttribute('href', WA + encodeURIComponent(msg));
   }
   function update() {
@@ -5167,13 +5492,17 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     if (soundOn) tick(2);
   });
   inputs.forEach(function (i) { i.addEventListener('change', function () { tick(parseInt(i.value, 10)); update(); }); });
-  [sizeSel, roleSel].forEach(function (s) { if (s) s.addEventListener('change', function () { if (shown) render(); }); });
+  [sizeSel, roleSel, linesSel, giroEl].forEach(function (s) { if (s) s.addEventListener('change', function () { if (shown) render(); }); });
+  if (orgEl) {
+    orgEl.addEventListener('input', function () { if (shown) render(); });
+    orgEl.addEventListener('blur', function () { orgEl.value = titulo(orgEl.value); if (shown) render(); });
+  }
   go.addEventListener('click', function () {
     if (Object.keys(answers()).length < 12) return;
     try { render(); shown = true; res.hidden = false; slot.appendChild(radarEl); bodyEl.classList.add('is-done'); update(); }
     catch (err) {
       shown = false; res.hidden = false;
-      res.innerHTML = '<div class="bru-res-right"><p class="bru-read">No fue posible calcular la lectura en este navegador. Escríbenos por WhatsApp y la revisamos juntos.</p><a class="bru-btn" href="' + WA + encodeURIComponent('Hola, intenté hacer la Brújula estratégica y no pudo calcular mi lectura.') + '" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a></div>';
+      res.innerHTML = '<div class="bru-res-right"><p class="bru-read">No fue posible calcular la lectura en este navegador. Escríbenos por WhatsApp y la revisamos juntos.</p><a class="bru-btn" href="' + WA + encodeURIComponent('Hola, intenté hacer la Brújula Estratégica y no pudo calcular mi lectura.') + '" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a></div>';
       if (window.console) console.error(err);
     }
     res.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
@@ -5181,7 +5510,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
   });
   reset.addEventListener('click', function () {
     inputs.forEach(function (i) { i.checked = false; });
-    if (sizeSel) sizeSel.value = ''; if (roleSel) roleSel.value = '';
+    if (sizeSel) sizeSel.value = ''; if (roleSel) roleSel.value = ''; if (linesSel) linesSel.value = ''; if (orgEl) orgEl.value = ''; if (giroEl) giroEl.value = '';
     shown = false; res.hidden = true; bodyEl.classList.remove('is-done'); side.insertBefore(radarEl, cap); update();
     inputs[0].focus();
   });
@@ -5190,7 +5519,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
   var wrap = root.querySelector('.bru-wrapper');
   if (!calm && 'IntersectionObserver' in window && wrap) {
     wrap.classList.add('bru-anim');
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { wrap.classList.add('is-in'); io.unobserve(wrap); } }); }, { threshold: 0.12 });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { wrap.classList.add('is-in'); io.unobserve(wrap); } }); }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
     io.observe(wrap);
   }
 })();
