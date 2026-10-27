@@ -1489,6 +1489,12 @@ div[id],section[id]{scroll-margin-top:1.5rem}
 .bru-later-title { margin:0 0 .4rem !important; font-family:var(--fh); font-size:.92rem !important; font-weight:700; color:#fcd34d !important; }
 .bru-later ul { margin:0; padding-left:1.1rem; display:flex; flex-direction:column; gap:.5rem; font-size:.82rem; line-height:1.55; color:rgba(255,255,255,.9); }
 .bru-later li strong { color:#fff; }
+.bru-org-line { margin:.15rem 0 .5rem; font-family:var(--fh); font-size:1.05rem; font-weight:600; color:#fff; line-height:1.35; }
+.bru-org-line strong { color:#33CCEC; }
+.bru-read .bru-profile { display:inline-block; margin:0 0 .4rem; padding:.22rem .75rem; border:1px solid rgba(51,204,236,.55); border-radius:999px; background:rgba(3,180,214,.18); font-family:var(--fh); font-size:.92rem; color:#fff; }
+.bru-read .bru-profile strong { color:#33CCEC; }
+.bru-read .bru-amp { display:block; margin:0 0 .65rem; font-size:.78rem; line-height:1.5; color:rgba(255,255,255,.8); }
+.bru-read .bru-lect { display:block; font-size:.9rem; line-height:1.65; color:rgba(255,255,255,.95); }
 .bru-result[hidden] { display:none; }
 /* entradas a la Brújula (hero y Strategy) */
 .bru-entry { display:flex; align-items:center; gap:1.2rem; margin:2rem 0; padding:1.05rem 1.3rem; border:1px solid var(--border); border-left:4px solid #03b4d6; border-radius:12px; background:var(--bg-card); }
@@ -1522,6 +1528,22 @@ div[id],section[id]{scroll-margin-top:1.5rem}
   .bru-opt span, .bru-bar i, .bru-btn, .bru-done, .bru-entry-btn { transition:none; }
 }
 @media print { .bru-needle { animation:none !important; } .bru-wrapper.bru-anim { opacity:1; transform:none; } .tx-acc > summary::after { display:none; } }
+/* ── Brújula · corrección de desborde en móvil ── */
+.bru-wrapper { max-width:100%; overflow-x:clip; }
+.bru-body, .bru-form, .bru-side, .bru-result,
+.bru-res-left, .bru-res-right,
+.bru-context, .bru-context-grid, .bru-sel,
+.bru-dim, .bru-q { min-width:0; max-width:100%; }
+.bru-sel select, .bru-sel input { width:100%; min-width:0; max-width:100%; }
+.bru-dim-title > span:first-child { min-width:0; overflow-wrap:anywhere; }
+.bru-done { flex-shrink:0; }
+@media (max-width:768px) {
+  .bru-body   { grid-template-columns:minmax(0,1fr); }
+  .bru-result { grid-template-columns:minmax(0,1fr); }
+  .bru-opts   { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .bru-context-grid { grid-template-columns:minmax(0,1fr); }
+  .bru-opt span { min-width:0; overflow-wrap:anywhere; }
+}
 /* ── Condiciones del servicio fiscal y acordeones ── */
 .tx-cond { margin:3rem 0 0; }
 .tx-cond-intro { color:var(--txt2); font-size:.92rem; line-height:1.7; margin:0 0 1.2rem; }
@@ -3193,6 +3215,7 @@ Jackson, T. L. (2019). <em>Hoshin Kanri for the lean enterprise: Developing comp
   <div class="bru-result" id="bru-result" tabindex="-1" hidden>
     <div class="bru-res-left">
       <p class="bru-res-eyebrow">Tu lectura</p>
+      <p class="bru-org-line" id="bru-org-line" hidden></p>
       <p class="bru-level" id="bru-level"></p>
       <div class="bru-radar-slot" id="bru-radar-slot"></div>
       <ul class="bru-dims" id="bru-dims"></ul>
@@ -5383,7 +5406,7 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     return m;
   }
   function esc(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-  function toolsBlock(dp, lv, order, flat, rec, rob, later, org, giro) {
+  function toolsBlock(dp, lv, order, flat, rec, rob, later) {
     var txt = cardText(), firmes = 0;
     var items = rec.sel.map(function (h) {
       var why, f = firmeza(rob.cnt[h.k], rob.nv);
@@ -5411,17 +5434,226 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
     var margen = 'Margen de lectura: una respuesta distinta mueve una dimensión 11 puntos porcentuales. ' + frase +
       (rob.lvchg ? ' Tu nivel de madurez está cerca de un límite: una respuesta distinta podría cambiarlo.' : '');
     return '<h4>Tres herramientas recomendadas</h4>' +
-      ((org || giro) ? '<p class="bru-note">Lectura para <strong>' + esc(org || 'tu organización') + '</strong>' + (giro ? ' · ' + esc(giro.toLowerCase()) : '') + '.</p>' : '') +
       '<p class="bru-note">Lectura orientativa: el estratega define en la sesión diagnóstica cuáles aplicar y en qué orden.</p>' +
       '<ol>' + items + '</ol>' +
       (rec.alt.length ? '<p class="bru-note">Otras opciones cercanas: ' + listY(rec.alt.map(function (h) { return h.s; })) + '.</p>' : '') +
       (later.length ? '<div class="bru-later"><p class="bru-later-title">Todavía no</p><ul>' + later.join('') + '</ul></div>' : '') +
       '<p class="bru-note">' + margen + '</p>';
   }
+  /* Lectura por tramo y por perfil: la variante depende solo de las respuestas (mismas respuestas, mismo texto) */
+  var LECT = {
+  "th": 33,
+  "bands": [
+    {
+      "lo": 0,
+      "hi": 16,
+      "n": "Arranque",
+      "v": [
+        "Tu organización apenas empieza a ordenar su estrategia: hoy casi todo depende de la experiencia de quien dirige.",
+        "Hoy la estrategia depende sobre todo de la experiencia de quien dirige; hay mucho espacio para sistematizarla."
+      ]
+    },
+    {
+      "lo": 17,
+      "hi": 33,
+      "n": "Base",
+      "v": [
+        "Hay intuición y algunas prácticas sueltas, pero todavía no forman un sistema que sostenga las decisiones.",
+        "Las decisiones aún dependen más de la experiencia que de un método; construir uno es el mayor avance disponible."
+      ]
+    },
+    {
+      "lo": 34,
+      "hi": 47,
+      "n": "Inicio",
+      "v": [
+        "Existen prácticas útiles, pero trabajan por separado: falta conectarlas para que cada decisión alimente a la siguiente.",
+        "Ya hay piezas del sistema; lo que falta es que se comuniquen entre sí.",
+        "Tu organización ya tiene bases, aunque todavía no se sostienen unas a otras."
+      ]
+    },
+    {
+      "lo": 48,
+      "hi": 60,
+      "n": "Avance",
+      "v": [
+        "Tu sistema estratégico funciona en varias partes; el valor está en conectarlas para que operen como un solo ciclo.",
+        "Llevas buen camino: la mayoría de las piezas existe y el trabajo ahora es conectarlas de punta a punta.",
+        "Hay una base sólida en varias áreas; falta que todas avancen al mismo ritmo."
+      ]
+    },
+    {
+      "lo": 61,
+      "hi": 74,
+      "n": "Recta final",
+      "v": [
+        "Estás cerca de un ciclo completo: bastan ajustes puntuales para que la estrategia funcione de punta a punta.",
+        "Tu organización está a pocos pasos de consolidar su sistema; conviene cerrar las brechas que quedan.",
+        "La mayor parte del ciclo estratégico ya opera; lo pendiente se concentra en pocos puntos."
+      ]
+    },
+    {
+      "lo": 75,
+      "hi": 87,
+      "n": "Sólida",
+      "v": [
+        "El ciclo estratégico funciona. El trabajo se orienta a refinar y proteger lo que ya está construido.",
+        "Tu estrategia opera como un sistema; el reto ahora es mantenerla viva y ajustarla con disciplina."
+      ]
+    },
+    {
+      "lo": 88,
+      "hi": 100,
+      "n": "Madura",
+      "v": [
+        "Tu organización muestra un ciclo estratégico maduro; el trabajo está en escalar y en diferenciarte.",
+        "El sistema estratégico está completo y se sostiene; lo que sigue es escalarlo sin perder el criterio."
+      ]
+    }
+  ],
+  "pairs": {
+    "0,1": {
+      "n": "Diagnóstico sin rumbo",
+      "v": [
+        "Conoces bien tu entorno y tu rentabilidad, pero ese conocimiento todavía no se convierte en una dirección escrita.",
+        "Tu organización parece entender su mercado; falta traducir ese análisis en una misión, una visión y objetivos claros."
+      ]
+    },
+    "0,2": {
+      "n": "Diagnóstico sin ejecución",
+      "v": [
+        "Entiendes bien tu mercado, pero la estructura y los responsables aún no acompañan lo que sabes.",
+        "El análisis es tu fortaleza; lo pendiente es que cada objetivo tenga un responsable y una estructura que lo sostenga."
+      ]
+    },
+    "0,3": {
+      "n": "Diagnóstico sin seguimiento",
+      "v": [
+        "Analizas con rigor, pero no mides si las decisiones que tomas con esa información funcionan.",
+        "Tu mirada al entorno es sólida; falta medir con indicadores y revisar con regularidad lo que se decide."
+      ]
+    },
+    "1,0": {
+      "n": "Rumbo sin diagnóstico",
+      "v": [
+        "Tu rumbo está definido, pero se apoya en poca información sobre el entorno y la rentabilidad.",
+        "Sabes hacia dónde quieres ir; conviene verificar ese rumbo con datos del mercado y de tus propias cifras."
+      ]
+    },
+    "1,2": {
+      "n": "Rumbo sin estructura",
+      "v": [
+        "Sabes hacia dónde vas, pero la estructura y los responsables todavía no te llevan hasta allá.",
+        "La dirección está clara; falta que cada objetivo tenga un responsable y que la organización se ordene para cumplirlo."
+      ]
+    },
+    "1,3": {
+      "n": "Rumbo sin medición",
+      "v": [
+        "Sabes hacia dónde vas, pero no mides si estás llegando.",
+        "Tu dirección es clara; sin indicadores ni revisiones periódicas, no hay forma de saber si funciona."
+      ]
+    },
+    "2,0": {
+      "n": "Ejecución sin diagnóstico",
+      "v": [
+        "Ejecutas con orden, pero decides con poca información del entorno y de tu rentabilidad.",
+        "Tu organización opera con disciplina; falta alimentar esa operación con una mirada periódica al mercado."
+      ]
+    },
+    "2,1": {
+      "n": "Ejecución sin rumbo",
+      "v": [
+        "Ejecutas con orden, pero sin una dirección escrita que oriente el esfuerzo.",
+        "El trabajo avanza; falta definir hacia dónde, con misión, visión y objetivos que den sentido a lo que se hace."
+      ]
+    },
+    "2,3": {
+      "n": "Ejecución sin medición",
+      "v": [
+        "Ejecutas con responsables claros, pero no mides si el esfuerzo produce resultados.",
+        "Tu organización trabaja con orden; sin indicadores ni revisiones, no sabe qué parte de ese esfuerzo rinde."
+      ]
+    },
+    "3,0": {
+      "n": "Medición sin diagnóstico",
+      "v": [
+        "Mides lo que haces, pero con poca mirada al entorno que explica los resultados.",
+        "Tus indicadores existen; conviene contrastarlos con lo que ocurre en el mercado y con tu rentabilidad real."
+      ]
+    },
+    "3,1": {
+      "n": "Medición sin rumbo",
+      "v": [
+        "Mides con disciplina, pero sin un rumbo claro que dé sentido a los números.",
+        "Los indicadores están; falta la dirección contra la cual medirlos."
+      ]
+    },
+    "3,2": {
+      "n": "Medición sin ejecución",
+      "v": [
+        "Mides con disciplina, pero la estructura y los responsables no convierten esos datos en acción.",
+        "Tus números son claros; falta que alguien responda por ellos y que la organización actúe en consecuencia."
+      ]
+    }
+  },
+  "even": {
+    "intuitiva": [
+      "Tus cuatro dimensiones avanzan al mismo paso, todavía en una etapa inicial: conviene definir la dirección antes de invertir en ejecución.",
+      "No hay una dimensión rezagada; el punto de partida es definir la dirección y elegir una primera prioridad."
+    ],
+    "en construcción": [
+      "Tus cuatro dimensiones avanzan juntas: el siguiente salto no viene de corregir una brecha, sino de conectar mejor lo que ya existe.",
+      "El avance es parejo en las cuatro dimensiones; la oportunidad está en integrar las prácticas y en subir el nivel de todas a la vez."
+    ],
+    "consolidada": [
+      "Las cuatro dimensiones sostienen el ciclo por igual; ninguna exige una corrección urgente.",
+      "No hay un punto débil: la ventaja está en decidir con criterio hacia dónde crecer."
+    ]
+  }
+};
+  function lectura(a, dp, tp, lv) {
+    var band = null, iv = 0, sum = 0, fu = 0, de = 0, i, par, amp, parejo, txt, nom;
+    for (i = 0; i < LECT.bands.length; i++) if (tp >= LECT.bands[i].lo && tp <= LECT.bands[i].hi) band = LECT.bands[i];
+    for (i = 1; i <= 12; i++) { iv += i * a['q' + i]; sum += a['q' + i]; }
+    for (i = 1; i < 4; i++) { if (dp[i] > dp[fu]) fu = i; if (dp[i] < dp[de]) de = i; }
+    amp = dp[fu] - dp[de]; parejo = !(amp >= LECT.th && fu !== de);
+    par = parejo ? { n: 'parejo', v: LECT.even[lv.n] } : LECT.pairs[fu + ',' + de];
+    nom = parejo ? 'parejo' : par.n;
+    return { intro: band.v[iv % band.v.length], frase: par.v[sum % 2], nombre: nom, amp: amp, fu: fu, de: de, parejo: parejo };
+  }
+  function lecturaHtml(L, dp) {
+    var cabeza = '<span class="bru-profile"><strong>Perfil:</strong> ' + esc(L.nombre) + '</span>';
+    var amp = L.parejo ? 'Diferencia entre tus dimensiones: ' + L.amp + ' puntos.' :
+      'Brecha entre tu dimensión más fuerte (' + DIMS[L.fu].n + ', ' + pct(dp[L.fu]) + ') y la más débil (' + DIMS[L.de].n + ', ' + pct(dp[L.de]) + '): ' + L.amp + ' puntos.';
+    return cabeza + '<span class="bru-amp">' + amp + '</span><span class="bru-lect">' + esc(L.intro) + ' ' + esc(L.frase) + '</span>';
+  }
+  var LINEAS_TXT = { 'Una': 'una línea de negocio', 'Dos o tres': 'dos o tres líneas de negocio', 'Cuatro o más': 'cuatro o más líneas de negocio' };
+  function san(t) { return String(t).replace(/[*_~`]/g, ' ').replace(/\s+/g, ' ').trim(); }
+  /* Mensaje de WhatsApp con formato: nombre de la organización y etiquetas en negrita (*texto*) */
+  function waMessage(L, dp, tp, lv, tools, org, giro, size, lines, role) {
+    var o = san(org), g = giro ? giro.toLowerCase() : '', out = [], ctx = [];
+    out.push(o ? 'Hola, soy de *' + o + '*' + (g ? ' (' + g + ')' : '') + '.' : 'Hola.');
+    out.push('Hice la *Brújula Estratégica* de AIDN y comparto mi lectura:', '');
+    out.push('*Madurez general:* ' + lv.n + ' (' + plain(tp) + ')');
+    out.push('*Perfil:* ' + (L.parejo ? 'parejo; diferencia de ' + L.amp + ' puntos' : L.nombre.toLowerCase() + '; brecha de ' + L.amp + ' puntos'));
+    out.push('*Dimensiones:* ' + DIMS.map(function (d, i) { return d.n + ' ' + plain(dp[i]); }).join(' · '));
+    out.push('*Herramientas sugeridas:* ' + listY(tools));
+    if (!o && g) ctx.push('giro: ' + g);
+    if (size) ctx.push(size);
+    if (lines) ctx.push(LINEAS_TXT[lines]);
+    if (role) ctx.push('rol: ' + san(role).toLowerCase());
+    if (ctx.length) out.push('*Contexto:* ' + ctx.join(' · '));
+    out.push('', 'Quiero agendar la *sesión diagnóstica inicial*.');
+    return out.join('\n');
+  }
   function render() {
     var a = answers(), st = stats(a), dp = dimPct(st), tp = Math.round(st.total / 36 * 100), lv = level(tp);
     document.getElementById('bru-level').innerHTML = 'Madurez estratégica ' + lv.n + ' · <b class="bru-num">' + pct(tp) + '</b>';
-    document.getElementById('bru-read').textContent = lv.t;
+    var org = titulo(orgEl && orgEl.value), giro = giroEl ? giroEl.value : '';
+    var L = lectura(a, dp, tp, lv), orgLine = document.getElementById('bru-org-line');
+    document.getElementById('bru-read').innerHTML = lecturaHtml(L, dp);
+    if (orgLine) { orgLine.hidden = !(org || giro); orgLine.innerHTML = (org || giro) ? 'Lectura para <strong>' + esc(org || 'tu organización') + '</strong>' + (giro ? ' · ' + esc(giro.toLowerCase()) : '') : ''; }
     document.getElementById('bru-dims').innerHTML = DIMS.map(function (d, i) {
       return '<li class="bru-dim-row"><span>' + d.n + '</span><span class="bru-dim-pct">' + pct(dp[i]) + '</span><span class="bru-dim-bar"><i style="width:' + dp[i] + '%"></i></span></li>';
     }).join('');
@@ -5431,18 +5663,10 @@ window.AIDNTheme = { toggle: toggleTheme, apply: applyTheme, get: () => state.th
       ? '<h4>Dónde conviene empezar</h4><p>Tus cuatro dimensiones están al mismo nivel: el punto de partida lo define el objetivo de tu organización, no una brecha.</p>'
       : '<h4>Dónde conviene empezar</h4><ul>' + order.slice(0, 2).map(function (i) { return '<li><strong>' + DIMS[i].n + ' (' + pct(dp[i]) + ').</strong> ' + DIMS[i].mod + '.</li>'; }).join('') + '</ul>';
     var small = !!(sizeSel && sizeSel.value === '1 a 10 personas'), nl = ({ 'Una': 1, 'Dos o tres': 2, 'Cuatro o más': 4 })[linesSel ? linesSel.value : ''] || 0;
-    var org = titulo(orgEl && orgEl.value), giro = giroEl ? giroEl.value : '';
     var rec = recommend(dp, tp, small, a, nl), toolsEl = document.getElementById('bru-tools');
     var rob = robustness(a, small, { lv: lv, rec: rec }, nl);
-    if (toolsEl) toolsEl.innerHTML = toolsBlock(dp, lv, order, flat, rec, rob, laterItems(rec, dp, tp, small), org, giro);
-    var ctx = [];
-    if (org) ctx.push('Organización: ' + org + '.');
-    if (giro) ctx.push('Giro: ' + giro.toLowerCase() + '.');
-    if (sizeSel && sizeSel.value) ctx.push('Tamaño: ' + sizeSel.value.toLowerCase() + '.');
-    if (linesSel && linesSel.value) ctx.push('Líneas de negocio: ' + linesSel.value.toLowerCase() + '.');
-    if (roleSel && roleSel.value) ctx.push('Rol: ' + roleSel.value.toLowerCase() + '.');
-    var msg = 'Hola, hice la Brújula Estratégica de AIDN. Mi lectura: ' + DIMS.map(function (d, i) { return d.n.toLowerCase() + ' ' + plain(dp[i]); }).join(', ') +
-      ' (madurez general: ' + lv.n + ', ' + plain(tp) + '). ' + (ctx.length ? ctx.join(' ') + ' ' : '') + 'Herramientas sugeridas: ' + listY(rec.sel.map(function (h) { return h.s; })) + '. Quiero agendar la sesión diagnóstica inicial.';
+    if (toolsEl) toolsEl.innerHTML = toolsBlock(dp, lv, order, flat, rec, rob, laterItems(rec, dp, tp, small));
+    var msg = waMessage(L, dp, tp, lv, rec.sel.map(function (h) { return h.s; }), org, giro, sizeSel ? sizeSel.value : '', linesSel ? linesSel.value : '', roleSel ? roleSel.value : '');
     document.getElementById('bru-cta').setAttribute('href', WA + encodeURIComponent(msg));
   }
   function update() {
