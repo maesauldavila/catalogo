@@ -1,586 +1,300 @@
-# 📊 Catálogo de Servicios 2026 - AIDN Strategic Consulting
+# Catálogo de servicios 2026 · AIDN Strategic Consulting
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![License](https://img.shields.io/badge/license-proprietary-red.svg)]()
-[![Version](https://img.shields.io/badge/version-2026.1-blue.svg)]()
+[![Estado](https://img.shields.io/badge/estado-activo-success.svg)]()
+[![Licencia](https://img.shields.io/badge/licencia-propietaria-red.svg)]()
+[![Versión](https://img.shields.io/badge/versión-2026.10%20(v15)-blue.svg)]()
 
-> Catálogo profesional de servicios de consultoría estratégica y servicios fiscales con diseño premium y experiencia de usuario boutique.
+> Catálogo de consultoría estratégica y servicios fiscales de AIDN Strategic Consulting, con dos herramientas interactivas propias: la **Brújula Estratégica** y la **Calculadora de Honorarios**.
 
-🔗 **Acceso directo:** [bit.ly/catalogo-aidn](https://bit.ly/catalogo-aidn)
-
----
-
-## 📋 Contenido
-
-- [Características](#-características)
-- [Propiedad Intelectual](#️-propiedad-intelectual)
-- [Servicios Ofrecidos](#-servicios-ofrecidos)
-- [Tecnologías](#️-tecnologías)
-- [Licencia](#-licencia)
-- [Contacto](#-contacto)
+**Sitio oficial:** [aidnstrategic.com](https://aidnstrategic.com)
 
 ---
 
-## ✨ Características
+## Contenido
 
-### Diseño Premium - Nivel Boutique
-
-- **Glassmorphism moderno** con efectos de blur y gradientes sofisticados
-- **Diseño responsive premium** (320px - 4K)
-- **Paleta corporativa exclusiva** (#0c2a85, #03b4d6)
-- **Tipografía profesional** con jerarquías visuales optimizadas
-- **Micro-interacciones sutiles** para experiencia premium
-- **SEO optimizado** con meta tags completos
-- **100% responsive** - Mobile-first approach
-- **Nivel boutique agency** ($6,000-8,500 USD valor de diseño)
-
-### Características Técnicas
-
-#### 📱 Optimización Web
-- ✅ **Meta tags completos** - Open Graph + Twitter Cards
-- ✅ **PWA ready** - Manifest + Theme colors
-- ✅ **Favicons completos** - Multi-dispositivo
-- ✅ **Canonical URLs** - SEO optimizado
-- ✅ **Security headers** - Content Security Policy
-- ✅ **DNS Prefetch** - Carga optimizada
-
-#### 🎨 Experiencia Visual
-- ✅ **Sistema de color consistente** - CSS Custom Properties
-- ✅ **Gradientes premium** - Efectos visuales sofisticados
-- ✅ **Tablas interactivas** - Hover effects
-- ✅ **Cards destacadas** - Consultoría premium
-- ✅ **Info boxes temáticas** - Success, warning, premium
-- ✅ **CTA optimizado** - Conversión WhatsApp
-
-#### 📊 Estructura de Contenido
-- ✅ **Secciones numeradas** - Navegación clara
-- ✅ **Tablas de precios** - Información transparente
-- ✅ **Políticas de operación** - Términos claros
-- ✅ **Jerarquía legal** - Información educativa
-- ✅ **Footer corporativo** - Contacto completo
-
-### Performance
-
-| Métrica | Valor |
-|---------|-------|
-| **Peso total** | ~45KB (ultra-ligero) |
-| **Carga inicial** | <800ms en 3G |
-| **CSS optimizado** | Inline, sin dependencias |
-| **Accesibilidad** | Diseño inclusivo |
+- [Qué es este proyecto](#qué-es-este-proyecto)
+- [Herramientas interactivas protegidas](#herramientas-interactivas-protegidas)
+- [Propiedad intelectual](#propiedad-intelectual)
+- [Restricciones de uso](#restricciones-de-uso)
+- [Licencia propietaria](#licencia-propietaria)
+- [Alcance de la protección y elementos de terceros](#alcance-de-la-protección-y-elementos-de-terceros)
+- [Privacidad](#privacidad)
+- [Aspectos técnicos](#aspectos-técnicos)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Preguntas frecuentes](#preguntas-frecuentes)
+- [Cómo reportar un uso no autorizado](#cómo-reportar-un-uso-no-autorizado)
+- [Contacto](#contacto)
+- [Historial de cambios](#historial-de-cambios)
 
 ---
 
-## 🛡️ Propiedad Intelectual
+## Qué es este proyecto
 
-### ⚠️ PROTECCIÓN DE MARCA Y CONTENIDO
+Un catálogo de archivo único (HTML, CSS y JavaScript sin dependencias de compilación) que presenta:
 
-**Este catálogo está protegido por derechos de autor.**
+- **AIDN Strategy:** consultoría estratégica a la medida (planeación y dirección, análisis financiero, reestructuración, modelos de negocio, herramientas estratégicas, Hoshin Kanri y enfoque de capital humano).
+- **AIDN Taxes:** servicios fiscales para personas físicas (RESICO, sueldos y salarios, actividades empresariales, servicios administrativos, legales y patrimoniales).
+- **Marco filosófico, políticas y ética profesional** de la firma.
+- **Dos herramientas interactivas** que se describen a continuación.
 
-#### 🏢 Marca Corporativa AIDN
+---
 
-**ELEMENTOS PROTEGIDOS:**
-- ✓ Logo AIDN (hexágono con gradiente azul corporativo)
-- ✓ Paleta de colores exclusiva (#0c2a85, #03b4d6)
-- ✓ Sistema de branding corporativo
-- ✓ Tagline: "Catapultando empresas para liderar el cambio"
-- ✓ Diseño y arquitectura del catálogo
-- ✓ Estructura de servicios y precios
-- ✓ Naming "AIDN Strategic Consulting"
+## Herramientas interactivas protegidas
+
+### Brújula Estratégica
+
+Cuestionario de madurez estratégica de 12 preguntas en cuatro dimensiones (análisis, formulación, implementación y evaluación). Entrega una lectura orientativa, una gráfica radar y una recomendación de herramientas estratégicas.
+
+**Elementos protegidos:**
+
+- La estructura del instrumento: redacción y orden de las 12 preguntas, agrupación en cuatro dimensiones y escala de respuesta.
+- El método de cálculo: ponderación por dimensión, umbrales de los niveles de madurez y criterios de lectura.
+- El catálogo de herramientas con sus atributos (nivel, dimensión, alcance, exigencia de datos y de conocimiento, entregable y preguntas que atiende).
+- El motor de recomendación: reglas de selección, prerrequisitos, reglas de «todavía no» y análisis de firmeza de cada recomendación.
+- El banco de textos de lectura (tramos de madurez, perfiles y variantes) y la redacción del mensaje que se genera para WhatsApp.
+- El diseño visual y la interacción del componente (radar, progreso, resultados).
+- La denominación «Brújula Estratégica» como nombre de esta herramienta de AIDN.
+
+### Calculadora de Honorarios
+
+Estimador de honorarios de AIDN Taxes por régimen, alcance, volumen de facturas y tipo de solicitante.
+
+**Elementos protegidos:**
+
+- Las tablas de tarifas por régimen y alcance, y su organización.
+- Las reglas de cálculo: facturas adicionales, tarifa extraordinaria de permanencia, empleadores adicionales y combinaciones de servicios IMSS.
+- La descripción de alcances, exclusiones y notas por servicio.
+- La lógica y el diseño de la interfaz del componente.
+
+**Nota de uso responsable:** los resultados de ambas herramientas son orientativos y no constituyen una cotización, una propuesta ni asesoría. La cotización definitiva se confirma en la sesión diagnóstica. Las tarifas del catálogo tienen una vigencia determinada, indicada en el propio sitio.
+
+---
+
+## Propiedad intelectual
+
+**Este catálogo y sus herramientas están protegidos por derechos de autor.**
+
+### Marca y contenido de AIDN
+
+- Logotipo hexagonal de AIDN
+- Denominación «AIDN Strategic Consulting» y sus submarcas «AIDN Strategy» y «AIDN Taxes»
+- Lema: «La estrategia empieza cuando termina la improvisación»
+- Sistema de identidad: paleta, tipografía, componentes y su combinación
+- Textos, estructura de servicios, políticas y criterios de la firma
+- Marco filosófico: misión, visión y valores
 
 **© 2026 AIDN Strategic Consulting. Todos los derechos reservados.**
 
-#### 👤 Autor y Diseñador
+### Autoría del diseño y del código
 
-**ELEMENTOS PROTEGIDOS:**
-- ✓ Código HTML/CSS completo
-- ✓ Diseño y estructura visual
-- ✓ Sistema de glassmorphism implementado
-- ✓ Arquitectura de información
-- ✓ Paleta de colores y gradientes
-- ✓ Sistema tipográfico y jerarquías
-- ✓ Componentes UI (tablas, cards, boxes)
+- Código HTML, CSS y JavaScript del catálogo y de ambas herramientas
+- Arquitectura de información, diseño visual y sistema de componentes
+- Textos, algoritmos y bases de datos de las herramientas (véase la sección anterior)
 
 **© 2026 MAE Saúl Dávila Pantoja. Todos los derechos reservados.**
 
 ---
 
-## 📜 Restricciones de Uso
+## Restricciones de uso
 
-### ❌ PROHIBIDO (Sin autorización escrita):
+### Prohibido sin autorización escrita
 
-1. Uso comercial del diseño o código
-2. Clonar/copiar para otros despachos contables
-3. Uso de marca AIDN o logo en proyectos propios
-4. Modificación y redistribución con fines comerciales
-5. Uso de la estructura de precios para competencia
-6. Creación de trabajos derivados comerciales
-7. Venta o sublicenciamiento del diseño
-8. Eliminación de avisos de copyright
-9. Uso de paleta de colores corporativa AIDN
-10. Replicación de estructura de servicios
+1. Usar con fines comerciales el diseño, el código o los textos.
+2. Clonar, copiar o replicar el catálogo para otro despacho o firma.
+3. Usar la marca, el logotipo o la identidad de AIDN en proyectos propios o de terceros.
+4. **Extraer, replicar o reimplementar la lógica de la Brújula Estratégica** (preguntas, cálculo, umbrales, catálogo de herramientas, reglas de recomendación o textos de lectura) para crear un diagnóstico igual o equivalente.
+5. **Extraer, replicar o reimplementar la Calculadora de Honorarios** o sus tablas de tarifas para cotizar, ofrecer o publicar servicios propios o de terceros.
+6. **Incrustar, enmarcar o reproducir** la Brújula o la Calculadora en otros sitios, aplicaciones o documentos, ya sea mediante código, iframe, captura automatizada o copia de su contenido.
+7. Usar rastreo o extracción automatizada masiva del contenido, o usarlo para entrenar, ajustar o alimentar sistemas de inteligencia artificial con fines comerciales.
+8. Crear obras derivadas con fines comerciales, vender o sublicenciar el diseño o las herramientas.
+9. Eliminar o alterar avisos de derechos de autor y atribución.
 
-### ✅ PERMITIDO (Con atribución):
+### Permitido
 
-1. Visualización del código para fines educativos
-2. Referencias de diseño en estudios de caso (con crédito)
-3. Inspiración conceptual (no copia directa)
-4. Análisis técnico para aprendizaje personal
+1. Navegar el catálogo y **usar las herramientas como lo haría un cliente o prospecto** que evalúa los servicios de AIDN.
+2. Compartir el enlace oficial del catálogo.
+3. Consultar el código con fines educativos y de aprendizaje personal.
+4. Citar o referenciar el catálogo en artículos, estudios de caso o tutoriales, con atribución.
 
 **Atribución requerida:**
+
 ```
-Diseño inspirado en AIDN Strategic Consulting
-Catálogo por MAE Saúl Dávila Pantoja
-https://bit.ly/catalogo-aidn
-Diseño original bajo licencia propietaria
+Catálogo de AIDN Strategic Consulting
+Diseño y desarrollo: MAE Saúl Dávila Pantoja
+https://aidnstrategic.com
+Obra bajo licencia propietaria. Uso de referencia únicamente.
 ```
 
 ---
 
-## ⚖️ Licencia Propietaria
+## Licencia propietaria
 
-**Este catálogo NO está bajo licencia de código abierto.**
+**Este proyecto no está bajo una licencia de código abierto.**
 
 ```
-Copyright © 2026 AIDN & MAE Saúl Dávila Pantoja
+Copyright © 2026 AIDN Strategic Consulting y MAE Saúl Dávila Pantoja
 
-LICENCIA PROPIETARIA - CATÁLOGO DE SERVICIOS
+LICENCIA PROPIETARIA · CATÁLOGO DE SERVICIOS Y HERRAMIENTAS INTERACTIVAS
 
-Todos los derechos reservados. No se permite:
+Todos los derechos reservados. Sin autorización escrita no se permite:
 - Uso comercial por terceros
-- Redistribución o clonación
-- Uso de marca AIDN sin autorización
-- Trabajos derivados para competencia
-- Uso de estructura de precios
+- Redistribución, clonación o incrustación
+- Uso de la marca AIDN
+- Reimplementación de la Brújula Estratégica o de la Calculadora de Honorarios
+- Obras derivadas para competidores
+- Extracción automatizada masiva
 
-Visualización educativa permitida con atribución.
+Se permite la navegación, el uso de las herramientas como cliente o prospecto
+y la consulta educativa con atribución.
 
-Para permisos comerciales: sauldavila@gmail.com
+Permisos comerciales: sauldavila@aidnstrategic.com
 WhatsApp: +52 81 1063 2844
 ```
 
-### 🚨 Protección Legal
-
-Este catálogo está protegido bajo:
-- Ley Federal del Derecho de Autor (México)
-- Propiedad intelectual corporativa de AIDN
-- Secreto comercial (estructura de precios)
-- Marca registrada (en proceso)
-
-**Violaciones serán reportadas según legislación aplicable.**
+El acceso, la visualización o el uso de este catálogo implica la aceptación de los términos de este documento y del archivo `LICENSE.txt`.
 
 ---
 
-## 🛠️ Tecnologías
+## Alcance de la protección y elementos de terceros
 
-### Stack Técnico
-- **HTML5 semántico** - Estructura optimizada para SEO
-- **CSS3 avanzado** - Custom Properties, Gradients, Backdrop Filters
-- **JavaScript mínimo** - Solo para funcionalidad esencial
-- **Single-file architecture** - Máxima portabilidad
-- **Inline CSS** - Sin dependencias externas
+Para que la protección sea clara y exigible, se precisa lo que **sí** y lo que **no** reclama AIDN:
 
-### Características Técnicas
-- **Mobile-first responsive** - Breakpoints optimizados
-- **Print-friendly** - Media queries para impresión
-- **Accessibility-focused** - Contraste y semántica adecuados
-- **SEO optimizado** - Meta tags completos
-- **Security headers** - CSP implementado
-- **Progressive enhancement** - Funciona en todos los navegadores
-
-### APIs y Standards
-- **Open Graph Protocol** - Compartir en redes sociales
-- **Twitter Cards** - Preview optimizado
-- **Schema.org ready** - Preparado para structured data
-- **PWA manifest** - Instalable en dispositivos
-- **Favicon completo** - Multi-resolución y formatos
+- **Sí se protege** la expresión concreta: el código, los textos, el diseño, la selección y la organización de contenidos, las tablas de tarifas y la implementación de las herramientas.
+- **No se reclaman derechos** sobre las metodologías y marcos públicos que el catálogo describe o aplica (por ejemplo, FODA, PESTEL, las cinco fuerzas de Porter, modelo de negocio Canvas, cuadro de mando integral, Hoshin Kanri, matriz BCG, matriz de Ansoff u OKR), que pertenecen a sus autores y al dominio público. AIDN protege su manera de explicarlos, combinarlos y recomendarlos.
+- **Obras de terceros:** las referencias bibliográficas citadas en el catálogo pertenecen a sus autores y editoriales.
+- **Servicios de terceros:** las tipografías (Google Fonts) y el reproductor de Spotify se rigen por los términos de sus proveedores.
+- **Visibilidad del código:** al ser un sitio web, el navegador recibe el código de las herramientas. Verlo no equivale a una licencia para copiarlo; la protección es jurídica y contractual, no técnica.
 
 ---
 
-## 📊 Servicios Ofrecidos
+## Privacidad
 
-### 🎯 Consultoría Estratégica
-
-**Servicios Premium Personalizados:**
-- Planeación y Dirección Estratégica
-- Análisis Financiero y Proyecciones
-- Reestructuración Organizacional
-- Desarrollo de Modelos de Negocio
-
-**Proceso de trabajo:**
-1. Sesión diagnóstica inicial (sin costo)
-2. Propuesta personalizada
-3. Ejecución con acompañamiento
-4. Seguimiento post-proyecto
-
-### 💼 Servicios Fiscales
-
-**Personas Físicas RESICO:**
-- Servicios Profesionales (Esencial/Profesional)
-- Sector Primario (cobro anual único)
-- Permanencia Premium en Padrón Activo
-
-**Sueldos y Salarios:**
-- Declaración Anual
-- Múltiples empleadores
-
-**Actividad Empresarial:**
-- Actividad Empresarial y Profesional
-- Minoristas
-- Mueblerías
-
-**Servicios Administrativos:**
-- Elaboración de CV
-- Modificaciones Patrimoniales
-- Declaraciones Inicial/Final
-
-### 📋 Políticas de Operación
-
-- Atención exclusiva para clientes activos
-- Sistema de citas obligatorio
-- Facturación transparente
-- Cero tolerancia a corrupción
-- Condiciones de pago claras
-- Ética profesional rigurosa
+- El sitio no utiliza *cookies* propias ni herramientas de analítica o publicidad.
+- Solo recuerda en el navegador la preferencia de tema (claro u oscuro); ese dato no llega a AIDN.
+- **La Brújula Estratégica procesa las respuestas en el navegador del usuario: no las guarda ni las envía a ningún servidor.** Solo se comparten si la persona decide abrir WhatsApp.
+- **La Calculadora de Honorarios opera también en el navegador** y no envía los datos que se capturan.
+- Algunos elementos los sirven terceros (Google Fonts y Spotify) y pueden recibir datos de la conexión, como la dirección IP.
 
 ---
 
-## 💻 Estructura del Proyecto
+## Aspectos técnicos
+
+- **Arquitectura:** archivo único (`index.html`) con CSS y JavaScript en línea, sin proceso de compilación.
+- **Diseño adaptable** de pantallas pequeñas a monitores grandes, con tema claro y oscuro.
+- **Accesibilidad:** enlace de salto al contenido, foco visible, objetivos táctiles de al menos 44 px y respeto de la preferencia de movimiento reducido.
+- **SEO:** metadatos completos, Open Graph, Twitter Cards, URL canónica y datos estructurados (Schema.org).
+- **PWA:** manifiesto y colores de tema.
+- **Seguridad:** política de seguridad de contenido (CSP) declarada.
+- **Impresión:** estilos específicos; los acordeones se despliegan al imprimir.
+- **Navegadores:** versiones modernas de Chrome, Edge, Firefox y Safari. Se emplean funciones recientes de CSS, por lo que se recomiendan versiones actualizadas (por ejemplo, Firefox 121 o superior).
+- **Dependencias externas en ejecución:** Google Fonts y el reproductor de Spotify (este último se carga solo al llegar al final de la página).
+
+---
+
+## Estructura del proyecto
 
 ```
 catalogo-aidn-2026/
 │
-├── index.html                  # Catálogo completo (single-file)
-├── README.md                   # Este archivo
+├── index.html                  # Catálogo completo (archivo único)
+├── README.md                   # Este documento
 ├── LICENSE.txt                 # Licencia propietaria
 │
-├── favicon.ico                 # Favicon 16x16
-├── favicon-16x16.png          # Favicon 16x16
-├── favicon-32x32.png          # Favicon 32x32
-├── apple-touch-icon.png       # iOS icon 180x180
-├── android-chrome-192x192.png # Android icon
-├── android-chrome-512x512.png # Android icon
-├── banner-catalogo26.png      # OG image (1280x640)
+├── favicon.ico
+├── favicon-16x16.png
+├── favicon-32x32.png
+├── apple-touch-icon.png
+├── android-chrome-192x192.png
+├── android-chrome-512x512.png
+├── banner.og-aidn.png          # Imagen Open Graph (1280×640)
 │
-└── site.webmanifest           # PWA manifest
-```
-
-**Arquitectura single-file por diseño:**
-- ✅ Máxima portabilidad
-- ✅ Sin dependencias externas
-- ✅ Deploy instantáneo
-- ✅ Fácil mantenimiento
-- ✅ Compatible con cualquier hosting
-
----
-
-## 🎯 Casos de Uso
-
-### 1. Presentación a Clientes Potenciales
-```
-✅ Enviar link por WhatsApp
-✅ Compartir en redes sociales
-✅ Presentar en tablets durante reuniones
-✅ Proyectar en presentaciones comerciales
-```
-
-### 2. Material de Marketing
-```
-✅ Landing page de servicios
-✅ Referencia para cotizaciones
-✅ Onboarding de nuevos clientes
-✅ Presentación institucional
-```
-
-### 3. Comunicación Corporativa
-```
-✅ Portal de información de servicios
-✅ Catálogo digital actualizable
-✅ Referencia de políticas y precios
-✅ Transparencia comercial
+└── site.webmanifest            # Manifiesto PWA
 ```
 
 ---
 
-## 📈 Métricas y Rendimiento
-
-### Optimización Web
-
-| Aspecto | Estado |
-|---------|--------|
-| **SEO** | Optimizado (meta tags completos) |
-| **Mobile** | 100% responsive |
-| **Performance** | Ultra-ligero (~45KB) |
-| **Accessibility** | Diseño inclusivo |
-| **Security** | CSP headers |
-
-### Compatibilidad
-
-| Navegador | Versión | Soporte |
-|-----------|---------|---------|
-| Chrome | 90+ | ✅ Full |
-| Firefox | 88+ | ✅ Full |
-| Safari | 14+ | ✅ Full |
-| Edge | 90+ | ✅ Full |
-| Opera | 76+ | ✅ Full |
-| Mobile Safari | iOS 14+ | ✅ Full |
-| Chrome Mobile | Android 10+ | ✅ Full |
-
-### Dispositivos Probados
-
-| Tipo | Rango | Estado |
-|------|-------|--------|
-| Desktop | 1024px+ | ✅ Optimizado |
-| Tablet | 768-1024px | ✅ Optimizado |
-| Mobile | 320-768px | ✅ Optimizado |
-| 4K Displays | 2560px+ | ✅ Optimizado |
-
----
-
-## ❓ FAQ
+## Preguntas frecuentes
 
 ### ¿Puedo usar este diseño para mi despacho?
 
-**No sin autorización.** Este diseño es propiedad de AIDN. Necesitarías contratar un diseño personalizado o solicitar licencia comercial.
+No sin autorización escrita. El diseño, el código y los textos son propiedad de AIDN y de su autor. Para un uso comercial se requiere una licencia.
 
-### ¿Puedo copiar la estructura de precios?
+### ¿Puedo usar la Brújula Estratégica con mi propia organización?
 
-**No.** La estructura de servicios y precios es secreto comercial de AIDN. Copiarla constituye competencia desleal.
+Sí. Está pensada para que cualquier persona obtenga una primera lectura de su organización. Lo que no se permite es copiar o reimplementar su lógica, sus textos o su motor de recomendación.
 
-### ¿Puedo usar el logo AIDN?
+### ¿Puedo incluir la Brújula o la Calculadora en mi sitio web?
 
-**Absolutamente no.** El logo AIDN es marca registrada (en proceso). Su uso no autorizado puede resultar en acciones legales.
+No. Para compartirlas, usa el enlace oficial del catálogo. La incrustación o reproducción requiere autorización escrita.
 
-### ¿Cuánto cuesta una licencia para usar este diseño?
+### ¿Puedo usar las tarifas de la Calculadora como referencia para mis propios precios?
 
-**Contactar para negociación:**
-- Despacho individual: $3,000-5,000 MXN
-- Despacho mediano: $8,000-12,000 MXN
-- White label completo: $20,000+ MXN
+No. Las tarifas de AIDN son parte de su oferta comercial y no pueden reproducirse para cotizar servicios de terceros. Tampoco constituyen una tarifa de mercado ni una recomendación.
 
-### ¿Los precios del catálogo son finales?
+### ¿Los resultados de la Brújula o de la Calculadora son definitivos?
 
-**Sí.** Los precios publicados son los vigentes para 2026. Políticas de operación aplicables según términos del catálogo.
+No. Son orientativos. La Brújula no sustituye la evaluación organizacional, y la Calculadora no sustituye la cotización que se confirma en la sesión diagnóstica.
 
-### ¿Puedo referenciar este catálogo en mi blog?
+### ¿Puedo usar el logotipo de AIDN?
 
-**Sí, con atribución.** Puedes mencionar y enlazar el catálogo con crédito adecuado a AIDN y su autor.
+No. El logotipo y la identidad de AIDN no pueden usarse sin autorización escrita.
 
----
+### ¿Puedo mencionar el catálogo en mi blog o en un artículo?
 
-## 🎓 Uso Educativo y Referencias
+Sí, con atribución y un enlace al sitio oficial.
 
-### Para Estudiantes y Desarrolladores
+### ¿Cuánto cuesta una licencia?
 
-**Permitido aprender de:**
-- ✅ Estructura HTML semántica
-- ✅ Uso de CSS Custom Properties
-- ✅ Sistema de glassmorphism
-- ✅ Diseño responsive mobile-first
-- ✅ Optimización de meta tags
-- ✅ Arquitectura single-file
-
-**En artículos y tutoriales:**
-```markdown
-Ejemplo de catálogo profesional: 
-[Catálogo AIDN 2026](https://bit.ly/catalogo-aidn)
-
-Diseño por MAE Saúl Dávila Pantoja para AIDN Strategic Consulting
-Nota: Diseño original bajo licencia propietaria.
-Uso solo con fines educativos de referencia.
-```
-
-**Prohibido:**
-- ❌ Copiar código para uso comercial
-- ❌ Clonar diseño para clientes
-- ❌ Usar paleta de colores AIDN
-- ❌ Replicar estructura de servicios
+Depende del uso y del alcance. Escribe a sauldavila@aidnstrategic.com para una propuesta.
 
 ---
 
-## 💡 Filosofía del Diseño
+## Cómo reportar un uso no autorizado
 
-> *"Más que cumplimiento fiscal: Estrategias que impactan en crecimiento y rentabilidad"*
+Escribe a **sauldavila@aidnstrategic.com** con el asunto «Reporte de uso indebido · Catálogo AIDN» e incluye:
 
-**Principios de diseño:**
-1. **Claridad primero** - Información transparente y accesible
-2. **Profesionalismo** - Diseño boutique que refleja calidad
-3. **Transparencia** - Precios y políticas visibles
-4. **Accesibilidad** - Funcional para todos los dispositivos
-5. **Performance** - Carga rápida y experiencia fluida
+- la dirección (URL) donde se encuentra el uso,
+- evidencia (capturas de pantalla o archivos) y
+- una breve descripción de lo que se reproduce (catálogo, Brújula, Calculadora, marca u otro elemento).
 
-**Valores reflejados:**
-- Ética profesional
-- Cero tolerancia a corrupción
-- Estrategia sobre improvisación
-- Crecimiento sostenible
-- Servicio premium
+**Procedimiento ante un uso no autorizado:**
+
+1. Notificación directa al infractor, con un plazo para retirar el contenido.
+2. Reporte a la plataforma de alojamiento o al buscador.
+3. Evaluación de las acciones legales que correspondan.
 
 ---
 
-## 🏆 Valor del Proyecto
+## Contacto
 
-**Este catálogo representa:**
-- 60-80 horas de desarrollo y diseño
-- $6,000-8,500 USD valor de mercado (diseño boutique)
-- Diseño production-ready
-- Branding corporativo protegido
-- Arquitectura escalable
-- SEO optimizado profesional
+**MAE Saúl Dávila Pantoja** · Consultor Estratégico · Fundador de AIDN Strategic Consulting
 
-**Respeto a la propiedad intelectual = Comunidad profesional saludable.**
+- Llamadas: [+52 81 4985 6949](tel:+528149856949)
+- WhatsApp: [+52 81 1063 2844](https://wa.me/528110632844)
+- Correo electrónico: sauldavila@aidnstrategic.com
+- Sitio oficial: [aidnstrategic.com](https://aidnstrategic.com)
+- Tarjeta digital: [maesauldavila.github.io/tarjeta-digital](https://maesauldavila.github.io/tarjeta-digital/)
 
----
-
-## 📞 Contacto
-
-### Para Servicios de AIDN
-
-**MAE Saúl Dávila Pantoja**
-- 📱 WhatsApp: [+52 81 1063 2844](https://wa.me/528110632844)
-- 📧 Email: aidnserviciosdeadmon@gmail.com
-- 🌐 Catálogo: [bit.ly/catalogo-aidn](https://bit.ly/catalogo-aidn)
-
-### Para Permisos de Diseño
-
-**Licencias Comerciales del Catálogo:**
-- 📧 Email: sauldavila@gmail.com
-- 📱 WhatsApp: [+52 1 55 3719 1248](https://wa.me/5215537191248)
-- 🌐 Portafolio: [maesauldavila.github.io/tarjeta-digital](https://maesauldavila.github.io/tarjeta-digital/)
-
-### Reportar Uso No Autorizado
-
-**Email:** sauldavila@gmail.com  
-**Asunto:** "Reporte Uso Indebido - Catálogo AIDN"  
-**Incluir:** URL, evidencia, descripción del uso
+**Licencias y permisos comerciales:** sauldavila@aidnstrategic.com
 
 ---
 
-## 🙏 Reconocimientos
+## Historial de cambios
 
-### Inspiración Profesional
+### 2026.10 · v15 (26 de octubre de 2026)
 
-- **Despachos contables premium** - Estructura de servicios
-- **Consultorias estratégicas** - Modelo de negocio
-- **OLA/CICA** - Certificación profesional
-- **SAT México** - Marco regulatorio fiscal
+- Corrección del desborde de los botones de respuesta y de la marca de dimensión completada de la Brújula en pantallas móviles.
+- README actualizado: protección específica de la Brújula Estratégica y de la Calculadora de Honorarios, alcance de la protección y elementos de terceros.
 
-**Nota:** El catálogo es 100% diseño original. No utiliza plantillas comerciales.
+### Versiones previas (2026)
 
----
-
-## 📚 Información Adicional
-
-### Certificaciones
-
-**MAE Saúl Dávila Pantoja:**
-- 🎓 Maestro en Administración Empresarial (Especialidad en Planeación Estratégica)
-- 🏆 Consultor Estratégico Certificado OLA/CICA 2025-2031
-- 📜 Licenciado en Contaduría Pública
-
-### Marco Legal Mexicano
-
-El catálogo incluye información educativa sobre:
-- Jerarquía de las leyes (Art. 133 Constitucional)
-- Fundamento legal de actos de autoridad
-- Protección del contribuyente
+- Incorporación de la Brújula Estratégica y de la Calculadora de Honorarios.
+- Sección de Hoshin Kanri, bloque de capital humano y resiliencia, Ruta del Emprendedor y lista de reproducción oficial.
+- Condiciones del servicio fiscal en acordeones y nota de privacidad.
+- Catálogo inicial de servicios 2026.
 
 ---
 
-## 📅 Changelog
+**© 2026 AIDN Strategic Consulting y MAE Saúl Dávila Pantoja · Todos los derechos reservados**
 
-### v2026.1 (Enero 2026)
-
-**Características iniciales:**
-- ✅ Catálogo completo de servicios 2026
-- ✅ Diseño premium con glassmorphism
-- ✅ Sistema responsive mobile-first
-- ✅ SEO optimizado completo
-- ✅ Secciones de consultoría estratégica
-- ✅ Servicios fiscales detallados
-- ✅ Políticas de operación transparentes
-- ✅ Información legal educativa
-- ✅ CTA WhatsApp optimizado
-- ✅ Footer corporativo completo
-
-**Performance:**
-- ~45KB peso total
-- <800ms carga en 3G
-- 100% responsive
-- SEO completo
-
----
-
-## 🔒 Protección DMCA
-
-**Reportamos violaciones activamente.**
-
-Si detectamos uso no autorizado:
-1. Notificación directa al infractor (7 días)
-2. Reporte a plataforma de hosting
-3. Evaluación de acciones legales
-
-**Para evitar problemas:**
-- Solicita permisos ANTES de usar
-- Respeta marca AIDN y autor
-- No clones para competencia
-- Proporciona atribución si es educativo
-
----
-
-## ⭐ ¿Te Gusta Este Catálogo?
-
-- 📧 Contáctanos para servicios profesionales
-- 💼 Agenda una consulta estratégica
-- 🤝 Solicita licencia si necesitas diseño similar
-- 🙏 Respeta la propiedad intelectual
-
-**Usar el catálogo ≠ Permiso para clonar el diseño**
-
----
-
-## 🔮 Actualizaciones Futuras
-
-### Planificado para 2027
-- [ ] Calculadora interactiva de honorarios
-- [ ] Sistema de agendamiento integrado
-- [ ] Portal de cliente con login
-- [ ] Integración con CRM
-- [ ] Blog de artículos estratégicos
-- [ ] Testimoniales de clientes
-- [ ] Galería de casos de éxito
-
-**Nota:** Actualizaciones sujetas a estrategia comercial de AIDN.
-
----
-
-## 📖 Recursos Relacionados
-
-### AIDN Strategic Consulting
-- [VP.Light Viewer](https://maesauldavila.github.io/VP.Light/) - Visor de presentaciones
-- [Tarjeta Digital](https://maesauldavila.github.io/tarjeta-digital/) - Contacto profesional
-- Sitio web corporativo (en desarrollo)
-
-### Marco Legal y Fiscal
-- [SAT México](https://www.sat.gob.mx) - Portal oficial
-- [OLA/CICA](https://www.ola-cica.org) - Organización Latinoamericana de Consultoría
-- Normatividad fiscal vigente
-
----
-
-**© 2026 AIDN Strategic Consulting & MAE Saúl Dávila Pantoja - Todos los derechos reservados**
-
-*Catapultando empresas para liderar el cambio*
-
----
-
-## 📋 Aviso Legal Final
-
-Este README y el catálogo asociado son documentos legales que establecen términos de uso, restricciones y protecciones de propiedad intelectual.
-
-**El acceso, visualización o descarga de este catálogo constituye aceptación de los términos establecidos en este documento y en LICENSE.txt**
-
-Para cualquier duda sobre uso permitido, contactar ANTES de utilizar cualquier elemento del catálogo.
-
-**Última actualización:** Enero 2026  
-**Versión del documento:** 2026.1  
-**Mantenedor:** MAE Saúl Dávila Pantoja
+**Última actualización:** octubre de 2026 · **Versión del documento:** 2026.10 · **Mantenedor:** MAE Saúl Dávila Pantoja
